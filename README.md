@@ -16,9 +16,10 @@ Steps to operate
 3. when the output caps are charged, that is the voltage difference between FP_VCAP and FB_VOUT pins is less then 80mv then the state changes to STANDBY
 4. click on start power transfer, this will start switching. with 0° phase shift. State UP AND RUNNING
 5. use the slider to change the phase shift.
-6. clicking on stop power transfer stops the switching and also turns off the short circuit switch. Short circuit switch status can be seen in fault enable pin status. fault enable pin red = controller pin high
-7. click on start sync and stop sync to start stop sync switches.
-8. IMPORTANT: only click stop power transfer when phase shift is 0.
+6. click on start sync and stop sync to start stop sync switches.
+7. click on stop vloop and stop vloop to start stop vloop.
+8. when vloop jumps in the peak phase shift clamps to maximum/minimums defined in code. 
+9. vloop slider refernce is used to set a output voltage rference.
 
 
 

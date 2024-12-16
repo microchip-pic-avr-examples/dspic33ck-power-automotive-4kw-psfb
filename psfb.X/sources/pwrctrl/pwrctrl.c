@@ -49,11 +49,29 @@
 POWER_CONTROL_t psfb;    // Declare psfb converter data structure
 POWER_CONTROL_t * psfb_ptr = &psfb;
 
+// PRIVATE FUNCTIONS
+static void PwrCtrl_StartUpInitialize(void);
+static void PwrCtrl_ControlLoopInitialize(void);
+
 //// PUBLIC FUNCTIONS
 extern void PwrCtrl_StateMachine(POWER_CONTROL_t* pcInstance);
 
 
 void PwrCtrl_Initialize(void){
+
+    // Clear references
+    psfb.Properties.VPriReference = 0;
+    psfb.Properties.VSecReference = 0;
+    psfb.Properties.IReference = 0;
+    psfb.Properties.PwrReference = 0;
+
+
+    // Initialize Start-Up ramp settings
+    PwrCtrl_StartUpInitialize();
+
+    // Initialize Power Control Loop
+    PwrCtrl_ControlLoopInitialize();
+
 
 }
 
@@ -72,4 +90,84 @@ void Dev_PwrCtrl_ControlLoopInitialize(void){
 
 void PwrCtrl_Reset(void){
 
+}
+
+
+/*******************************************************************************
+ * @ingroup pwrctrl
+ * @brief  Initialize the StartUp Ramp configuration
+ * @return void
+ * 
+ * @details This function initializes the Ramp Up configuration for voltage, current
+ * and power. For each parameters that would be ramped up, pointer to the reference,
+ * reference target pointer, increment/decrement step size, delay for each increment/decremnt
+ * counter for each execution need to be defined. When the reference becomes equal to 
+ * the reference targe, the rampComplete data member will be set. 
+ *********************************************************************************/
+static void PwrCtrl_StartUpInitialize(void)
+{
+    // Initialize Voltage ramp-up settings
+    psfb.VRamp.ptrReference = (uint16_t*)&psfb.VLoop.Reference;
+    psfb.VRamp.ptrReferenceTarget = &psfb.Properties.VSecReference;
+    psfb.VRamp.StepSize = 1;
+    psfb.VRamp.Delay = 20;
+    psfb.VRamp.Counter = 0;
+    psfb.VRamp.RampComplete = 0;
+    
+    //Initialize Current ramp-up settings
+    psfb.IRamp.ptrReference = (uint16_t*)&psfb.ILoop.Reference;
+    psfb.IRamp.ptrReferenceTarget = (uint16_t*)&psfb.Properties.IReference;
+    psfb.IRamp.StepSize = 1;
+    psfb.IRamp.Delay = 60;
+    psfb.IRamp.Counter = 0;
+    psfb.IRamp.RampComplete = 0;
+    
+    //Initialize Power ramp-up settings
+    psfb.PRamp.ptrReference = (uint16_t*)&psfb.PLoop.Reference;
+    psfb.PRamp.ptrReferenceTarget = &psfb.Properties.PwrReference;
+    psfb.PRamp.StepSize = 1;
+    psfb.PRamp.Delay = 4;
+    psfb.PRamp.Counter = 0;
+    psfb.PRamp.RampComplete = 0;
+    
+    #if defined (OPEN_LOOP_PBV) && (OPEN_LOOP_PBV == true)
+    // The PWM Period bits [2:0] needs to be mask when using cascaded PWM setup 
+    // (please refer to Section 4.1.3.3 in High Resolution PWM FRM)
+    uint16_t PeriodMask = 0x7; 
+    
+    // Initialize Voltage ramp-up settings for Period control
+    psfb.Pwm.ControlPeriod = psfb.Pwm.ControlPeriod & ~(PeriodMask);
+    psfb.Pwm.PBVPeriodTarget = psfb.Pwm.PBVPeriodTarget & ~(PeriodMask);
+    
+    psfb.VRamp.ptrReference = &psfb.Pwm.ControlPeriod;
+    psfb.VRamp.ptrReferenceTarget = &psfb.Pwm.PBVPeriodTarget;
+    psfb.VRamp.StepSize = 0xE;
+    psfb.VRamp.Delay = 0;
+    
+    //Initialize Current ramp-up settings for Phase control
+    psfb.Pwm.ControlPhase = psfb.Pwm.ControlPhase & ~(PeriodMask);
+    psfb.Pwm.PBVControlPhaseTarget = psfb.Pwm.PBVControlPhaseTarget & ~(PeriodMask);
+    
+    psfb.IRamp.ptrReference = &psfb.Pwm.ControlPhase;
+    psfb.IRamp.ptrReferenceTarget = &psfb.Pwm.PBVControlPhaseTarget;
+    psfb.IRamp.StepSize = 0xE;
+    psfb.IRamp.Delay = 0;
+    
+#endif
+}
+
+
+/*******************************************************************************
+ * @ingroup pwrctrl
+ * @brief  Initializes the control loop
+ * @return void
+ * 
+ * @details This function initializes the control loop necessary to run the close loop
+ * operation of the converter. 
+ *********************************************************************************/
+void PwrCtrl_ControlLoopInitialize(void)
+{
+
+    VCOMP_ControlObject_Initialize();
+    
 }

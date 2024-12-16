@@ -146,6 +146,8 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
     pcInstance->PhRamp.Delay = 20;
     pcInstance->PhRamp.RampComplete = true;
 #endif
+
+
     // Next State assigned to STATE_FAULT_DETECTION
     Dev_LED_Off(LED_BOARD_GREEN);
     Dev_LED_Off(LED_BOARD_RED);
@@ -343,7 +345,8 @@ static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance)
      else
     {   
         // Ramp Up the Voltage, Current and Power reference
-//        uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->VRamp);
+        PwrCtrl_PWM_Enable();
+        uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->VRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->IRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->PRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->PhRamp);
@@ -352,7 +355,7 @@ static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance)
         
         //uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->PhRamp);
         // Check if ramp up is complete
-        uint16_t rampComplete  = true;
+        //uint16_t rampComplete  = true;
         if (rampComplete)
             // Next State assigned to STATE_ONLINE
             pcInstance->State = PWRCTRL_STATE_UP_AND_RUNNING; 
@@ -381,10 +384,8 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
     }
     
-    else
-    {
+    else if (!pcInstance->Properties.Enable) 
         // Check if Enable bit has been cleared
-        if (!pcInstance->Properties.Enable) 
         {
             // Disable PWM physical output
             PwrCtrl_PWM_Disable();
@@ -394,10 +395,8 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
 
             // State back to STATE_INITIALIZE
             pcInstance->State = PWRCTRL_STATE_INITIALIZE; 
-        }
-        PwrCtrl_PWM_Enable();
-        Dev_LED_On(LED_BOARD_GREEN);
-      
+            Dev_LED_Off(LED_BOARD_GREEN);
+        }      
         //removing it for now
         
 //    #if defined (OPEN_LOOP_PBV) && (OPEN_LOOP_PBV == true)
@@ -405,14 +404,17 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
 //            pcInstance->State = PWRCTRL_STATE_SOFT_START;
 //    #endif    
         
-//    // Check if there is change in power control references    
+    // Check if there is change in power control references    
+        
+    else if (pcInstance->VLoop.Reference != pcInstance->Properties.VSecReference)
 //     else if ((pcInstance->ILoop.Reference != pcInstance->Properties.IReference) ||
 //                (pcInstance->VLoop.Reference != pcInstance->Properties.VSecReference) ||
 //                (pcInstance->PLoop.Reference != pcInstance->Properties.PwrReference))
-//            
-//            // State back to STATE_SOFT_START
-//            pcInstance->State = PWRCTRL_STATE_SOFT_START;
-    }
+     {    
+            // State back to STATE_SOFT_START
+            pcInstance->State = PWRCTRL_STATE_SOFT_START;
+     }
+
 } 
 
 

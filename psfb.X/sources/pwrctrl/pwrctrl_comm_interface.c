@@ -258,7 +258,7 @@ uint16_t Dev_PwrCtrl_GetAveraging_Vprim(void)
  **********************************************************************************/
 uint16_t Dev_PwrCtrl_GetAveraging_Vsec(void)
 {
-    //return(vSecAveraging.AverageValue);
+    //return(vOutAveraging.AverageValue);
     return;
 }
 

@@ -110,9 +110,9 @@
       </SignalChannel>
       <SignalChannel>
         <Name>Phase shift</Name>
-        <Scaling>0.56</Scaling>
+        <Scaling>0.0089</Scaling>
         <Offset>0</Offset>
-        <Unit>%</Unit>
+        <Unit>°</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -138,7 +138,7 @@
         <Name>Secondary Current ADC</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit> -621</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -187,10 +187,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>dead time alt</Name>
-        <Scaling>0.25</Scaling>
+        <Name>voltage ref</Name>
+        <Scaling>0.00523</Scaling>
         <Offset>0</Offset>
-        <Unit>ns</Unit>
+        <Unit>v</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -213,7 +213,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>DACDAT3H</Name>
+        <Name>comp ref PCT</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit xsi:nil="true" />
@@ -225,6 +225,32 @@
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
+      <SignalChannel>
+        <Name>voltage ref present</Name>
+        <Scaling>0.00523</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>17</SignalChannelIndex>
+        <PositionInMessage>17</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>comp ref Sec</Name>
+        <Scaling>0.0833</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>18</SignalChannelIndex>
+        <PositionInMessage>18</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
@@ -233,10 +259,6 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>3</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>4</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -256,11 +278,11 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
-        <SignalChannelIndex>10</SignalChannelIndex>
+        <SignalChannelIndex>4</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
-        <SignalChannelIndex>14</SignalChannelIndex>
+        <SignalChannelIndex>10</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -275,10 +297,22 @@
         <SignalChannelIndex>16</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>18</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>14</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>17</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
     </TableView>
     <OutputValues>
       <OutputValue>
-        <Name>Phase Shift°</Name>
+        <Name>Phase Shift Degrees</Name>
         <Unit xsi:nil="true" />
         <Scaling>1</Scaling>
         <Offset>0</Offset>
@@ -292,35 +326,35 @@
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
-        <Name>DT fixed leg</Name>
+        <Name>Dead time</Name>
         <Unit xsi:nil="true" />
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <MinimumValue>480</MinimumValue>
         <MaximumValue>2000</MaximumValue>
-        <DefaultValue>1000</DefaultValue>
+        <DefaultValue>640</DefaultValue>
         <Step>1</Step>
-        <ButtonText>update ref</ButtonText>
+        <ButtonText>update ded</ButtonText>
         <Data>0203 0004 00BB [value]</Data>
         <AutoSendAfterChange>true</AutoSendAfterChange>
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
-        <Name>DT phase shifted leg</Name>
+        <Name>Voltage Reference Raw Num</Name>
         <Unit xsi:nil="true" />
         <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <MinimumValue>480</MinimumValue>
-        <MaximumValue>2000</MaximumValue>
+        <MinimumValue>1</MinimumValue>
+        <MaximumValue>3000</MaximumValue>
         <DefaultValue>1000</DefaultValue>
-        <Step>1</Step>
-        <ButtonText>update ded </ButtonText>
+        <Step>100</Step>
+        <ButtonText>update V</ButtonText>
         <Data>0203 0004 00CC [value]</Data>
         <AutoSendAfterChange>true</AutoSendAfterChange>
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
-        <Name>current ref comp</Name>
+        <Name>Pcurrent ref comp</Name>
         <Unit xsi:nil="true" />
         <Scaling>1</Scaling>
         <Offset>0</Offset>
@@ -476,6 +510,12 @@
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
+          <StatusBit>
+            <Name>vcomp enable</Name>
+            <BitIndex>2</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
         </StatusBits>
         <PageName>4kw</PageName>
       </StatusGroup>
@@ -506,7 +546,6 @@
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 00 00</Data>
-        <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Start Sync</Name>
@@ -529,10 +568,18 @@
         <Data>02 02 00 02 aa 00</Data>
       </SendRawDataButton>
       <SendRawDataButton>
-        <Name>Random Action</Name>
+        <Name>P Controller ON</Name>
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 FF FF</Data>
+        <PageName>4kw</PageName>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>P Controller Off</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 FF 00</Data>
+        <PageName>4kw</PageName>
       </SendRawDataButton>
     </SendRawDataButtons>
   </Status>

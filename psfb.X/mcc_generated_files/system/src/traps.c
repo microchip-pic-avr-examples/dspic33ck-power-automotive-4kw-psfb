@@ -53,12 +53,17 @@ void __attribute__((weak)) TRAPS_halt_on_error(uint16_t code)
 {
     TRAPS_error_code = code;
 #ifdef __DEBUG    
+    
+    Nop();
+    Nop();
+    Nop();
+    
     /* If we are in debug mode, cause a software breakpoint in the debugger */
     __builtin_software_breakpoint();
-    while(1)
-    {
-    
-    }
+//    while(1)
+//    {
+//    
+//    }
 #else
     // Trigger software reset
     __asm__ volatile ("reset");

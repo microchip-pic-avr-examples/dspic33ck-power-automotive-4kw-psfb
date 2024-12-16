@@ -35,6 +35,8 @@
 #include "pwrctrl/pwrctrl.h"
 #include "config/version.h"
 
+#include "pwrctrl/vcomp/VCOMP.h"
+
 /*********************************************************************************
  * @ingroup pbv-protocol-ids
  * @
@@ -74,7 +76,7 @@ static uint16_t status_output_state = 0 ;
 static uint16_t safety_flags = 0 ;
 static uint16_t slider_PS_PP = 0 ;
 static uint16_t dead_time_right = 0;
-static uint16_t dead_time_left = 0;
+static uint16_t voltage_ref = 0;
 static uint16_t current_slider_ref = 0;
 
 static uint8_t button_random_action = 0;
@@ -119,6 +121,11 @@ void App_PBV_psfb_Init()
     App_PBV_psfb_ASCII_Ptr->Length             = 64;
 
     app_PBV_Init(App_PBV_psfb_TX_Ptr, App_PBV_psfb_ASCII_Ptr, App_PBV_psfb_RX_Ptr);
+    
+    
+    ///
+    
+    dead_time_right = PG1DTH;
 }
 
 /***********************************************************************************
@@ -228,24 +235,27 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[1] = flag_word;
     buffer_sixteen_tx[2] = (Dev_PwrCtrl_GetAdc_Vpri() - 202);
     buffer_sixteen_tx[3] = Dev_PwrCtrl_GetAdc_Vsec();
-    buffer_sixteen_tx[4] = (uint16_t)(Dev_Sec_AverageValue() - 610);
+    buffer_sixteen_tx[4] = (uint16_t)(PwrCtrl_GetAdc_Isec_shunt() - 610);
     buffer_sixteen_tx[5] = Dev_PwrCtrl_GetVoltage_Vcap();
-    buffer_sixteen_tx[6] = (uint16_t)(Dev_Temp_AverageValue() - 497 );
+    buffer_sixteen_tx[6] = (uint16_t)(PwrCtrl_GetAdc_Temperature() - 497 );
     buffer_sixteen_tx[7] = PwrCtrl_GetAdc_Vrail_5V();
-    buffer_sixteen_tx[8] = slider_PS_PP;
+    buffer_sixteen_tx[8] = PG1TRIGC;
     buffer_sixteen_tx[9] =  PwrCtrl_GetAdc_Ipri_ct();
     buffer_sixteen_tx[10] = PwrCtrl_GetAdc_Isec_shunt();
     buffer_sixteen_tx[11] = Dev_PwrCtrl_GetControl_Phase();
-    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (button_start_sync<<1);
+    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (button_start_sync<<1) + (VCOMP.status.bits.enabled<<2);
     buffer_sixteen_tx[13] = dead_time_right;
-    buffer_sixteen_tx[14] = dead_time_left;
+    buffer_sixteen_tx[14] = psfb_ptr->Properties.VSecReference;
     buffer_sixteen_tx[15] = current_slider_ref - 621;
     buffer_sixteen_tx[16] = DAC3DATH;
+    buffer_sixteen_tx[17] = psfb_ptr->VLoop.Reference;
+    buffer_sixteen_tx[18] = DAC1DATH;
     
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 17);
+    
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 19);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 17 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 19 * 2 ;
 }
 
 
@@ -281,10 +291,10 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
         case 0xaa00:
 //            Dev_Reset_Average_Buffer();
             break;
-        case 0xFFFF:
-            button_random_action ^= 1;
-//            dev_fan_data_ptr->override_flag  ^= 1;
-            break;
+//        case 0xFFFF:
+//            button_random_action ^= 1;
+////            dev_fan_data_ptr->override_flag  ^= 1;
+////            break;
         case 0x00aa:
             FAULT_EN_SetHigh();
             charge_en = 1;
@@ -292,6 +302,14 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
         case 0x00bb:
             FAULT_EN_SetLow();
             charge_en = 0;
+            break;
+            
+        case 0xFFFF:
+            VCOMP.status.bits.enabled = 1;
+            break;
+        
+        case 0xFF00:
+             VCOMP.status.bits.enabled = 0;
             break;
         default:
             break;
@@ -346,6 +364,9 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
 //            DAC1DATH = temp;
                 PG1DTH = data[1];   // set dead time to 150ns
                 PG1DTL = data[1];   // set dead time to 150ns
+
+                PG3DTH = data[1];   // set dead time to 150ns
+                PG3DTL = data[1];   // set dead time to 150ns
 //                PG2DTH = 0;     // no dead time on PWMxH
 //                PG2DTL = 1000;  // set dead time to 250ns
 //                PG3DTH = data[1];   // set dead time to 150ns
@@ -357,22 +378,10 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             break;
             
         case 0xcc:
-            //current slider ref -- DACDATH update here.
-            dead_time_left = data[1];
-//            temp = 0.5 + (data[1] * 0.18);
-//            temp = ( temp * 4095 )/3.3 ; 
-//            dead_time_left = temp;
-//            DAC1DATH = temp;
-//                PG1DTH = data[1];   // set dead time to 150ns
-//                PG1DTL = data[1];   // set dead time to 150ns
-//                PG2DTH = 0;     // no dead time on PWMxH
-//                PG2DTL = 1000;  // set dead time to 250ns
-                PG3DTH = data[1];   // set dead time to 150ns
-                PG3DTL = data[1];   // set dead time to 150ns
-//                PG4DTH = 0;     // no dead time on PWMxH
-//                PG4DTL = 1000;  // set dead time to 250ns
-                PG1STATbits.UPDREQ = 1; // Set manual update (can be automated later)
-                break;
+            voltage_ref = data[1];
+            PwrCtrl_SetVSecReference(voltage_ref);
+
+            break;
         
         case 0xdd:
             //current slider ref -- DACDATH update here.

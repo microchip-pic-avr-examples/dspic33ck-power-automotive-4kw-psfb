@@ -70,12 +70,9 @@ void MCC_Custom_User_Config (void)
     
     // Set synchronization of PWM start and register update
     PG1CONH = 0x0800; // SOCS=0, MSTEN=1
-    PG3CONH = 0x0241; // SOCS=1, TRGMOD=1, UPDMOD=2
-    
-    PG4CONH = 0x0241; // SOCS=1, TRGMOD=1, UPDMOD=2
     PG2CONH = 0x0243; // SOCS=3, TRGMOD=1, UPDMOD=2
-
-
+    PG3CONH = 0x0241; // SOCS=1, TRGMOD=1, UPDMOD=2
+    PG4CONH = 0x0241; // SOCS=1, TRGMOD=1, UPDMOD=2
 
     // Set I/O Configuration
     PG1IOCONL = 0x3000; // OVRENH/L=1
@@ -114,14 +111,14 @@ void MCC_Custom_User_Config (void)
     PG3DC = 20000;
     
     // Set dead times
-    PG1DTH = 1000;   // set dead time to 150ns
-    PG1DTL = 1000;   // set dead time to 150ns
+    PG1DTH = 640;   // set dead time to 160ns
+    PG1DTL = 640;   // set dead time to 160ns
     PG2DTH = 0;     // no dead time on PWMxH
-    PG2DTL = 1000;  // set dead time to 250ns
-    PG3DTH = 1000;   // set dead time to 150ns
-    PG3DTL = 1000;   // set dead time to 150ns
+    PG2DTL = 640;  // set dead time to 160ns
+    PG3DTH = 640;   // set dead time to 160ns
+    PG3DTL = 640;   // set dead time to 160ns
     PG4DTH = 0;     // no dead time on PWMxH
-    PG4DTL = 1000;  // set dead time to 250ns
+    PG4DTL = 640;  // set dead time to 160ns
 
     // Set synchronization triggers
     PG1TRIGC = 0; // phase shift = 0

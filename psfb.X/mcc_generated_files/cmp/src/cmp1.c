@@ -76,7 +76,7 @@ void CMP1_Initialize(void)
     DAC1CONL = 0x8008; //HYSSEL None; HYSPOL Rising Edge; INSEL CMP1B; CMPPOL Non Inverted; FLTREN disabled; DACOEN disabled; CBE disabled; IRQM Interrupts are disabled; DACEN enabled; 
 
     //Slope Settings
-    DAC1DATH = 0xF32; //DACDATH 3890; 
+    DAC1DATH = 0x83E; //DACDATH 2110; 
     DAC1DATL = 0xCD; //DACDATL 205; 
     SLP1CONH = 0x0; //PSE Negative; TWME disabled; HME disabled; SLOPEN disabled; 
     SLP1CONL = 0x0; //SLPSTRT None; SLPSTOPB None; SLPSTOPA None; HCFSEL None; 

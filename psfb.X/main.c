@@ -20,6 +20,7 @@
 */
 #include "system/system.h"
 #include "timer/tmr1.h"
+#include "timer/sccp1.h"
 #include "os/os_scheduler.h"
 #include "device/dev_led.h"
 //#include "device/dev_fan.h"
@@ -29,6 +30,8 @@
 #include "config/comms_config.h"
 #include "pwm_hs/pwm.h"
 #include "device/dev_adc_temporary.h"
+#include "fault/fault.h"
+#include "pwrctrl/pwrctrl_isr.h"
 
 // AR-241126: header file for calling custom peripheral configuration after MCC config
 #include "sources/driver/mcc_extension/mcc_custom_config.h"
@@ -37,14 +40,18 @@
 */
 
 void custom_pwm(void);
-
 void custom_pwm_n(void);
 
 int main(void)
 {
     
     SYSTEM_Initialize();
-    TMR1_TimeoutCallbackRegister (TMR1_CallBack);
+    TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
+    
+    SCCP1_Timer_TimeoutCallbackRegister(ControlLoop_Interrupt_CallBack); // control + feedback (ADC) update, fault management
+
+    PwrCtrl_Initialize();
+    Fault_Initialize();
 
 //    custom_pwm();
 //    custom_pwm_n(); // AR-241126: Disabled, is now part of following function
@@ -56,6 +63,8 @@ int main(void)
     App_PBV_psfb_Init();
     Dev_LED_Init();
 //    Dev_ADC_init();
+
+
 
 //    Dev_Temp_Init();
   

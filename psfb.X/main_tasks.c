@@ -94,7 +94,7 @@ void Tasks_Realtime_100us(void)
 //    X2CScope_Communicate();     ///< commuincate needs to be in free running mode. in some while(1) loop
 #endif
     PwrCtrl_Execute();
-    Fault_Execute();
+    //Fault_Execute();
 
 }
 #endif /* OS_USE_SCHEDULER_100us */
@@ -132,7 +132,7 @@ void Tasks_1ms(void)
 //    App_ExampleSomethingOne_1ms();
 //    App_ExampleSomethingTwo_1ms();
         
-    Dev_ADC_Sampling_Task_1ms();
+    //Dev_ADC_Sampling_Task_1ms();
 
 }
 
@@ -149,8 +149,8 @@ void Tasks_10ms(void)
     App_PBV_psfb_Task_10ms();
     
     
-    Dev_Temp_Task_10ms();
-    Dev_Sec_Task_10ms();
+    //Dev_Temp_Task_10ms();
+    //Dev_Sec_Task_10ms();
 }
 
 extern uint16_t os_resetCause;

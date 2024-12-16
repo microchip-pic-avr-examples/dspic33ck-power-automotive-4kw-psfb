@@ -45,7 +45,7 @@
 
 #define MINIMUM_DEADTIME                (float)150e-9 ///< Minimum Deadtime in seconds [sec]
 #define MAXIMUM_DEADTIME                (float)500e-9 ///< Maximum Deadtime in seconds [sec]
-#define MINIMUM_PHASESHIFTED_PULSE      (float) 80e-9 ///< Minimum phase shifted pulse in seconds [sec]
+#define MINIMUM_PHASESHIFTED_PULSE      (float)250e-9 ///< Minimum phase shifted pulse in seconds [sec]
 
 #define PRI_TO_SEC_PHASE_DEGREES_LIMIT  90u ///< Maximum Limit for primary to secondary phase in degrees [deg]
 
@@ -81,24 +81,24 @@
 
 #define IPRI_OC_THRES_TRIG_AMPS             (float) 39.0 ///< Primary over current trigger threshold
 #define IPRI_OC_THRES_CLEAR_AMPS            (float)  2.0
-#define IPRI_OC_T_BLANK_TRIG_SEC            (float) 50.0e-6
+#define IPRI_OC_T_BLANK_TRIG_SEC            (float) 150.0e-6
 #define IPRI_OC_T_BLANK_CLEAR_SEC           (float)  0.0
 #define IPRI_OC_TICK_SEC                    (T_ADC_SAMPLE_SECS)
 
-#define IPRI_SC_THRES_TRIG_AMPS             (float) 39.0
+#define IPRI_SC_THRES_TRIG_AMPS             (float) 120.0
 /** @} */ // end of group ~~~~~~~~~~~~~~~~~~~~
 
 /******************************************************************************
  * @ingroup secondary-current-feedback
  * @{
  ******************************************************************************/
-#define ISEC_OC_THRES_TRIG_AMPS             (float) 49.0
+#define ISEC_OC_THRES_TRIG_AMPS             (float) 120.0
 #define ISEC_OC_THRES_CLEAR_AMPS            (float)  2.0
-#define ISEC_OC_T_BLANK_TRIG_SEC            (float) 50.0e-6
+#define ISEC_OC_T_BLANK_TRIG_SEC            (float)  0.0
 #define ISEC_OC_T_BLANK_CLEAR_SEC           (float)  0.0
 #define ISEC_OC_TICK_SEC                    (T_ADC_SAMPLE_SECS) 
 
-#define ISEC_SC_THRES_TRIG_AMPS             (float) 49.0
+#define ISEC_SC_THRES_TRIG_AMPS             (float) 120.0
 #define ISEC_LOAD_STEP_CLAMPING_AMPS        (float) 1.5 
 /** @} */ // end of group ~~~~~~~~~~~~~~~~~~~~
 

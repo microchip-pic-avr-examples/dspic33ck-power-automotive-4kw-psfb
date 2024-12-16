@@ -175,7 +175,7 @@ void Fault_Execute(void)
 //    if(psfb_ptr->PowerDirection==PWR_CTRL_CHARGING)    
 //    {    
 //        if((iSecAveraging.AverageValue <=  (ISEC_LOAD_STEP_CLAMP>>2)) && 
-//           (vSecAveraging.AverageValue > (psfb_ptr->VLoop.Reference + VSEC_LOAD_STEP_CLAMP)) && 
+//           (vOutAveraging.AverageValue > (psfb_ptr->VLoop.Reference + VSEC_LOAD_STEP_CLAMP)) && 
 //           (psfb_ptr->Properties.IReference >= 1) )
 //        {
 //            BatteryDisconnect = true;
