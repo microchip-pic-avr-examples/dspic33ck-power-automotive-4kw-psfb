@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Module xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.microchip.com/dsmps">
+  <Version>2.2.0.0</Version>
+  <ProjectName>4kw</ProjectName>
+  <Status>
+    <SignalChannels>
+      <SignalChannel>
+        <Name>State</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>0</SignalChannelIndex>
+        <PositionInMessage>0</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Status Flags</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>1</SignalChannelIndex>
+        <PositionInMessage>1</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Input Voltage ADC</Name>
+        <Scaling>0.238</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>2</SignalChannelIndex>
+        <PositionInMessage>2</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Output Voltage</Name>
+        <Scaling>0.005231</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>3</SignalChannelIndex>
+        <PositionInMessage>3</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Secondary Current</Name>
+        <Scaling>0.0833</Scaling>
+        <Offset>0</Offset>
+        <Unit />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>4</SignalChannelIndex>
+        <PositionInMessage>4</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Output Cap Voltage</Name>
+        <Scaling>0.005231</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>5</SignalChannelIndex>
+        <PositionInMessage>5</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Temperature</Name>
+        <Scaling>0.0424</Scaling>
+        <Offset>0</Offset>
+        <Unit>°C</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>6</SignalChannelIndex>
+        <PositionInMessage>6</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>5V Rail</Name>
+        <Scaling>0.001611</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>7</SignalChannelIndex>
+        <PositionInMessage>7</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Phase shift</Name>
+        <Scaling>0.56</Scaling>
+        <Offset>0</Offset>
+        <Unit>%</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>8</SignalChannelIndex>
+        <PositionInMessage>8</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Primary Current</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit>A</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>9</SignalChannelIndex>
+        <PositionInMessage>9</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Secondary Current ADC</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit> -621</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>10</SignalChannelIndex>
+        <PositionInMessage>10</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Control Phase</Name>
+        <Scaling>0.56</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>11</SignalChannelIndex>
+        <PositionInMessage>11</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>fault enable pin</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>12</SignalChannelIndex>
+        <PositionInMessage>12</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>deadtime</Name>
+        <Scaling>0.25</Scaling>
+        <Offset>0</Offset>
+        <Unit>ns</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>13</SignalChannelIndex>
+        <PositionInMessage>13</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>dead time alt</Name>
+        <Scaling>0.25</Scaling>
+        <Offset>0</Offset>
+        <Unit>ns</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>14</SignalChannelIndex>
+        <PositionInMessage>14</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>current Ref</Name>
+        <Scaling>0.0044</Scaling>
+        <Offset>0</Offset>
+        <Unit>A</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>15</SignalChannelIndex>
+        <PositionInMessage>15</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>DACDAT3H</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>16</SignalChannelIndex>
+        <PositionInMessage>16</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+    </SignalChannels>
+    <TableView>
+      <TableViewItem>
+        <SignalChannelIndex>2</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>3</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>4</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>5</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>6</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>7</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>8</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>10</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>14</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>13</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>15</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>16</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+    </TableView>
+    <OutputValues>
+      <OutputValue>
+        <Name>Phase Shift°</Name>
+        <Unit xsi:nil="true" />
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <MinimumValue>0</MinimumValue>
+        <MaximumValue>171</MaximumValue>
+        <DefaultValue>0</DefaultValue>
+        <Step>9</Step>
+        <ButtonText>update</ButtonText>
+        <Data>0203 0004 00AA [value]</Data>
+        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <PageName>4kw</PageName>
+      </OutputValue>
+      <OutputValue>
+        <Name>DT fixed leg</Name>
+        <Unit xsi:nil="true" />
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <MinimumValue>480</MinimumValue>
+        <MaximumValue>2000</MaximumValue>
+        <DefaultValue>1000</DefaultValue>
+        <Step>1</Step>
+        <ButtonText>update ref</ButtonText>
+        <Data>0203 0004 00BB [value]</Data>
+        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <PageName>4kw</PageName>
+      </OutputValue>
+      <OutputValue>
+        <Name>DT phase shifted leg</Name>
+        <Unit xsi:nil="true" />
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <MinimumValue>480</MinimumValue>
+        <MaximumValue>2000</MaximumValue>
+        <DefaultValue>1000</DefaultValue>
+        <Step>1</Step>
+        <ButtonText>update ded </ButtonText>
+        <Data>0203 0004 00CC [value]</Data>
+        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <PageName>4kw</PageName>
+      </OutputValue>
+      <OutputValue>
+        <Name>current ref comp</Name>
+        <Unit xsi:nil="true" />
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <MinimumValue>845</MinimumValue>
+        <MaximumValue>3995</MaximumValue>
+        <DefaultValue>890</DefaultValue>
+        <Step>1</Step>
+        <ButtonText>update ref</ButtonText>
+        <Data>0203 0004 00DD [value]</Data>
+        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <PageName>4kw</PageName>
+      </OutputValue>
+    </OutputValues>
+    <StatusGroups>
+      <StatusGroup>
+        <SignalChannelIndex>0</SignalChannelIndex>
+        <StatusBits>
+          <StatusBit>
+            <Name>PCS_INIT</Name>
+            <BitIndex>0</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>008000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>PCS_PRECHARGE</Name>
+            <BitIndex>2</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>008000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>PCS_STANDBY</Name>
+            <BitIndex>3</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>008000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>PCS_START_CONTROL</Name>
+            <BitIndex>4</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>008000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>PCS_SOFT_START</Name>
+            <BitIndex>5</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>008000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>PCS_UP_AND_RUNNING</Name>
+            <BitIndex>6</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>008000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>PCS_FAULT</Name>
+            <BitIndex>1</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
+        </StatusBits>
+        <PageName>4kw</PageName>
+      </StatusGroup>
+      <StatusGroup>
+        <SignalChannelIndex>1</SignalChannelIndex>
+        <StatusBits>
+          <StatusBit>
+            <Name>Enabled</Name>
+            <BitIndex>0</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>Running</Name>
+            <BitIndex>1</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>Fault</Name>
+            <BitIndex>2</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>IPRI_OCP_</Name>
+            <BitIndex>3</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>ISC_OCP_</Name>
+            <BitIndex>4</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>FLT_ISNS_SCP</Name>
+            <BitIndex>5</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>FLT_VPRI_OVP</Name>
+            <BitIndex>6</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>FLT_VPRI_UVP</Name>
+            <BitIndex>7</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>FLT_VSEC_OVP</Name>
+            <BitIndex>8</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>FLT_VSEC_UVP</Name>
+            <BitIndex>9</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>Temp</Name>
+            <BitIndex>10</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>FLT_RAIL_5V</Name>
+            <BitIndex>11</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>Load Disconnect</Name>
+            <BitIndex>12</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+          <StatusBit>
+            <Name>Reset</Name>
+            <BitIndex>13</BitIndex>
+            <ControlType>radio</ControlType>
+          </StatusBit>
+        </StatusBits>
+        <PageName>4kw</PageName>
+      </StatusGroup>
+      <StatusGroup>
+        <SignalChannelIndex>12</SignalChannelIndex>
+        <StatusBits>
+          <StatusBit>
+            <Name>Fault Enable Pin</Name>
+            <BitIndex>0</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>sync</Name>
+            <BitIndex>1</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
+        </StatusBits>
+        <PageName>4kw</PageName>
+      </StatusGroup>
+    </StatusGroups>
+    <SendRawDataButtons>
+      <SendRawDataButton>
+        <Name>Start Charge</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 00 aa</Data>
+        <PageName>4kw</PageName>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>Stop Charge</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 00 bb</Data>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>Start Power Transfer</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 00 01</Data>
+        <PageName>4kw</PageName>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>Stop Power Transfer</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 00 00</Data>
+        <PageName>4kw</PageName>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>Start Sync</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 01 01</Data>
+        <PageName>4kw</PageName>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>Stop Sync</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 01 00</Data>
+        <PageName>4kw</PageName>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>Reset Vin Buffer</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 aa 00</Data>
+      </SendRawDataButton>
+      <SendRawDataButton>
+        <Name>Random Action</Name>
+        <Enabled>true</Enabled>
+        <RawDataVisible>true</RawDataVisible>
+        <Data>02 02 00 02 FF FF</Data>
+      </SendRawDataButton>
+    </SendRawDataButtons>
+  </Status>
+  <AsciiLogs>
+    <AsciiLog>
+      <Name>Log</Name>
+      <ProtocolList>
+        <ProtocolId>768</ProtocolId>
+      </ProtocolList>
+      <DisplayThreshold>50000</DisplayThreshold>
+      <LogFileEnabled>false</LogFileEnabled>
+      <FileSizeLimitBytes>1024</FileSizeLimitBytes>
+    </AsciiLog>
+  </AsciiLogs>
+  <Scope xsi:nil="true" />
+  <SchematicDiagram xsi:nil="true" />
+  <UserGuide xsi:nil="true" />
+  <Info xsi:nil="true" />
+  <SerialPort>
+    <DefaultSpeed>115200</DefaultSpeed>
+  </SerialPort>
+  <MaxMonitorBufferLength>300</MaxMonitorBufferLength>
+</Module>
