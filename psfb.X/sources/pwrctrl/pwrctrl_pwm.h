@@ -9,9 +9,6 @@
 
 #include "pwrctrl_typedef.h"
 
-void PwrCtrl_PWM_Update(POWER_CONTROL_t* pcInstance);
-void PwrCtrl_PWM_Enable(void);
-void PwrCtrl_PWM_Disable(void);
 struct PWM_DISTRIBUTION_s {
     uint16_t PhaseShift;        // target buffer of the control output value to be distributed across PWM registers
     uint16_t* ptrPeriod;        // Pointer to the leading PWM channel period register
@@ -26,6 +23,10 @@ extern PWM_DISTRIBUTION_t PhaseShiftDistribution;
 
 //extern void PwrCtrl_PWM_Update(POWER_CONTROL_t* pcInstance);
 extern void PwrCtrl_PWM_Update(PWM_DISTRIBUTION_t* instance);
+
+extern void PwrCtrl_PWM_Enable(void);
+extern void PwrCtrl_PWM_Disable(void);
+extern void PwrCtrl_PWM_Initialize(void);
 
 #endif	/* DRV_PWRCTRL_PWM_H */
 
