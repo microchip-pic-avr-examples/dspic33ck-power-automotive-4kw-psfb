@@ -23,7 +23,9 @@
 #include "pwrctrl.h"
 #include "fault/fault.h"
 
-#include "pwrctrl/vcomp/VCOMP.h"                 
+#include "pwrctrl/vcomp/VCOMP.h"   
+#include "pwrctrl/pwrctrl_pwm.h"
+
 // PRIVATE FUNCTIONS
 void PwrCtrl_PrimToSecPHDegree(void);
 void PwrCtrl_DeadTimeAdjust(void);
@@ -59,16 +61,16 @@ void ControlLoop_Interrupt_CallBack(void)
     // Enable the ADC sampling
     ADC1_SoftwareTriggerEnable();
 
-    // GPIO_1_SetLow();
-    VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
     
     //dutycycle updates for 2 and 4
     if (VCOMP.status.bits.enabled) 
-        
     {
-        PG4DC = PG4PER - PG1TRIGC;
-        PG2DC = PG2PER - PG1TRIGC;
-        PG1STATbits.UPDREQ = 1;
+        // GPIO_1_SetLow();
+        VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
+        PwrCtrl_PWM_Update(&PhaseShiftDistribution);
+//        PG4DC = PG4PER - PG1TRIGC;
+//        PG2DC = PG2PER - PG1TRIGC;
+//        PG1STATbits.UPDREQ = 1;
     }
 }
 

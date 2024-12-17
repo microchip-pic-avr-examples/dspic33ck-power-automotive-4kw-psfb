@@ -36,6 +36,7 @@
 #include "config/version.h"
 
 #include "pwrctrl/vcomp/VCOMP.h"
+#include "pwrctrl/pwrctrl_pwm.h"
 
 /*********************************************************************************
  * @ingroup pbv-protocol-ids
@@ -344,14 +345,19 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
 
             // AR-241126: Extended above timing computation and update in 
             //            accordance with new PWM daisy chain configuration
+            /*
             PWM_TriggerCCompareValueSet(1, data[1] * 112);
             PWM_DutyCycleSet(4, PG4PER - (data[1] * 112));
             PWM_DutyCycleSet(2, PG2PER - (data[1] * 112));
             PwrCtrl_SetPhaseTarget(data[1] * 112);
+            */
+            
+            PhaseShiftDistribution.PhaseShift = (data[1] * 112);
+            PwrCtrl_PWM_Update(&PhaseShiftDistribution);
             
             PWM_TriggerBCompareValueSet(1, data[1] * 56);
             
-            PG1STATbits.UPDREQ = 1; // Set manual update (can be automated later)
+            // PG1STATbits.UPDREQ = 1; // Set manual update (can be automated later)
             
             break;
 
