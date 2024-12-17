@@ -253,6 +253,7 @@
           <itemPath>sources/pwrctrl/pwrctrl_pwm.c</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_isr.c</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_isr_extension.c</itemPath>
+          <itemPath>sources/pwrctrl/pwrctrl_pwm_asm.s</itemPath>
         </logicalFolder>
         <logicalFolder name="x2cScope" displayName="x2cScope" projectFiles="true">
           <itemPath>sources/x2cScope/X2CScope.c</itemPath>
