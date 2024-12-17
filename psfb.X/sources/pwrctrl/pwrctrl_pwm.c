@@ -132,12 +132,17 @@ void PwrCtrl_PWM_Enable(void)
         // enable PWM channel outputs by clearing override bits
         PG1IOCONLbits.OVRENH = 0;
         PG1IOCONLbits.OVRENL = 0;
+        
         PG2IOCONLbits.OVRENH = 1; // not used
-        PG2IOCONLbits.OVRENL = 0;
+        //PG2IOCONLbits.OVRENL = 0;
+        PG2IOCONLbits.OVRENL = 1; // temporary.
+        
         PG3IOCONLbits.OVRENH = 0;
         PG3IOCONLbits.OVRENL = 0;
+        
         PG4IOCONLbits.OVRENH = 1; // not used
-        PG4IOCONLbits.OVRENL = 0;
+        //PG4IOCONLbits.OVRENL = 0;
+        PG4IOCONLbits.OVRENL = 1;
     }    
     
 }
@@ -268,6 +273,3 @@ void PwrCtrl_PWM_Initialize(void)
     PhaseShiftDistribution.ptrUpdateReg = &PG1STAT;
     
 }
-
-
-

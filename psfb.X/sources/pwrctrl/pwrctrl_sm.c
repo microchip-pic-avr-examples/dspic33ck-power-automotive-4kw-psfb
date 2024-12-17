@@ -302,6 +302,8 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         // Next State assigned to STATE_SOFT_START
         pcInstance->State = PWRCTRL_STATE_SOFT_START;
         
+        PwrCtrl_PWM_Enable();
+        
     }
 }
 
@@ -345,7 +347,7 @@ static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance)
      else
     {   
         // Ramp Up the Voltage, Current and Power reference
-        PwrCtrl_PWM_Enable();
+
         uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->VRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->IRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->PRamp);

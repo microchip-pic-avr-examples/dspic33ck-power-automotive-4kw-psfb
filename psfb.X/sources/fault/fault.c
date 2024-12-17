@@ -162,7 +162,7 @@ void Fault_Execute(void)
 
         //faultCheck &= psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive;
         
-//        PwrCtrl_PWM_Disable();
+        PwrCtrl_PWM_Disable();
 //        FAULT_EN_SetLow();
 //        Fault_Handler();
     }    

@@ -281,13 +281,17 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             break;
         case 0x0101:
             button_start_sync = 1;
-            PG2CONLbits.ON = 1;
-            PG4CONLbits.ON = 1;
+//            PG2CONLbits.ON = 1;
+//            PG4CONLbits.ON = 1;
+            PG4IOCONLbits.OVRENL = 0;
+            PG2IOCONLbits.OVRENL = 0;
             break;
         case 0x0100:
             button_start_sync = 0;
-            PG2CONLbits.ON = 0;
-            PG4CONLbits.ON = 0;
+            PG4IOCONLbits.OVRENL = 1;
+            PG2IOCONLbits.OVRENL = 1;
+//            PG2CONLbits.ON = 0;
+//            PG4CONLbits.ON = 0;
             break;
         case 0xaa00:
 //            Dev_Reset_Average_Buffer();
@@ -351,6 +355,9 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             PWM_DutyCycleSet(2, PG2PER - (data[1] * 112));
             PwrCtrl_SetPhaseTarget(data[1] * 112);
             */
+            Nop();
+            Nop();
+            Nop();
             
             PhaseShiftDistribution.PhaseShift = (data[1] * 112);
             PwrCtrl_PWM_Update(&PhaseShiftDistribution);
