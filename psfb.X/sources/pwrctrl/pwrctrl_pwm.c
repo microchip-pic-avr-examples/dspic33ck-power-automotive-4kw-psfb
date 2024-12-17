@@ -10,6 +10,9 @@
 #include <stdbool.h>
 #include "pwm_hs/pwm.h"
 #include "pwrctrl_typedef.h"
+#include "pwrctrl_pwm.h"
+
+PWM_DISTRIBUTION_t PhaseShiftDistribution;
 
 /*******************************************************************************
  * @ingroup pwrctrl-pwm
