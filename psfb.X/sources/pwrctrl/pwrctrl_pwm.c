@@ -101,25 +101,45 @@ void PwrCtrl_PWM_Enable(void)
 {      
     // Turn-On PWM outputs by disabling the output override 
     // on each high and low PWM output
-//    PWM_OverrideHighDisable(PWM_PRI_1);
-//    PWM_OverrideHighDisable(PWM_SEC_1);
-//    PWM_OverrideHighDisable(PWM_PRI_2);
-//    PWM_OverrideHighDisable(PWM_SEC_2);
-//           
-//    PWM_OverrideLowDisable(PWM_PRI_1);
-//    PWM_OverrideLowDisable(PWM_SEC_1);
-//    PWM_OverrideLowDisable(PWM_PRI_2);
-//    PWM_OverrideLowDisable(PWM_SEC_2); 
-    
-    // Set update request of the last PWM in the cascade 
-    // to update all PWM registers
-    
-    // temp
-    
-    PG1CONLbits.ON = 1;
+    // Start PWM
+    PG4CONLbits.ON = 1;
+    PG2CONLbits.ON = 1;
     PG3CONLbits.ON = 1;
-//    PWM_SoftwareUpdateRequest(PWM_SEC_2);
-
+    PG1CONLbits.ON = 1;
+    
+    PCLKCONbits.MCLKSEL = 1;
+    PCLKCONbits.DIVSEL = 0;
+    
+    int timeout = 0;
+    
+    while ((0 == PCLKCONbits.HRRDY) && (++timeout < 5000));
+    if (timeout < 5000)
+    {
+        PG1STATbits.UPDREQ = 1; // make sure all PWM channels are updated before enabling outputs
+    
+        // Hand over pin control to PWM module
+        PG1IOCONHbits.PENH = 1;
+        PG1IOCONHbits.PENL = 1;
+        PG2IOCONHbits.PENH = 0; // not used
+        PG2IOCONHbits.PENL = 1;
+        PG3IOCONHbits.PENH = 1;
+        PG3IOCONHbits.PENL = 1;
+        PG4IOCONHbits.PENH = 0; // not used
+        PG4IOCONHbits.PENL = 1;
+        
+        for (int i=1000; i>0; i--); // short delay
+        
+        // enable PWM channel outputs by clearing override bits
+        PG1IOCONLbits.OVRENH = 0;
+        PG1IOCONLbits.OVRENL = 0;
+        PG2IOCONLbits.OVRENH = 1; // not used
+        PG2IOCONLbits.OVRENL = 0;
+        PG3IOCONLbits.OVRENH = 0;
+        PG3IOCONLbits.OVRENL = 0;
+        PG4IOCONLbits.OVRENH = 1; // not used
+        PG4IOCONLbits.OVRENL = 0;
+    }    
+    
 }
 
 
@@ -148,10 +168,14 @@ void PwrCtrl_PWM_Disable(void)
     
     // Set update request of the last PWM in the cascade 
     // to update all pwm registers
-    PG1CONLbits.ON = 0;
-    PG3CONLbits.ON = 0;
-    PG2CONLbits.ON = 0;
-    PG4CONLbits.ON = 0;
+    PG1IOCONLbits.OVRENH = 1;
+    PG1IOCONLbits.OVRENL = 1;
+    PG2IOCONLbits.OVRENH = 1;
+    PG2IOCONLbits.OVRENL = 1;
+    PG3IOCONLbits.OVRENH = 1;
+    PG3IOCONLbits.OVRENL = 1;
+    PG4IOCONLbits.OVRENH = 1;
+    PG4IOCONLbits.OVRENL = 1;
 //    PWM_SoftwareUpdateRequest(PWM_SEC_2);
     
 }

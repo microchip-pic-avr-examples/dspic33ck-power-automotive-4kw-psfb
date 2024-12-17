@@ -49,39 +49,4 @@ void MCC_Custom_User_Config (void)
     Nop();
     
 
-    
-    // Start PWM
-    PG4CONLbits.ON = 1;
-    PG2CONLbits.ON = 1;
-    PG3CONLbits.ON = 1;
-    PG1CONLbits.ON = 1;
-    
-    PCLKCONbits.MCLKSEL = 1;
-    PCLKCONbits.DIVSEL = 0;
-    
-    int timeout = 0;
-    
-    while ((0 == PCLKCONbits.HRRDY) && (++timeout < 5000));
-    if (timeout < 5000)
-    {
-        PG1IOCONHbits.PENH = 1;
-        PG1IOCONHbits.PENL = 1;
-        PG2IOCONHbits.PENH = 0; // not used
-        PG2IOCONHbits.PENL = 1;
-        PG3IOCONHbits.PENH = 1;
-        PG3IOCONHbits.PENL = 1;
-        PG4IOCONHbits.PENH = 0; // not used
-        PG4IOCONHbits.PENL = 1;
-        
-        for (int i=1000; i>0; i--); // short delay
-        
-        PG1IOCONLbits.OVRENH = 0;
-        PG1IOCONLbits.OVRENL = 0;
-        PG2IOCONLbits.OVRENH = 1; // not used
-        PG2IOCONLbits.OVRENL = 0;
-        PG3IOCONLbits.OVRENH = 0;
-        PG3IOCONLbits.OVRENL = 0;
-        PG4IOCONLbits.OVRENH = 1; // not used
-        PG4IOCONLbits.OVRENL = 0;
-    }       
 }
