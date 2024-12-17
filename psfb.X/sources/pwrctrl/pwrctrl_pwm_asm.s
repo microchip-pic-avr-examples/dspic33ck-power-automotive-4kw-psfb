@@ -47,13 +47,14 @@
     ; w0 already points to the PhaseShift data member
     mov [w0 + #ptrPeriod], w1               ; load pointer to period register into working register
     mov [w1], w2                            ; load value of period register into working register
-    sub w2, w0, w1                          ; subtract phase shift value from period value
+    sub w2, [w0], w1                          ; subtract phase shift value from period value
     mov [w0 + #ptrDCSRR], w2                ; load pointer address of right leg SR duty cycle register
     mov [w0 + #ptrDCSRL], w3                ; load pointer address of left leg SR duty cycle register
     mov w1, [w2]                            ; move SR on-time value to right SR duty cycle register
     mov w1, [w3]                            ; move SR on-time value to left SR duty cycle register
-    mov [w0 + #ptrPhaseShift], w1           ; load pointer address to phase shift register
-    mov w0, [w1]                            ; move value of phase shift to register
+    mov [w0 + #ptrPhaseShift], w2           ; load pointer address to phase shift register
+    mov [w0], w1			    ; load value of phase shift into working register
+    mov w1, [w2]                            ; move value of phase shift to register
     
     mov [w0 + #ptrUpdateReg], w1            ; load pointer to PGxSTAT register into working register
     mov [w1], w2                            ; load value of PGxSTAT register into working register

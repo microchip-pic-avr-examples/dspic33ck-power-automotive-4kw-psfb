@@ -94,7 +94,7 @@ volatile uint16_t VCOMP_ControlObject_Initialize(void)
     VCOMP.Ports.Source.NormFactor = <signed int/Q15 fractional>; // Primary feedback normalization factor fractional */
 
     // Configure Controller Primary Output Port
-    VCOMP.Ports.Target.ptrAddress = &PG1TRIGC; // Pointer to primary output target (e.g. SFR register or variable)
+    VCOMP.Ports.Target.ptrAddress = &PhaseShiftDistribution.PhaseShift; //&PG1TRIGC; // Pointer to primary output target (e.g. SFR register or variable)
 /*     VCOMP.Ports.Target.Offset = <signed int>;     // Primary output offset value
     VCOMP.Ports.Target.NormScaler = <signed int>; // Primary output normalization factor bit-shift scaler
     VCOMP.Ports.Target.NormFactor = <signed int/Q15 fractional>; // Primary output normalization factor fractional */
