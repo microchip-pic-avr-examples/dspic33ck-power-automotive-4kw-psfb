@@ -31,6 +31,7 @@
 //#include "driver/mcc_extension/drv_custom_config_pwm.h"
 #include "driver/mcc_extension/drv_custom_config_adc.h"
 #include "pwrctrl/pwrctrl.h"
+#include "pwrctrl/pwrctrl_pwm.h"
 
 /*******************************************************************************
  * @ingroup driver-layer 
@@ -48,5 +49,7 @@ void MCC_Custom_User_Config (void)
     Nop();
     Nop();
     
+    PwrCtrl_PWM_Initialize();
+    PwrCtrl_PWM_Enable();
 
 }
