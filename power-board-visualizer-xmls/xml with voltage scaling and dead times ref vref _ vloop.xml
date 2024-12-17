@@ -109,7 +109,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Phase shift</Name>
+        <Name>Phase shift Deg</Name>
         <Scaling>0.0089</Scaling>
         <Offset>0</Offset>
         <Unit>°</Unit>
@@ -251,6 +251,19 @@
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
+      <SignalChannel>
+        <Name>Phase Shift Percent</Name>
+        <Scaling>0.005</Scaling>
+        <Offset>0</Offset>
+        <Unit>%</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>19</SignalChannelIndex>
+        <PositionInMessage>8</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
@@ -275,6 +288,10 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>8</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>19</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -336,7 +353,7 @@
         <Step>1</Step>
         <ButtonText>update ded</ButtonText>
         <Data>0203 0004 00BB [value]</Data>
-        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <AutoSendAfterChange>false</AutoSendAfterChange>
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
