@@ -130,6 +130,7 @@ volatile uint16_t VCOMP_ControlObject_Initialize(void)
     /* Controller Status Word Configuration */
 
     VCOMP.status.bits.enabled = false;            // Keep controller disabled
+    VCOMP.DataProviders.ptrDProvControlError = &psfb_ptr->controller_error;
 
     // Call Assembler Control Library Initialization Function
     retval = VCOMP_Initialize(&VCOMP);            // Initialize controller data arrays and number scalers

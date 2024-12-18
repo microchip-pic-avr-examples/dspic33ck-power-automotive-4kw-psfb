@@ -253,12 +253,13 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[16] = DAC3DATH;
     buffer_sixteen_tx[17] = psfb_ptr->VLoop.Reference;
     buffer_sixteen_tx[18] = DAC1DATH;
+    buffer_sixteen_tx[19] = psfb_ptr->controller_error;
     
     
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 19);
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 20);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 19 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 20 * 2 ;
 }
 
 

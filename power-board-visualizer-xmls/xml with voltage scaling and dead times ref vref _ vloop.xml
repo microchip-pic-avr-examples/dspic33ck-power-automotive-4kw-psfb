@@ -48,7 +48,7 @@
         <Scaling>0.005231</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
-        <Plot>false</Plot>
+        <Plot>true</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>3</SignalChannelIndex>
@@ -191,7 +191,7 @@
         <Scaling>0.00523</Scaling>
         <Offset>0</Offset>
         <Unit>v</Unit>
-        <Plot>false</Plot>
+        <Plot>true</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>14</SignalChannelIndex>
@@ -264,6 +264,19 @@
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
+      <SignalChannel>
+        <Name>controller error</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>20</SignalChannelIndex>
+        <PositionInMessage>19</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
@@ -326,6 +339,10 @@
         <SignalChannelIndex>17</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>20</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
     </TableView>
     <OutputValues>
       <OutputValue>
@@ -357,14 +374,14 @@
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
-        <Name>Voltage Reference Raw Num</Name>
+        <Name>V Ref Raw Num</Name>
         <Unit xsi:nil="true" />
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <MinimumValue>1</MinimumValue>
         <MaximumValue>3000</MaximumValue>
         <DefaultValue>1000</DefaultValue>
-        <Step>100</Step>
+        <Step>10</Step>
         <ButtonText>update V</ButtonText>
         <Data>0203 0004 00CC [value]</Data>
         <AutoSendAfterChange>true</AutoSendAfterChange>

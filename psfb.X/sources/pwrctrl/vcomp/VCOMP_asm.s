@@ -2,7 +2,7 @@
 ;  SDK Version: PowerSmart Digital Control Library Designer v1.9.15.709
 ;  CGS Version: Code Generator Script v3.0.11 (01/06/2022)
 ;  Author:      M70027
-;  Date/Time:   12/13/2024 13:54:07
+;  Date/Time:   12/18/2024 12:36:47
 ; **********************************************************************************
 ;  3P3Z Control Library File (Dual Bitshift-Scaling Mode)
 ; **********************************************************************************
@@ -47,6 +47,12 @@
     push w6                                 ; save MAC operation working register WREG6
     push w8                                 ; save MAC operation working register WREG8
     push w10                                ; save MAC operation working register WREG10
+    push CORCON                             ; save CPU configuration register
+    
+;------------------------------------------------------------------------------
+; Configure DSP for fractional operation with normal saturation (Q1.31 format)
+    mov #0x00C0, w4                         ; load default value of DSP core configuration enabling accumulator saturation and signed fractional multiply
+    mov w4, _CORCON                         ; load default configuration into CORCON register
     
 ;------------------------------------------------------------------------------
 ; Setup pointers to A-Term data arrays
@@ -92,6 +98,8 @@
     subr w1, [w2], w1                       ; calculate error (=reference - input)
     mov [w0 + #normPreShift], w2            ; move error input scaler into working register
     sl w1, w2, w1                           ; normalize error result to fractional number format
+    mov [w0 + #ptrDProvControlError], w2    ; load pointer address of target buffer of most recent error value from data structure
+    mov w1, [w2]                            ; copy most recent error value to given data buffer target
     
 ;------------------------------------------------------------------------------
 ; Setup pointers to B-Term data arrays
@@ -159,6 +167,7 @@
     
 ;------------------------------------------------------------------------------
 ; Restore working registers in reverse order
+    pop CORCON                              ; restore CPU configuration registers
     pop w10                                 ; restore MAC operation working register WREG10
     pop w8                                  ; restore MAC operation working register WREG8
     pop w6                                  ; restore MAC operation working register WREG6
@@ -170,6 +179,15 @@
     VCOMP_LOOP_BYPASS:                      ; Enable/Disable bypass branch target to perform dummy read of source to clear the source buffer
     mov [w0 + #ptrSourceRegister], w2       ; load pointer to input source register
     mov [w2], w1                            ; move value from input source into working register
+    
+;------------------------------------------------------------------------------
+; Load reference and calculate error input to transfer function
+    mov [w0 + #ptrControlReference], w2     ; move pointer to control reference into working register
+    subr w1, [w2], w1                       ; calculate error (=reference - input)
+    mov [w0 + #normPreShift], w2            ; move error input scaler into working register
+    sl w1, w2, w1                           ; normalize error result to fractional number format
+    mov [w0 + #ptrDProvControlError], w2    ; load pointer address of target buffer of most recent error value from data structure
+    mov w1, [w2]                            ; copy most recent error value to given data buffer target
     VCOMP_LOOP_EXIT:                        ; Exit control loop branch target
     
 ;------------------------------------------------------------------------------
@@ -279,6 +297,12 @@
     push w6                                 ; save MAC operation working register WREG6
     push w8                                 ; save MAC operation working register WREG8
     push w10                                ; save MAC operation working register WREG10
+    push CORCON                             ; save CPU configuration register
+    
+;------------------------------------------------------------------------------
+; Configure DSP for fractional operation with normal saturation (Q1.31 format)
+    mov #0x00C0, w4                         ; load default value of DSP core configuration enabling accumulator saturation and signed fractional multiply
+    mov w4, _CORCON                         ; load default configuration into CORCON register
     
 ;------------------------------------------------------------------------------
 ; Read data from input source
@@ -291,6 +315,8 @@
     subr w1, [w2], w1                       ; calculate error (=reference - input)
     mov [w0 + #normPreShift], w2            ; move error input scaler into working register
     sl w1, w2, w1                           ; normalize error result to fractional number format
+    mov [w0 + #ptrDProvControlError], w2    ; load pointer address of target buffer of most recent error value from data structure
+    mov w1, [w2]                            ; copy most recent error value to given data buffer target
     
 ;------------------------------------------------------------------------------
 ; Load P-gain factor from data structure
@@ -333,6 +359,7 @@
     
 ;------------------------------------------------------------------------------
 ; Restore working registers in reverse order
+    pop CORCON                              ; restore CPU configuration registers
     pop w10                                 ; restore MAC operation working register WREG10
     pop w8                                  ; restore MAC operation working register WREG8
     pop w6                                  ; restore MAC operation working register WREG6
@@ -344,6 +371,15 @@
     VCOMP_PTERM_LOOP_BYPASS:                ; Enable/Disable bypass branch target to perform dummy read of source to clear the source buffer
     mov [w0 + #ptrSourceRegister], w2       ; load pointer to input source register
     mov [w2], w1                            ; move value from input source into working register
+    
+;------------------------------------------------------------------------------
+; Load reference and calculate error input to transfer function
+    mov [w0 + #ptrControlReference], w2     ; move pointer to control reference into working register
+    subr w1, [w2], w1                       ; calculate error (=reference - input)
+    mov [w0 + #normPreShift], w2            ; move error input scaler into working register
+    sl w1, w2, w1                           ; normalize error result to fractional number format
+    mov [w0 + #ptrDProvControlError], w2    ; load pointer address of target buffer of most recent error value from data structure
+    mov w1, [w2]                            ; copy most recent error value to given data buffer target
     VCOMP_PTERM_LOOP_EXIT:                  ; Exit P-Term control loop branch target
     
 ;------------------------------------------------------------------------------
