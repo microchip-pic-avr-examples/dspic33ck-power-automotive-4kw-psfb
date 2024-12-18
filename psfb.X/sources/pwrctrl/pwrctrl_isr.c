@@ -67,7 +67,7 @@ void ControlLoop_Interrupt_CallBack(void)
     {
         // GPIO_1_SetLow();
         VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
-        PwrCtrl_PWM_Update(&PhaseShiftDistribution);
+        PwrCtrl_PWM_Update(&PhaseShiftDistribution);        // this should be tied up. 
 //        PG4DC = PG4PER - PG1TRIGC;
 //        PG2DC = PG2PER - PG1TRIGC;
 //        PG1STATbits.UPDREQ = 1;

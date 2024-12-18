@@ -271,5 +271,9 @@ void PwrCtrl_PWM_Initialize(void)
     PhaseShiftDistribution.ptrDCSRL = &PG4DC;
     PhaseShiftDistribution.ptrDCSRR = &PG2DC;
     PhaseShiftDistribution.ptrUpdateReg = &PG1STAT;
+
+    // pwm1 enable interrupt.
+    // hook the ControlLoop_Interrupt_CallBack to pwm ISR
+    // disable the SCCP timer.
     
 }

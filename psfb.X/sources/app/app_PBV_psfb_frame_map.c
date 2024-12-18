@@ -366,9 +366,9 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             Nop();
             
             PhaseShiftDistribution.PhaseShift = (data[1] * 112);
-            
+            //GPIO_Debug_high();
             PwrCtrl_PWM_Update(&PhaseShiftDistribution);
-            
+            //GPIO_Debug_Low();
             PWM_TriggerBCompareValueSet(1, data[1] * 56);
             
             // PG1STATbits.UPDREQ = 1; // Set manual update (can be automated later)

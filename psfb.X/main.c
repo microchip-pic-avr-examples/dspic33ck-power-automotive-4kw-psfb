@@ -48,7 +48,8 @@ int main(void)
     SYSTEM_Initialize();
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
     
-    SCCP1_Timer_TimeoutCallbackRegister(ControlLoop_Interrupt_CallBack); // control + feedback (ADC) update, fault management
+    SCCP1_Timer_TimeoutCallbackRegister(ControlLoop_Interrupt_CallBack); // control + feedback (ADC) update, fault management       // turn this off, and hook everything to PWM interrupt.
+    
 
     PwrCtrl_Initialize();
     Fault_Initialize();
