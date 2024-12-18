@@ -106,7 +106,7 @@ volatile uint16_t VCOMP_ControlObject_Initialize(void)
 
     // Primary Control Output Limit Configuration
     VCOMP.Limits.MinOutput = 0;        // Minimum control output value
-    VCOMP.Limits.MaxOutput = 9576;        // Maximum control output value
+    VCOMP.Limits.MaxOutput = 17800;        // Maximum control output value
 
     /* ADC Trigger Positioning Configuration */
 
