@@ -163,6 +163,8 @@ void Fault_Execute(void)
         //faultCheck &= psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive;
         
         PwrCtrl_PWM_Disable();
+        psfb_ptr->State = PWRCTRL_STATE_FAULT_DETECTION;
+        psfb_ptr->Fault.FaultDetected = 1;
 //        FAULT_EN_SetLow();
 //        Fault_Handler();
     }    

@@ -127,6 +127,8 @@ void App_PBV_psfb_Init()
     ///
     
     dead_time_right = PG1DTH;
+    
+    current_slider_ref = DAC3DATH;
 }
 
 /***********************************************************************************
@@ -342,7 +344,10 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
     
     switch (switchcase) {
         case 0xaa:
-            slider_PS_PP = data[1];
+            if (VCOMP.status.bits.enabled) 
+                break;
+            else {
+                slider_PS_PP = data[1];
 //            PWM_DutyCycleSet(4, PG4PER - (data[1] * 112));
 //            PWM_TriggerACompareValueSet(1, data[1] * 112);
 //            PwrCtrl_SetPhaseTarget(data[1] * 112);
@@ -360,12 +365,13 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             Nop();
             
             PhaseShiftDistribution.PhaseShift = (data[1] * 112);
+            
             PwrCtrl_PWM_Update(&PhaseShiftDistribution);
             
             PWM_TriggerBCompareValueSet(1, data[1] * 56);
             
             // PG1STATbits.UPDREQ = 1; // Set manual update (can be automated later)
-            
+            }
             break;
 
         case 0xbb:
