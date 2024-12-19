@@ -13,7 +13,7 @@
 #include <stdlib.h>
 
 // MCC header files
-#include "timer/sccp1.h"
+//#include "timer/sccp1.h"
 #include "adc/adc1.h"
 #include "system/pins.h"
 
@@ -52,26 +52,32 @@ void ControlLoop_Interrupt_CallBack(void)
     // GPIO_1_SetHigh();
     
     // Update the ADC data member
+    
+    VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
+    
+//    GPIO_debug_SetHigh();
+    PwrCtrl_PWM_Update(&PhaseShiftDistribution);        // this should be tied up. 
+    GPIO_debug_SetLow();
+    
+    _PWM1IF = 0;
+    
     PwrCtrl_UpdateADConverterData();
     
     // Execute the fault detection
     Fault_Execute();
     
-    
     // Enable the ADC sampling
     ADC1_SoftwareTriggerEnable();
-
-    
-    //dutycycle updates for 2 and 4
-    if (VCOMP.status.bits.enabled) 
-    {
-        // GPIO_1_SetLow();
-        VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
-        PwrCtrl_PWM_Update(&PhaseShiftDistribution);        // this should be tied up. 
-//        PG4DC = PG4PER - PG1TRIGC;
-//        PG2DC = PG2PER - PG1TRIGC;
-//        PG1STATbits.UPDREQ = 1;
-    }
+ 
+//    if (VCOMP.status.bits.enabled) 
+//    {
+//        // GPIO_1_SetLow();
+//        VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
+//
+////        PG4DC = PG4PER - PG1TRIGC;
+////        PG2DC = PG2PER - PG1TRIGC;
+////        PG1STATbits.UPDREQ = 1;
+//    }
 }
 
 

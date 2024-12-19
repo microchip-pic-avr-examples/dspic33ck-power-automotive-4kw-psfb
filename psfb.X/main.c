@@ -20,7 +20,7 @@
 */
 #include "system/system.h"
 #include "timer/tmr1.h"
-#include "timer/sccp1.h"
+//#include "timer/sccp1.h"
 #include "os/os_scheduler.h"
 #include "device/dev_led.h"
 //#include "device/dev_fan.h"
@@ -48,8 +48,8 @@ int main(void)
     SYSTEM_Initialize();
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
     
-    SCCP1_Timer_TimeoutCallbackRegister(ControlLoop_Interrupt_CallBack); // control + feedback (ADC) update, fault management       // turn this off, and hook everything to PWM interrupt.
-    
+    //SCCP1_Timer_TimeoutCallbackRegister(ControlLoop_Interrupt_CallBack); // control + feedback (ADC) update, fault management       // turn this off, and hook everything to PWM interrupt.
+    //PWM_GeneratorEOCEventCallbackRegister(ControlLoop_Interrupt_CallBack);
 
     PwrCtrl_Initialize();
     Fault_Initialize();
@@ -58,6 +58,10 @@ int main(void)
 //    custom_pwm_n(); // AR-241126: Disabled, is now part of following function
     // AR-241126: Calling Custom PWM Daisy Chain Configuration 
     MCC_Custom_User_Config();
+
+    _PWM1IP = 5;        // high priority
+    _PWM1IF = 0;
+    _PWM1IE = 1;        // enable interrupt
     
     //DACCTRL1Lbits.FCLKDIV = 0b101;
     OS_Init(); 
@@ -119,10 +123,14 @@ void custom_pwm(void){
     LOGCONBbits.S2BPOL = 0b1;       // invert input 
     LOGCONBbits.PWMLFB = 0b00;      // OR
     LOGCONBbits.PWMLFBD = 0b001;    // output to pwm 2
-    
-    
+
 }
 
 void custom_pwm_n(void){
     PG4IOCONLbits.SWAP = 1;
+}
+
+void __attribute__((__interrupt__, auto_psv))_PWM1Interrupt(void){
+    ControlLoop_Interrupt_CallBack();
+//    _PWM1IF = 0;
 }

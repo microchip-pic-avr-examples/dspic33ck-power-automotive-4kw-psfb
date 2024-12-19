@@ -198,6 +198,57 @@
 
 /**
  * @ingroup  pinsdriver
+ * @brief    Sets the RD14 GPIO Pin which has a custom name of GPIO_debug to High
+ * @pre      The RD14 must be set as Output Pin             
+ * @param    none
+ * @return   none  
+ */
+#define GPIO_debug_SetHigh()          (_LATD14 = 1)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Sets the RD14 GPIO Pin which has a custom name of GPIO_debug to Low
+ * @pre      The RD14 must be set as Output Pin
+ * @param    none
+ * @return   none  
+ */
+#define GPIO_debug_SetLow()           (_LATD14 = 0)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Toggles the RD14 GPIO Pin which has a custom name of GPIO_debug
+ * @pre      The RD14 must be set as Output Pin
+ * @param    none
+ * @return   none  
+ */
+#define GPIO_debug_Toggle()           (_LATD14 ^= 1)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Reads the value of the RD14 GPIO Pin which has a custom name of GPIO_debug
+ * @param    none
+ * @return   none  
+ */
+#define GPIO_debug_GetValue()         _RD14
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Configures the RD14 GPIO Pin which has a custom name of GPIO_debug as Input
+ * @param    none
+ * @return   none  
+ */
+#define GPIO_debug_SetDigitalInput()  (_TRISD14 = 1)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Configures the RD14 GPIO Pin which has a custom name of GPIO_debug as Output
+ * @param    none
+ * @return   none  
+ */
+#define GPIO_debug_SetDigitalOutput() (_TRISD14 = 0)
+
+/**
+ * @ingroup  pinsdriver
  * @brief    Sets the RD15 GPIO Pin which has a custom name of LED_DP_PIM to High
  * @pre      The RD15 must be set as Output Pin             
  * @param    none
