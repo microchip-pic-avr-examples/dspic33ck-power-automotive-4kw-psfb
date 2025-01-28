@@ -21,6 +21,7 @@
 #include "config/config.h"
 #include "pwrctrl.h"
 #include "fault/fault.h"
+#include "dcdt/pwrctrl_dcdt.h"
 
 
     
@@ -75,7 +76,7 @@ static bool VLoopInterleaveExec = true;
 void PwrCtrl_UpdateADConverterData (void)
 {        
     // Enable the ADC sampling
-    ADC1_SoftwareTriggerEnable();
+    // ADC1_SoftwareTriggerEnable();
     
 /*     if(ADC1_IsConversionComplete(I_SEC_AVG_FILT))
         psfb_ptr->Data.ISenseSecondary = ADC1_ConversionResultGet(I_SEC_AVG_FILT);  */
@@ -117,95 +118,22 @@ void PwrCtrl_UpdateADConverterData (void)
  * @return void
  * 
  * @details This function prepares the data for Voltage loop control and Power
- *  loop control. The enable bit of these control loops are manage in this function 
- *  in which the VLoop and PLoop are enabled at 10KHz with 180 degrees phase. 
+ *  loop control.
  *********************************************************************************/
-void PwrCtrl_10KHzVPLoopPrepareData(void)
+void PwrCtrl_PrepareData(void)
 {
-/*     static uint16_t cnt = 0;
-    
-    //Interleave the execution of VLoop and PLoop control for 10KHz execution
-    if(++cnt == (VPLOOP_ILOOP_EXE_RATIO)) 
-    {
-        // Averaging of Secondary Voltage
-        vOutAveraging.AverageValue = (uint16_t)(__builtin_divud(vOutAveraging.Accumulator, vOutAveraging.Counter));
-        vOutAveraging.Accumulator = 0;
-        vOutAveraging.Counter = 0;
-        
-        #if(OPEN_LOOP_PBV == false)
-        //Condition for control loop execution controlling the loop enable bit
-        if((dab.VLoop.Enable == false) && (VLoopInterleaveExec == true) && (dab.Status.bits.Running == 1))
-        #endif  
-        {
-            // Enable Vloop control
-            dab.VLoop.Enable = true;
-            dab.PLoop.Enable = false;
-          
-            // Averaging of Primary Voltage
-            vPrimAveraging.AverageValue = (uint16_t)(__builtin_divud(vPrimAveraging.Accumulator, vPrimAveraging.Counter));
-            vPrimAveraging.Accumulator = 0;
-            vPrimAveraging.Counter = 0;
-            
-            // Compute the Adaptive Gain 
-            PwrCtrl_AdaptiveGainUpdate();
-        }
- 
-        #if(OPEN_LOOP_PBV == false)
-        else if((dab.PLoop.Enable == false) && (VLoopInterleaveExec == false) && (dab.Status.bits.Running == 1))
-        #endif
-        {
-            // Enable PLoop control
-            dab.VLoop.Enable = false;
-            dab.PLoop.Enable = true;
-        
-            // Averaging of Secondary Current
-            iSecAveraging.AverageValue = (uint16_t)(__builtin_divud(iSecAveraging.Accumulator, iSecAveraging.Counter));
-            iSecAveraging.Accumulator = 0;
-            iSecAveraging.Counter = 0;
-            
-            // Bit-shift value used to perform input value normalization
-            // Scaled the feedback to Power (Watts in units)
-            uint32_t buf = (uint32_t)iSecAveraging.AverageValue * 
-                    (uint32_t)vOutAveraging.AverageValue * POWER_FACTOR; 
-
-            // scale back the 14 bit from the POWER_RESOLUTION calculation 
-            // to get the Watts value for Power Loop
-            buf >>= POWER_SCALER;
-
-            // Transfer to SecPower data member the power computation in [Watts] 
-            dab.Data.SecPower = buf;
-        
-        }
-        
-        // If Power supply is not yet running, the averaging of
-        // primary voltage and secondary voltage continues to display in PBV
-        if(!dab.Status.bits.Running){
-            // Averaging of Primary Voltage
-            vPrimAveraging.AverageValue = (uint16_t)(__builtin_divud(vPrimAveraging.Accumulator, vPrimAveraging.Counter));
-            vPrimAveraging.Accumulator = 0;
-            vPrimAveraging.Counter = 0;
-            
-            // Averaging of Secondary Current
-            iSecAveraging.AverageValue = (uint16_t)(__builtin_divud(iSecAveraging.Accumulator, iSecAveraging.Counter));
-            iSecAveraging.Accumulator = 0;
-            iSecAveraging.Counter = 0;
-            
-            // Bit-shift value used to perform input value normalization
-            // Scaled the feedback to Power (Watts in units)
-            uint32_t buf = (uint32_t)iSecAveraging.AverageValue * 
-                    (uint32_t)vOutAveraging.AverageValue * POWER_FACTOR; 
-
-            // scale back the 14 bit from the POWER_RESOLUTION calculation 
-            // to get the Watts value for Power Loop
-            buf >>= POWER_SCALER;
-
-            // Transfer to SecPower data member the power computation in [Watts] 
-            dab.Data.SecPower = buf;
-        }
-        
-        cnt = 0;
-    } */
-}
+//    vPrimAveraging.AverageValue = (uint16_t)(__builtin_divud(vPrimAveraging.Accumulator, vPrimAveraging.Counter));
+//    vPrimAveraging.Accumulator = 0;
+//    vPrimAveraging.Counter = 0;
+//
+//    iSecAveraging.AverageValue = (uint16_t)(__builtin_divud(iSecAveraging.Accumulator, iSecAveraging.Counter));
+//    iSecAveraging.Accumulator = 0;
+//    iSecAveraging.Counter = 0;
+//
+//    vOutAveraging.AverageValue = (uint16_t)(__builtin_divud(vOutAveraging.Accumulator, vOutAveraging.Counter));
+//    vOutAveraging.Accumulator = 0;
+//    vOutAveraging.Counter = 0;         
+}   
 
 /*******************************************************************************
  * @ingroup pwrctrl-isr
@@ -220,93 +148,22 @@ void PwrCtrl_10KHzVPLoopPrepareData(void)
  *********************************************************************************/
 void PwrCtrl_ControlLoopExecute(void)
 {   
-/*     // Execute the Voltage Loop Control
-    if((dab.VLoop.Enable == true) && (VLoopInterleaveExec == true))
-    {     
-        VLoopInterleaveExec = false;
-        
-        if(dab.PowerDirection == PWR_CTRL_CHARGING)
-        { 
-            VMC_2p2z.KfactorCoeffsB = 0x7FFF;
-            VMC_2p2z.maxOutput =  0x7FFF;
+    // control loop execute
+    psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISensePrimary ;
+    
+    SMPS_Controller2P2ZUpdate(
+            &IMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
+            &(psfb_ptr->ILoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
+            psfb_ptr->ILoop.Reference,      // ILoopReference from Iramp
+            &(psfb_ptr->ILoop.Output)          // pointer to the control loop target register of the calculated result 
+            );   
 
-            // Bit-shift value used to perform input value normalization
-            dab.VLoop.Feedback = vOutAveraging.AverageValue << 3;  
-            dab.VLoop.Reference = (dab.VLoop.Reference << 3);
-
-            // Execute the Voltage Loop Control
-            XFT_SMPS_Controller2P2ZUpdate(&VMC_2p2z, &dab.VLoop.Feedback,
-                    dab.VLoop.Reference, &dab.VLoop.Output);
-        
-            // Reset the Vloop reference to its original scaling
-            dab.VLoop.Reference = (dab.VLoop.Reference >> 3);
-        }
+    psfb_ptr->controller_error =  psfb_ptr->ILoop.Output;
+    
+    if (psfb_ptr->ILoop.Enable == 1) {
+        PwrCtrl_SetPhaseTarget(psfb_ptr->ILoop.Output);
+        PwrCtrl_PWM_Update();
     }
-
-    // Execute the Power Loop Control
-    if((dab.PLoop.Enable == true) && (VLoopInterleaveExec == false))
-    {      
-        VLoopInterleaveExec = true;
-         
-        dab.PLoop.Feedback = dab.Data.SecPower;
-        dab.PLoop.Reference = dab.PLoop.Reference;
-        
-        // Execute the Power Loop Control
-        SMPS_Controller2P2ZUpdate(&PMC_2p2z, &dab.PLoop.Feedback,
-                dab.PLoop.Reference, &dab.PLoop.Output);
-
-    }
-
-    // Execute the Current Loop Control
-    if(dab.ILoop.Enable == true)
-    {
-        DPD_TP31_SetHigh();
-        //Bit-shift value used to perform input value normalization
-        dab.ILoop.Feedback = dab.Data.ISecAverageRectified << 3;
-        //adaptive gain factor
-        IMC_2p2z.KfactorCoeffsB = dab.ILoop.AgcFactor;
-        //refresh limits
-        IMC_2p2z.maxOutput =  0x7FFF;
-
-        // Mixing stage from voltage loop 10KHz
-        uint32_t RefBuf = (uint32_t)(dab.ILoop.Reference) * 
-                (uint32_t)(dab.VLoop.Output & 0x7FFF);
-        uint16_t ILoopReference = (uint16_t)(RefBuf >> 12); 
-
-        // Mixing stage from power loop 10KHz
-        RefBuf =  (uint32_t)ILoopReference * (uint32_t)(dab.PLoop.Output & 0x7FFF);  
-        ILoopReference = (int16_t)(RefBuf >> 15);       
-        
-        // Basic clamping in rising direction, in case of  Iloop or Vloop overshoot during large load step. 
-        if( dab.Data.ISecAverageRectified >  (dab.ILoop.Reference + ISEC_LOAD_STEP_CLAMP)) 
-        {
-             XFT_SMPS_Controller2P2ZUpdate(&IMC_2p2z, &dab.ILoop.Feedback, 0, &dab.ILoop.Output); //force I ref to 0
-        }
-        else
-            if(vOutAveraging.AverageValue > (dab.VLoop.Reference + VSEC_LOAD_STEP_CLAMP))
-            {    
-                XFT_SMPS_Controller2P2ZUpdate(&IMC_2p2z, &dab.ILoop.Feedback, 0, &dab.ILoop.Output);//force I ref to 0
-            }
-            else
-            {
-                XFT_SMPS_Controller2P2ZUpdate(&IMC_2p2z, &dab.ILoop.Feedback, ILoopReference, &dab.ILoop.Output);   
-            }    
-        
-        
-        // Control loop output copied to control phase
-        dab.Pwm.ControlPhase = (((uint32_t)(dab.Pwm.ControlDutyCycle) * 
-                (uint32_t)dab.ILoop.Output) >> 15); //range 0..180
-        dab.Pwm.ControlPhase += dab.Pwm.DeadTimeLow;
-        
-        // Clamping value of control phase
-        if(dab.Pwm.ControlPhase > (dab.Pwm.ControlDutyCycle - MIN_PHASE_SHIFTED_PULSE))
-            dab.Pwm.ControlPhase = dab.Pwm.ControlDutyCycle - MIN_PHASE_SHIFTED_PULSE;
-        // Clamping value of control phase
-        else if(dab.Pwm.ControlPhase < dab.Pwm.DeadTimeLow) 
-            dab.Pwm.ControlPhase = dab.Pwm.DeadTimeLow;  
-        
-        DPD_TP31_SetLow();
-    } */
 }
 
 /*******************************************************************************
@@ -321,34 +178,7 @@ void PwrCtrl_ControlLoopExecute(void)
 static void PwrCtrl_AdaptiveGainUpdate(void)
 {
 
-/*     // Calculate the primary voltage in terms of Volts
-    uint16_t DAB_PrimaryVoltage = __builtin_divud((vPrimAveraging.AverageValue * VPRI_SCALER), VPRI_FACTOR);     
-    
-    if(dab.PowerDirection == PWR_CTRL_CHARGING)
-    { 
-        // Apply AGC when primary voltage is greater than the minimum VIN AGC threshold 
-        if(DAB_PrimaryVoltage > AGC_MINIMUM_VIN_THRESHOLD)
-            dab.ILoop.AgcFactor = (int16_t) (0x7FFF & 
-                    __builtin_divud(AGC_VOLTAGE_FACTOR, DAB_PrimaryVoltage));
-        else // AGC is not active
-            dab.ILoop.AgcFactor = 0x7FFF;
-        
-              
-    #if(ENABLE_VLOOP_AGC == true)
-        if(dab.ILoop.Reference > AGC_MINIMUM_CURRENT_THRESHOLD)
-            dab.VLoop.AgcFactor = (int16_t) (0x7FFF & 
-                    __builtin_divud(AGC_CURRENT_FACTOR, dab.ILoop.Reference)); 
-        else // AGC is not active
-            dab.VLoop.AgcFactor = 0x7FFF;
-    #endif
-    }
-    
-    // Reserved for future Development
-    if(dab.PowerDirection == PWR_CTRL_DISCHARGING)
-    { 
-    } */
 }
-
 
 /*******************************************************************************
  * @ingroup pwrctrl-isr
@@ -361,22 +191,7 @@ static void PwrCtrl_AdaptiveGainUpdate(void)
  *********************************************************************************/
 void PwrCtrl_PrimToSecPHDegree(void)
 {
-/*     // Calculation of Primary and Secondary degrees phase
-    // Normalize phase to 0..90.  
-    uint32_t buff = ((unsigned long)dab.Pwm.ControlPhase) << DEGREES_PHASE_SCALER;
-    uint16_t buf = __builtin_divud( buff ,dab.Pwm.ControlDutyCycle);
-    buff = __builtin_muluu(buf, PRI_TO_SEC_PHASE_DEGREES_LIMIT);
-    buf = __builtin_divud( buff ,DEGREES_PHASE_SCALING_10);
 
-    // Calculation result for phase value scaled by 10x 
-    dab.Pwm.ControlPhase_P2S_Degreex10 = buf;
-    
-    // Clamping value for degrees phase when it exceeds the 90.0 degrees  
-    if(dab.Pwm.ControlPhase_P2S_Degreex10 >= 900)
-    { 
-        // Override the calculated control phase value
-        dab.Pwm.ControlPhase_P2S_Degreex10 = 899;
-    } */
 }
 
 /*******************************************************************************
@@ -389,105 +204,6 @@ void PwrCtrl_PrimToSecPHDegree(void)
  *********************************************************************************/
 void PwrCtrl_DeadTimeAdjust(void)
 {
-/*         uint16_t NewDT = 0;   
-        
-        // Deadtime values adjusted on rough phase range. experimentally measured values.
-        // If the control phase is less than 29.0 degrees phase
-        if  (dab.Pwm.ControlPhase_P2S_Degreex10 < 290)                                          
-            {NewDT = 2000;} // Equivalent to 500ns DeadTime
-        // If the control phase is within the range of 33.0 and 80.0 degrees phase
-        else if ((dab.Pwm.ControlPhase_P2S_Degreex10 > 330)&&(dab.Pwm.ControlPhase_P2S_Degreex10 < 800)) 
-            {NewDT = 1500;} // Equivalent to 375ns DeadTime
-        // If the control phase is within the range of 80.5 and 87.5 degrees phase
-        else if ((dab.Pwm.ControlPhase_P2S_Degreex10 > 805)&&(dab.Pwm.ControlPhase_P2S_Degreex10 < 875)) 
-            {NewDT = 700;} // Equivalent to 175ns DeadTime
-        // If the control phase is greater than 88.0 degrees phase
-        else if  (dab.Pwm.ControlPhase_P2S_Degreex10 > 880)                                           
-            {NewDT = 600;} // Equivalent to 150ns DeadTime
 
-        // When new dead-time did not satisfy any condition in degrees phase
-        //retain the previous dead-time value
-        if(NewDT)
-        {
-            // Minimum clamping value of dead-time
-            if (NewDT < MINIMUM_DEADTIME) 
-                NewDT = MINIMUM_DEADTIME; 
-            
-            // Write the new dead-time to the PWM
-            dab.Pwm.DeadTimeLow = NewDT;
-            dab.Pwm.DeadTimeHigh = NewDT;
-
-            // Clear NewDT variable
-            NewDT=0;
-        } */
 }
 
-#if defined (PERIOD_MODULATION_DEMO) && (PERIOD_MODULATION_DEMO == true)
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief  This function updates the DAB data members and modulates PWM period
- * @return void
- * 
- * @details Modulates the DAB period when the maximum phase has been reached.
- *********************************************************************************/
-void  PwrCtrl_PeriodModulator(void)
-{
-    static uint16_t decimPM;
-    decimPM++;
-    
-    if(dab.Pwm.ControlPhase_P2S_Target > PRI_TO_SEC_PHASE_TARGET) 
-        dab.Pwm.ControlPhase_P2S_Target = PRI_TO_SEC_PHASE_TARGET;//clamp cutoff while modulating period
-    if(dab.Pwm.ControlPhase_P2S_Target == 0) 
-        dab.Pwm.ControlPhase_P2S_Target = PRI_TO_SEC_PHASE_TARGET;
-        
-    if(decimPM>=8) 
-    {
-        if (dab.Pwm.ControlPhase_P2S_Degreex10 < (dab.Pwm.ControlPhase_P2S_Target-5))
-        {
-            if((dab.Pwm.ControlPeriod > MIN_PWM_PERIOD) && (dab.Pwm.LowPowerSlowMode == 0))
-            {  
-                dab.Pwm.ControlPeriod-= PERIODSTEP;
-            }
-            else
-            {
-                // When phase shift between primary to secondary is 68 degrees,
-                // DAB runs in low power mode
-                if (dab.Pwm.ControlPhase_P2S_Degreex10 < 680)
-                {
-                   dab.Pwm.LowPowerSlowMode =1;
-                }
-            }
-        }
-
-        if (dab.Pwm.ControlPhase_P2S_Degreex10 > (dab.Pwm.ControlPhase_P2S_Target + 5))
-        {  
-            if((dab.Pwm.ControlPeriod < MAX_PWM_PERIOD) && (dab.Pwm.ControlPhase_P2S_Degreex10  > 20))
-            {    
-                dab.Pwm.ControlPeriod+= PERIODSTEP;
-            }
-        }
-
-        if(dab.Pwm.LowPowerSlowMode == 1)
-        {    
-            if (dab.Pwm.ControlPhase_P2S_Degreex10 > 600)
-            {    
-                dab.Pwm.LowPowerSlowMode = 0;
-            }
-            else
-            {    
-                if(dab.Pwm.ControlPeriod < MIN_PWM_PERIOD)
-                {  
-                    dab.Pwm.ControlPeriod += PERIODSTEP;
-                }
-                else
-                if (dab.Pwm.ControlPhase_P2S_Degreex10 > 330 )//snap out
-                {
-                    dab.Pwm.LowPowerSlowMode = 0;
-                }
-            }
-        }
-        decimPM=0;
-    }
-}
-
-#endif

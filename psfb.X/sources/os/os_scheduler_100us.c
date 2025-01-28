@@ -150,7 +150,7 @@ void OS_Scheduler_Init(void)
     scheduler_interrupt_leader_100us = 0U;   // reset directly before calling the Scheduler Loop
     scheduler_interrupt_follower_100us = 0U; // reset directly before calling the Scheduler Loop
     
-    TMR1_TimeoutCallbackRegister (TMR1_CallBack);       // melody breaks the naming convention, therefore manually registering the name.
+    //TMR1_TimeoutCallbackRegister (TMR1_CallBack);       // melody breaks the naming convention, therefore manually registering the name.
 }
 
 

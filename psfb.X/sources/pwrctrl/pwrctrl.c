@@ -67,11 +67,12 @@ void PwrCtrl_Initialize(void){
 
 
     // Initialize Start-Up ramp settings
-    PwrCtrl_StartUpInitialize();
+    PwrCtrl_StartUpInitialize(); // ramp stuff
 
     // Initialize Power Control Loop
-    PwrCtrl_ControlLoopInitialize();
+    PwrCtrl_ControlLoopInitialize(); //coefficents and SMPS_Controller2P2ZInitialize
 
+    //TODO: ??
 
 }
 
@@ -80,16 +81,34 @@ void PwrCtrl_Execute(void) {
     PwrCtrl_StateMachine(psfb_ptr);
 }
 
-void Dev_PwrCtrl_Suspend(void){
-
-}
-
-void Dev_PwrCtrl_ControlLoopInitialize(void){
-
-}
-
 void PwrCtrl_Reset(void){
+    //set the period to maximum  
 
+/*  psfb.Pwm.ControlPeriod = MAX_PWM_PERIOD;
+    psfb.Pwm.ControlPhase = psfb.Pwm.DeadTimeLow;
+    psfb.Pwm.PBVPeriodTarget = MAX_PWM_PERIOD;
+    psfb.Pwm.PBVControlPhaseTarget = psfb.Pwm.DeadTimeLow; */
+    
+    // Reset the power control references
+    psfb.Properties.VPriReference = 0;
+    psfb.Properties.VSecReference = 0;
+    psfb.Properties.IReference = 0;
+    psfb.Properties.PwrReference = 0;
+
+    // Initialize current loop reference to 0, to be controlled externally
+    psfb.ILoop.Reference = 0;
+    // Initialize power loop reference to 0, to be controlled externally
+    psfb.PLoop.Reference = 0;
+    // Initialize voltage loop reference to current secondary voltage
+    psfb.VLoop.Reference = 0;
+    
+    // Set the AGC to 1
+    psfb.VLoop.AgcFactor = 0x7FFF;
+    psfb.ILoop.AgcFactor = 0x7FFF;
+    psfb.PLoop.AgcFactor = 0x7FFF;
+    
+    // Reset Control Loop Histories
+    PwrCtrl_ResetControlLoopHistories();     
 }
 
 
@@ -167,7 +186,16 @@ static void PwrCtrl_StartUpInitialize(void)
  *********************************************************************************/
 void PwrCtrl_ControlLoopInitialize(void)
 {
+    //VCOMP_ControlObject_Initialize();
 
-    VCOMP_ControlObject_Initialize();
+    // Initialize current loop compensator
+    PwrCtrl_IComp_Initialize();
+
+    // Current loop properties initialize
+    psfb.ILoop.Enable = false;
+    psfb.ILoop.AgcFactor = 0x7FFF;
+    psfb.ILoop.Feedback = 0;
+    psfb.ILoop.Output = 0;
+    psfb.ILoop.Reference = 0;
     
 }

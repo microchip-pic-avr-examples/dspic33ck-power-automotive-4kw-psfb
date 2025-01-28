@@ -15,7 +15,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -122,12 +122,12 @@ void ADC1_Initialize (void)
     ADCON2H = 0x0;
     // CNVCHSEL AN0; SWCTRG disabled; SWLCTRG disabled; SHRSAMP disabled; SUSPCIE disabled; SUSPEND disabled; REFSEL disabled; 
     ADCON3L = 0x0;
-    // C0EN disabled; C1EN enabled; SHREN enabled; CLKDIV 4; CLKSEL AFVCODIV; 
-    ADCON3H = (uint16_t)0x8382 & (uint16_t)0xFF00; //Disabling C0EN, C1EN, C2EN, C3EN and SHREN bits
+    // C0EN enabled; C1EN enabled; SHREN enabled; CLKDIV 4; CLKSEL AFVCODIV; 
+    ADCON3H = (uint16_t)0x8383 & (uint16_t)0xFF00; //Disabling C0EN, C1EN, C2EN, C3EN and SHREN bits
     // SAMC0EN enabled; SAMC1EN enabled; 
     ADCON4L = 0x3;
-    // C0CHS AN0; C1CHS ANA1; 
-    ADCON4H = 0x4;
+    // C0CHS ANA0; C1CHS ANA1; 
+    ADCON4H = 0x5;
     // SIGN0 disabled; DIFF0 disabled; SIGN1 disabled; DIFF1 disabled; SIGN2 disabled; DIFF2 disabled; SIGN3 disabled; DIFF3 disabled; SIGN4 disabled; DIFF4 disabled; SIGN5 disabled; DIFF5 disabled; SIGN6 disabled; DIFF6 disabled; SIGN7 disabled; DIFF7 disabled; 
     ADMOD0L = 0x0;
     // SIGN8 disabled; DIFF8 disabled; SIGN9 disabled; DIFF9 disabled; SIGN10 disabled; DIFF10 disabled; SIGN11 disabled; DIFF11 disabled; SIGN12 disabled; DIFF12 disabled; SIGN13 disabled; DIFF13 disabled; SIGN14 disabled; DIFF14 disabled; SIGN15 disabled; DIFF15 disabled; 
@@ -136,8 +136,8 @@ void ADC1_Initialize (void)
     ADMOD1L = 0x0;
     // SIGN24 disabled; DIFF24 disabled; SIGN25 disabled; DIFF25 disabled; 
     ADMOD1H = 0x0;
-    // IE0 disabled; IE1 disabled; IE2 disabled; IE3 disabled; IE4 disabled; IE5 disabled; IE6 disabled; IE7 disabled; IE8 disabled; IE9 disabled; IE10 disabled; IE11 disabled; IE12 disabled; IE13 disabled; IE14 disabled; IE15 disabled; 
-    ADIEL = 0x0;
+    // IE0 enabled; IE1 disabled; IE2 disabled; IE3 disabled; IE4 disabled; IE5 disabled; IE6 disabled; IE7 disabled; IE8 disabled; IE9 disabled; IE10 disabled; IE11 disabled; IE12 disabled; IE13 disabled; IE14 disabled; IE15 disabled; 
+    ADIEL = 0x1;
     // IE16 disabled; IE17 disabled; IE18 disabled; IE19 disabled; IE24 disabled; IE25 disabled; 
     ADIEH = 0x0;
     // 
@@ -271,18 +271,24 @@ void ADC1_Initialize (void)
     ADC1_ChannelCallbackRegister(&ADC1_ChannelCallback);
     ADC1_ComparatorCallbackRegister(&ADC1_ComparatorCallback);
     
+    // Clearing FB_P_CT_FILT interrupt flag.
+    IFS5bits.ADCAN0IF = 0;
+    // Enabling FB_P_CT_FILT interrupt.
+    IEC5bits.ADCAN0IE = 1;
 
     // Setting WARMTIME bit
     ADCON5Hbits.WARMTIME = 0xF;
     // Enabling ADC Module
     ADCON1Lbits.ADON = 0x1;
+    // Enabling Power for Core0
+    ADC1_CorePowerEnable(ADC_CORE_0);
     // Enabling Power for Core1
     ADC1_CorePowerEnable(ADC_CORE_1);
     // Enabling Power for the Shared Core
     ADC1_SharedCorePowerEnable();
 
-    //TRGSRC0 None; TRGSRC1 Common Software Trigger; 
-    ADTRIG0L = 0x100;
+    //TRGSRC0 PWM1 Trigger2; TRGSRC1 Common Software Trigger; 
+    ADTRIG0L = 0x105;
     //TRGSRC2 Common Software Trigger; TRGSRC3 None; 
     ADTRIG0H = 0x1;
     //TRGSRC4 None; TRGSRC5 None; 
@@ -307,7 +313,12 @@ void ADC1_Initialize (void)
 
 void ADC1_Deinitialize (void)
 {
+    uint16_t dummy; //buffers has to be read before clearing interrupt flags
     ADCON1Lbits.ADON = 0;
+    
+    dummy = ADCBUF0;
+    IFS5bits.ADCAN0IF = 0;
+    IEC5bits.ADCAN0IE = 0;
     
     ADCON1L = 0x0;
     ADCON1H = 0x60;
@@ -404,6 +415,13 @@ void ADC1_CorePowerEnable(enum ADC_DEDICATED_CORE core)
 {
     switch(core)
     {
+        case ADC_CORE_0:
+            ADCON5Lbits.C0PWR = 1; 
+            while(ADCON5Lbits.C0RDY == 0)
+            {
+            }
+            ADCON3Hbits.C0EN = 1; 
+            break;
         case ADC_CORE_1:
             ADCON5Lbits.C1PWR = 1; 
             while(ADCON5Lbits.C1RDY == 0)
@@ -541,6 +559,9 @@ void ADC1_PWMTriggerSourceSet(enum ADC_CHANNEL channel, enum ADC_PWM_INSTANCE pw
         case FB_5V:
                 ADTRIG4Hbits.TRGSRC19 = adcTriggerValue;
                 break;
+        case FB_P_CT_FILT:
+                ADTRIG0Lbits.TRGSRC0 = adcTriggerValue;
+                break;
         case I_SEC_AVG_FILT:
                 ADTRIG0Lbits.TRGSRC1 = adcTriggerValue;
                 break;
@@ -630,6 +651,16 @@ void __attribute__ ( ( __interrupt__ , auto_psv, weak ) ) _ADCInterrupt ( void )
             (*ADC1_ChannelHandler)(FB_5V, adcVal);
         }
         IFS6bits.ADCAN19IF = 0;
+    }
+    if(IFS5bits.ADCAN0IF == 1)
+    {
+        //Read the ADC value from the ADCBUF before clearing interrupt
+        adcVal = ADCBUF0;
+        if(NULL != ADC1_ChannelHandler)
+        {
+            (*ADC1_ChannelHandler)(FB_P_CT_FILT, adcVal);
+        }
+        IFS5bits.ADCAN0IF = 0;
     }
     if(IFS5bits.ADCAN1IF == 1)
     {
@@ -766,6 +797,21 @@ void __attribute__ ( ( __interrupt__ , auto_psv, weak ) ) _ADCAN19Interrupt ( vo
 }
 
 
+void __attribute__ ( ( __interrupt__ , auto_psv, weak ) ) _ADCAN0Interrupt ( void )
+{
+    uint16_t valFB_P_CT_FILT;
+    //Read the ADC value from the ADCBUF
+    valFB_P_CT_FILT = ADCBUF0;
+
+    if(NULL != ADC1_ChannelHandler)
+    {
+        (*ADC1_ChannelHandler)(FB_P_CT_FILT, valFB_P_CT_FILT);
+    }
+
+    //clear the FB_P_CT_FILT interrupt flag
+    IFS5bits.ADCAN0IF = 0;
+}
+
 void __attribute__ ( ( __interrupt__ , auto_psv, weak ) ) _ADCAN1Interrupt ( void )
 {
     uint16_t valI_SEC_AVG_FILT;
@@ -853,6 +899,18 @@ void __attribute__ ((weak)) ADC1_ChannelTasks (enum ADC_CHANNEL channel)
             {
                 //Read the ADC value from the ADCBUF
                 adcVal = ADCBUF19;
+
+                if(NULL != ADC1_ChannelHandler)
+                {
+                    (*ADC1_ChannelHandler)(channel, adcVal);
+                }
+            }
+            break;
+        case FB_P_CT_FILT:
+            if((bool)ADSTATLbits.AN0RDY == 1)
+            {
+                //Read the ADC value from the ADCBUF
+                adcVal = ADCBUF0;
 
                 if(NULL != ADC1_ChannelHandler)
                 {

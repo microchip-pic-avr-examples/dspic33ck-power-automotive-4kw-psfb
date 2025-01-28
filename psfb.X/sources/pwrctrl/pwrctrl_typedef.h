@@ -188,6 +188,21 @@ struct PWR_CTRL_PROPERTIES_s
 };  
 typedef struct PWR_CTRL_PROPERTIES_s PWR_CTRL_PROPERTIES_t;  
 
+
+
+
+struct PWM_DISTRIBUTION_s {
+    uint16_t PhaseShift;        // target buffer of the control output value to be distributed across PWM registers
+    uint16_t* ptrPeriod;        // Pointer to the leading PWM channel period register
+    uint16_t* ptrPhaseShift;    // Pointer to leading PWM channel trigger register setting the phase shift between right- and left-leg
+    uint16_t* ptrDCSRR;         // Pointer to Duty Cycle register of the right-leg synchronous rectifier
+    uint16_t* ptrDCSRL;         // Pointer to Duty Cycle register of the left-leg synchronous rectifier
+    uint16_t* ptrUpdateReg;     // Pointer to Status register to set the UPDATE_REQUEST bit
+}__attribute__((aligned));
+typedef struct PWM_DISTRIBUTION_s PWM_DISTRIBUTION_t;
+
+
+
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -210,6 +225,7 @@ struct POWER_CONTROL_s
     CONTROLLER_t        PLoop;  ///< structure for power controller data
     PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode   
     uint16_t controller_error;  ///< error seen by compensator
+    PWM_DISTRIBUTION_t PhaseShiftDistribution;  // phase shift distribution TODO: tie this uo with switch node data struct
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 

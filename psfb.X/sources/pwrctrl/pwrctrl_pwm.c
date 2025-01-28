@@ -12,8 +12,6 @@
 #include "pwrctrl_typedef.h"
 #include "pwrctrl_pwm.h"
 
-PWM_DISTRIBUTION_t PhaseShiftDistribution;
-
 /*******************************************************************************
  * @ingroup pwrctrl-pwm
  * @brief  PWM distribution for DAB converter
@@ -24,69 +22,19 @@ PWM_DISTRIBUTION_t PhaseShiftDistribution;
  *  half bridges of the DAB converter. PWM1 and PWM3 drives the primary half 
  *  bridges and PWM2 and PWM4 drives the secondary half bridges.
  *********************************************************************************/
-//void PwrCtrl_PWM_Update(POWER_CONTROL_t* pcInstance)
-//{   
-///*     // The PWM Period bits [2:0] needs to be mask when using cascaded PWM setup 
-//    // (please refer to Section 4.1.3.3 in High Resolution PWM FRM)
-//    uint16_t PeriodMask = 0x7; 
-//    
-//    // Mask the calculated frequency bits [2:0] to make the cascaded/synchronous
-//    // PWM scheme reliable (please refer to Section 4.1.3.3 in High Resolution PWM FRM)
-//    pcInstance->Pwm.ControlPeriod = pcInstance->Pwm.ControlPeriod & ~(PeriodMask);
-//    
-//    // Calculate Duty Cycle for 50%
-//    pcInstance->Pwm.ControlDutyCycle = (pcInstance->Pwm.ControlPeriod >> 1);
-//    
-//    // Maximum Clamping for control phase
-//    if(pcInstance->Pwm.ControlPhase > pcInstance->Pwm.ControlPeriod){
-//        pcInstance->Pwm.ControlPhase = pcInstance->Pwm.ControlPeriod;
-//    }
-//
-//    // Calculate primary to secondary phase as half of the control phase
-//    uint16_t PrimarySecondaryPhase = (pcInstance->Pwm.ControlPhase >> 1);
-//    
-//    // Compensate the added Dead-time 
-//    PrimarySecondaryPhase += pcInstance->Pwm.DeadTimeLow >> 1;
-//    
-//    // Calculate the Bridge Delay ((Frequency / 2) - Primary to Secondary Phase + Control Phase)
-//    // Note that in the cascaded PWM, the reference phase of the client PWM, is its trigger source
-//    uint16_t PrimaryPhaseDelay = (pcInstance->Pwm.ControlDutyCycle - PrimarySecondaryPhase) + 
-//            pcInstance->Pwm.ControlPhase;
-//    
-//    // Set the PWM trigger with the calculated PWM phases
-//    PWM_TriggerCCompareValueSet(PWM_PRI_1, PrimarySecondaryPhase);
-//    PWM_TriggerCCompareValueSet(PWM_SEC_1, PrimaryPhaseDelay);
-//    PWM_TriggerCCompareValueSet(PWM_PRI_2, PrimarySecondaryPhase);
-//
-//    // Set the PWM Duty Cycle at 50% with the given Frequency
-//    PWM_DutyCycleSet(PWM_PRI_1, pcInstance->Pwm.ControlDutyCycle);
-//    PWM_DutyCycleSet(PWM_SEC_1, pcInstance->Pwm.ControlDutyCycle);
-//    PWM_DutyCycleSet(PWM_PRI_2, pcInstance->Pwm.ControlDutyCycle);
-//    PWM_DutyCycleSet(PWM_SEC_2, pcInstance->Pwm.ControlDutyCycle);
-//    
-//    // Set the PWM Frequency
-//    PWM_PeriodSet(PWM_PRI_1, pcInstance->Pwm.ControlPeriod);
-//    PWM_PeriodSet(PWM_SEC_1, pcInstance->Pwm.ControlPeriod);
-//    PWM_PeriodSet(PWM_PRI_2, pcInstance->Pwm.ControlPeriod);
-//    PWM_PeriodSet(PWM_SEC_2, pcInstance->Pwm.ControlPeriod);
-//
-//    // Set the PWM Low DeadTime
-//    PWM_DeadTimeLowSet(PWM_PRI_1, pcInstance->Pwm.DeadTimeLow);
-//    PWM_DeadTimeLowSet(PWM_SEC_1, pcInstance->Pwm.DeadTimeLow);
-//    PWM_DeadTimeLowSet(PWM_PRI_2, pcInstance->Pwm.DeadTimeLow);
-//    PWM_DeadTimeLowSet(PWM_SEC_2, pcInstance->Pwm.DeadTimeLow);
-//    
-//    // Set the PWM High DeadTime
-//    PWM_DeadTimeHighSet(PWM_PRI_1, pcInstance->Pwm.DeadTimeHigh);
-//    PWM_DeadTimeHighSet(PWM_SEC_1, pcInstance->Pwm.DeadTimeHigh);
-//    PWM_DeadTimeHighSet(PWM_PRI_2, pcInstance->Pwm.DeadTimeHigh);
-//    PWM_DeadTimeHighSet(PWM_SEC_2, pcInstance->Pwm.DeadTimeHigh);
-//    
-//    // Set the Update bit of the last PWM in the cascaded approach to broadcast
-//    // it to the other PWMs
-//    PWM_SoftwareUpdateRequest(PWM_SEC_2); */
-//    
-//}
+void PwrCtrl_PWM_Update()
+{   
+    psfb_ptr->Pwm.ControlPhase = psfb_ptr->Pwm.PBVControlPhaseTarget * 112;      // could add a ramp here as well :/
+    
+    PWM_TriggerCCompareValueSet(PWM_PRI_1, psfb_ptr->Pwm.ControlPhase);
+    
+    PWM_TriggerBCompareValueSet(PWM_PRI_1, (psfb_ptr->Pwm.ControlPhase>>1) );        // ADC primary trigger
+    
+    PWM_DutyCycleSet(PWM_SEC_2, PG4PER - psfb_ptr->Pwm.ControlPhase);
+    PWM_DutyCycleSet(PWM_SEC_1, PG2PER - psfb_ptr->Pwm.ControlPhase);
+    
+    PWM_SoftwareUpdateRequest(PWM_PRI_1);     
+}
 
 /*******************************************************************************
  * @ingroup pwrctrl-pwm
@@ -265,12 +213,19 @@ void PwrCtrl_PWM_Initialize(void)
     PG4DC = (PG1PER - PG1TRIGC - PG4DTL);
     
     // Configure the PWM value distribution data structure
-    PhaseShiftDistribution.PhaseShift = 0;  // Clear output value of phase shift
-    PhaseShiftDistribution.ptrPhaseShift = &PG1TRIGC;
-    PhaseShiftDistribution.ptrPeriod = &PG1PER;
-    PhaseShiftDistribution.ptrDCSRL = &PG4DC;
-    PhaseShiftDistribution.ptrDCSRR = &PG2DC;
-    PhaseShiftDistribution.ptrUpdateReg = &PG1STAT;
+//    PhaseShiftDistribution.PhaseShift = 0;  // Clear output value of phase shift
+//    PhaseShiftDistribution.ptrPhaseShift = &PG1TRIGC;
+//    PhaseShiftDistribution.ptrPeriod = &PG1PER;
+//    PhaseShiftDistribution.ptrDCSRL = &PG4DC;
+//    PhaseShiftDistribution.ptrDCSRR = &PG2DC;
+//    PhaseShiftDistribution.ptrUpdateReg = &PG1STAT;
+    
+//    psfb_ptr->PhaseShiftDistribution.PhaseShift = 0;  // Clear output value of phase shift
+//    psfb_ptr->PhaseShiftDistribution.ptrPhaseShift = &PG1TRIGC;
+//    psfb_ptr->PhaseShiftDistribution.ptrPeriod = &PG1PER;
+//    psfb_ptr->PhaseShiftDistribution.ptrDCSRL = &PG4DC;
+//    psfb_ptr->PhaseShiftDistribution.ptrDCSRR = &PG2DC;
+//    psfb_ptr->PhaseShiftDistribution.ptrUpdateReg = &PG1STAT;
 
     // pwm1 enable interrupt.
     // hook the ControlLoop_Interrupt_CallBack to pwm ISR

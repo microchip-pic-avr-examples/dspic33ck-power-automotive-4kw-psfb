@@ -4,6 +4,12 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="dcdt_generated_code"
+                     displayName="DCDT Generated Files"
+                     projectFiles="true">
+        <itemPath>dcdt/iloop/dcdt_generated_code/exp1_dcdt.h</itemPath>
+        <itemPath>dcdt/iloop/dcdt_generated_code/iloop_dcdt.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
@@ -115,6 +121,10 @@
           <itemPath>sources/os/os_watchdog.h</itemPath>
         </logicalFolder>
         <logicalFolder name="pwrctrl" displayName="pwrctrl" projectFiles="true">
+          <logicalFolder name="dcdt" displayName="dcdt" projectFiles="true">
+            <itemPath>sources/pwrctrl/dcdt/pwrctrl_dcdt.h</itemPath>
+            <itemPath>sources/pwrctrl/dcdt/smps_control.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="vcomp" displayName="vcomp" projectFiles="true">
             <itemPath>sources/pwrctrl/vcomp/npnz16b.h</itemPath>
             <itemPath>sources/pwrctrl/vcomp/npnz16b.inc</itemPath>
@@ -240,6 +250,12 @@
           <itemPath>sources/os/os_watchdog.c</itemPath>
         </logicalFolder>
         <logicalFolder name="pwrctrl" displayName="pwrctrl" projectFiles="true">
+          <logicalFolder name="dcdt" displayName="dcdt" projectFiles="true">
+            <itemPath>sources/pwrctrl/dcdt/pwrctrl_dcdt.c</itemPath>
+            <itemPath>sources/pwrctrl/dcdt/XFT_smps_2p2z_dspic.s</itemPath>
+            <itemPath>sources/pwrctrl/dcdt/smps_2p2z_dspic.s</itemPath>
+            <itemPath>sources/pwrctrl/dcdt/smps_3p3z_dspic.s</itemPath>
+          </logicalFolder>
           <logicalFolder name="vcomp" displayName="vcomp" projectFiles="true">
             <itemPath>sources/pwrctrl/vcomp/VCOMP.c</itemPath>
             <itemPath>sources/pwrctrl/vcomp/VCOMP_asm.s</itemPath>
@@ -251,7 +267,6 @@
           <itemPath>sources/pwrctrl/pwrctrl_pwm.c</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_isr.c</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_isr_extension.c</itemPath>
-          <itemPath>sources/pwrctrl/pwrctrl_pwm_asm.s</itemPath>
         </logicalFolder>
         <logicalFolder name="x2cScope" displayName="x2cScope" projectFiles="true">
           <itemPath>sources/x2cScope/X2CScope.c</itemPath>
@@ -425,7 +440,8 @@
       </C30-LD>
       <C30Global>
         <property key="combine-sourcefiles" value="false"/>
-        <property key="common-include-directories" value="sources;mcc_generated_files"/>
+        <property key="common-include-directories"
+                  value="sources;mcc_generated_files;dcdt"/>
         <property key="dual-boot-partition" value="0"/>
         <property key="fast-math" value="false"/>
         <property key="generic-16-bit" value="false"/>

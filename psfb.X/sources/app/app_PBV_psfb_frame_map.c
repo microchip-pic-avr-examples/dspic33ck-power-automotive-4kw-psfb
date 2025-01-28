@@ -35,7 +35,7 @@
 #include "pwrctrl/pwrctrl.h"
 #include "config/version.h"
 
-#include "pwrctrl/vcomp/VCOMP.h"
+
 #include "pwrctrl/pwrctrl_pwm.h"
 
 /*********************************************************************************
@@ -78,6 +78,7 @@ static uint16_t safety_flags = 0 ;
 static uint16_t slider_PS_PP = 0 ;
 static uint16_t dead_time_right = 0;
 static uint16_t voltage_ref = 0;
+static uint16_t current_ref = 0;
 static uint16_t current_slider_ref = 0;
 
 static uint8_t button_random_action = 0;
@@ -236,23 +237,29 @@ void App_PBV_psfb_Build_Frame()
     
     buffer_sixteen_tx[0] = (1<<Dev_PwrCtrl_Get_State());
     buffer_sixteen_tx[1] = flag_word;
-    buffer_sixteen_tx[2] = (Dev_PwrCtrl_GetAdc_Vpri() - 202);
+    buffer_sixteen_tx[2] = (Dev_PwrCtrl_GetAdc_Vpri() - 202) ? (Dev_PwrCtrl_GetAdc_Vpri() - 202) : 0;
     buffer_sixteen_tx[3] = Dev_PwrCtrl_GetAdc_Vsec();
-    buffer_sixteen_tx[4] = (uint16_t)(PwrCtrl_GetAdc_Isec_shunt() - 610);
+    buffer_sixteen_tx[4] = (PwrCtrl_GetAdc_Isec_shunt() - 610) ? (PwrCtrl_GetAdc_Isec_shunt() - 610) : 0;
     buffer_sixteen_tx[5] = Dev_PwrCtrl_GetVoltage_Vcap();
-    buffer_sixteen_tx[6] = (uint16_t)(PwrCtrl_GetAdc_Temperature() - 497 );
+    buffer_sixteen_tx[6] = (PwrCtrl_GetAdc_Temperature() - 497 ) ? (PwrCtrl_GetAdc_Temperature() - 497 ) : 0;
     buffer_sixteen_tx[7] = PwrCtrl_GetAdc_Vrail_5V();
     buffer_sixteen_tx[8] = PG1TRIGC;
     buffer_sixteen_tx[9] =  PwrCtrl_GetAdc_Ipri_ct();
     buffer_sixteen_tx[10] = PwrCtrl_GetAdc_Isec_shunt();
     buffer_sixteen_tx[11] = Dev_PwrCtrl_GetControl_Phase();
-    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (button_start_sync<<1) + (VCOMP.status.bits.enabled<<2);
+    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (button_start_sync<<1) + (psfb_ptr->ILoop.Enable<<2);
     buffer_sixteen_tx[13] = dead_time_right;
-    buffer_sixteen_tx[14] = psfb_ptr->Properties.VSecReference;
+    
+    buffer_sixteen_tx[14] = psfb_ptr->Properties.IReference;
+    
     buffer_sixteen_tx[15] = current_slider_ref - 621;
+
     buffer_sixteen_tx[16] = DAC3DATH;
-    buffer_sixteen_tx[17] = psfb_ptr->VLoop.Reference;
+    
+    buffer_sixteen_tx[17] = psfb_ptr->ILoop.Reference;
+    
     buffer_sixteen_tx[18] = DAC1DATH;
+    
     buffer_sixteen_tx[19] = psfb_ptr->controller_error;
     
     
@@ -313,11 +320,13 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             break;
             
         case 0xFFFF:
-            VCOMP.status.bits.enabled = 1;
+            //VCOMP.status.bits.enabled = 1;
+            psfb_ptr->ILoop.Enable = 1;
             break;
         
         case 0xFF00:
-             VCOMP.status.bits.enabled = 0;
+            //VCOMP.status.bits.enabled = 0;
+            psfb_ptr->ILoop.Enable = 0;
             break;
         default:
             break;
@@ -345,7 +354,7 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
     
     switch (switchcase) {
         case 0xaa:
-            if (VCOMP.status.bits.enabled) 
+            if (psfb_ptr->ILoop.Enable == 1) 
                 break;
             else {
                 slider_PS_PP = data[1];
@@ -361,19 +370,16 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             PWM_DutyCycleSet(2, PG2PER - (data[1] * 112));
             PwrCtrl_SetPhaseTarget(data[1] * 112);
             */
-            Nop();
-            Nop();
-            Nop();
             
-            GPIO_debug_SetHigh();
-            PhaseShiftDistribution.PhaseShift = (data[1] * 112);
+            //GPIO_debug_SetHigh();
+            //psfb_ptr->PhaseShiftDistribution.PhaseShift = (data[1] * 112);
 //            GPIO_debug_SetLow();
-            
+            //PwrCtrl_SetPhaseTarget(data[1] * 112);
+            PwrCtrl_SetPhaseTarget(data[1]);
+            //PWM_TriggerCCompareValueSet(1, data[1] * 56);
             //GPIO_Debug_high();
-            //PwrCtrl_PWM_Update(&PhaseShiftDistribution);
+            PwrCtrl_PWM_Update();
             //GPIO_Debug_Low();
-            PWM_TriggerBCompareValueSet(1, data[1] * 56);
-            
             // PG1STATbits.UPDREQ = 1; // Set manual update (can be automated later)
             }
             break;
@@ -401,9 +407,10 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             break;
             
         case 0xcc:
-            voltage_ref = data[1];
-            PwrCtrl_SetVSecReference(voltage_ref);
-
+            //voltage_ref = data[1];
+            //PwrCtrl_SetVSecReference(voltage_ref);
+            current_ref = data[1];
+            PwrCtrl_SetIReference(current_ref);
             break;
         
         case 0xdd:
@@ -417,7 +424,7 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             current_slider_ref = temp;
             DAC3DATH = temp;
             break;
-//            dev_fan_data_ptr->target_speed_percent = data[1];
+        
         default:
             break;
     }

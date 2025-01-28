@@ -15,7 +15,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -199,6 +199,9 @@ inline static uint16_t ADC1_ConversionResultGet( enum ADC_CHANNEL channel )
         case FB_5V:
                 result = ADCBUF19;
                 break;
+        case FB_P_CT_FILT:
+                result = ADCBUF0;
+                break;
         case I_SEC_AVG_FILT:
                 result = ADCBUF1;
                 break;
@@ -244,6 +247,9 @@ inline static bool ADC1_IsConversionComplete(enum ADC_CHANNEL channel)
         case FB_5V:
                 status = ADSTATHbits.AN19RDY;
                 break;
+        case FB_P_CT_FILT:
+                status = ADSTATLbits.AN0RDY;
+                break;
         case I_SEC_AVG_FILT:
                 status = ADSTATLbits.AN1RDY;
                 break;
@@ -263,6 +269,7 @@ inline static bool ADC1_IsConversionComplete(enum ADC_CHANNEL channel)
  */
 inline static void ADC1_ResolutionSet(enum ADC_RESOLUTION_TYPE resolution)
 {
+   ADCORE0Hbits.RES = resolution;
    ADCORE1Hbits.RES = resolution;
    ADCON1Hbits.SHRRES = resolution;
 }
@@ -377,6 +384,10 @@ inline static void ADC1_IndividualChannelInterruptEnable(enum ADC_CHANNEL channe
                 IEC6bits.ADCAN19IE = 1;
                 ADIEHbits.IE19 = 1;
                 break;
+        case FB_P_CT_FILT:
+                IEC5bits.ADCAN0IE = 1;
+                ADIELbits.IE0 = 1;
+                break;
         case I_SEC_AVG_FILT:
                 IEC5bits.ADCAN1IE = 1;
                 ADIELbits.IE1 = 1;
@@ -420,6 +431,10 @@ inline static void ADC1_IndividualChannelInterruptDisable(enum ADC_CHANNEL chann
                 IEC6bits.ADCAN19IE = 0;
                 ADIEHbits.IE19 = 0;
                 break;
+        case FB_P_CT_FILT:
+                IEC5bits.ADCAN0IE = 0;
+                ADIELbits.IE0 = 0;
+                break;
         case I_SEC_AVG_FILT:
                 IEC5bits.ADCAN1IE = 0;
                 ADIELbits.IE1 = 0;
@@ -457,6 +472,9 @@ inline static void ADC1_IndividualChannelInterruptFlagClear(enum ADC_CHANNEL cha
         case FB_5V:
                 IFS6bits.ADCAN19IF = 0;
                 break;
+        case FB_P_CT_FILT:
+                IFS5bits.ADCAN0IF = 0;
+                break;
         case I_SEC_AVG_FILT:
                 IFS5bits.ADCAN1IF = 0;
                 break;
@@ -493,6 +511,9 @@ inline static void ADC1_IndividualChannelInterruptPrioritySet(enum ADC_CHANNEL c
 				break;
 		case FB_5V:
 				IPC27bits.ADCAN19IP = priorityValue;
+				break;
+		case FB_P_CT_FILT:
+				IPC22bits.ADCAN0IP = priorityValue;
 				break;
 		case I_SEC_AVG_FILT:
 				IPC23bits.ADCAN1IP = priorityValue;

@@ -33,7 +33,7 @@ void PwrCtrl_PeriodModulator(void);
 void PwrCtrl_UpdateADConverterData(void);
 void PwrCtrl_ControlLoopExecute(void);
 void PwrCtrl_10KHzVPLoopPrepareData(void);
-uint16_t VCOMP_ControlObject_Initialize(void);
+//uint16_t VCOMP_ControlObject_Initialize(void);
 
 /*******************************************************************************
  * @ingroup pwrctrl-isr
@@ -49,98 +49,98 @@ uint16_t VCOMP_ControlObject_Initialize(void);
  *********************************************************************************/
 void ControlLoop_Interrupt_CallBack(void)
 {      
-    // GPIO_1_SetHigh();
+//  GPIO_1_SetHigh();
     
-    // Update the ADC data member
+//  Update the ADC data member
     
-    VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
+//  VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
     
-//    GPIO_debug_SetHigh();
-    PwrCtrl_PWM_Update(&PhaseShiftDistribution);        // this should be tied up. 
-    GPIO_debug_SetLow();
+//  GPIO_debug_SetHigh();
+//  PwrCtrl_PWM_Update(&PhaseShiftDistribution);        // this should be tied up. 
+
     
-    _PWM1IF = 0;
+//  _PWM1IF = 0;
+    GPIO_debug_SetHigh();
+    // Enable the ADC sampling
+    ADC1_SoftwareTriggerEnable();
     
-    PwrCtrl_UpdateADConverterData();
-    
+    // execute control loop
     // Execute the fault detection
     Fault_Execute();
     
-    // Enable the ADC sampling
-    ADC1_SoftwareTriggerEnable();
- 
-//    if (VCOMP.status.bits.enabled) 
-//    {
-//        // GPIO_1_SetLow();
-//        VCOMP_PTermUpdate(&VCOMP);                         // Call control loop
-//
-////        PG4DC = PG4PER - PG1TRIGC;
-////        PG2DC = PG2PER - PG1TRIGC;
-////        PG1STATbits.UPDREQ = 1;
-//    }
-}
+    PwrCtrl_UpdateADConverterData();
 
-
-
-volatile uint16_t VCOMP_ControlObject_Initialize(void)
-{
-    volatile uint16_t retval = 0;                 // Auxiliary variable for function call verification (initially set to ZERO = false)
-
-    /* Controller Input and Output Ports Configuration */
-
-    // fixed point number accumulator saturation behaviour : keep saturated instead of rolling over
-    CORCONbits.ACCSAT = 0;
-    CORCONbits.SATA = 1;
-    CORCONbits.SATB = 1;
+    PwrCtrl_PrepareData();
     
-    // Configure Controller Primary Input Port
-    VCOMP.Ports.Source.ptrAddress = &ADCBUF2; // Pointer to primary feedback source (e.g. ADC buffer register or variable)
-/*     VCOMP.Ports.Source.Offset = <signed int>;     // Primary feedback signal offset
-    VCOMP.Ports.Source.NormScaler = <signed int>; // Primary feedback normalization factor bit-shift scaler
-    VCOMP.Ports.Source.NormFactor = <signed int/Q15 fractional>; // Primary feedback normalization factor fractional */
-
-    // Configure Controller Primary Output Port
-    VCOMP.Ports.Target.ptrAddress = &PhaseShiftDistribution.PhaseShift; //&PG1TRIGC; // Pointer to primary output target (e.g. SFR register or variable)
-/*     VCOMP.Ports.Target.Offset = <signed int>;     // Primary output offset value
-    VCOMP.Ports.Target.NormScaler = <signed int>; // Primary output normalization factor bit-shift scaler
-    VCOMP.Ports.Target.NormFactor = <signed int/Q15 fractional>; // Primary output normalization factor fractional */
-
-    // Configure Control Reference Port
-    VCOMP.Ports.ptrControlReference = &psfb_ptr->VLoop.Reference; // Pointer to control reference (user-variable)
-
-    /* Controller Output Limits Configuration */
-
-    // Primary Control Output Limit Configuration
-    VCOMP.Limits.MinOutput = 0;        // Minimum control output value
-    VCOMP.Limits.MaxOutput = 17800;        // Maximum control output value
-
-    /* ADC Trigger Positioning Configuration */
-
-    // ADC Trigger A Control Configuration
-    VCOMP.ADCTriggerControl.ptrADCTriggerARegister = &PG1TRIGA; // Pointer to ADC trigger A register
-    // VCOMP.ADCTriggerControl.ADCTriggerAOffset = <unsigned int>; // user-defined trigger delay (
-    // for current it matters.
-
-    /* Advanced Parameter Configuration */
-
-    // Initialize User Data Space Buffer Variables
-    VCOMP.Advanced.usrParam0 = 0;                 // No additional advanced control options used
-    VCOMP.Advanced.usrParam1 = 0;                 // No additional advanced control options used
-    VCOMP.Advanced.usrParam2 = 0;                 // No additional advanced control options used
-    VCOMP.Advanced.usrParam3 = 0;                 // No additional advanced control options used
-    VCOMP.Advanced.usrParam4 = 0;                 // No additional advanced control options used
-    VCOMP.Advanced.usrParam5 = 0;                 // No additional advanced control options used
-    VCOMP.Advanced.usrParam6 = 0;                 // No additional advanced control options used
-    VCOMP.Advanced.usrParam7 = 0;                 // No additional advanced control options used
-
-    /* Controller Status Word Configuration */
-
-    VCOMP.status.bits.enabled = false;            // Keep controller disabled
-    VCOMP.DataProviders.ptrDProvControlError = &psfb_ptr->controller_error;
-
-    // Call Assembler Control Library Initialization Function
-    retval = VCOMP_Initialize(&VCOMP);            // Initialize controller data arrays and number scalers
-
-    return(retval);
-
+    PwrCtrl_ControlLoopExecute();
+    
+    PwrCtrl_PWM_Update();
+    
+    GPIO_debug_SetLow();
+    
 }
+
+//volatile uint16_t VCOMP_ControlObject_Initialize(void)
+//{
+//    volatile uint16_t retval = 0;                 // Auxiliary variable for function call verification (initially set to ZERO = false)
+//
+//    /* Controller Input and Output Ports Configuration */
+//
+//    // fixed point number accumulator saturation behaviour : keep saturated instead of rolling over
+//    CORCONbits.ACCSAT = 0;
+//    CORCONbits.SATA = 1;
+//    CORCONbits.SATB = 1;
+//    
+//    // Configure Controller Primary Input Port
+//    VCOMP.Ports.Source.ptrAddress = &ADCBUF2; // Pointer to primary feedback source (e.g. ADC buffer register or variable)
+///*     VCOMP.Ports.Source.Offset = <signed int>;     // Primary feedback signal offset
+//    VCOMP.Ports.Source.NormScaler = <signed int>; // Primary feedback normalization factor bit-shift scaler
+//    VCOMP.Ports.Source.NormFactor = <signed int/Q15 fractional>; // Primary feedback normalization factor fractional */
+//
+//    // Configure Controller Primary Output Port
+//    VCOMP.Ports.Target.ptrAddress = &PhaseShiftDistribution.PhaseShift; //&PG1TRIGC; // Pointer to primary output target (e.g. SFR register or variable)
+///*     VCOMP.Ports.Target.Offset = <signed int>;     // Primary output offset value
+//    VCOMP.Ports.Target.NormScaler = <signed int>; // Primary output normalization factor bit-shift scaler
+//    VCOMP.Ports.Target.NormFactor = <signed int/Q15 fractional>; // Primary output normalization factor fractional */
+//
+//    // Configure Control Reference Port
+//    VCOMP.Ports.ptrControlReference = &psfb_ptr->VLoop.Reference; // Pointer to control reference (user-variable)
+//
+//    /* Controller Output Limits Configuration */
+//
+//    // Primary Control Output Limit Configuration
+//    VCOMP.Limits.MinOutput = 0;        // Minimum control output value
+//    VCOMP.Limits.MaxOutput = 17800;        // Maximum control output value
+//
+//    /* ADC Trigger Positioning Configuration */
+//
+//    // ADC Trigger A Control Configuration
+//    VCOMP.ADCTriggerControl.ptrADCTriggerARegister = &PG1TRIGA; // Pointer to ADC trigger A register
+//    // VCOMP.ADCTriggerControl.ADCTriggerAOffset = <unsigned int>; // user-defined trigger delay (
+//    // for current it matters.
+//
+//    /* Advanced Parameter Configuration */
+//
+//    // Initialize User Data Space Buffer Variables
+//    VCOMP.Advanced.usrParam0 = 0;                 // No additional advanced control options used
+//    VCOMP.Advanced.usrParam1 = 0;                 // No additional advanced control options used
+//    VCOMP.Advanced.usrParam2 = 0;                 // No additional advanced control options used
+//    VCOMP.Advanced.usrParam3 = 0;                 // No additional advanced control options used
+//    VCOMP.Advanced.usrParam4 = 0;                 // No additional advanced control options used
+//    VCOMP.Advanced.usrParam5 = 0;                 // No additional advanced control options used
+//    VCOMP.Advanced.usrParam6 = 0;                 // No additional advanced control options used
+//    VCOMP.Advanced.usrParam7 = 0;                 // No additional advanced control options used
+//
+//    /* Controller Status Word Configuration */
+//
+//    VCOMP.status.bits.enabled = false;            // Keep controller disabled
+//    VCOMP.DataProviders.ptrDProvControlError = &psfb_ptr->controller_error;
+//
+//    // Call Assembler Control Library Initialization Function
+//    retval = VCOMP_Initialize(&VCOMP);            // Initialize controller data arrays and number scalers
+//
+//    return(retval);
+//
+//}
+
+

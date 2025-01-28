@@ -15,7 +15,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -60,9 +60,10 @@ enum ADC_CHANNEL
     FB_TEMP,    /**<Channel Name:AN14   Assigned to:Shared Channel*/
     Channel_AN15,    /**<Channel Name:AN15   Assigned to:Shared Channel*/
     FB_5V,    /**<Channel Name:AN19   Assigned to:Shared Channel*/
+    FB_P_CT_FILT,    /**<Channel Name:ANA0   Assigned to:Dedicated Core0*/
     I_SEC_AVG_FILT,    /**<Channel Name:ANA1   Assigned to:Dedicated Core1*/
-    MAX_CHANNELS = 7,    /**< MAX_CHANNELS will be removed in future MCC releases. Use ADC_MAX_CHANNELS instead */
-    ADC_MAX_CHANNELS = 7    /**< Maximum number of channels configured by user in MCC Melody User Interface */
+    MAX_CHANNELS = 8,    /**< MAX_CHANNELS will be removed in future MCC releases. Use ADC_MAX_CHANNELS instead */
+    ADC_MAX_CHANNELS = 8    /**< Maximum number of channels configured by user in MCC Melody User Interface */
 };
 
 
@@ -77,10 +78,12 @@ enum ADC_CHANNEL
 */
 enum ADC_DEDICATED_CORE
 {
+    CORE_0 = 0,    /**<CORE_0 will be removed in future MCC releases. Use ADC_CORE_0 instead. */
+    ADC_CORE_0 = 0,    /**<Core name:ADC_CORE_0*/
     CORE_1 = 1,    /**<CORE_1 will be removed in future MCC releases. Use ADC_CORE_1 instead. */
     ADC_CORE_1 = 1,    /**<Core name:ADC_CORE_1*/
-    MAX_DEDICATED_CORES = 1,    /**< MAX_DEDICATED_CORES will be removed in future MCC releases. Use ADC_MAX_DEDICATED_CORES instead */
-    ADC_MAX_DEDICATED_CORES = 1    /**< Maximum cores configured by user in MCC Melody User Interface */
+    MAX_DEDICATED_CORES = 2,    /**< MAX_DEDICATED_CORES will be removed in future MCC releases. Use ADC_MAX_DEDICATED_CORES instead */
+    ADC_MAX_DEDICATED_CORES = 2    /**< Maximum cores configured by user in MCC Melody User Interface */
 };
 
 /**

@@ -15,7 +15,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+© [2025] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -43,6 +43,10 @@
 
 void INTERRUPT_Initialize(void)
 {
+    // ADCAN0: ADC AN0 Convert Done
+    // Priority: 1
+    IPC22bits.ADCAN0IP = 1;
+    
     // DMT: Dead Man Timer
     // Priority: 1
     IPC11bits.DMTIP = 1;
@@ -56,6 +60,7 @@ void INTERRUPT_Initialize(void)
 void INTERRUPT_Deinitialize(void)
 {
     //POR default value of priority
+    IPC22bits.ADCAN0IP = 4;
     IPC11bits.DMTIP = 4;
     IPC0bits.T1IP = 4;
 }

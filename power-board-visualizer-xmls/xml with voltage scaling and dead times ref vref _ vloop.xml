@@ -125,7 +125,7 @@
         <Name>Primary Current</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>A</Unit>
+        <Unit>bits</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -187,10 +187,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>voltage ref</Name>
-        <Scaling>0.00523</Scaling>
+        <Name>Iloop Ref Setpoint</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>v</Unit>
+        <Unit />
         <Plot>true</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -200,7 +200,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>current Ref</Name>
+        <Name>I PRI OC Ref</Name>
         <Scaling>0.0044</Scaling>
         <Offset>0</Offset>
         <Unit>A</Unit>
@@ -213,7 +213,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>comp ref PCT</Name>
+        <Name>I PRI OC DAC</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit xsi:nil="true" />
@@ -226,8 +226,8 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>voltage ref present</Name>
-        <Scaling>0.00523</Scaling>
+        <Name>Iloop Ref Present</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit xsi:nil="true" />
         <Plot>false</Plot>
@@ -239,7 +239,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>comp ref Sec</Name>
+        <Name>SEC OC Ref</Name>
         <Scaling>0.0833</Scaling>
         <Offset>0</Offset>
         <Unit xsi:nil="true" />
@@ -265,7 +265,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>controller error</Name>
+        <Name>controller output</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit xsi:nil="true" />
@@ -340,6 +340,10 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>9</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>20</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
@@ -374,7 +378,7 @@
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
-        <Name>I Ref Raw Num</Name>
+        <Name>I Ref  loop</Name>
         <Unit xsi:nil="true" />
         <Scaling>1</Scaling>
         <Offset>0</Offset>
@@ -388,7 +392,7 @@
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
-        <Name>current pri ref comp</Name>
+        <Name>Ipri OC Comp</Name>
         <Unit xsi:nil="true" />
         <Scaling>1</Scaling>
         <Offset>0</Offset>
