@@ -113,7 +113,7 @@
 
 // Compensator Clamp Limits
 #define ILOOP_COMP_2P2Z_MIN_CLAMP    0x0000
-#define ILOOP_COMP_2P2Z_MAX_CLAMP    19000
+#define ILOOP_COMP_2P2Z_MAX_CLAMP    19000  // clamp values added manually here. TODO: change DCDT project file.
 
 
 #endif
