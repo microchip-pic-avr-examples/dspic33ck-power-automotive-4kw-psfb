@@ -26,7 +26,7 @@
 
 // PRIVATE FUNCTIONS
 static void Fault_EnableShortCircuitProtection(void);
-
+static void Fault_PrimaryOverCurrent_EventHandler(void);
 bool loadDisconnect = false;
 
 /*******************************************************************************
@@ -105,6 +105,8 @@ void Fault_Initialize(void)
     Fault_EnableShortCircuitProtection();
 #endif 
     
+    CMP3_EventCallbackRegister(Fault_PrimaryOverCurrent_EventHandler);
+    
 }
 
 /*******************************************************************************
@@ -150,26 +152,26 @@ void Fault_Execute(void)
 //    #endif  
 //    
     
-#if defined(FAULT_IPRI_OC) && (FAULT_IPRI_OC ==  true)  
-    // Hardware short circuit
-    if( CMP3_StatusGet()){
+// #if defined(FAULT_IPRI_OC) && (FAULT_IPRI_OC ==  true)  
+//     // Hardware short circuit
+//     if( CMP3_StatusGet()){
         
-        //Fault_Handler();
+//         //Fault_Handler();
         
-        // Set fault bits
-        psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive = 1;
-        psfb_ptr->Fault.Object.IPrimaryOCP.FaultLatch = 1;
+//         // Set fault bits
+//         psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive = 1;
+//         psfb_ptr->Fault.Object.IPrimaryOCP.FaultLatch = 1;
 
-        //faultCheck &= psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive;
+//         //faultCheck &= psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive;
         
-        PwrCtrl_PWM_Disable();
-        psfb_ptr->State = PWRCTRL_STATE_FAULT_DETECTION;
-        psfb_ptr->Fault.FaultDetected = 1;
-//        FAULT_EN_SetLow();
-//        Fault_Handler();
-    }    
+//         PwrCtrl_PWM_Disable();
+//         psfb_ptr->State = PWRCTRL_STATE_FAULT_DETECTION;
+//         psfb_ptr->Fault.FaultDetected = 1;
+// //        FAULT_EN_SetLow();
+// //        Fault_Handler();
+//     }    
     
-#endif
+// #endif
 //    
 //    #if defined (LOAD_DISCONNECT) && (LOAD_DISCONNECT ==  true)
 //    // Protection when Load is removed by accident. 
@@ -288,4 +290,23 @@ void Fault_Execute_100ms(void)
         psfb_ptr->Status.bits.FaultActive = 0;
     }
     #endif
+}
+
+
+void Fault_PrimaryOverCurrent_EventHandler(){
+            //Fault_Handler();
+        
+        // Set fault bits
+        GPIO_debug_SetHigh();
+        psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive = 1;
+        psfb_ptr->Fault.Object.IPrimaryOCP.FaultLatch = 1;
+
+        //faultCheck &= psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive;
+        
+        PwrCtrl_PWM_Stop_Switching();
+        psfb_ptr->State = PWRCTRL_STATE_FAULT_DETECTION;
+        psfb_ptr->Fault.FaultDetected = 1;
+//        FAULT_EN_SetLow();
+//        Fault_Handler();
+        GPIO_debug_SetLow();
 }

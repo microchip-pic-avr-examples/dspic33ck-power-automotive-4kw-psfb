@@ -238,9 +238,19 @@ void PwrCtrl_PWM_Initialize(void)
 }
 
 
+/*******************************************************************************
+ * @ingroup pwrctrl-pwm
+ * @brief  Disable the PWM output
+ * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
+ * @return void
+ * 
+ * @details This function disables the physical PWM output at the primary side by 
+ * setting the override bits of the PWM modules PG1 and PG3.
+ *********************************************************************************/
+
 void PwrCtrl_PWM_Stop_Switching(void){
     PG1IOCONLbits.OVRENH = 1;
     PG1IOCONLbits.OVRENL = 1;
-    PG2IOCONLbits.OVRENH = 1;
-    PG2IOCONLbits.OVRENL = 1;
+    PG3IOCONLbits.OVRENH = 1;
+    PG3IOCONLbits.OVRENL = 1;
 }

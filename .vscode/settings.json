@@ -2,6 +2,10 @@
     "files.associations": {
         "pwrctrl_dcdt.h": "c",
         "iloop_dcdt.h": "c",
-        "smps_control.h": "c"
+        "smps_control.h": "c",
+        "pwrctrl_typedef.h": "c",
+        "stdbool.h": "c",
+        "pwm.h": "c",
+        "pwrctrl_pwm.h": "c"
     }
 }

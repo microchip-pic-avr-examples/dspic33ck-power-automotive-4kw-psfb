@@ -149,7 +149,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>Control Phase</Name>
-        <Scaling>0.56</Scaling>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit xsi:nil="true" />
         <Plot>false</Plot>
@@ -239,7 +239,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>SEC OCP Limit</Name>
+        <Name>I-SHUNT OCP Limit</Name>
         <Scaling>0.0833</Scaling>
         <Offset>0</Offset>
         <Unit>A</Unit>
@@ -300,14 +300,6 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
-        <SignalChannelIndex>8</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>19</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
         <SignalChannelIndex>13</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
@@ -321,10 +313,6 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>16</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>18</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -344,7 +332,23 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>18</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>20</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>11</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>8</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>19</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
     </TableView>
@@ -396,8 +400,8 @@
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <MinimumValue>845</MinimumValue>
-        <MaximumValue>4500</MaximumValue>
-        <DefaultValue>4372</DefaultValue>
+        <MaximumValue>3890</MaximumValue>
+        <DefaultValue>3700</DefaultValue>
         <Step>1</Step>
         <ButtonText>update ref</ButtonText>
         <Data>0203 0004 00DD [value]</Data>

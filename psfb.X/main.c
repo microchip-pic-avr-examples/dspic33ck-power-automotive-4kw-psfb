@@ -47,6 +47,15 @@ int main(void)
     PwrCtrl_Initialize();
     Fault_Initialize();
 
+
+    //disabling the interrupt
+    IEC4bits.CMP3IE = 0;
+    IPC19bits.CMP3IP = 6;       // Primary OCP higher priority then all. 7 is highest, rest of the interrupts are at 1.
+    // Clearing IF flag before enabling the interrupt.
+    IFS4bits.CMP3IF = 0;
+    // Enabling CMP3 interrupt.
+    IEC4bits.CMP3IE = 1;
+
     // AR-241126: Calling Custom PWM Daisy Chain Configuration 
     MCC_Custom_User_Config();   // pwm initialize and enable.
     
@@ -79,3 +88,4 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     //clear the FB_P_CT_FILT interrupt flag
     IFS5bits.ADCAN0IF = 0;
 }
+
