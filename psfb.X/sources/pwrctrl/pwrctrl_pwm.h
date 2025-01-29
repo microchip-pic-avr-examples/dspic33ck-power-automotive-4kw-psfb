@@ -13,12 +13,13 @@
 
 //extern PWM_DISTRIBUTION_t PhaseShiftDistribution;
 
-extern void PwrCtrl_PWM_Update(void);
+ void PwrCtrl_PWM_Update(void);
 //extern void PwrCtrl_PWM_Update(PWM_DISTRIBUTION_t* instance);
 
-extern void PwrCtrl_PWM_Enable(void);
-extern void PwrCtrl_PWM_Disable(void);
-extern void PwrCtrl_PWM_Initialize(void);
+ void PwrCtrl_PWM_Enable(void);
+ void PwrCtrl_PWM_Disable(void);
+ void PwrCtrl_PWM_Stop_Switching(void);
+ void PwrCtrl_PWM_Initialize(void);
 
 #endif	/* DRV_PWRCTRL_PWM_H */
 

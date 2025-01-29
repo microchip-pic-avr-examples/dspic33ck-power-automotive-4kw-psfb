@@ -24,8 +24,12 @@
  *********************************************************************************/
 void PwrCtrl_PWM_Update()
 {   
-    psfb_ptr->Pwm.ControlPhase = psfb_ptr->Pwm.PBVControlPhaseTarget * 112;      // could add a ramp here as well :/
-    
+    if (psfb_ptr->ILoop.Enable == 0){
+        psfb_ptr->Pwm.ControlPhase = psfb_ptr->Pwm.PBVControlPhaseTarget * 112;      // could add a ramp here as well :/
+    } else {
+        psfb_ptr->Pwm.ControlPhase = psfb_ptr->Pwm.PBVControlPhaseTarget; 
+    }
+      
     PWM_TriggerCCompareValueSet(PWM_PRI_1, psfb_ptr->Pwm.ControlPhase);
     
     PWM_TriggerBCompareValueSet(PWM_PRI_1, (psfb_ptr->Pwm.ControlPhase>>1) );        // ADC primary trigger
@@ -231,4 +235,12 @@ void PwrCtrl_PWM_Initialize(void)
     // hook the ControlLoop_Interrupt_CallBack to pwm ISR
     // disable the SCCP timer.
     
+}
+
+
+void PwrCtrl_PWM_Stop_Switching(void){
+    PG1IOCONLbits.OVRENH = 1;
+    PG1IOCONLbits.OVRENL = 1;
+    PG2IOCONLbits.OVRENH = 1;
+    PG2IOCONLbits.OVRENL = 1;
 }

@@ -123,9 +123,7 @@ void App_PBV_psfb_Init()
     App_PBV_psfb_ASCII_Ptr->Length             = 64;
 
     app_PBV_Init(App_PBV_psfb_TX_Ptr, App_PBV_psfb_ASCII_Ptr, App_PBV_psfb_RX_Ptr);
-    
-    
-    ///
+
     
     dead_time_right = PG1DTH;
     

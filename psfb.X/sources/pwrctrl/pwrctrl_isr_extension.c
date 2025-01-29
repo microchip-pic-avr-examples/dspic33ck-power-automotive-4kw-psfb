@@ -103,12 +103,12 @@ void PwrCtrl_UpdateADConverterData (void)
         vOutAveraging.Counter = vOutAveraging.Counter + 1; 
     }
     
-    if(ADC1_IsConversionComplete(I_SEC_AVG_FILT)){
-        psfb_ptr->Data.ISenseSecondary = ADC1_ConversionResultGet(I_SEC_AVG_FILT); 
-        psfb_ptr->Data.ISecAverageRectified = abs(psfb_ptr->Data.ISenseSecondary - psfb_ptr->Data.ISecSensorOffset);
-        iSecAveraging.Accumulator += psfb_ptr->Data.ISecAverageRectified;
-        iSecAveraging.Counter = iSecAveraging.Counter + 1;
-    }
+//    if(ADC1_IsConversionComplete(I_SEC_AVG_FILT)){
+//        psfb_ptr->Data.ISenseSecondary = ADC1_ConversionResultGet(I_SEC_AVG_FILT); 
+//        psfb_ptr->Data.ISecAverageRectified = abs(psfb_ptr->Data.ISenseSecondary - psfb_ptr->Data.ISecSensorOffset);
+//        iSecAveraging.Accumulator += psfb_ptr->Data.ISecAverageRectified;
+//        iSecAveraging.Counter = iSecAveraging.Counter + 1;
+//    }
 }
 
 /*******************************************************************************
@@ -148,8 +148,9 @@ void PwrCtrl_PrepareData(void)
  *********************************************************************************/
 void PwrCtrl_ControlLoopExecute(void)
 {   
-    // control loop execute
-    psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISensePrimary ;
+    // control loop execute 
+    //TODO: change the feedback signal to secondary current ??
+    psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISenseSecondary;
     
     SMPS_Controller2P2ZUpdate(
             &IMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure

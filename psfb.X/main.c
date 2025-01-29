@@ -55,8 +55,6 @@ int main(void)
     OS_Init(); 
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
 
-
-
   
 #if (X2CDEBUG_ENABLED == 1)
 X2CScope_Init();
@@ -74,6 +72,7 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
 {
     //Read the ADC value from the ADCBUF
     psfb_ptr->Data.ISensePrimary = ADCBUF0;
+    psfb_ptr->Data.ISenseSecondary = ADCBUF1;
     
     ControlLoop_Interrupt_CallBack();   //update software based ADC, execute Faults
     

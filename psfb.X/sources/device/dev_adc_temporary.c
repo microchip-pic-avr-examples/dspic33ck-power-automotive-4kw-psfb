@@ -9,8 +9,8 @@ void Dev_ADC_Sampling_Task_1ms (void){
 //    if(ADC1_IsConversionComplete(FB_P_CT_FILT))
 //        psfb_ptr->.Data.ISensePrimary = ADC1_ConversionResultGet(FB_P_CT_FILT); 
 //    
-    if(ADC1_IsConversionComplete(I_SEC_AVG_FILT))
-        psfb_ptr->Data.ISenseSecondary = ADC1_ConversionResultGet(I_SEC_AVG_FILT); 
+//    if(ADC1_IsConversionComplete(I_SEC_AVG_FILT))
+//        psfb_ptr->Data.ISenseSecondary = ADC1_ConversionResultGet(I_SEC_AVG_FILT); 
     
     if(ADC1_IsConversionComplete(FB_VOUT))
         psfb_ptr->Data.VOutVoltage = ADC1_ConversionResultGet(FB_VOUT); 

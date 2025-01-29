@@ -64,12 +64,12 @@ void ControlLoop_Interrupt_CallBack(void)
     // Enable the ADC sampling
     ADC1_SoftwareTriggerEnable();
     
+    PwrCtrl_UpdateADConverterData();
+
     // execute control loop
     // Execute the fault detection
     Fault_Execute();
     
-    PwrCtrl_UpdateADConverterData();
-
     PwrCtrl_PrepareData();
     
     PwrCtrl_ControlLoopExecute();
