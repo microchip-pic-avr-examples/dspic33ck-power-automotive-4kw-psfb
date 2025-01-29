@@ -15,7 +15,7 @@
 #include "pwm_hs/pwm.h"
 #include "system/pins.h"
 
-#include "config/macros.h"
+//#include "config/macros.h"
 #include "device/device.h"
 #include "pwrctrl/pwrctrl.h"
 #include "fault_common.h"
@@ -23,6 +23,30 @@
 #include "fault_comm_interface.h"
 
 #include "pwrctrl/pwrctrl_pwm.h"
+
+//defining macros here for now
+#define VPRI_OV_THRES_TRIG_V            890
+#define VPRI_OV_THRES_CLEAR_V           800
+#define VPRI_UV_THRES_TRIG_V            400
+#define VPRI_UV_THRES_CLEAR_V           390
+
+#define VPRI_OV_THRES_TRIG_ADC          (((VPRI_OV_THRES_TRIG_V) * 4.329) + 205) 
+#define VPRI_UV_THRES_TRIG_ADC          (((VPRI_UV_THRES_TRIG_V) * 4.329) + 205) 
+
+#define VPRI_OV_THRES_CLEAR_ADC         (((VPRI_OV_THRES_CLEAR_V) * 4.329) + 205) 
+#define VPRI_UV_THRES_CLEAR_ADC         (((VPRI_UV_THRES_CLEAR_V) * 4.329) + 205) 
+
+#define FAULT_VPRI_OV   true
+#define FAULT_VPRI_UV   true
+#define FAULT_ISEC_OC   false
+#define FAULT_IPRI_OC   false
+#define FAULT_VSEC_OV   false
+#define FAULT_PS_OTP    false
+#define FAULT_SHORT_CCT false
+#define FAULT_VRAIL_5V  false
+#define LOAD_DISCONNECT false
+
+
 
 // PRIVATE FUNCTIONS
 static void Fault_EnableShortCircuitProtection(void);
@@ -49,9 +73,9 @@ void Fault_Handler(void)
     PwrCtrl_PWM_Disable();
      
     // set the fault active bit
-    psfb_ptr->Status.bits.FaultActive = 1;
+    // psfb_ptr->Status.bits.FaultActive = 1;
     
-    psfb_ptr->Fault.FaultDetected = 1;
+    // psfb_ptr->Fault.FaultDetected = 1;
     
     // clear the running bit
     psfb_ptr->Status.bits.Running = 0;    
@@ -68,33 +92,33 @@ void Fault_Handler(void)
  *********************************************************************************/
 void Fault_Initialize(void)
 {
-    // Initialize Primary Over Current Protection
-    FAULT_Init(&psfb_ptr->Fault.Object.IPrimaryOCP, IPRI_OC_THRES_TRIG, 
-            IPRI_OC_THRES_CLEAR, IPRI_OC_T_BLANK_TRIG, IPRI_OC_T_BLANK_CLEAR); 
+    // // Initialize Primary Over Current Protection
+    // FAULT_Init(&psfb_ptr->Fault.Object.IPrimaryOCP, IPRI_OC_THRES_TRIG, 
+    //         IPRI_OC_THRES_CLEAR, IPRI_OC_T_BLANK_TRIG, IPRI_OC_T_BLANK_CLEAR); 
     
-    // Initialize Secondary Over Current Protection
-    FAULT_Init(&psfb_ptr->Fault.Object.ISecondaryOCP, ISEC_OC_THRES_TRIG, 
-            ISEC_OC_THRES_CLEAR, ISEC_OC_T_BLANK_TRIG, ISEC_OC_T_BLANK_CLEAR);  
-    
-    // Initialize Primary Over Voltage Protection
-    FAULT_Init(&psfb_ptr->Fault.Object.VPrimaryOVP, VPRI_OV_THRES_TRIG, 
-            VPRI_OV_THRES_CLEAR, VPRI_OV_T_BLANK_TRIG, VPRI_OV_T_BLANK_CLEAR);   
+    // // Initialize Secondary Over Current Protection
+    // FAULT_Init(&psfb_ptr->Fault.Object.ISecondaryOCP, ISEC_OC_THRES_TRIG, 
+    //         ISEC_OC_THRES_CLEAR, ISEC_OC_T_BLANK_TRIG, ISEC_OC_T_BLANK_CLEAR);  
     
     // Initialize Primary Over Voltage Protection
-    FAULT_Init(&psfb_ptr->Fault.Object.VPrimaryUVP, VPRI_OV_THRES_TRIG, 
-            VPRI_OV_THRES_CLEAR, VPRI_OV_T_BLANK_TRIG, VPRI_OV_T_BLANK_CLEAR);   
+    FAULT_Init(&psfb_ptr->Fault.Object.VPrimaryOVP, VPRI_OV_THRES_TRIG_ADC, 
+            VPRI_OV_THRES_CLEAR_ADC, 1, 1);   
     
-    // Initialize Secondary Over Voltage Protection
-    FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryOVP, VSEC_OV_THRES_TRIG, 
-            VSEC_OV_THRES_CLEAR, VSEC_OV_T_BLANK_TRIG, VSEC_OV_T_BLANK_CLEAR);
+    // Initialize Primary Under Voltage Protection
+    FAULT_Init(&psfb_ptr->Fault.Object.VPrimaryUVP, VPRI_UV_THRES_TRIG_ADC, 
+            VPRI_UV_THRES_CLEAR_ADC, 1, 1);   
     
-    // Initialize Secondary Over Voltage Protection
-    FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryUVP, VSEC_OV_THRES_TRIG, 
-            VSEC_OV_THRES_CLEAR, VSEC_OV_T_BLANK_TRIG, VSEC_OV_T_BLANK_CLEAR);
+    // // Initialize Secondary Over Voltage Protection
+    // FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryOVP, VSEC_OV_THRES_TRIG, 
+    //         VSEC_OV_THRES_CLEAR, VSEC_OV_T_BLANK_TRIG, VSEC_OV_T_BLANK_CLEAR);
     
-    // Initialize 5V Rail instability Protection
-    FAULT_Init(&psfb_ptr->Fault.Object.VRail_5V, VRAIL_5V_UV_THRES_TRIG, 
-            VRAIL_5V_UV_THRES_CLEAR, VRAIL_5V_UV_T_BLANK_TRIG, VRAIL_5V_UV_T_BLANK_CLEAR);
+    // // Initialize Secondary Over Voltage Protection
+    // FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryUVP, VSEC_OV_THRES_TRIG, 
+    //         VSEC_OV_THRES_CLEAR, VSEC_OV_T_BLANK_TRIG, VSEC_OV_T_BLANK_CLEAR);
+    
+    // // Initialize 5V Rail instability Protection
+    // FAULT_Init(&psfb_ptr->Fault.Object.VRail_5V, VRAIL_5V_UV_THRES_TRIG, 
+    //         VRAIL_5V_UV_THRES_CLEAR, VRAIL_5V_UV_T_BLANK_TRIG, VRAIL_5V_UV_T_BLANK_CLEAR);
     
 //    // Initialize Over Temperature Protection
 //    FAULT_Init(&psfb_ptr->Fault.Object.PowerSupplyOTP, OTP_THRES_TRIG,         
@@ -136,15 +160,15 @@ void Fault_Execute(void)
 //    faultCheck &= FAULT_CheckMax(&psfb_ptr->Fault.Object.IPrimaryOCP, psfb_ptr->Data.ISensePrimary, &Fault_Handler);
 //    #endif 
 //    
-//    // primary over voltage fault handler
-//    #if defined(FAULT_VPRI_OV) && (FAULT_VPRI_OV ==  true)      
-//    faultCheck &= FAULT_CheckMax(&psfb_ptr->Fault.Object.VPrimaryOVP, psfb_ptr->Data.VInVoltage, &Fault_Handler);
-//    #endif  
-//
-//    // primary over voltage fault handler
-//    #if defined(FAULT_VPRI_UV) && (FAULT_VPRI_UV ==  true)      
-//    faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VPrimaryUVP, psfb_ptr->Data.VInVoltage, &Fault_Handler);
-//    #endif  
+   // primary over voltage fault handler
+   #if defined(FAULT_VPRI_OV) && (FAULT_VPRI_OV ==  true)      
+   faultCheck &= FAULT_CheckMax(&psfb_ptr->Fault.Object.VPrimaryOVP, psfb_ptr->Data.VInVoltage, &Fault_Handler);
+   #endif  
+
+   // primary over voltage fault handler
+   #if defined(FAULT_VPRI_UV) && (FAULT_VPRI_UV ==  true)      
+   faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VPrimaryUVP, psfb_ptr->Data.VInVoltage, &Fault_Handler);
+   #endif  
 //
 //    // primary over voltage fault handler
 //    #if defined(FAULT_VRAIL_5V) && (FAULT_VRAIL_5V ==  true)                
@@ -198,10 +222,10 @@ void Fault_Execute(void)
 //    }   
 //    #endif
 
-    //psfb_ptr->Status.bits.FaultActive = faultCheck;
+    psfb_ptr->Status.bits.FaultActive = faultCheck;
     
     // Identify the fault that trips
-    // psfb_ptr->Fault.FaultDetected = Fault_GetFlags();
+    psfb_ptr->Fault.FaultDetected = Fault_GetFlags();
 }
 
 

@@ -32,7 +32,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>Input Voltage</Name>
-        <Scaling>0.238</Scaling>
+        <Scaling>0.231</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
         <Plot>false</Plot>
@@ -496,6 +496,7 @@
             <Name>Primary Voltage OV</Name>
             <BitIndex>6</BitIndex>
             <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>Primary Voltage UV</Name>
@@ -504,12 +505,12 @@
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>Secondary Voltage OV</Name>
+            <Name>VCAP OV</Name>
             <BitIndex>8</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>Secondary Voltage UV</Name>
+            <Name>VCAP UV</Name>
             <BitIndex>9</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
