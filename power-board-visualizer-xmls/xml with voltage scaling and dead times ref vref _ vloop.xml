@@ -477,13 +477,13 @@
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>IPRI_OCP_</Name>
+            <Name>Primary OC</Name>
             <BitIndex>3</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>ISC_OCP_</Name>
+            <Name>Secondary OC</Name>
             <BitIndex>4</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
@@ -493,44 +493,34 @@
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>FLT_VPRI_OVP</Name>
+            <Name>Primary Voltage OV</Name>
             <BitIndex>6</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>FLT_VPRI_UVP</Name>
+            <Name>Primary Voltage UV</Name>
             <BitIndex>7</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>FLT_VSEC_OVP</Name>
+            <Name>Secondary Voltage OV</Name>
             <BitIndex>8</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>FLT_VSEC_UVP</Name>
+            <Name>Secondary Voltage UV</Name>
             <BitIndex>9</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>Temp</Name>
+            <Name>Over Temp</Name>
             <BitIndex>10</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>FLT_RAIL_5V</Name>
+            <Name>5V Rail Fault</Name>
             <BitIndex>11</BitIndex>
-            <ControlType>radio</ControlType>
-          </StatusBit>
-          <StatusBit>
-            <Name>Load Disconnect</Name>
-            <BitIndex>12</BitIndex>
-            <ControlType>radio</ControlType>
-          </StatusBit>
-          <StatusBit>
-            <Name>Reset</Name>
-            <BitIndex>13</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
         </StatusBits>

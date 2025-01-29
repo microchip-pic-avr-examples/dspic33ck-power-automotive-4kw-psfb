@@ -38,9 +38,7 @@ uint16_t Fault_GetFlags(void)
             (psfb_ptr->Fault.Object.VSecondaryOVP.FaultLatch << FLT_VSEC_OVP) +
             (psfb_ptr->Fault.Object.VSecondaryUVP.FaultLatch << FLT_VSEC_UVP) +
             (psfb_ptr->Fault.Object.PowerSupplyOTP.FaultLatch << FLT_psfb_TEMP) +
-            (psfb_ptr->Fault.Object.VRail_5V.FaultLatch << FLT_RAIL_5V) +
-            (loadDisconnect << FLT_LOAD_DISCONNECT) + 
-            (psfb_ptr->Fault.Object.ISenseSCP.FaultLatch << RESET);
+            (psfb_ptr->Fault.Object.VRail_5V.FaultLatch << FLT_RAIL_5V); 
             
     return(fault);        
 }
