@@ -37,13 +37,13 @@
  ***********************************************************************************/
 enum  PWR_CTRL_STATES_e
 {
-  PWRCTRL_STATE_INITIALIZE,           ///< power converter control state #0:  initializes object properties and clears status bits
-  PWRCTRL_STATE_FAULT_DETECTION,      ///< power converter control state #1:  checks if a fault occurs
-  PWRCTRL_STATE_PRECHARGE,            ///< power converter control state #2:  charging output caps
-  PWRCTRL_STATE_STANDBY,              ///< power converter control state #3:  waiting for status bits allowing power supply to run
-  PWRCTRL_STATE_START_CONTROL,        ///< power converter control state #4:  wait for some time to 
-  PWRCTRL_STATE_SOFT_START,           ///< power converter control state #5:  performs soft-start sequence 
-  PWRCTRL_STATE_UP_AND_RUNNING        ///< power converter control state #6:  output is in regulation and power is OK (normal continuous operation)
+  PWRCTRL_STATE_INITIALIZE = 0,       ///< power converter control state #0:  initializes object properties and clears status bits
+  PWRCTRL_STATE_PRECHARGE,            ///< power converter control state #1:  charging output caps
+  PWRCTRL_STATE_STANDBY,              ///< power converter control state #2:  waiting for status bits allowing power supply to run
+  PWRCTRL_STATE_START_CONTROL,        ///< power converter control state #3:  wait for some time to 
+  PWRCTRL_STATE_SOFT_START,           ///< power converter control state #4:  performs soft-start sequence 
+  PWRCTRL_STATE_UP_AND_RUNNING,       ///< power converter control state #5:  output is in regulation and power is OK (normal continuous operation)
+  PWRCTRL_STATE_FAULT_DETECTION,      ///< power converter control state #6:  checks if a fault occurs
 };
 typedef enum PWR_CTRL_STATES_e PWR_CTRL_STATE_t;
 
@@ -83,6 +83,7 @@ struct FEEDBACK_SETTINGS_s
     uint16_t VCapVoltage;           ///< Data value for capacitor
     
     uint16_t ISensePrimary;         ///< Data value for primary current as measured with CT
+    uint16_t IPriSensorOffset;      ///< Offset of the primary current sensor
 
     uint16_t ISenseSecondary;       ///< Data value for secondary current as measured with shunt
     uint16_t ISecAverage;           ///< Data value for average secondary current 

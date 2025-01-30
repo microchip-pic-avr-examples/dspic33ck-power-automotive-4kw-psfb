@@ -94,7 +94,6 @@ void PwrCtrl_StateMachine(POWER_CONTROL_t* pcInstance)
         case PWRCTRL_STATE_PRECHARGE:
             PCS_PRECHARGE_handler(pcInstance);
             break;
-    
 
         default:
             pcInstance->State = PWRCTRL_STATE_INITIALIZE;
@@ -138,20 +137,22 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
 //    pcInstance->VRamp.RampComplete = true;
 //    pcInstance->PRamp.RampComplete = true;
 //    
-#if defined (OPEN_LOOP_PBV) && (OPEN_LOOP_PBV == true)
-    pcInstance->PhRamp.ptrReference = &pcInstance->Pwm.ControlPhase;
-    pcInstance->PhRamp.ptrReferenceTarget = &pcInstance->Pwm.PBVControlPhaseTarget;
-    pcInstance->PhRamp.StepSize = 20;
-    pcInstance->PhRamp.Counter = 0;
-    pcInstance->PhRamp.Delay = 20;
-    pcInstance->PhRamp.RampComplete = true;
-#endif
-
-
-    // Next State assigned to STATE_FAULT_DETECTION
+    
     Dev_LED_Off(LED_BOARD_GREEN);
     Dev_LED_Off(LED_BOARD_RED);
-    pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+
+    //add delay of some ms to for values to be stable
+
+    if (dev_AreOffsetsCalculated() == 1){
+        psfb_ptr->Data.ISecSensorOffset = dev_Get_SecondaryShuntOffset();
+        psfb_ptr->Data.IPriSensorOffset = dev_Get_PrimaryCTOffset();
+        pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+    }
+    else {
+        dev_MeasureOffsets();
+    }
+
+    //pcInstance->State = PWRCTRL_STATE_PRECHARGE;
     
 }
 

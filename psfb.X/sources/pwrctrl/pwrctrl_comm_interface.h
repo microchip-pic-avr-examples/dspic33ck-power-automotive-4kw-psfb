@@ -58,6 +58,8 @@ uint16_t Dev_PwrCtrl_Get_SecPower(void);
 uint16_t Dev_PwrCtrl_GetAveraging_Vprim(void);
 uint16_t Dev_PwrCtrl_GetAveraging_Vsec(void);
 uint16_t Dev_PwrCtrl_GetAveraging_Isec(void);
+uint16_t Dev_PwrCtrl_GetIsec_Offset(void);
+uint16_t Dev_PwrCtrl_GetIPri_Offset(void);
 
 
 uint16_t Dev_PwrCtrl_GetControl_Phase(void);

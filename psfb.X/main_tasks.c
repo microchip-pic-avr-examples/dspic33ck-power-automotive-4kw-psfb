@@ -52,9 +52,7 @@
 #include "config/comms_config.h"
 //#include "device/measure_task.h"
 #include "device/dev_temp.h"
-#include "device/dev_sec_cur.h"
 
-#include "device/dev_adc_temporary.h"
 static OS_SYSTIME_t sysTime;
 //=======================================================================================================
 //

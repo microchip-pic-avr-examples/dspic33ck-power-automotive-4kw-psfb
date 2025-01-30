@@ -299,3 +299,13 @@ uint16_t Dev_PwrCtrl_GetControl_Phase(void)
 {
     return(psfb_ptr->Pwm.ControlPhase);
 }
+
+uint16_t Dev_PwrCtrl_GetIPri_Offset(void)
+{
+    return(psfb_ptr->Data.IPriSensorOffset);
+}
+
+uint16_t Dev_PwrCtrl_GetIsec_Offset(void)
+{
+    return(psfb_ptr->Data.ISecSensorOffset);
+}

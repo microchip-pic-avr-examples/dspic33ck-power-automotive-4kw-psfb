@@ -11,6 +11,7 @@
 //#include "dev_current_sensor.h"
 //#include "dev_fan.h"
 #include "dev_led.h"
+#include "dev_adc_sensor_offsets.h"
 //#include "dev_temp.h"
 
 #endif	/* DEVICE_H */

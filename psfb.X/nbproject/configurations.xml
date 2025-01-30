@@ -82,10 +82,9 @@
         </logicalFolder>
         <logicalFolder name="device" displayName="device" projectFiles="true">
           <itemPath>sources/device/dev_led.h</itemPath>
-          <itemPath>sources/device/dev_adc_temporary.h</itemPath>
           <itemPath>sources/device/dev_temp.h</itemPath>
           <itemPath>sources/device/device.h</itemPath>
-          <itemPath>sources/device/dev_sec_cur.h</itemPath>
+          <itemPath>sources/device/dev_adc_sensor_offsets.h</itemPath>
         </logicalFolder>
         <logicalFolder name="driver" displayName="driver" projectFiles="true">
           <logicalFolder name="mcc_extension"
@@ -222,9 +221,8 @@
         </logicalFolder>
         <logicalFolder name="device" displayName="device" projectFiles="true">
           <itemPath>sources/device/dev_led.c</itemPath>
-          <itemPath>sources/device/dev_adc_temporary.c</itemPath>
           <itemPath>sources/device/dev_temp.c</itemPath>
-          <itemPath>sources/device/dev_sec_cur.c</itemPath>
+          <itemPath>sources/device/dev_adc_sensor_offsets.c</itemPath>
         </logicalFolder>
         <logicalFolder name="driver" displayName="driver" projectFiles="true">
           <logicalFolder name="mcc_extension"

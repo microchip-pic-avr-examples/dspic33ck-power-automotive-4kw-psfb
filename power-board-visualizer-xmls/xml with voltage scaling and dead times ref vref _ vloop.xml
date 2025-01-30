@@ -191,7 +191,7 @@
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit>bits</Unit>
-        <Plot>true</Plot>
+        <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>14</SignalChannelIndex>
@@ -277,6 +277,32 @@
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
+      <SignalChannel>
+        <Name>I-CT Offset</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit>bits</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>21</SignalChannelIndex>
+        <PositionInMessage>20</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>I-SHUNT Offset</Name>
+        <Scaling>1</Scaling>
+        <Offset>0</Offset>
+        <Unit>bits</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>22</SignalChannelIndex>
+        <PositionInMessage>21</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
@@ -316,11 +342,19 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>21</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>4</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>10</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>22</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -421,37 +455,37 @@
           </StatusBit>
           <StatusBit>
             <Name>PCS_PRECHARGE</Name>
-            <BitIndex>2</BitIndex>
+            <BitIndex>1</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>PCS_STANDBY</Name>
-            <BitIndex>3</BitIndex>
+            <BitIndex>2</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>PCS_START_CONTROL</Name>
-            <BitIndex>4</BitIndex>
+            <BitIndex>3</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>PCS_SOFT_START</Name>
-            <BitIndex>5</BitIndex>
+            <BitIndex>4</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>PCS_UP_AND_RUNNING</Name>
-            <BitIndex>6</BitIndex>
+            <BitIndex>5</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>PCS_FAULT</Name>
-            <BitIndex>1</BitIndex>
+            <BitIndex>6</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
@@ -514,6 +548,7 @@
             <Name>VCAP UV</Name>
             <BitIndex>9</BitIndex>
             <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>Over Temp</Name>

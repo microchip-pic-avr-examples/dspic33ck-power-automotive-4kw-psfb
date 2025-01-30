@@ -96,14 +96,14 @@ void PwrCtrl_UpdateADConverterData (void)
     
     if(ADC1_IsConversionComplete(VIN_INT_AN)){
         psfb_ptr->Data.VInVoltage = ADC1_ConversionResultGet(VIN_INT_AN);
-        vPrimAveraging.Accumulator += psfb_ptr->Data.VInVoltage;
-        vPrimAveraging.Counter = vPrimAveraging.Counter + 1;   
+        // vPrimAveraging.Accumulator += psfb_ptr->Data.VInVoltage;
+        // vPrimAveraging.Counter = vPrimAveraging.Counter + 1;   
     }
     
     if(ADC1_IsConversionComplete(FB_VOUT)){
         psfb_ptr->Data.VOutVoltage = ADC1_ConversionResultGet(FB_VOUT);
-        vOutAveraging.Accumulator += psfb_ptr->Data.VOutVoltage;
-        vOutAveraging.Counter = vOutAveraging.Counter + 1; 
+        // vOutAveraging.Accumulator += psfb_ptr->Data.VOutVoltage;
+        // vOutAveraging.Counter = vOutAveraging.Counter + 1; 
     }
     
 //    if(ADC1_IsConversionComplete(I_SEC_AVG_FILT)){

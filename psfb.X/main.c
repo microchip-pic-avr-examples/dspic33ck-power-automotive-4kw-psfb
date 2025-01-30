@@ -20,18 +20,15 @@
 */
 #include "system/system.h"
 #include "timer/tmr1.h"
-//#include "timer/sccp1.h"
 #include "os/os_scheduler.h"
 #include "device/dev_led.h"
-//#include "device/dev_fan.h"
 #include "app/app_PBV_psfb_frame_map.h"
-//#include "device/dev_temp.h"
 #include "x2cScope/X2CScope.h"
 #include "config/comms_config.h"
 #include "pwm_hs/pwm.h"
-#include "device/dev_adc_temporary.h"
 #include "fault/fault.h"
 #include "pwrctrl/pwrctrl_isr.h"
+#include "pwrctrl/pwrctrl.h"
 
 // AR-241126: header file for calling custom peripheral configuration after MCC config
 #include "sources/driver/mcc_extension/mcc_custom_config.h"
@@ -39,7 +36,7 @@
     Main application
 */
 
-
+uint16_t counter = 65500;
 int main(void)
 {
     
@@ -61,6 +58,10 @@ int main(void)
     
     App_PBV_psfb_Init();
     Dev_LED_Init();
+    dev_MeasureOffsets_Initialize();
+    
+    while (counter--> 0) Nop(); // TODO: implement some delay for values to settle
+    
     OS_Init(); 
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
 
@@ -82,9 +83,11 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     //Read the ADC value from the ADCBUF
     psfb_ptr->Data.ISensePrimary = ADCBUF0;
     psfb_ptr->Data.ISenseSecondary = ADCBUF1;
-    
-    ControlLoop_Interrupt_CallBack();   //update software based ADC, execute Faults
-    
+
+    if (psfb_ptr->State > 0 ) {             // TODO: precharge state could mess this up
+        ControlLoop_Interrupt_CallBack();   //update software based ADC, execute Faults
+    } 
+
     //clear the FB_P_CT_FILT interrupt flag
     IFS5bits.ADCAN0IF = 0;
 }

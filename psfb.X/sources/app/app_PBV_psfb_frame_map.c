@@ -235,11 +235,11 @@ void App_PBV_psfb_Build_Frame()
     
     buffer_sixteen_tx[0] = (1<<Dev_PwrCtrl_Get_State());
     buffer_sixteen_tx[1] = flag_word;
-    buffer_sixteen_tx[2] = (Dev_PwrCtrl_GetAdc_Vpri() - 202) ? (Dev_PwrCtrl_GetAdc_Vpri() - 202) : 0;
+    buffer_sixteen_tx[2] = (Dev_PwrCtrl_GetAdc_Vpri() > 202) ? (Dev_PwrCtrl_GetAdc_Vpri() - 202) : 0;
     buffer_sixteen_tx[3] = Dev_PwrCtrl_GetAdc_Vsec();
-    buffer_sixteen_tx[4] = (PwrCtrl_GetAdc_Isec_shunt() - 610) ? (PwrCtrl_GetAdc_Isec_shunt() - 610) : 0;
+    buffer_sixteen_tx[4] = (PwrCtrl_GetAdc_Isec_shunt() > 610) ? (PwrCtrl_GetAdc_Isec_shunt() - 610) : 0;
     buffer_sixteen_tx[5] = Dev_PwrCtrl_GetVoltage_Vcap();
-    buffer_sixteen_tx[6] = (PwrCtrl_GetAdc_Temperature() - 497 ) ? (PwrCtrl_GetAdc_Temperature() - 497 ) : 0;
+    buffer_sixteen_tx[6] = (PwrCtrl_GetAdc_Temperature() > 497) ? (PwrCtrl_GetAdc_Temperature() - 497 ) : 0;
     buffer_sixteen_tx[7] = PwrCtrl_GetAdc_Vrail_5V();
     buffer_sixteen_tx[8] = PG1TRIGC;
     buffer_sixteen_tx[9] =  PwrCtrl_GetAdc_Ipri_ct();
@@ -259,12 +259,16 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[18] = DAC1DATH;
     
     buffer_sixteen_tx[19] = psfb_ptr->controller_error;
+
+    buffer_sixteen_tx[20] = Dev_PwrCtrl_GetIPri_Offset();
+
+    buffer_sixteen_tx[21] = Dev_PwrCtrl_GetIsec_Offset();
     
     
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 20);
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 22);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 20 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 22 * 2 ;
 }
 
 

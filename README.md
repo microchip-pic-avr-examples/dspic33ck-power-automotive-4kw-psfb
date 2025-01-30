@@ -52,3 +52,8 @@
 1. VCAP OV Threshold 18V = 3440 adc
 2. VCAP UV Threshold 6V = 1146 adc
 
+### current sensors offset calculation
+
+1. wait for some time in main.
+2. in the init state sample the i pri and i shunt lines for 64 times, calculate average. that is the offset
+
