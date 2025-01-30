@@ -83,11 +83,10 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     //Read the ADC value from the ADCBUF
     psfb_ptr->Data.ISensePrimary = ADCBUF0;
     psfb_ptr->Data.ISenseSecondary = ADCBUF1;
-
+    
     if (psfb_ptr->State > 0 ) {             // TODO: precharge state could mess this up
         ControlLoop_Interrupt_CallBack();   //update software based ADC, execute Faults
     } 
-
     //clear the FB_P_CT_FILT interrupt flag
     IFS5bits.ADCAN0IF = 0;
 }
