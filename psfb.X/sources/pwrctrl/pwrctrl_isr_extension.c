@@ -90,6 +90,9 @@ void PwrCtrl_UpdateADConverterData (void)
     
     if(ADC1_IsConversionComplete(FB_TEMP))
         psfb_ptr->Data.Temperature = ADC1_ConversionResultGet(FB_TEMP);
+
+    if(ADC1_IsConversionComplete(FB_VCAP))
+        psfb_ptr->Data.VCapVoltage = ADC1_ConversionResultGet(FB_VCAP);
     
     if(ADC1_IsConversionComplete(VIN_INT_AN)){
         psfb_ptr->Data.VInVoltage = ADC1_ConversionResultGet(VIN_INT_AN);

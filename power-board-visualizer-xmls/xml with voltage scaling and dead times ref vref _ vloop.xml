@@ -45,7 +45,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>Output Voltage</Name>
-        <Scaling>0.005231</Scaling>
+        <Scaling>0.005232</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
         <Plot>false</Plot>
@@ -71,7 +71,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>Output Cap Voltage</Name>
-        <Scaling>0.005231</Scaling>
+        <Scaling>0.005232</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
         <Plot>false</Plot>
@@ -508,6 +508,7 @@
             <Name>VCAP OV</Name>
             <BitIndex>8</BitIndex>
             <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>VCAP UV</Name>

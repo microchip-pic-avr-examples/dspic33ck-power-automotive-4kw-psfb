@@ -32,15 +32,26 @@
 
 #define VPRI_OV_THRES_TRIG_ADC          (((VPRI_OV_THRES_TRIG_V) * 4.329) + 205) 
 #define VPRI_UV_THRES_TRIG_ADC          (((VPRI_UV_THRES_TRIG_V) * 4.329) + 205) 
-
 #define VPRI_OV_THRES_CLEAR_ADC         (((VPRI_OV_THRES_CLEAR_V) * 4.329) + 205) 
 #define VPRI_UV_THRES_CLEAR_ADC         (((VPRI_UV_THRES_CLEAR_V) * 4.329) + 205) 
 
+#define VSEC_OV_THRES_TRIG_V            18
+#define VSEC_OV_THRES_CLEAR_V           11
+#define VSEC_UV_THRES_TRIG_V            8
+#define VSEC_UV_THRES_CLEAR_V           10
+
+#define VSEC_OV_THRES_TRIG_ADC          ((VSEC_OV_THRES_TRIG_V) * 191.131)
+#define VSEC_OV_THRES_CLEAR_ADC         ((VPRI_OV_THRES_CLEAR_V) * 191.131)
+#define VSEC_UV_THRES_TRIG_ADC          ((VSEC_UV_THRES_TRIG_V) * 191.131)  
+#define VSEC_UV_THRES_CLEAR_ADC         ((VPRI_UV_THRES_CLEAR_V) * 191.131) 
+
 #define FAULT_VPRI_OV   true
 #define FAULT_VPRI_UV   true
+#define FAULT_VSEC_OV   true
+#define FAULT_VSEC_UV   true
+
 #define FAULT_ISEC_OC   false
 #define FAULT_IPRI_OC   false
-#define FAULT_VSEC_OV   false
 #define FAULT_PS_OTP    false
 #define FAULT_SHORT_CCT false
 #define FAULT_VRAIL_5V  false
@@ -108,13 +119,13 @@ void Fault_Initialize(void)
     FAULT_Init(&psfb_ptr->Fault.Object.VPrimaryUVP, VPRI_UV_THRES_TRIG_ADC, 
             VPRI_UV_THRES_CLEAR_ADC, 1, 1);   
     
-    // // Initialize Secondary Over Voltage Protection
-    // FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryOVP, VSEC_OV_THRES_TRIG, 
-    //         VSEC_OV_THRES_CLEAR, VSEC_OV_T_BLANK_TRIG, VSEC_OV_T_BLANK_CLEAR);
+    // Initialize Secondary Over Voltage Protection
+    FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryOVP, VSEC_OV_THRES_TRIG_ADC, 
+            VSEC_OV_THRES_CLEAR_ADC, 1, 1);
     
-    // // Initialize Secondary Over Voltage Protection
-    // FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryUVP, VSEC_OV_THRES_TRIG, 
-    //         VSEC_OV_THRES_CLEAR, VSEC_OV_T_BLANK_TRIG, VSEC_OV_T_BLANK_CLEAR);
+    // Initialize Secondary Under Voltage Protection
+    FAULT_Init(&psfb_ptr->Fault.Object.VSecondaryUVP, VSEC_UV_THRES_TRIG_ADC, 
+            VSEC_UV_THRES_CLEAR_ADC, 1, 1);
     
     // // Initialize 5V Rail instability Protection
     // FAULT_Init(&psfb_ptr->Fault.Object.VRail_5V, VRAIL_5V_UV_THRES_TRIG, 
@@ -169,6 +180,17 @@ void Fault_Execute(void)
    #if defined(FAULT_VPRI_UV) && (FAULT_VPRI_UV ==  true)      
    faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VPrimaryUVP, psfb_ptr->Data.VInVoltage, &Fault_Handler);
    #endif  
+
+    // secondary over voltage fault handler
+   #if defined(FAULT_VSEC_OV) && (FAULT_VSEC_OV ==  true)      
+   faultCheck &= FAULT_CheckMax(&psfb_ptr->Fault.Object.VSecondaryOVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
+   #endif  
+
+   // secondary over voltage fault handler
+   #if defined(FAULT_VSEC_UV) && (FAULT_VSEC_UV ==  true)      
+   faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VSecondaryUVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
+   #endif  
+   
 //
 //    // primary over voltage fault handler
 //    #if defined(FAULT_VRAIL_5V) && (FAULT_VRAIL_5V ==  true)                

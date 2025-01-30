@@ -42,3 +42,13 @@
 
 1. ov threshold is then ADC Val * 0.231 = 900, -> 3896.1 + 205 = 4101    -> higher than the max adc val -> max can be 895V
 2. uv threshold is then ADC val = 1731.6 + 205  = 1936
+
+### output voltage / V cap voltage
+1. gain 154mv/v. 
+2. Vcap voltage = (ADC Val * 3.3)/4095 * (1/0.154)
+3. Vcap voltage = ADC VAL * 0.005232 
+4. ADC VAL = Vcap * 191.131
+
+1. VCAP OV Threshold 18V = 3440 adc
+2. VCAP UV Threshold 6V = 1146 adc
+
