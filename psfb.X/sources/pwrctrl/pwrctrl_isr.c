@@ -60,23 +60,20 @@ void ControlLoop_Interrupt_CallBack(void)
 
     
 //  _PWM1IF = 0;
-    GPIO_debug_SetHigh();
+
     // Enable the ADC sampling
-    ADC1_SoftwareTriggerEnable();
-    
-    PwrCtrl_UpdateADConverterData();
+
 
     // execute control loop
-    // Execute the fault detection
-    Fault_Execute();
+
     
-    PwrCtrl_PrepareData();
+    //PwrCtrl_PrepareData();
     
     PwrCtrl_ControlLoopExecute();
     
     PwrCtrl_PWM_Update();
     
-    GPIO_debug_SetLow();
+
     
 }
 

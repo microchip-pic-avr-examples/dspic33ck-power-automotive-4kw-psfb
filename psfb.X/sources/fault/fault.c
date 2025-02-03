@@ -45,6 +45,12 @@
 #define VSEC_UV_THRES_TRIG_ADC          ((VSEC_UV_THRES_TRIG_V) * 191.131)  
 #define VSEC_UV_THRES_CLEAR_ADC         ((VPRI_UV_THRES_CLEAR_V) * 191.131) 
 
+#define ISEC_OC_THRES_TRIG_A            210
+#define ISEC_OC_THRES_CLEAR_A           180
+
+#define ISEC_OC_THRES_TRIG_ADC          ISEC_OC_THRES_TRIG_A + 0        //TODO: fix multipliers
+#define ISEC_OC_THRES_CLEAR_ADC         ISEC_OC_THRES_CLEAR_A + 0       // placeholders
+
 #define FAULT_VPRI_OV   true
 #define FAULT_VPRI_UV   true
 #define FAULT_VSEC_OV   true
@@ -107,9 +113,9 @@ void Fault_Initialize(void)
     // FAULT_Init(&psfb_ptr->Fault.Object.IPrimaryOCP, IPRI_OC_THRES_TRIG, 
     //         IPRI_OC_THRES_CLEAR, IPRI_OC_T_BLANK_TRIG, IPRI_OC_T_BLANK_CLEAR); 
     
-    // // Initialize Secondary Over Current Protection
-    // FAULT_Init(&psfb_ptr->Fault.Object.ISecondaryOCP, ISEC_OC_THRES_TRIG, 
-    //         ISEC_OC_THRES_CLEAR, ISEC_OC_T_BLANK_TRIG, ISEC_OC_T_BLANK_CLEAR);  
+    // Initialize Secondary Over Current Protection
+    FAULT_Init(&psfb_ptr->Fault.Object.ISecondaryOCP, ISEC_OC_THRES_TRIG_ADC, 
+            ISEC_OC_THRES_CLEAR_ADC, 1, 1);  
     
     // Initialize Primary Over Voltage Protection
     FAULT_Init(&psfb_ptr->Fault.Object.VPrimaryOVP, VPRI_OV_THRES_TRIG_ADC, 
@@ -156,10 +162,10 @@ void Fault_Initialize(void)
 void Fault_Execute(void)
 {
     uint16_t faultCheck = 0;
-//    // secondary over current fault handler
-//    #if defined(FAULT_ISEC_OC) && (FAULT_ISEC_OC ==  true)      
-//    faultCheck = FAULT_CheckMax(&psfb_ptr->Fault.Object.ISecondaryOCP, psfb_ptr->Data.ISenseSecondary, &Fault_Handler);
-//    #endif 
+   // secondary over current fault handler
+   #if defined(FAULT_ISEC_OC) && (FAULT_ISEC_OC ==  true)      
+   faultCheck = FAULT_CheckMax(&psfb_ptr->Fault.Object.ISecondaryOCP, psfb_ptr->Data.ISenseSecondary, &Fault_Handler);
+   #endif 
 //    
 //    // secondary over voltage fault handler
 ////    #if defined(FAULT_VSEC_OV) && (FAULT_VSEC_OV ==  true)            
@@ -181,14 +187,16 @@ void Fault_Execute(void)
    faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VPrimaryUVP, psfb_ptr->Data.VInVoltage, &Fault_Handler);
    #endif  
 
+
     // secondary over voltage fault handler
    #if defined(FAULT_VSEC_OV) && (FAULT_VSEC_OV ==  true)      
-   faultCheck &= FAULT_CheckMax(&psfb_ptr->Fault.Object.VSecondaryOVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
+    faultCheck &= FAULT_CheckMax(&psfb_ptr->Fault.Object.VSecondaryOVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
    #endif  
 
    // secondary over voltage fault handler
-   #if defined(FAULT_VSEC_UV) && (FAULT_VSEC_UV ==  true)      
-   faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VSecondaryUVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
+   #if defined(FAULT_VSEC_UV) && (FAULT_VSEC_UV ==  true)  
+   if (psfb_ptr->State > 1 )   // after precharge    
+        faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VSecondaryUVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
    #endif  
    
 //

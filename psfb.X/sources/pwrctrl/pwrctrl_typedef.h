@@ -204,6 +204,13 @@ typedef struct PWM_DISTRIBUTION_s PWM_DISTRIBUTION_t;
 
 
 
+struct PRECHARGE_s {
+    uint16_t DutyCycle;     // current open loop dutycycle in percentage
+    uint8_t  precharged;    // is the system precharged
+    uint16_t maxDutyCycle;  // max dutycycle in percentage
+};
+typedef struct PRECHARGE_s PRECHARGE_t;
+
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -226,6 +233,7 @@ struct POWER_CONTROL_s
     CONTROLLER_t        PLoop;  ///< structure for power controller data
     PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode   
     uint16_t controller_error;  ///< error seen by compensator
+    PRECHARGE_t         Precharge;
     PWM_DISTRIBUTION_t PhaseShiftDistribution;  // phase shift distribution TODO: tie this uo with switch node data struct
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;

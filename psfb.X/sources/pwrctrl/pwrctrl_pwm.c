@@ -241,7 +241,6 @@ void PwrCtrl_PWM_Initialize(void)
 /*******************************************************************************
  * @ingroup pwrctrl-pwm
  * @brief  Disable the PWM output
- * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
  * @return void
  * 
  * @details This function disables the physical PWM output at the primary side by 
@@ -253,4 +252,24 @@ void PwrCtrl_PWM_Stop_Switching(void){
     PG1IOCONLbits.OVRENL = 1;
     PG3IOCONLbits.OVRENH = 1;
     PG3IOCONLbits.OVRENL = 1;
+}
+
+
+/*******************************************************************************
+ * @ingroup pwrctrl-pwm
+ * @brief  set the PWM output to particular duty cycle. 
+ * @param duty cycle in percent
+ * @return void
+ * 
+ * @details This function disables the physical PWM output at the primary side by 
+ * setting the override bits of the PWM modules PG1 and PG3.
+ *********************************************************************************/
+
+void PwrCtrl_PWM_SetDutyCyclePrimary(uint16_t dutycycle){
+    // max phase shift 20000; 
+    // 1 percent = 20000 / 200; 
+    uint16_t phaseValue = dutycycle * 200;    
+    PWM_TriggerCCompareValueSet(PWM_PRI_1, phaseValue);
+    PWM_TriggerBCompareValueSet(PWM_PRI_1, phaseValue>>1);
+    PWM_SoftwareUpdateRequest(PWM_PRI_1);   
 }

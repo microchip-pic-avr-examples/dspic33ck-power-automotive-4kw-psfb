@@ -16,6 +16,7 @@
         "config.h": "c",
         "pins.h": "c",
         "fault_comm_interface.h": "c",
-        "dev_adc_sensor_offsets.h": "c"
+        "dev_adc_sensor_offsets.h": "c",
+        "fault.h": "c"
     }
 }

@@ -147,6 +147,8 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
         psfb_ptr->Data.ISecSensorOffset = dev_Get_SecondaryShuntOffset();
         psfb_ptr->Data.IPriSensorOffset = dev_Get_PrimaryCTOffset();
         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+        FAULT_EN_SetHigh();
+        PwrCtrl_PWM_Enable();
     }
     else {
         dev_MeasureOffsets();
@@ -216,16 +218,36 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
     }
     
-    if (FAULT_EN_GetValue()){
-        Dev_LED_Blink(LED_BOARD_GREEN);
+    // if (FAULT_EN_GetValue()){
+    //     Dev_LED_Blink(LED_BOARD_GREEN);
         
-        if (abs(Dev_PwrCtrl_GetVoltage_Vcap() - Dev_PwrCtrl_GetAdc_Vsec())<100){
-                pcInstance->State = PWRCTRL_STATE_STANDBY;
-                Dev_LED_Off(LED_BOARD_GREEN);
-        }
+    //     if (abs(Dev_PwrCtrl_GetVoltage_Vcap() - Dev_PwrCtrl_GetAdc_Vsec())<100){
+    //             pcInstance->State = PWRCTRL_STATE_STANDBY;
+    //             Dev_LED_Off(LED_BOARD_GREEN);
+    //     }
 
-    }
+    // }
+//    float temp = 39100 / (float)(Dev_PwrCtrl_GetAdc_Vpri() - 205);
+//    pcInstance->Precharge.maxDutyCycle = (uint16_t)temp >> 4 ; 
     
+    pcInstance->Precharge.maxDutyCycle = 63;        //TODO: fix maths.
+
+    if (pcInstance->Precharge.precharged == 1) {
+        pcInstance->State = PWRCTRL_STATE_STANDBY;
+    } else {
+        if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) 
+            pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
+        PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+        pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+    }
+        // at 12v Vcap is around 11.5 * 191.131 = 2196
+    if (Dev_PwrCtrl_GetVoltage_Vcap() > 2190) {
+        pcInstance->Precharge.precharged = 1;
+        pcInstance->Precharge.DutyCycle = 0;
+        PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+        pcInstance->State = PWRCTRL_STATE_STANDBY;
+        PwrCtrl_PWM_Disable();
+    }
     
 //    // NOTE: Power control enable is controlled externally 
 //    else if (pcInstance->Properties.Enable)
@@ -250,8 +272,6 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
 //        
 //    }
 }
-
-
 
 
 /*******************************************************************************

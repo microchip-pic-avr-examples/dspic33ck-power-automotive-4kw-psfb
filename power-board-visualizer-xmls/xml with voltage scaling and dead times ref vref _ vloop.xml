@@ -58,7 +58,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>I-SHUNT</Name>
-        <Scaling>0.0833</Scaling>
+        <Scaling>0.0805</Scaling>
         <Offset>0</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
@@ -240,7 +240,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>I-SHUNT OCP Limit</Name>
-        <Scaling>0.0833</Scaling>
+        <Scaling>0.0805</Scaling>
         <Offset>0</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
@@ -594,7 +594,6 @@
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 00 aa</Data>
-        <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Stop Charge</Name>

@@ -29,6 +29,8 @@
 #include "fault/fault.h"
 #include "pwrctrl/pwrctrl_isr.h"
 #include "pwrctrl/pwrctrl.h"
+#include "system/pins.h"
+#include "adc/adc1.h"
 
 // AR-241126: header file for calling custom peripheral configuration after MCC config
 #include "sources/driver/mcc_extension/mcc_custom_config.h"
@@ -60,7 +62,7 @@ int main(void)
     Dev_LED_Init();
     dev_MeasureOffsets_Initialize();
     
-    while (counter--> 0) Nop(); // TODO: implement some delay for values to settle
+    while (counter--> 0) Nop(); // implementing delay for values to settle
     
     OS_Init(); 
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
@@ -80,13 +82,22 @@ X2CScope_Init();
 
 void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
 {
-    //Read the ADC value from the ADCBUF
+    GPIO_debug_SetHigh();   // to keep track of the interrupt latency per cycle
+    //Read all the ADC value from the ADCBUF
     psfb_ptr->Data.ISensePrimary = ADCBUF0;
     psfb_ptr->Data.ISenseSecondary = ADCBUF1;
     
-    if (psfb_ptr->State > 0 ) {             // TODO: precharge state could mess this up
+    ADC1_SoftwareTriggerEnable();
+    PwrCtrl_UpdateADConverterData();
+
+    // Execute the fault detection
+    Fault_Execute();    // moving it here, so that all other faults are checked other than VCAP undervoltage
+
+    if (psfb_ptr->State > 1) {             // if state is greater than precharge, give the phase shift control over to controller
         ControlLoop_Interrupt_CallBack();   //update software based ADC, execute Faults
     } 
+
+    GPIO_debug_SetLow();
     //clear the FB_P_CT_FILT interrupt flag
     IFS5bits.ADCAN0IF = 0;
 }

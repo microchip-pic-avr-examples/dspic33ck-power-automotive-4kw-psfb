@@ -84,7 +84,7 @@ static uint16_t current_slider_ref = 0;
 static uint8_t button_random_action = 0;
  static uint8_t button_start = 0;
 static uint8_t button_start_sync = 0;
-static int16_t charge_en = 0;
+// static int16_t charge_en = 0;
 
 /***********************************************************************************
  * Private Functions Prototypes
@@ -314,11 +314,11 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
 ////            break;
         case 0x00aa:
             FAULT_EN_SetHigh();
-            charge_en = 1;
+            // charge_en = 1;
             break;
         case 0x00bb:
             FAULT_EN_SetLow();
-            charge_en = 0;
+            // charge_en = 0;
             break;
             
         case 0xFFFF:

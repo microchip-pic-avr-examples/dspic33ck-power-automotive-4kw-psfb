@@ -54,6 +54,21 @@
 
 ### current sensors offset calculation
 
-1. wait for some time in main.
-2. in the init state sample the i pri and i shunt lines for 64 times, calculate average. that is the offset
+1. wait for some time in main before state machine starts for values to settle.
+2. in the INIT state sample the i-pri and i-shunt lines for 64 times, calculate average. that is the offset
+
+### PRECHARGE : charging vcap to 12 volts in Precharge state
+
+1. after offsets are calculated, enable short circuit switch and pwm switching.
+2. in precharge state check if vcap voltage is 12 volts, if not, then increase duty cycle. Dutycycle capped up to max duty cycle. this corresponds to 15V at 800 Vin. each increment is 1% at 100us rate.
+3. if it is around 12 volts, then turn off pwm, and go to standby state.
+4. if the state machine is at init state or precharge state, then the Under voltage fault at Vcap is not monitored.
+5. max duty calculated  -> d% = (Vout  * 2 * 17 * 100) / Vin ---, vout = 11.5
+6. d% =  39100 /  Vin
+7. d% = 39100 / ( VinADC - 205 ) * 0.231 
+8. d% = 39100 / ( VinADC - 205) / 4.329 -> approx divide by 4, 
+9. d% = 39100 / ( VinADC - 205) >>2;
+10. unimplemented still, division results in 0. TODO fix. temp fix capped at 63percent.
+
+
 
