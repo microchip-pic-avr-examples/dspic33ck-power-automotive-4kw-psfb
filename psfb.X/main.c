@@ -60,6 +60,7 @@ int main(void)
     
     App_PBV_psfb_Init();
     Dev_LED_Init();
+    psfb_ptr->SecRec.SR_Flag = 0;   // make sure it is off
     dev_MeasureOffsets_Initialize();
     
     while (counter--> 0) Nop(); // implementing delay for values to settle
@@ -96,6 +97,8 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     if (psfb_ptr->State > 1) {             // if state is greater than precharge, give the phase shift control over to controller
         ControlLoop_Interrupt_CallBack();   //update software based ADC, execute Faults
     } 
+
+    PwrCtrl_PWM_UpdateSecondaryRectifiers(); // check Ishunt within range
 
     GPIO_debug_SetLow();
     //clear the FB_P_CT_FILT interrupt flag

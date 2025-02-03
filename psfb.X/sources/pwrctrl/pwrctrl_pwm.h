@@ -21,6 +21,6 @@
  void PwrCtrl_PWM_Stop_Switching(void);
  void PwrCtrl_PWM_Initialize(void);
  void PwrCtrl_PWM_SetDutyCyclePrimary(uint16_t dutycycle);
-
+ void PwrCtrl_PWM_UpdateSecondaryRectifiers(void);
 #endif	/* DRV_PWRCTRL_PWM_H */
 

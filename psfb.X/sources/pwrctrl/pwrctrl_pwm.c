@@ -273,3 +273,26 @@ void PwrCtrl_PWM_SetDutyCyclePrimary(uint16_t dutycycle){
     PWM_TriggerBCompareValueSet(PWM_PRI_1, phaseValue>>1);
     PWM_SoftwareUpdateRequest(PWM_PRI_1);   
 }
+
+void PwrCtrl_PWM_UpdateSecondaryRectifiers (void) {
+    
+    if (psfb_ptr->SecRec.SR_Flag == 0) 
+    {
+        //threshhold = 970;
+        
+        if (psfb_ptr->Data.ISenseSecondary > psfb_ptr->SecRec.Threshold_high) {       //approx 34 amps Iout
+            //debug_SetHigh();
+            psfb_ptr->SecRec.SR_Flag = 1;
+            PG4IOCONLbits.OVRENL = 0;       //turning on SR
+            PG2IOCONLbits.OVRENL = 0;
+        } 
+    } else {
+        //threshhold = 950;
+        if (psfb_ptr->Data.ISenseSecondary < psfb_ptr->SecRec.Threshold_low) {       // approx 26 amps Iout
+            //debug_SetLow();
+            psfb_ptr->SecRec.SR_Flag  = 0;
+            PG4IOCONLbits.OVRENL = 1;       //turning off SR
+            PG2IOCONLbits.OVRENL = 1;
+        }
+    }
+}

@@ -245,7 +245,7 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[9] =  PwrCtrl_GetAdc_Ipri_ct();
     buffer_sixteen_tx[10] = PwrCtrl_GetAdc_Isec_shunt();
     buffer_sixteen_tx[11] = Dev_PwrCtrl_GetControl_Phase();
-    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (button_start_sync<<1) + (psfb_ptr->ILoop.Enable<<2);
+    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (psfb_ptr->SecRec.SR_Flag<<1) + (psfb_ptr->ILoop.Enable<<2);
     buffer_sixteen_tx[13] = dead_time_right;
     
     buffer_sixteen_tx[14] = psfb_ptr->Properties.IReference;
@@ -263,12 +263,15 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[20] = Dev_PwrCtrl_GetIPri_Offset();
 
     buffer_sixteen_tx[21] = Dev_PwrCtrl_GetIsec_Offset();
+
+    buffer_sixteen_tx[22] = psfb_ptr->SecRec.Threshold_high;
+
+    buffer_sixteen_tx[23] = psfb_ptr->SecRec.Threshold_low;
     
-    
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 22);
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 24);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 22 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 24 * 2 ;
 }
 
 

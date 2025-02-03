@@ -71,4 +71,9 @@
 10. unimplemented still, division results in 0. TODO fix. temp fix capped at 63percent.
 
 
+### SR turn on and off.
 
+1. PwrCtrl_PWM_UpdateSecondaryRectifiers is called cycle by cycle after every adc sample.
+2. thresholds are calculated once, and are calculated in init state, after offsets are determined.
+3. Threshold = offset + gain * amps
+4. hardcoded for now.

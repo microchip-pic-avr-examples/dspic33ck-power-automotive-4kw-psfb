@@ -144,9 +144,16 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
     //add delay of some ms to for values to be stable
 
     if (dev_AreOffsetsCalculated() == 1){
-        psfb_ptr->Data.ISecSensorOffset = dev_Get_SecondaryShuntOffset();
-        psfb_ptr->Data.IPriSensorOffset = dev_Get_PrimaryCTOffset();
+        pcInstance->Data.ISecSensorOffset = dev_Get_SecondaryShuntOffset();
+        pcInstance->Data.IPriSensorOffset = dev_Get_PrimaryCTOffset();
+        
+        //34 amps
+        pcInstance->SecRec.Threshold_high = pcInstance->Data.ISecSensorOffset + 421;
+        //26amps
+        pcInstance->SecRec.Threshold_low = pcInstance->Data.ISecSensorOffset + 323;
+
         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+
         FAULT_EN_SetHigh();
         PwrCtrl_PWM_Enable();
     }
@@ -216,6 +223,7 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
         
         // State back to STATE_FAULT_DETECTION
         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
+        return;     //TODO: fix state machine and fault jumps
     }
     
     // if (FAULT_EN_GetValue()){

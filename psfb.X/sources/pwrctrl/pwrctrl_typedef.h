@@ -211,6 +211,13 @@ struct PRECHARGE_s {
 };
 typedef struct PRECHARGE_s PRECHARGE_t;
 
+struct SEC_REC_s {
+    uint8_t SR_Flag;            // SR flag on
+    uint16_t Threshold_high;     // Threhshold high
+    uint16_t Threshold_low;      // Threshold Low
+};
+typedef struct SEC_REC_s SEC_REC_t;
+
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -234,6 +241,7 @@ struct POWER_CONTROL_s
     PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode   
     uint16_t controller_error;  ///< error seen by compensator
     PRECHARGE_t         Precharge;
+    SEC_REC_t           SecRec;
     PWM_DISTRIBUTION_t PhaseShiftDistribution;  // phase shift distribution TODO: tie this uo with switch node data struct
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
