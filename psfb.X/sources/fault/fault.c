@@ -27,8 +27,8 @@
 //defining macros here for now
 #define VPRI_OV_THRES_TRIG_V            890
 #define VPRI_OV_THRES_CLEAR_V           800
-#define VPRI_UV_THRES_TRIG_V            400
-#define VPRI_UV_THRES_CLEAR_V           390
+#define VPRI_UV_THRES_TRIG_V            250     // TODO::sys Default 400V
+#define VPRI_UV_THRES_CLEAR_V           240     // TODO::sys Default 390V
 
 #define VPRI_OV_THRES_TRIG_ADC          (((VPRI_OV_THRES_TRIG_V) * 4.329) + 205) 
 #define VPRI_UV_THRES_TRIG_ADC          (((VPRI_UV_THRES_TRIG_V) * 4.329) + 205) 
@@ -70,34 +70,6 @@ static void Fault_EnableShortCircuitProtection(void);
 static void Fault_PrimaryOverCurrent_EventHandler(void);
 bool loadDisconnect = false;
 
-/*******************************************************************************
- * @ingroup fault
- * @brief  Handles the fault trip by turning off the power control switching
- * @return void
- * 
- * @details This function handles the occurence of fault when one of the fault
- *  condition trips. It shuts down the operation of the power control, set the 
- *  FaultActive bit and clear the Running bit indicating that power converter
- *  has been turned-off. A fault pin is also set to low to blocked the PWM signal
- *  as a hardware protection.  
- *********************************************************************************/
-void Fault_Handler(void)
-{
-    // Drive the fault pin to Low when Fault trips
-    //FAULT_EN_SetLow();
-    
-    // Turn off PWM output
-    PwrCtrl_PWM_Disable();
-     
-    // set the fault active bit
-    // psfb_ptr->Status.bits.FaultActive = 1;
-    
-    // psfb_ptr->Fault.FaultDetected = 1;
-    
-    // clear the running bit
-    psfb_ptr->Status.bits.Running = 0;    
-    
-}
 
 /*******************************************************************************
  * @ingroup fault
@@ -273,25 +245,32 @@ void Fault_Reset(void)
     //FAULT_EN_SetHigh();
     
     // Clear fault Objects FaultActive bit
-    psfb_ptr->Fault.Object.VPrimaryOVP.FaultActive = 0;
-    psfb_ptr->Fault.Object.VSecondaryOVP.FaultActive = 0;
     psfb_ptr->Fault.Object.IPrimaryOCP.FaultActive = 0;
     psfb_ptr->Fault.Object.ISecondaryOCP.FaultActive = 0;
     psfb_ptr->Fault.Object.ISenseSCP.FaultActive = 0;
+    psfb_ptr->Fault.Object.VPrimaryOVP.FaultActive = 0;
+    psfb_ptr->Fault.Object.VPrimaryUVP.FaultActive = 0;
+    psfb_ptr->Fault.Object.VSecondaryOVP.FaultActive = 0;
+    psfb_ptr->Fault.Object.VSecondaryUVP.FaultActive = 0;
     psfb_ptr->Fault.Object.PowerSupplyOTP.FaultActive = 0;
-    psfb_ptr->Fault.Object.VRail_5V.FaultActive = 0;
+    psfb_ptr->Fault.Object.VRail_5V.FaultActive= 0;
+
     
     // Clear fault Objects FaultLatch bit
-    psfb_ptr->Fault.Object.VPrimaryOVP.FaultLatch = 0;
-    psfb_ptr->Fault.Object.VSecondaryOVP.FaultLatch = 0;
+
     psfb_ptr->Fault.Object.IPrimaryOCP.FaultLatch = 0;
     psfb_ptr->Fault.Object.ISecondaryOCP.FaultLatch = 0;
     psfb_ptr->Fault.Object.ISenseSCP.FaultLatch = 0;
-    psfb_ptr->Fault.Object.VRail_5V.FaultLatch = 0;
-    psfb_ptr->Fault.Object.PowerSupplyOTP.FaultActive = 0;
+    psfb_ptr->Fault.Object.VPrimaryOVP.FaultLatch = 0;
+    psfb_ptr->Fault.Object.VPrimaryUVP.FaultLatch = 0;
+    psfb_ptr->Fault.Object.VSecondaryOVP.FaultLatch = 0;
+    psfb_ptr->Fault.Object.VSecondaryUVP.FaultLatch = 0;
+    psfb_ptr->Fault.Object.PowerSupplyOTP.FaultLatch = 0;
+    psfb_ptr->Fault.Object.VRail_5V.FaultLatch= 0;
     
     loadDisconnect = false;
-    
+
+    psfb_ptr->Fault.FaultDetected = 0;
     psfb_ptr->Status.bits.FaultActive = 0;
 }
 
@@ -363,4 +342,34 @@ void Fault_PrimaryOverCurrent_EventHandler(){
 //        FAULT_EN_SetLow();
 //        Fault_Handler();
         GPIO_debug_SetLow();
+}
+
+
+/*******************************************************************************
+ * @ingroup fault
+ * @brief  Handles the fault trip by turning off the power control switching
+ * @return void
+ * 
+ * @details This function handles the occurence of fault when one of the fault
+ *  condition trips. It shuts down the operation of the power control, set the 
+ *  FaultActive bit and clear the Running bit indicating that power converter
+ *  has been turned-off. A fault pin is also set to low to blocked the PWM signal
+ *  as a hardware protection.  
+ *********************************************************************************/
+void Fault_Handler(void)
+{
+    // Drive the fault pin to Low when Fault trips
+    //FAULT_EN_SetLow();
+    
+    // Turn off PWM output
+    PwrCtrl_PWM_Stop_Switching();
+     
+    //set the fault active bit
+    psfb_ptr->Status.bits.FaultActive = 1;
+    
+    psfb_ptr->Fault.FaultDetected = 1;
+    
+    // clear the running bit
+    psfb_ptr->Status.bits.Running = 0; 
+    
 }

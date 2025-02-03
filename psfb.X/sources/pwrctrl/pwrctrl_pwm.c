@@ -275,7 +275,10 @@ void PwrCtrl_PWM_SetDutyCyclePrimary(uint16_t dutycycle){
 }
 
 void PwrCtrl_PWM_UpdateSecondaryRectifiers (void) {
-    
+    if (psfb_ptr->SecRec.SR_Enabled == 0){
+        return;
+    }
+
     if (psfb_ptr->SecRec.SR_Flag == 0) 
     {
         //threshhold = 970;

@@ -279,9 +279,9 @@
       </SignalChannel>
       <SignalChannel>
         <Name>I-CT Offset</Name>
-        <Scaling>1</Scaling>
+        <Scaling>0.0008058</Scaling>
         <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -292,9 +292,9 @@
       </SignalChannel>
       <SignalChannel>
         <Name>I-SHUNT Offset</Name>
-        <Scaling>1</Scaling>
+        <Scaling>0.0008058</Scaling>
         <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -305,9 +305,9 @@
       </SignalChannel>
       <SignalChannel>
         <Name>I-SHUNT Threshold high</Name>
-        <Scaling>1</Scaling>
+        <Scaling>0.0805</Scaling>
         <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -318,9 +318,9 @@
       </SignalChannel>
       <SignalChannel>
         <Name>I-SHUNT Threshold Low</Name>
-        <Scaling>1</Scaling>
+        <Scaling>0.0805</Scaling>
         <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -618,6 +618,12 @@
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
+          <StatusBit>
+            <Name>precharge enable</Name>
+            <BitIndex>3</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
         </StatusBits>
         <PageName>4kw</PageName>
       </StatusGroup>
@@ -628,6 +634,7 @@
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 00 aa</Data>
+        <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Stop Charge</Name>
@@ -664,24 +671,23 @@
         <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
-        <Name>Reset Vin Buffer</Name>
+        <Name>Reset Faults</Name>
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 aa 00</Data>
+        <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>I Controller ON - test</Name>
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 FF FF</Data>
-        <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>I Controller Off - test</Name>
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 FF 00</Data>
-        <PageName>4kw</PageName>
       </SendRawDataButton>
     </SendRawDataButtons>
   </Status>

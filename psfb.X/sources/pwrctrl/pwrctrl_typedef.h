@@ -205,6 +205,7 @@ typedef struct PWM_DISTRIBUTION_s PWM_DISTRIBUTION_t;
 
 
 struct PRECHARGE_s {
+    uint8_t PrechargeEnabled; // if precharge is enabled.
     uint16_t DutyCycle;     // current open loop dutycycle in percentage
     uint8_t  precharged;    // is the system precharged
     uint16_t maxDutyCycle;  // max dutycycle in percentage
@@ -212,9 +213,11 @@ struct PRECHARGE_s {
 typedef struct PRECHARGE_s PRECHARGE_t;
 
 struct SEC_REC_s {
-    uint8_t SR_Flag;            // SR flag on
+    uint8_t SR_Enabled;         // if SR is enabled or not. enabled after start power transfer
+    uint8_t SR_Flag;            // SR flag o
     uint16_t Threshold_high;     // Threhshold high
     uint16_t Threshold_low;      // Threshold Low
+
 };
 typedef struct SEC_REC_s SEC_REC_t;
 

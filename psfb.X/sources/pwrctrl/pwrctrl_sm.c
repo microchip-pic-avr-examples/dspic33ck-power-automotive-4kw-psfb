@@ -155,7 +155,6 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
 
         FAULT_EN_SetHigh();
-        PwrCtrl_PWM_Enable();
     }
     else {
         dev_MeasureOffsets();
@@ -237,8 +236,9 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
     // }
 //    float temp = 39100 / (float)(Dev_PwrCtrl_GetAdc_Vpri() - 205);
 //    pcInstance->Precharge.maxDutyCycle = (uint16_t)temp >> 4 ; 
-    
-    pcInstance->Precharge.maxDutyCycle = 63;        //TODO: fix maths.
+
+    if (pcInstance->Precharge.PrechargeEnabled == 1) {
+        pcInstance->Precharge.maxDutyCycle = 63;        //TODO: fix maths. and state machine 
 
     if (pcInstance->Precharge.precharged == 1) {
         pcInstance->State = PWRCTRL_STATE_STANDBY;
@@ -256,6 +256,8 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->State = PWRCTRL_STATE_STANDBY;
         PwrCtrl_PWM_Disable();
     }
+    }
+
     
 //    // NOTE: Power control enable is controlled externally 
 //    else if (pcInstance->Properties.Enable)
@@ -322,8 +324,7 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         // Update PWM distribution
 //        PwrCtrl_PWM_Update(&psfb);
 
-        // Enable PWM physical output
-        //PwrCtrl_PWM_Enable();
+
 
         // Enable power control running bit
         pcInstance->Status.bits.Running = 1;
@@ -331,8 +332,13 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         // Next State assigned to STATE_SOFT_START
         pcInstance->State = PWRCTRL_STATE_SOFT_START;
         
+        // Enable PWM physical output
         PwrCtrl_PWM_Enable();
-        
+
+        // enable SR flag to be controlled by current
+        psfb_ptr->SecRec.SR_Enabled = 1;
+        //Enable Iloop here
+        psfb_ptr->ILoop.Enable = 1;
     }
 }
 

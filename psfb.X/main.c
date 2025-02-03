@@ -60,6 +60,7 @@ int main(void)
     
     App_PBV_psfb_Init();
     Dev_LED_Init();
+    psfb_ptr->SecRec.SR_Enabled = 0;    // enabled after start power transfer
     psfb_ptr->SecRec.SR_Flag = 0;   // make sure it is off
     dev_MeasureOffsets_Initialize();
     

@@ -245,7 +245,7 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[9] =  PwrCtrl_GetAdc_Ipri_ct();
     buffer_sixteen_tx[10] = PwrCtrl_GetAdc_Isec_shunt();
     buffer_sixteen_tx[11] = Dev_PwrCtrl_GetControl_Phase();
-    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (psfb_ptr->SecRec.SR_Flag<<1) + (psfb_ptr->ILoop.Enable<<2);
+    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (psfb_ptr->SecRec.SR_Flag<<1) + (psfb_ptr->ILoop.Enable<<2) + (psfb_ptr->Precharge.PrechargeEnabled<<3);
     buffer_sixteen_tx[13] = dead_time_right;
     
     buffer_sixteen_tx[14] = psfb_ptr->Properties.IReference;
@@ -310,14 +310,17 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             break;
         case 0xaa00:
 //            Dev_Reset_Average_Buffer();
+            Fault_Reset();
             break;
 //        case 0xFFFF:
 //            button_random_action ^= 1;
 ////            dev_fan_data_ptr->override_flag  ^= 1;
 ////            break;
         case 0x00aa:
-            FAULT_EN_SetHigh();
+            //FAULT_EN_SetHigh();
             // charge_en = 1;
+            psfb_ptr->Precharge.PrechargeEnabled = 1;      
+            PwrCtrl_PWM_Enable();
             break;
         case 0x00bb:
             FAULT_EN_SetLow();
