@@ -54,7 +54,7 @@
 #define FAULT_VPRI_OV   true
 #define FAULT_VPRI_UV   true
 #define FAULT_VSEC_OV   true
-#define FAULT_VSEC_UV   true
+#define FAULT_VSEC_UV   false
 
 #define FAULT_ISEC_OC   false
 #define FAULT_IPRI_OC   false
@@ -167,7 +167,7 @@ void Fault_Execute(void)
 
    // secondary over voltage fault handler
    #if defined(FAULT_VSEC_UV) && (FAULT_VSEC_UV ==  true)  
-   if (psfb_ptr->State > 1 )   // after precharge    
+   if (psfb_ptr->State > 1)   // after precharge    
         faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VSecondaryUVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
    #endif  
    

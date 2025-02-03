@@ -239,23 +239,29 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
 
     if (pcInstance->Precharge.PrechargeEnabled == 1) {
         pcInstance->Precharge.maxDutyCycle = 63;        //TODO: fix maths. and state machine 
+        if (pcInstance->Precharge.precharged == 1) {
+            pcInstance->State = PWRCTRL_STATE_STANDBY;
+        } else {
+            if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) {
+                pcInstance->Precharge.delayCounter = pcInstance->Precharge.delayCounter + 1;
+                if (pcInstance->Precharge.delayCounter > 499){                       //5ms each step increment
+                    Nop();
+                    pcInstance->Precharge.delayCounter = 0;
+                    pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
+                }
+            } 
+            PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+            pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+        }
 
-    if (pcInstance->Precharge.precharged == 1) {
-        pcInstance->State = PWRCTRL_STATE_STANDBY;
-    } else {
-        if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) 
-            pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
-        PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
-        pcInstance->State = PWRCTRL_STATE_PRECHARGE;
-    }
         // at 12v Vcap is around 11.5 * 191.131 = 2196
-    if (Dev_PwrCtrl_GetVoltage_Vcap() > 2190) {
-        pcInstance->Precharge.precharged = 1;
-        pcInstance->Precharge.DutyCycle = 0;
-        PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
-        pcInstance->State = PWRCTRL_STATE_STANDBY;
-        PwrCtrl_PWM_Disable();
-    }
+        if (Dev_PwrCtrl_GetVoltage_Vcap() > 2190) {
+            pcInstance->Precharge.precharged = 1;
+            pcInstance->Precharge.DutyCycle = 0;
+            PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+            pcInstance->State = PWRCTRL_STATE_STANDBY;
+            PwrCtrl_PWM_Disable();
+        }
     }
 
     
