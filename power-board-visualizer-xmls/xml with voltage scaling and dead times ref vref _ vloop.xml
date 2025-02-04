@@ -329,6 +329,19 @@
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
+      <SignalChannel>
+        <Name>I-SHUNT Ref A</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-52</Offset>
+        <Unit>Amps</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>25</SignalChannelIndex>
+        <PositionInMessage>14</PositionInMessage>
+        <PageName>4kw</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
@@ -392,15 +405,15 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>25</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>14</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>17</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>18</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -459,7 +472,7 @@
         <Step>10</Step>
         <ButtonText>update Iref</ButtonText>
         <Data>0203 0004 00CC [value]</Data>
-        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <AutoSendAfterChange>false</AutoSendAfterChange>
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
@@ -554,6 +567,7 @@
             <Name>Secondary OC</Name>
             <BitIndex>4</BitIndex>
             <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
             <Name>FLT_ISNS_SCP</Name>

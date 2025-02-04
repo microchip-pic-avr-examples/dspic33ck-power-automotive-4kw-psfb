@@ -224,70 +224,77 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
         return;     //TODO: fix state machine and fault jumps
     }
-    
-    // if (FAULT_EN_GetValue()){
-    //     Dev_LED_Blink(LED_BOARD_GREEN);
-        
-    //     if (abs(Dev_PwrCtrl_GetVoltage_Vcap() - Dev_PwrCtrl_GetAdc_Vsec())<100){
-    //             pcInstance->State = PWRCTRL_STATE_STANDBY;
-    //             Dev_LED_Off(LED_BOARD_GREEN);
-    //     }
+    //    // NOTE: Power control enable is controlled externally 
+   else if (pcInstance->Properties.Enable)
+   {
+       // Reset fault objects status bits
+       Fault_Reset();
+           
+       // Reset the power control properties and control loop histories
+       //PwrCtrl_Reset();
 
-    // }
-//    float temp = 39100 / (float)(Dev_PwrCtrl_GetAdc_Vpri() - 205);
-//    pcInstance->Precharge.maxDutyCycle = (uint16_t)temp >> 4 ; 
+       // Update PWM distribution
+//        PwrCtrl_PWM_Update(&psfb);
 
-    if (pcInstance->Precharge.PrechargeEnabled == 1) {
-        pcInstance->Precharge.maxDutyCycle = 63;        //TODO: fix maths. and state machine 
-        if (pcInstance->Precharge.precharged == 1) {
-            pcInstance->State = PWRCTRL_STATE_STANDBY;
-        } else {
-            if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) {
-                pcInstance->Precharge.delayCounter = pcInstance->Precharge.delayCounter + 1;
-                if (pcInstance->Precharge.delayCounter > 499){                       //5ms each step increment
-                    Nop();
-                    pcInstance->Precharge.delayCounter = 0;
-                    pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
+       // Enable PWM physical output
+       //PwrCtrl_PWM_Enable();
+
+       // Enable power control running bit
+       pcInstance->Status.bits.Running = 1;
+
+       // override precharge 
+       pcInstance->Precharge.PrechargeEnabled = 0 ;
+
+       // Next State assigned to STATE_SOFT_START
+       pcInstance->State = PWRCTRL_STATE_STANDBY;
+       
+   }
+
+   else if (pcInstance->Precharge.PrechargeEnabled == 1) {
+        pcInstance->Precharge.maxDutyCycle = 65;        //TODO: fix maths. and state machine 
+        if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) {
+            pcInstance->Precharge.delayCounter = pcInstance->Precharge.delayCounter + 1;
+            if (pcInstance->Precharge.delayCounter > 499){                       //5ms each step increment
+                Nop();
+                pcInstance->Precharge.delayCounter = 0;
+                pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
                 }
             } 
             PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
             pcInstance->State = PWRCTRL_STATE_PRECHARGE;
-        }
-
-        // at 12v Vcap is around 11.5 * 191.131 = 2196
-        if (Dev_PwrCtrl_GetVoltage_Vcap() > 2190) {
-            pcInstance->Precharge.precharged = 1;
-            pcInstance->Precharge.DutyCycle = 0;
-            PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
-            pcInstance->State = PWRCTRL_STATE_STANDBY;
-            PwrCtrl_PWM_Disable();
-        }
-    }
-
-    
-//    // NOTE: Power control enable is controlled externally 
-//    else if (pcInstance->Properties.Enable)
-//    {
-//        // Reset fault objects status bits
-//        Fault_Reset();
-//            
-//        // Reset the power control properties and control loop histories
-//        PwrCtrl_Reset();
-//
-//        // Update PWM distribution
-////        PwrCtrl_PWM_Update(&psfb);
-//
-//        // Enable PWM physical output
-//        PwrCtrl_PWM_Enable();
-//
-//        // Enable power control running bit
-//        pcInstance->Status.bits.Running = 1;
-//
-//        // Next State assigned to STATE_SOFT_START
-//        pcInstance->State = PWRCTRL_STATE_SOFT_START;
-//        
-//    }
+   }
+    // else if (pcInstance->Precharge.PrechargeEnabled == 1) {
+    //     //Disable Iloop here - if we go back to precharge state 
+    //     //psfb_ptr->ILoop.Enable = 0;
+    //     pcInstance->Precharge.maxDutyCycle = 63;        //TODO: fix maths. and state machine 
+    //     if (pcInstance->Precharge.precharged == 1) {
+    //         pcInstance->State = PWRCTRL_STATE_STANDBY;
+    //     } else {
+    //         if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) {
+    //             pcInstance->Precharge.delayCounter = pcInstance->Precharge.delayCounter + 1;
+    //             if (pcInstance->Precharge.delayCounter > 499){                       //5ms each step increment
+    //                 Nop();
+    //                 pcInstance->Precharge.delayCounter = 0;
+    //                 pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
+    //             }
+    //         } 
+    //         PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+    //         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+    //     }
+    //     // at 12v Vcap is around 11.5 * 191.131 = 2196
+    //     // at 7.5v Vcap is around 7.5 * 191.131 = 1433.4825
+    //     if (Dev_PwrCtrl_GetVoltage_Vcap() > 1433) {
+    //         pcInstance->Precharge.precharged = 1;
+    //         pcInstance->Precharge.DutyCycle = 0;
+    //         PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+    //         pcInstance->State = PWRCTRL_STATE_STANDBY;
+    //         PwrCtrl_PWM_Stop_Switching();
+    //     }
+    // }
 }
+//    float temp = (float)39100 / (float)(Dev_PwrCtrl_GetAdc_Vpri() - 205);
+//    pcInstance->Precharge.maxDutyCycle = (uint16_t)temp >> 4 ; 
+//}
 
 
 /*******************************************************************************
@@ -322,10 +329,10 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
     else if (pcInstance->Properties.Enable)
     {
         // Reset fault objects status bits
-        Fault_Reset();
+        // Fault_Reset();
             
         // Reset the power control properties and control loop histories
-        PwrCtrl_Reset();
+        // PwrCtrl_Reset();
 
         // Update PWM distribution
 //        PwrCtrl_PWM_Update(&psfb);
@@ -339,7 +346,7 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->State = PWRCTRL_STATE_SOFT_START;
         
         // Enable PWM physical output
-        PwrCtrl_PWM_Enable();
+        // PwrCtrl_PWM_Enable();
 
         // enable SR flag to be controlled by current
         psfb_ptr->SecRec.SR_Enabled = 1;
@@ -376,7 +383,8 @@ static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance)
     else if (!pcInstance->Properties.Enable) 
     {
         // Disable PWM physical output
-        PwrCtrl_PWM_Disable();
+        //PwrCtrl_PWM_Disable();
+        PwrCtrl_PWM_Stop_Switching();
         
         // Clear power control running bit
         pcInstance->Status.bits.Running = 0;
@@ -493,10 +501,10 @@ static void PCS_START_CONTROL_handler(POWER_CONTROL_t* pcInstance)
     else if (pcInstance->Properties.Enable)
     {
         // Reset fault objects status bits
-        Fault_Reset();
+        // Fault_Reset();
             
         // Reset the power control properties and control loop histories
-        PwrCtrl_Reset();
+        // PwrCtrl_Reset();
 
         // Update PWM distribution
 //        PwrCtrl_PWM_Update(&psfb);
@@ -510,5 +518,17 @@ static void PCS_START_CONTROL_handler(POWER_CONTROL_t* pcInstance)
         // Next State assigned to STATE_SOFT_START
         pcInstance->State = PWRCTRL_STATE_SOFT_START;
         
+    }     // Check if Enable bit has been cleared
+    else if (!pcInstance->Properties.Enable) 
+    {
+        // Disable PWM physical output
+        //PwrCtrl_PWM_Disable();
+        PwrCtrl_PWM_Stop_Switching();
+        
+        // Clear power control running bit
+        pcInstance->Status.bits.Running = 0;
+        
+        // State back to STATE_STANDBY
+        pcInstance->State = PWRCTRL_STATE_STANDBY; 
     }
 }

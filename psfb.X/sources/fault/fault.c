@@ -35,7 +35,7 @@
 #define VPRI_OV_THRES_CLEAR_ADC         (((VPRI_OV_THRES_CLEAR_V) * 4.329) + 205) 
 #define VPRI_UV_THRES_CLEAR_ADC         (((VPRI_UV_THRES_CLEAR_V) * 4.329) + 205) 
 
-#define VSEC_OV_THRES_TRIG_V            18
+#define VSEC_OV_THRES_TRIG_V            13
 #define VSEC_OV_THRES_CLEAR_V           11
 #define VSEC_UV_THRES_TRIG_V            8
 #define VSEC_UV_THRES_CLEAR_V           10
@@ -48,15 +48,15 @@
 #define ISEC_OC_THRES_TRIG_A            210
 #define ISEC_OC_THRES_CLEAR_A           180
 
-#define ISEC_OC_THRES_TRIG_ADC          ISEC_OC_THRES_TRIG_A + 0        //TODO: fix multipliers
-#define ISEC_OC_THRES_CLEAR_ADC         ISEC_OC_THRES_CLEAR_A + 0       // placeholders
+#define ISEC_OC_THRES_TRIG_ADC          1640            // corrsesponds to 80 amps
+#define ISEC_OC_THRES_CLEAR_ADC         1540
 
 #define FAULT_VPRI_OV   true
 #define FAULT_VPRI_UV   true
 #define FAULT_VSEC_OV   true
 #define FAULT_VSEC_UV   false
 
-#define FAULT_ISEC_OC   false
+#define FAULT_ISEC_OC   true
 #define FAULT_IPRI_OC   false
 #define FAULT_PS_OTP    false
 #define FAULT_SHORT_CCT false

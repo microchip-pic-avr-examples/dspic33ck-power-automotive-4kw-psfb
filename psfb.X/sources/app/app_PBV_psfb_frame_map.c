@@ -237,7 +237,7 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[1] = flag_word;
     buffer_sixteen_tx[2] = (Dev_PwrCtrl_GetAdc_Vpri() > 202) ? (Dev_PwrCtrl_GetAdc_Vpri() - 202) : 0;
     buffer_sixteen_tx[3] = Dev_PwrCtrl_GetAdc_Vsec();
-    buffer_sixteen_tx[4] = (PwrCtrl_GetAdc_Isec_shunt() > 610) ? (PwrCtrl_GetAdc_Isec_shunt() - 610) : 0;
+    buffer_sixteen_tx[4] = (PwrCtrl_GetAdc_Isec_shunt() > Dev_PwrCtrl_GetIsec_Offset()) ? (PwrCtrl_GetAdc_Isec_shunt() - Dev_PwrCtrl_GetIsec_Offset()) : 0;
     buffer_sixteen_tx[5] = Dev_PwrCtrl_GetVoltage_Vcap();
     buffer_sixteen_tx[6] = (PwrCtrl_GetAdc_Temperature() > 497) ? (PwrCtrl_GetAdc_Temperature() - 497 ) : 0;
     buffer_sixteen_tx[7] = PwrCtrl_GetAdc_Vrail_5V();
@@ -250,7 +250,7 @@ void App_PBV_psfb_Build_Frame()
     
     buffer_sixteen_tx[14] = psfb_ptr->Properties.IReference;
     
-    buffer_sixteen_tx[15] = current_slider_ref - 621;
+    buffer_sixteen_tx[15] = current_slider_ref - Dev_PwrCtrl_GetIPri_Offset();
 
     buffer_sixteen_tx[16] = DAC3DATH;
     
@@ -292,7 +292,8 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             break;
         case 0x0000:
             PwrCtrl_SetEnable(false);
-            FAULT_EN_SetLow();
+            psfb_ptr->Precharge.PrechargeEnabled = 0;
+            //FAULT_EN_SetLow();
             break;
         case 0x0101:
             button_start_sync = 1;
