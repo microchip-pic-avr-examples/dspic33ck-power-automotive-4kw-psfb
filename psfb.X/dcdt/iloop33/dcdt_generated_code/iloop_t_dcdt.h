@@ -4,10 +4,10 @@
   and includes system summary and digital compensator coefficients. This file
   should be included in the MPLAB X project directory.
 
-  File Name:     iloop_dcdt.h
-  Project Name:  iloop
+  File Name:     iloop_t_dcdt.h
+  Project Name:  iloop33
   Date:          2/7/2025
-  Time:          14:20.00
+  Time:          18:03.10
 
   Software License Agreement
 
@@ -33,27 +33,29 @@
   CLAIMS BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF),
   OR OTHER SIMILAR COSTS.
  **/
-#ifndef _ILOOP_DCDT_DEFINES_H
-#define _ILOOP_DCDT_DEFINES_H
+#ifndef _ILOOP_T_DCDT_DEFINES_H
+#define _ILOOP_T_DCDT_DEFINES_H
 
 /**
-  Compensator Type:  2P2Z
+  Compensator Type:  3P3Z
       Entry                Value  
     ---------            ---------
-  Pole 0                 5.0000e+02 Hz
-  Pole 2                 5.0000e+04 Hz
-  Zero 1                 1.7000e+03 Hz
-  Gain(Kdc)              2.000
+  Pole 0                 1.1000e+03 Hz
+  Pole 2                 4.0000e+03 Hz
+  Pole 3                 4.5000e+04 Hz
+  Zero 1                 1.5000e+03 Hz
+  Zero 2                 5.0000e+03 Hz
+  Gain(Kdc)              4.000
   Warp                   false
   PWM Frequency          1.0000e+05
   PWM Sampling Ratio     1
   Sampling Frequency     1.0000e+05
   PWM Max Resolution     1.0600e-09
-  Computational Delay    1.3500e-06
+  Computational Delay    1.5000e-06
   Gate Drive Delay       1.5000e-07
   Control Output Min.    0
   Control Output Max.    19000
-  Kuc Gain               3.0432e+01
+  Kuc Gain               7.6025e+00
   Use Kuc Gain           false
 
 
@@ -66,13 +68,13 @@
 
   s-domain transfer function
 
-               Wp0   Wp2(Wz1 + s)
-  H(s) = Kdc X --- X ------------
-                s    Wz1(Wp2 + s)
+               Wp0   Wp2(Wp3)(Wz1 + s)(Wz2 + s)
+  H(s) = Kdc X --- X --------------------------
+                s    Wz1(Wz2)(Wp2 + s)(Wp3 + s)
 
-                  3.14e+03   3.14e+05(1.07e+04 + s)
-  H(s) = 2.000 X -------- X ----------------------
-                     s       1.07e+04(3.14e+05 + s)
+                 6.91e+03   2.51e+04(2.83e+05)(9.42e+03 + s)(3.14e+04 + s)
+  H(s) = 4.000 X -------- X ----------------------------------------------
+                    s       9.42e+03(3.14e+04)(2.51e+04 + s)(2.83e+05 + s)
 
 
 
@@ -80,40 +82,44 @@
 
   Name    Value     Normalized    Q15      Hex
   ----    -----     ----------    ---      ---
-  a1      0.778     0.778         25492    0x6394
-  a2      0.222     0.222         7275     0x1C6B
-  b0      0.379     0.379         12406    0x3076
-  b1      0.038     0.038         1258     0x04EA
-  b2      -0.340    -0.340        -11148   0xD474
+  a1      1.605     1.000         32764    0x7FFC
+  a2      -0.472    -0.294        -9637    0xDA5B
+  a3      -0.133    -0.083        -2717    0xF563
+  b0      1.479     0.921         30194    0x75F2
+  b1      -0.945    -0.588        -19278   0xB4B2
+  b2      -1.443    -0.899        -29456   0x8CF0
+  b3      0.981     0.611         20016    0x4E30
 
 
   z-domain transfer function
 
-         u(z)  B0 + B1z^(-1) + B2z^(-2)
-  H(z) = --- = ------------------------
-         e(z)  A0 - A1z^(-1) - A2z^(-2)
+         u(z)  B0 + B1z^(-1) + B2z^(-2) + B3z^(-3)
+  H(z) = --- = -----------------------------------
+         e(z)  A0 - A1z^(-1) - A2z^(-2) - A3z^(-3)
 
-          (0.379) + (0.038)z^(-1) + (-0.340)z^(-2)
-  H(z) = ---------------------------------------------
-          1 - (0.778)z^(-1) - (0.222)z^(-2)
+          (1.479) + (-0.945)z^(-1) + (-1.443)z^(-2) + (0.981)z^(-3)
+  H(z) = -----------------------------------------------------------
+          1 - (1.605)z^(-1) - (-0.472)z^(-2) - (-0.133)z^(-3)
 
 **/
 
 
 // Compensator Coefficient Defines
-#define ILOOP_COMP_2P2Z_COEFF_A1      0x6394
-#define ILOOP_COMP_2P2Z_COEFF_A2      0x1C6B
-#define ILOOP_COMP_2P2Z_COEFF_B0      0x3076
-#define ILOOP_COMP_2P2Z_COEFF_B1      0x04EA
-#define ILOOP_COMP_2P2Z_COEFF_B2      0xD474
-#define ILOOP_COMP_2P2Z_POSTSCALER    0x7FFF
-#define ILOOP_COMP_2P2Z_POSTSHIFT     0x0000
-#define ILOOP_COMP_2P2Z_PRESHIFT      0x0000
+#define ILOOP_T_COMP_3P3Z_COEFF_A1      0x7FFC
+#define ILOOP_T_COMP_3P3Z_COEFF_A2      0xDA5B
+#define ILOOP_T_COMP_3P3Z_COEFF_A3      0xF563
+#define ILOOP_T_COMP_3P3Z_COEFF_B0      0x75F2
+#define ILOOP_T_COMP_3P3Z_COEFF_B1      0xB4B2
+#define ILOOP_T_COMP_3P3Z_COEFF_B2      0x8CF0
+#define ILOOP_T_COMP_3P3Z_COEFF_B3      0x4E30
+#define ILOOP_T_COMP_3P3Z_POSTSCALER    0x66C0
+#define ILOOP_T_COMP_3P3Z_POSTSHIFT     0xFFFF
+#define ILOOP_T_COMP_3P3Z_PRESHIFT      0x0000
 
 
 // Compensator Clamp Limits
-#define ILOOP_COMP_2P2Z_MIN_CLAMP    0x0000
-#define ILOOP_COMP_2P2Z_MAX_CLAMP    0x4A38
+#define ILOOP_T_COMP_3P3Z_MIN_CLAMP    0x0000
+#define ILOOP_T_COMP_3P3Z_MAX_CLAMP    0x4A38
 
 
 #endif

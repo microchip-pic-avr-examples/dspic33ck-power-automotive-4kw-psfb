@@ -155,12 +155,21 @@ void PwrCtrl_ControlLoopExecute(void)
     //TODO: change the feedback signal to secondary current ??
     psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISenseSecondary;
     
-    SMPS_Controller2P2ZUpdate(
-            &IMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
+    // SMPS_Controller2P2ZUpdate(
+    //         &IMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
+    //         &(psfb_ptr->ILoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
+    //         psfb_ptr->ILoop.Reference,      // ILoopReference from Iramp
+    //         &(psfb_ptr->ILoop.Output)          // pointer to the control loop target register of the calculated result 
+    //         );   
+
+    SMPS_Controller3P3ZUpdate(
+            &IMC_3p3z,                      // SPMPS_2P2Z_T pointer type structure
             &(psfb_ptr->ILoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
             psfb_ptr->ILoop.Reference,      // ILoopReference from Iramp
             &(psfb_ptr->ILoop.Output)          // pointer to the control loop target register of the calculated result 
             );   
+
+    
 
     psfb_ptr->controller_error =  psfb_ptr->ILoop.Output;
     

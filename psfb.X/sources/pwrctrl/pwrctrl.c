@@ -189,7 +189,9 @@ void PwrCtrl_ControlLoopInitialize(void)
     //VCOMP_ControlObject_Initialize();
 
     // Initialize current loop compensator
-    PwrCtrl_IComp_Initialize();
+    //PwrCtrl_IComp_Initialize();
+
+    PwrCtrl_IComp_3p3z_Initialize();
 
     // Current loop properties initialize
     psfb.ILoop.Enable = false;
