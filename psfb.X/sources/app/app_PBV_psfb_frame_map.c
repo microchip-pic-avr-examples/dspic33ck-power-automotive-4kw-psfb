@@ -231,47 +231,48 @@ void App_PBV_psfb_Build_Frame()
     uint16_t fault_flags = Fault_GetFlags();
     uint16_t status_flags = Dev_PwrCtrl_Get_Status();
     uint16_t flag_word = enabled + ((status_flags & 0x0003)<<1) + (fault_flags<<3);
-    
-    
+
     buffer_sixteen_tx[0] = (1<<Dev_PwrCtrl_Get_State());
     buffer_sixteen_tx[1] = flag_word;
-    buffer_sixteen_tx[2] = (Dev_PwrCtrl_GetAdc_Vpri() > 202) ? (Dev_PwrCtrl_GetAdc_Vpri() - 202) : 0;
-    buffer_sixteen_tx[3] = Dev_PwrCtrl_GetAdc_Vsec();
-    buffer_sixteen_tx[4] = (PwrCtrl_GetAdc_Isec_shunt() > Dev_PwrCtrl_GetIsec_Offset()) ? (PwrCtrl_GetAdc_Isec_shunt() - Dev_PwrCtrl_GetIsec_Offset()) : 0;
-    buffer_sixteen_tx[5] = Dev_PwrCtrl_GetVoltage_Vcap();
-    buffer_sixteen_tx[6] = (PwrCtrl_GetAdc_Temperature() > 497) ? (PwrCtrl_GetAdc_Temperature() - 497 ) : 0;
-    buffer_sixteen_tx[7] = PwrCtrl_GetAdc_Vrail_5V();
-    buffer_sixteen_tx[8] = PG1TRIGC;
-    buffer_sixteen_tx[9] =  PwrCtrl_GetAdc_Ipri_ct();
+    buffer_sixteen_tx[2] = FAULT_EN_GetValue() + 
+                            (psfb_ptr->SecRec.SR_Flag<<1) + (psfb_ptr->ILoop.Enable<<2) + (psfb_ptr->ILoop.Enable<<3)+ (psfb_ptr->Precharge.PrechargeEnabled<<4);
+    buffer_sixteen_tx[3] = Dev_PwrCtrl_GetAdc_Vpri() ; 
+    buffer_sixteen_tx[4] = PwrCtrl_GetAdc_Vrail_5V();
+    buffer_sixteen_tx[5] = (PwrCtrl_GetAdc_Temperature() > 497) ? (PwrCtrl_GetAdc_Temperature() - 497 ) : 0;
+
+    // I-CT
+    buffer_sixteen_tx[6] = PwrCtrl_GetAdc_Ipri_ct();
+    buffer_sixteen_tx[7] = DAC3DATH;
+    buffer_sixteen_tx[8] = Dev_PwrCtrl_GetIPri_Offset();
+    buffer_sixteen_tx[9] = current_slider_ref - Dev_PwrCtrl_GetIPri_Offset();
+    
+    // I-SHUNT
     buffer_sixteen_tx[10] = PwrCtrl_GetAdc_Isec_shunt();
-    buffer_sixteen_tx[11] = Dev_PwrCtrl_GetControl_Phase();
-    buffer_sixteen_tx[12] = FAULT_EN_GetValue() + (psfb_ptr->SecRec.SR_Flag<<1) + (psfb_ptr->ILoop.Enable<<2) + (psfb_ptr->Precharge.PrechargeEnabled<<3);
-    buffer_sixteen_tx[13] = dead_time_right;
-    
-    buffer_sixteen_tx[14] = psfb_ptr->Properties.IReference;
-    
-    buffer_sixteen_tx[15] = current_slider_ref - Dev_PwrCtrl_GetIPri_Offset();
+    buffer_sixteen_tx[11] = Dev_PwrCtrl_GetIsec_Offset();
+    //buffer_sixteen_tx[12] = psfb_ptr->Properties.IReference;
+    buffer_sixteen_tx[12] = psfb_ptr->vloop_output;     // output of vloop will be reference of the iloop
+    buffer_sixteen_tx[13] = psfb_ptr->iloop_output;
+    buffer_sixteen_tx[14] = psfb_ptr->SecRec.Threshold_high;
+    buffer_sixteen_tx[15] = psfb_ptr->SecRec.Threshold_low;
 
-    buffer_sixteen_tx[16] = DAC3DATH;
-    
-    buffer_sixteen_tx[17] = psfb_ptr->ILoop.Reference;
-    
-    buffer_sixteen_tx[18] = DAC1DATH;
-    
-    buffer_sixteen_tx[19] = psfb_ptr->iloop_output;
+    // Vout
+    buffer_sixteen_tx[16] = Dev_PwrCtrl_GetAdc_Vsec();
 
-    buffer_sixteen_tx[20] = Dev_PwrCtrl_GetIPri_Offset();
+    // Vcap
+    buffer_sixteen_tx[17] = Dev_PwrCtrl_GetVoltage_Vcap();
+    buffer_sixteen_tx[18] = psfb_ptr->VLoop.Reference;
+    buffer_sixteen_tx[19] = psfb_ptr->Properties.VSecReference;
+    buffer_sixteen_tx[20] = psfb_ptr->vloop_output;
 
-    buffer_sixteen_tx[21] = Dev_PwrCtrl_GetIsec_Offset();
+    // phase
+    buffer_sixteen_tx[21] = PG1TRIGC;
+    buffer_sixteen_tx[22] = Dev_PwrCtrl_GetControl_Phase();
 
-    buffer_sixteen_tx[22] = psfb_ptr->SecRec.Threshold_high;
 
-    buffer_sixteen_tx[23] = psfb_ptr->SecRec.Threshold_low;
-    
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 24);
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 22);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 24 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 22 * 2 ;
 }
 
 
@@ -420,6 +421,11 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
             //PwrCtrl_SetVSecReference(voltage_ref);
             current_ref = data[1];
             PwrCtrl_SetIReference(current_ref);
+            break;
+
+        case 0xee:
+            voltage_ref = data[1];
+            PwrCtrl_SetVSecReference(voltage_ref);
             break;
         
         case 0xdd:

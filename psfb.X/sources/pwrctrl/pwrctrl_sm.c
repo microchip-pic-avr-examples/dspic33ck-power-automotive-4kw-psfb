@@ -149,8 +149,8 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
         
         //34 amps
         pcInstance->SecRec.Threshold_high = pcInstance->Data.ISecSensorOffset + 421;
-        //26amps
-        pcInstance->SecRec.Threshold_low = pcInstance->Data.ISecSensorOffset + 323;
+        //30amps
+        pcInstance->SecRec.Threshold_low = pcInstance->Data.ISecSensorOffset + 372;
 
         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
 
@@ -352,6 +352,8 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         psfb_ptr->SecRec.SR_Enabled = 1;
         //Enable Iloop here
         psfb_ptr->ILoop.Enable = 1;
+        //Enable Vloop here
+        psfb_ptr->VLoop.Enable = 1;
     }
 }
 
@@ -396,8 +398,10 @@ static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance)
      else
     {   
         // Ramp Up the Voltage, Current and Power reference
+        uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->VRamp);  
+        
 
-        uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->IRamp);
+//        uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->IRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->IRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->PRamp);
 //        rampComplete &= PwrCtrl_RampReference(&pcInstance->PhRamp);
@@ -457,7 +461,7 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
         
     // Check if there is change in power control references    
         
-    else if (pcInstance->ILoop.Reference != pcInstance->Properties.IReference)
+    else if (pcInstance->VLoop.Reference != pcInstance->Properties.VSecReference)
 //     else if ((pcInstance->ILoop.Reference != pcInstance->Properties.IReference) ||
 //                (pcInstance->VLoop.Reference != pcInstance->Properties.VSecReference) ||
 //                (pcInstance->PLoop.Reference != pcInstance->Properties.PwrReference))

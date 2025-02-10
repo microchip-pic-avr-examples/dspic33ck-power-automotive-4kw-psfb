@@ -245,6 +245,7 @@ struct POWER_CONTROL_s
     PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode   
     uint16_t            vloop_output;
     uint16_t            iloop_output;  ///< iloop output
+    uint16_t            vloop_delay;   ///< slowing down voltage loop
     PRECHARGE_t         Precharge;
     SEC_REC_t           SecRec;
     PWM_DISTRIBUTION_t PhaseShiftDistribution;  // phase shift distribution TODO: tie this uo with switch node data struct

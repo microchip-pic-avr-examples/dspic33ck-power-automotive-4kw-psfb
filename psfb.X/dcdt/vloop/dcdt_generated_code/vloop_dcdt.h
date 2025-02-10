@@ -7,7 +7,7 @@
   File Name:     vloop_dcdt.h
   Project Name:  vloop
   Date:          2/10/2025
-  Time:          10:57.33
+  Time:          14:28.38
 
   Software License Agreement
 
@@ -46,8 +46,8 @@
   Gain(Kdc)              1.000
   Warp                   false
   PWM Frequency          1.0000e+05
-  PWM Sampling Ratio     1
-  Sampling Frequency     1.0000e+05
+  PWM Sampling Ratio     10
+  Sampling Frequency     1.0000e+04
   PWM Max Resolution     1.0600e-09
   Computational Delay    1.3500e-06
   Gate Drive Delay       1.5000e-07
@@ -60,8 +60,8 @@
   PWM Calculations
       Name                Value  
     ---------           ---------
-  Bits of Resolution    13.204
-  Gain                  1.060e-04
+  Bits of Resolution    16.526
+  Gain                  1.060e-05
 
 
   s-domain transfer function
@@ -78,13 +78,13 @@
 
   Digital Compensator Coefficients
 
-  Name    Value     Normalized    Q15      Hex
-  ----    -----     ----------    ---      ---
-  a1      1.728     1.000         32764    0x7FFC
-  a2      -0.728    -0.421        -13809   0xCA0F
-  b0      0.028     0.016         522      0x020A
-  b1      0.001     0.000         16       0x0010
-  b2      -0.027    -0.015        -506     0xFE06
+  Name    Value     Normalized    Q15     Hex
+  ----    -----     ----------    ---     ---
+  a1      0.778     0.778         25492   0x6394
+  a2      0.222     0.222         7275    0x1C6B
+  b0      0.141     0.141         4633    0x1219
+  b1      0.038     0.038         1258    0x04EA
+  b2      -0.103    -0.103        -3375   0xF2D1
 
 
   z-domain transfer function
@@ -93,21 +93,21 @@
   H(z) = --- = ------------------------
          e(z)  A0 - A1z^(-1) - A2z^(-2)
 
-          (0.028) + (0.001)z^(-1) + (-0.027)z^(-2)
+          (0.141) + (0.038)z^(-1) + (-0.103)z^(-2)
   H(z) = ---------------------------------------------
-          1 - (1.728)z^(-1) - (-0.728)z^(-2)
+          1 - (0.778)z^(-1) - (0.222)z^(-2)
 
 **/
 
 
 // Compensator Coefficient Defines
-#define VLOOP_COMP_2P2Z_COEFF_A1      0x7FFC
-#define VLOOP_COMP_2P2Z_COEFF_A2      0xCA0F
-#define VLOOP_COMP_2P2Z_COEFF_B0      0x020A
-#define VLOOP_COMP_2P2Z_COEFF_B1      0x0010
-#define VLOOP_COMP_2P2Z_COEFF_B2      0xFE06
-#define VLOOP_COMP_2P2Z_POSTSCALER    0x6EA2
-#define VLOOP_COMP_2P2Z_POSTSHIFT     0xFFFF
+#define VLOOP_COMP_2P2Z_COEFF_A1      0x6394
+#define VLOOP_COMP_2P2Z_COEFF_A2      0x1C6B
+#define VLOOP_COMP_2P2Z_COEFF_B0      0x1219
+#define VLOOP_COMP_2P2Z_COEFF_B1      0x04EA
+#define VLOOP_COMP_2P2Z_COEFF_B2      0xF2D1
+#define VLOOP_COMP_2P2Z_POSTSCALER    0x7FFF
+#define VLOOP_COMP_2P2Z_POSTSHIFT     0x0000
 #define VLOOP_COMP_2P2Z_PRESHIFT      0x0000
 
 

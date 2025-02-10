@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Module xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.microchip.com/dsmps">
   <Version>2.2.0.0</Version>
-  <ProjectName>4kw - Iloop</ProjectName>
+  <ProjectName>4kw - Vloop</ProjectName>
   <Status>
     <SignalChannels>
       <SignalChannel>
@@ -31,10 +31,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Input Voltage</Name>
-        <Scaling>0.231</Scaling>
+        <Name>Debug Flags</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>V</Unit>
+        <Unit xsi:nil="true" />
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -44,8 +44,8 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Output Voltage</Name>
-        <Scaling>0.005232</Scaling>
+        <Name>Input Voltage</Name>
+        <Scaling>0.231</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
         <Plot>false</Plot>
@@ -57,10 +57,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT</Name>
-        <Scaling>0.0805</Scaling>
+        <Name>5v Rail</Name>
+        <Scaling>0.001611</Scaling>
         <Offset>0</Offset>
-        <Unit>A</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -70,10 +70,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Output Cap Voltage</Name>
-        <Scaling>0.005232</Scaling>
+        <Name>Temp</Name>
+        <Scaling>0.0424</Scaling>
         <Offset>0</Offset>
-        <Unit>V</Unit>
+        <Unit>°C</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -83,10 +83,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Temperature</Name>
-        <Scaling>0.0424</Scaling>
-        <Offset>0</Offset>
-        <Unit>°C</Unit>
+        <Name>I-CT CT</Name>
+        <Scaling>0.004</Scaling>
+        <Offset>-2.54</Offset>
+        <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -96,10 +96,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>5V Rail</Name>
-        <Scaling>0.001611</Scaling>
-        <Offset>0</Offset>
-        <Unit>V</Unit>
+        <Name>I-CT OCP</Name>
+        <Scaling>0.004</Scaling>
+        <Offset>-2.528</Offset>
+        <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -109,10 +109,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Phase shift Deg</Name>
-        <Scaling>0.0089</Scaling>
+        <Name>I-CT offset</Name>
+        <Scaling>0.0008056</Scaling>
         <Offset>0</Offset>
-        <Unit>°</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -122,10 +122,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-CT</Name>
-        <Scaling>0.004</Scaling>
+        <Name>I-CT OCP Slider</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>A</Unit>
+        <Unit>bits?</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -135,10 +135,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT bits</Name>
-        <Scaling>1</Scaling>
-        <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Name>I-SHUNT</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-52</Offset>
+        <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -148,10 +148,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Control Phase</Name>
-        <Scaling>1</Scaling>
+        <Name>I-SHUNT offset</Name>
+        <Scaling>0.0008056</Scaling>
         <Offset>0</Offset>
-        <Unit xsi:nil="true" />
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -161,10 +161,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Debug Flags</Name>
+        <Name>I-Shunt Reference</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit xsi:nil="true" />
+        <Unit>bits</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -174,10 +174,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>deadtime</Name>
-        <Scaling>0.25</Scaling>
+        <Name>I-Shunt Loop Output</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>ns</Unit>
+        <Unit xsi:nil="true" />
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -187,10 +187,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT Ref</Name>
-        <Scaling>1</Scaling>
-        <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Name>SR Threshold high</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-52</Offset>
+        <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -200,9 +200,9 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-CT OCP Limit</Name>
-        <Scaling>0.004</Scaling>
-        <Offset>0</Offset>
+        <Name>SR Threshold Low</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-52</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
@@ -213,10 +213,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-CT OCP bits</Name>
-        <Scaling>1</Scaling>
+        <Name>Output Voltage</Name>
+        <Scaling>0.005232</Scaling>
         <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -226,10 +226,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT Ref Ramp</Name>
-        <Scaling>1</Scaling>
+        <Name>Vcap</Name>
+        <Scaling>0.005232</Scaling>
         <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -239,10 +239,10 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT OCP Limit</Name>
-        <Scaling>0.0805</Scaling>
+        <Name>Vloop Reference</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>A</Unit>
+        <Unit>bits</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -252,20 +252,20 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Phase Shift Percent</Name>
-        <Scaling>0.005</Scaling>
+        <Name>VLoop Reference Setpoint</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>%</Unit>
+        <Unit>bits</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>19</SignalChannelIndex>
-        <PositionInMessage>8</PositionInMessage>
+        <PositionInMessage>19</PositionInMessage>
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Iloop Output</Name>
+        <Name>Vloop Ouput</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit>bits</Unit>
@@ -273,83 +273,44 @@
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>20</SignalChannelIndex>
-        <PositionInMessage>19</PositionInMessage>
-        <PageName>4kw</PageName>
-        <ProtocolID>516</ProtocolID>
-      </SignalChannel>
-      <SignalChannel>
-        <Name>I-CT Offset</Name>
-        <Scaling>0.0008058</Scaling>
-        <Offset>0</Offset>
-        <Unit>V</Unit>
-        <Plot>false</Plot>
-        <PlotValMin>0</PlotValMin>
-        <PlotValMax>0</PlotValMax>
-        <SignalChannelIndex>21</SignalChannelIndex>
         <PositionInMessage>20</PositionInMessage>
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT Offset</Name>
-        <Scaling>0.0008058</Scaling>
+        <Name>PG1TRIGC DC</Name>
+        <Scaling>0.005</Scaling>
         <Offset>0</Offset>
-        <Unit>V</Unit>
+        <Unit>%</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
-        <SignalChannelIndex>22</SignalChannelIndex>
+        <SignalChannelIndex>21</SignalChannelIndex>
         <PositionInMessage>21</PositionInMessage>
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT Threshold high</Name>
-        <Scaling>0.0805</Scaling>
+        <Name>Control Phase?</Name>
+        <Scaling>1</Scaling>
         <Offset>0</Offset>
-        <Unit>A</Unit>
+        <Unit>bits</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
-        <SignalChannelIndex>23</SignalChannelIndex>
+        <SignalChannelIndex>22</SignalChannelIndex>
         <PositionInMessage>22</PositionInMessage>
-        <PageName>4kw</PageName>
-        <ProtocolID>516</ProtocolID>
-      </SignalChannel>
-      <SignalChannel>
-        <Name>I-SHUNT Threshold Low</Name>
-        <Scaling>0.0805</Scaling>
-        <Offset>0</Offset>
-        <Unit>A</Unit>
-        <Plot>false</Plot>
-        <PlotValMin>0</PlotValMin>
-        <PlotValMax>0</PlotValMax>
-        <SignalChannelIndex>24</SignalChannelIndex>
-        <PositionInMessage>23</PositionInMessage>
-        <PageName>4kw</PageName>
-        <ProtocolID>516</ProtocolID>
-      </SignalChannel>
-      <SignalChannel>
-        <Name>I-SHUNT Ref A</Name>
-        <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
-        <Unit>Amps</Unit>
-        <Plot>false</Plot>
-        <PlotValMin>0</PlotValMin>
-        <PlotValMax>0</PlotValMax>
-        <SignalChannelIndex>25</SignalChannelIndex>
-        <PositionInMessage>14</PositionInMessage>
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
-        <SignalChannelIndex>2</SignalChannelIndex>
+        <SignalChannelIndex>3</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
-        <SignalChannelIndex>3</SignalChannelIndex>
+        <SignalChannelIndex>4</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -365,63 +326,7 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
-        <SignalChannelIndex>13</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
         <SignalChannelIndex>9</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>15</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>16</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>21</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>4</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>10</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>22</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>23</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>24</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>25</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>14</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>17</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>20</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>11</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -429,7 +334,51 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>11</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>16</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>17</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>18</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>19</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>20</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>10</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>12</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>13</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>21</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>14</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>15</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
     </TableView>
@@ -446,7 +395,6 @@
         <ButtonText>update</ButtonText>
         <Data>0203 0004 00AA [value]</Data>
         <AutoSendAfterChange>false</AutoSendAfterChange>
-        <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
         <Name>Dead time</Name>
@@ -473,7 +421,6 @@
         <ButtonText>update Iref</ButtonText>
         <Data>0203 0004 00CC [value]</Data>
         <AutoSendAfterChange>false</AutoSendAfterChange>
-        <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
         <Name>I-CT OCP</Name>
@@ -486,6 +433,20 @@
         <Step>1</Step>
         <ButtonText>update ref</ButtonText>
         <Data>0203 0004 00DD [value]</Data>
+        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <PageName>4kw</PageName>
+      </OutputValue>
+      <OutputValue>
+        <Name>Vref loop</Name>
+        <Unit>bits</Unit>
+        <Scaling>191.131</Scaling>
+        <Offset>0</Offset>
+        <MinimumValue>1</MinimumValue>
+        <MaximumValue>14</MaximumValue>
+        <DefaultValue>1</DefaultValue>
+        <Step>0.5</Step>
+        <ButtonText>update Vref</ButtonText>
+        <Data>0203 0004 00EE [value]</Data>
         <AutoSendAfterChange>true</AutoSendAfterChange>
         <PageName>4kw</PageName>
       </OutputValue>
@@ -612,7 +573,7 @@
         <PageName>4kw</PageName>
       </StatusGroup>
       <StatusGroup>
-        <SignalChannelIndex>12</SignalChannelIndex>
+        <SignalChannelIndex>2</SignalChannelIndex>
         <StatusBits>
           <StatusBit>
             <Name>EN_CTRL(high Enable)</Name>
@@ -633,8 +594,14 @@
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>precharge enable</Name>
+            <Name>Vcomp enable</Name>
             <BitIndex>3</BitIndex>
+            <ControlType>radio</ControlType>
+            <ActiveColor>FF0000</ActiveColor>
+          </StatusBit>
+          <StatusBit>
+            <Name>precharge enable</Name>
+            <BitIndex>4</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
@@ -675,14 +642,12 @@
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 01 01</Data>
-        <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Stop Sync</Name>
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 01 00</Data>
-        <PageName>4kw</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Reset Faults</Name>
