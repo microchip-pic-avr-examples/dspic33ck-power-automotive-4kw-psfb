@@ -35,11 +35,16 @@
 
 #include "iloop/dcdt_generated_code/iloop_dcdt.h"
 #include "iloop33/dcdt_generated_code/iloop_t_dcdt.h"
+#include "vloop/dcdt_generated_code/vloop_dcdt.h"
 
 extern SMPS_2P2Z_T IMC_2p2z;
 extern SMPS_3P3Z_T IMC_3p3z;
 
+extern SMPS_2P2Z_T VMC_2p2z;
+
 void PwrCtrl_IComp_Initialize(void);
+void PwrCtrl_VComp_Initialize(void);
+
 void PwrCtrl_ResetControlLoopHistories(void);
 //------------------------------------------------------------------------------
 // END

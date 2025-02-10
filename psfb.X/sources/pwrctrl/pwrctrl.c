@@ -129,7 +129,7 @@ static void PwrCtrl_StartUpInitialize(void)
     psfb.VRamp.ptrReference = (uint16_t*)&psfb.VLoop.Reference;
     psfb.VRamp.ptrReferenceTarget = &psfb.Properties.VSecReference;
     psfb.VRamp.StepSize = 1;
-    psfb.VRamp.Delay = 20;
+    psfb.VRamp.Delay = 60;
     psfb.VRamp.Counter = 0;
     psfb.VRamp.RampComplete = 0;
     
@@ -141,13 +141,13 @@ static void PwrCtrl_StartUpInitialize(void)
     psfb.IRamp.Counter = 0;
     psfb.IRamp.RampComplete = 0;
     
-    //Initialize Power ramp-up settings
-    psfb.PRamp.ptrReference = (uint16_t*)&psfb.PLoop.Reference;
-    psfb.PRamp.ptrReferenceTarget = &psfb.Properties.PwrReference;
-    psfb.PRamp.StepSize = 1;
-    psfb.PRamp.Delay = 4;
-    psfb.PRamp.Counter = 0;
-    psfb.PRamp.RampComplete = 0;
+    // //Initialize Power ramp-up settings
+    // psfb.PRamp.ptrReference = (uint16_t*)&psfb.PLoop.Reference;
+    // psfb.PRamp.ptrReferenceTarget = &psfb.Properties.PwrReference;
+    // psfb.PRamp.StepSize = 1;
+    // psfb.PRamp.Delay = 4;
+    // psfb.PRamp.Counter = 0;
+    // psfb.PRamp.RampComplete = 0;
     
     #if defined (OPEN_LOOP_PBV) && (OPEN_LOOP_PBV == true)
     // The PWM Period bits [2:0] needs to be mask when using cascaded PWM setup 
@@ -191,6 +191,10 @@ void PwrCtrl_ControlLoopInitialize(void)
     // Initialize current loop compensator
     //PwrCtrl_IComp_Initialize();
 
+    // Initialize voltage loop compensator
+    PwrCtrl_VComp_Initialize();
+
+    //Initialize the current loop 3p3z
     PwrCtrl_IComp_3p3z_Initialize();
 
     // Current loop properties initialize
@@ -199,5 +203,12 @@ void PwrCtrl_ControlLoopInitialize(void)
     psfb.ILoop.Feedback = 0;
     psfb.ILoop.Output = 0;
     psfb.ILoop.Reference = 0;
+
+    // Voltage loop properties initialize 
+    psfb.VLoop.Enable = false;
+    psfb.VLoop.AgcFactor = 0x7FFF;
+    psfb.VLoop.Feedback = 0;
+    psfb.VLoop.Output = 0;
+    psfb.VLoop.Reference = 0;
     
 }

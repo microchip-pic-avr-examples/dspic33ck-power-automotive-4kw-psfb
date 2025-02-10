@@ -258,7 +258,7 @@ void App_PBV_psfb_Build_Frame()
     
     buffer_sixteen_tx[18] = DAC1DATH;
     
-    buffer_sixteen_tx[19] = psfb_ptr->controller_error;
+    buffer_sixteen_tx[19] = psfb_ptr->iloop_output;
 
     buffer_sixteen_tx[20] = Dev_PwrCtrl_GetIPri_Offset();
 

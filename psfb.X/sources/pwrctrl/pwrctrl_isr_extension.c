@@ -152,27 +152,32 @@ void PwrCtrl_PrepareData(void)
 void PwrCtrl_ControlLoopExecute(void)
 {   
     // control loop execute 
-    //TODO: change the feedback signal to secondary current ??
-    psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISenseSecondary;
-    
-    // SMPS_Controller2P2ZUpdate(
-    //         &IMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
-    //         &(psfb_ptr->ILoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
-    //         psfb_ptr->ILoop.Reference,      // ILoopReference from Iramp
-    //         &(psfb_ptr->ILoop.Output)          // pointer to the control loop target register of the calculated result 
-    //         );   
 
-    SMPS_Controller3P3ZUpdate(
-            &IMC_3p3z,                      // SPMPS_2P2Z_T pointer type structure
+    psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VCapVoltage;
+
+    SMPS_Controller2P2ZUpdate(
+            &VMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
+            &(psfb_ptr->VLoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
+            psfb_ptr->VLoop.Reference,      // ILoopReference from Iramp
+            &(psfb_ptr->VLoop.Output)       // pointer to the control loop target register of the calculated result 
+            );
+
+    psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISenseSecondary;
+
+    uint32_t IloopReference = psfb_ptr->VLoop.Output ; 
+
+    SMPS_Controller2P2ZUpdate(
+            &IMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
             &(psfb_ptr->ILoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
-            psfb_ptr->ILoop.Reference,      // ILoopReference from Iramp
-            &(psfb_ptr->ILoop.Output)          // pointer to the control loop target register of the calculated result 
+            //psfb_ptr->ILoop.Reference,      // ILoopReference from Iramp
+            IloopReference,                 // IloopReference from Vloop
+            &(psfb_ptr->ILoop.Output)       // pointer to the control loop target register of the calculated result 
             );   
 
-    
+    // temporary
+    psfb_ptr->iloop_output =  psfb_ptr->ILoop.Output;
+    psfb_ptr->vloop_output = IloopReference;
 
-    psfb_ptr->controller_error =  psfb_ptr->ILoop.Output;
-    
     if (psfb_ptr->ILoop.Enable == 1) {
         PwrCtrl_SetPhaseTarget(psfb_ptr->ILoop.Output);
         PwrCtrl_PWM_Update();

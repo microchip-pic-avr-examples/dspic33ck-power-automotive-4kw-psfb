@@ -243,7 +243,8 @@ struct POWER_CONTROL_s
     CONTROLLER_t        VLoop;  ///< structure for voltage controller data
     CONTROLLER_t        PLoop;  ///< structure for power controller data
     PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode   
-    uint16_t controller_error;  ///< error seen by compensator
+    uint16_t            vloop_output;
+    uint16_t            iloop_output;  ///< iloop output
     PRECHARGE_t         Precharge;
     SEC_REC_t           SecRec;
     PWM_DISTRIBUTION_t PhaseShiftDistribution;  // phase shift distribution TODO: tie this uo with switch node data struct
