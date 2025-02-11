@@ -164,7 +164,7 @@ void PwrCtrl_ControlLoopExecute(void)
         // psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VCapVoltage;  
         psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VOutVoltage;
         
-        if (psfb_ptr->vloop_delay++ > 8) {
+        if (psfb_ptr->vloop_delay++ > 0) {
             SMPS_Controller2P2ZUpdate(
                 &VMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
                 &(psfb_ptr->VLoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
