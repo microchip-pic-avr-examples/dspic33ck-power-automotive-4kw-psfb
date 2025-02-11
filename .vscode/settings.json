@@ -17,6 +17,8 @@
         "pins.h": "c",
         "fault_comm_interface.h": "c",
         "dev_adc_sensor_offsets.h": "c",
-        "fault.h": "c"
+        "fault.h": "c",
+        "iloop_t_dcdt.h": "c",
+        "vloop_dcdt.h": "c"
     }
 }

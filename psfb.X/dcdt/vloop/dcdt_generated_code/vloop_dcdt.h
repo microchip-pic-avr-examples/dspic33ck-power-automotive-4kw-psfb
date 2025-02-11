@@ -6,8 +6,8 @@
 
   File Name:     vloop_dcdt.h
   Project Name:  vloop
-  Date:          2/10/2025
-  Time:          14:28.38
+  Date:          2/11/2025
+  Time:          10:04.37
 
   Software License Agreement
 
@@ -40,9 +40,9 @@
   Compensator Type:  2P2Z
       Entry                Value  
     ---------            ---------
-  Pole 0                 1.0000e+02 Hz
-  Pole 2                 5.0000e+03 Hz
-  Zero 1                 5.0000e+02 Hz
+  Pole 0                 2.0000e+01 Hz
+  Pole 2                 1.0000e+04 Hz
+  Zero 1                 1.0000e+02 Hz
   Gain(Kdc)              1.000
   Warp                   false
   PWM Frequency          1.0000e+05
@@ -51,7 +51,7 @@
   PWM Max Resolution     1.0600e-09
   Computational Delay    1.3500e-06
   Gate Drive Delay       1.5000e-07
-  Control Output Min.    650
+  Control Output Min.    550
   Control Output Max.    1642
   Kuc Gain               7.6025e+00
   Use Kuc Gain           false
@@ -70,9 +70,9 @@
   H(s) = Kdc X --- X ------------
                 s    Wz1(Wp2 + s)
 
-                  6.28e+02   3.14e+04(3.14e+03 + s)
+                  1.26e+02   6.28e+04(6.28e+02 + s)
   H(s) = 1.000 X -------- X ----------------------
-                     s       3.14e+03(3.14e+04 + s)
+                     s       6.28e+02(6.28e+04 + s)
 
 
 
@@ -80,11 +80,11 @@
 
   Name    Value     Normalized    Q15     Hex
   ----    -----     ----------    ---     ---
-  a1      0.778     0.778         25492   0x6394
-  a2      0.222     0.222         7275    0x1C6B
-  b0      0.141     0.141         4633    0x1219
-  b1      0.038     0.038         1258    0x04EA
-  b2      -0.103    -0.103        -3375   0xF2D1
+  a1      0.483     0.483         15823   0x3DCF
+  a2      0.517     0.517         16944   0x4230
+  b0      0.156     0.156         5127    0x1407
+  b1      0.010     0.010         312     0x0138
+  b2      -0.147    -0.147        -4815   0xED31
 
 
   z-domain transfer function
@@ -93,26 +93,26 @@
   H(z) = --- = ------------------------
          e(z)  A0 - A1z^(-1) - A2z^(-2)
 
-          (0.141) + (0.038)z^(-1) + (-0.103)z^(-2)
+          (0.156) + (0.010)z^(-1) + (-0.147)z^(-2)
   H(z) = ---------------------------------------------
-          1 - (0.778)z^(-1) - (0.222)z^(-2)
+          1 - (0.483)z^(-1) - (0.517)z^(-2)
 
 **/
 
 
 // Compensator Coefficient Defines
-#define VLOOP_COMP_2P2Z_COEFF_A1      0x6394
-#define VLOOP_COMP_2P2Z_COEFF_A2      0x1C6B
-#define VLOOP_COMP_2P2Z_COEFF_B0      0x1219
-#define VLOOP_COMP_2P2Z_COEFF_B1      0x04EA
-#define VLOOP_COMP_2P2Z_COEFF_B2      0xF2D1
+#define VLOOP_COMP_2P2Z_COEFF_A1      0x3DCF
+#define VLOOP_COMP_2P2Z_COEFF_A2      0x4230
+#define VLOOP_COMP_2P2Z_COEFF_B0      0x1407
+#define VLOOP_COMP_2P2Z_COEFF_B1      0x0138
+#define VLOOP_COMP_2P2Z_COEFF_B2      0xED31
 #define VLOOP_COMP_2P2Z_POSTSCALER    0x7FFF
 #define VLOOP_COMP_2P2Z_POSTSHIFT     0x0000
 #define VLOOP_COMP_2P2Z_PRESHIFT      0x0000
 
 
 // Compensator Clamp Limits
-#define VLOOP_COMP_2P2Z_MIN_CLAMP    0x028A
+#define VLOOP_COMP_2P2Z_MIN_CLAMP    0x0226
 #define VLOOP_COMP_2P2Z_MAX_CLAMP    0x066A
 
 

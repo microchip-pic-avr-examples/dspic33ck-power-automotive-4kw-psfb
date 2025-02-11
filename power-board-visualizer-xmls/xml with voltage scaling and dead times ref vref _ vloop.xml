@@ -46,7 +46,7 @@
       <SignalChannel>
         <Name>Input Voltage</Name>
         <Scaling>0.231</Scaling>
-        <Offset>0</Offset>
+        <Offset>-45</Offset>
         <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
@@ -253,9 +253,9 @@
       </SignalChannel>
       <SignalChannel>
         <Name>VLoop Reference Setpoint</Name>
-        <Scaling>1</Scaling>
+        <Scaling>0.005232</Scaling>
         <Offset>0</Offset>
-        <Unit>bits</Unit>
+        <Unit>V</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
@@ -342,15 +342,15 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>19</SignalChannelIndex>
+        <PageName>4kw</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>17</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>18</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>19</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -447,7 +447,7 @@
         <Step>0.5</Step>
         <ButtonText>update Vref</ButtonText>
         <Data>0203 0004 00EE [value]</Data>
-        <AutoSendAfterChange>true</AutoSendAfterChange>
+        <AutoSendAfterChange>false</AutoSendAfterChange>
         <PageName>4kw</PageName>
       </OutputValue>
     </OutputValues>

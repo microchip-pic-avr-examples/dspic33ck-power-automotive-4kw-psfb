@@ -210,5 +210,4 @@ void PwrCtrl_ControlLoopInitialize(void)
     psfb.VLoop.Feedback = 0;
     psfb.VLoop.Output = 0;
     psfb.VLoop.Reference = 0;
-    
 }
