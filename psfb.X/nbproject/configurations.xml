@@ -751,7 +751,7 @@
         <property key="memories.programmemory.ranges" value="0-2beff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/M70027/Documents/Projects/4kw-rn/closed_loop_voltage_dcdt_new/dspic33ck-power-automotive-4kw-psfb/psfb.X/debug/default/psfb_ptg"/>
+                  value="C:/Users/M70027/Documents/Projects/fourkw/4kw-dcdc/four_dcdc.X/debug/default/four_dcdc_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>

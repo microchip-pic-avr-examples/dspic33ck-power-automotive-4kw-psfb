@@ -35,10 +35,11 @@
 #define VPRI_OV_THRES_CLEAR_ADC         (((VPRI_OV_THRES_CLEAR_V) * 4.329) + 205) 
 #define VPRI_UV_THRES_CLEAR_ADC         (((VPRI_UV_THRES_CLEAR_V) * 4.329) + 205) 
 
-#define VSEC_OV_THRES_TRIG_V            13
+#define VSEC_OV_THRES_TRIG_V            18
 #define VSEC_OV_THRES_CLEAR_V           11
-#define VSEC_UV_THRES_TRIG_V            8
-#define VSEC_UV_THRES_CLEAR_V           10
+
+#define VSEC_UV_THRES_TRIG_V            4
+#define VSEC_UV_THRES_CLEAR_V           6
 
 #define VSEC_OV_THRES_TRIG_ADC          ((VSEC_OV_THRES_TRIG_V) * 191.131)
 #define VSEC_OV_THRES_CLEAR_ADC         ((VPRI_OV_THRES_CLEAR_V) * 191.131)
@@ -54,10 +55,9 @@
 #define FAULT_VPRI_OV   true
 #define FAULT_VPRI_UV   true
 #define FAULT_VSEC_OV   true
-#define FAULT_VSEC_UV   false
+#define FAULT_VSEC_UV   true
 
 #define FAULT_ISEC_OC   true
-#define FAULT_IPRI_OC   false
 #define FAULT_PS_OTP    false
 #define FAULT_SHORT_CCT false
 #define FAULT_VRAIL_5V  false
@@ -167,7 +167,7 @@ void Fault_Execute(void)
 
    // secondary over voltage fault handler
    #if defined(FAULT_VSEC_UV) && (FAULT_VSEC_UV ==  true)  
-   if (psfb_ptr->State > 1)   // after precharge    
+   if ((psfb_ptr->State > 1) && (psfb_ptr->State < 6))  // after precharge and before fault    
         faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VSecondaryUVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
    #endif  
    

@@ -154,6 +154,9 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
 
         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
 
+        //  float temp = (float)39100 / (float)(Dev_PwrCtrl_GetAdc_Vpri() - 205);
+        //  pcInstance->Precharge.maxDutyCycle = (uint16_t)temp >> 4 ; 
+
         FAULT_EN_SetHigh();
     }
     else {
@@ -354,6 +357,10 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         psfb_ptr->ILoop.Enable = 1;
         //Enable Vloop here
         psfb_ptr->VLoop.Enable = 1;
+
+        //reference set to precharged caps on startup
+        psfb_ptr->VLoop.Reference =             psfb_ptr->Data.VOutVoltage;
+        psfb_ptr->Properties.VSecReference =    psfb_ptr->Data.VOutVoltage;
     }
 }
 

@@ -154,27 +154,29 @@ void PwrCtrl_ControlLoopExecute(void)
     // control loop execute 
     uint16_t IloopReference = 0;
 
-    // // vloop:iloop -> 1:10
-    // if (psfb_ptr->vloop_delay++ > 9) {
-    //         psfb_ptr->VLoop.Enable = 1;
-    //         psfb_ptr->vloop_delay = 0;
-    // }
-
+//    // vloop:iloop -> 1:10
+//    if (++psfb_ptr->vloop_delay > 9) {
+//            psfb_ptr->VLoop.Enable = 1;
+//            psfb_ptr->vloop_delay = 0;
+//    }
+    
     if (psfb_ptr->VLoop.Enable == 1) {
-        psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VCapVoltage;
+        // psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VCapVoltage;  
+        psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VOutVoltage;
         
-        SMPS_Controller2P2ZUpdate(
-            &VMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
-            &(psfb_ptr->VLoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
-            psfb_ptr->VLoop.Reference,      // VLoopReference from Vramp
-            &(psfb_ptr->VLoop.Output)       // pointer to the control loop target register of the calculated result 
+        if (psfb_ptr->vloop_delay++ > 8) {
+            SMPS_Controller2P2ZUpdate(
+                &VMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
+                &(psfb_ptr->VLoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
+                psfb_ptr->VLoop.Reference,      // VLoopReference from Vramp
+                &(psfb_ptr->VLoop.Output)       // pointer to the control loop target register of the calculated result 
             );
-        
-        // psfb_ptr->VLoop.Enable = 0;     // disable, enable after counter
-        
-        // Vloop output available all the time.
-        IloopReference = psfb_ptr->VLoop.Output;   
-    }
+            // psfb_ptr->VLoop.Enable = 0;     // disable, enable after counter
+            psfb_ptr->vloop_delay = 0;
+        }
+    }     
+    // Vloop output 
+    IloopReference = psfb_ptr->VLoop.Output; 
     
     if (psfb_ptr->ILoop.Enable == 1) {
         psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISenseSecondary;
