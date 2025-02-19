@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><dcdt>
     <project type="Single-Loop" name="iloop33">
         <compensator type="3P3Z">
-            <pole type="0" value="1100.000"/>
-            <pole type="2" value="4000.000"/>
-            <pole type="3" value="45000.000"/>
-            <zero type="1" value="1500.000"/>
-            <zero type="2" value="5000.000"/>
-            <gain type="kdc" value="4.000"/>
+            <pole type="0" value="8000.000"/>
+            <pole type="2" value="21000.000"/>
+            <pole type="3" value="40000.000"/>
+            <zero type="1" value="3000.000"/>
+            <zero type="2" value="6000.000"/>
+            <gain type="kdc" value="1.000"/>
             <setting type="warp" value="false"/>
             <pwm type="frequency" value="100000.000"/>
             <pwm type="ratio" value="1"/>

@@ -71,7 +71,7 @@ void ControlLoop_Interrupt_CallBack(void)
     
     PwrCtrl_ControlLoopExecute();
     
-    PwrCtrl_PWM_Update();
+    //PwrCtrl_PWM_Update();
     
 
     

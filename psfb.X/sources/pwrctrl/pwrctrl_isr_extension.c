@@ -164,7 +164,7 @@ void PwrCtrl_ControlLoopExecute(void)
         // psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VCapVoltage;  
         psfb_ptr->VLoop.Feedback = psfb_ptr->Data.VOutVoltage;
         
-        if (psfb_ptr->vloop_delay++ > 0) {
+//        if (psfb_ptr->vloop_delay++ > 0) {
             SMPS_Controller2P2ZUpdate(
                 &VMC_2p2z,                      // SPMPS_2P2Z_T pointer type structure
                 &(psfb_ptr->VLoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
@@ -172,8 +172,8 @@ void PwrCtrl_ControlLoopExecute(void)
                 &(psfb_ptr->VLoop.Output)       // pointer to the control loop target register of the calculated result 
             );
             // psfb_ptr->VLoop.Enable = 0;     // disable, enable after counter
-            psfb_ptr->vloop_delay = 0;
-        }
+//            psfb_ptr->vloop_delay = 0;
+//        }
     }     
     // Vloop output 
     IloopReference = psfb_ptr->VLoop.Output; 
@@ -185,7 +185,7 @@ void PwrCtrl_ControlLoopExecute(void)
             &IMC_3p3z,                      // SPMPS_2P2Z_T pointer type structure
             &(psfb_ptr->ILoop.Feedback),    // pointer to the input source register or variable being tracked by 2P2Z
             //psfb_ptr->ILoop.Reference,      // ILoopReference from Iramp
-            IloopReference,                 // IloopReference from Vloop
+            psfb_ptr->VLoop.Output,                 // IloopReference from Vloop
             &(psfb_ptr->ILoop.Output)          // pointer to the control loop target register of the calculated result 
         );   
 

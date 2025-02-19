@@ -6,8 +6,8 @@
 
   File Name:     iloop_t_dcdt.h
   Project Name:  iloop33
-  Date:          2/7/2025
-  Time:          18:03.10
+  Date:          2/18/2025
+  Time:          9:13.38
 
   Software License Agreement
 
@@ -40,12 +40,12 @@
   Compensator Type:  3P3Z
       Entry                Value  
     ---------            ---------
-  Pole 0                 1.1000e+03 Hz
-  Pole 2                 4.0000e+03 Hz
-  Pole 3                 4.5000e+04 Hz
-  Zero 1                 1.5000e+03 Hz
-  Zero 2                 5.0000e+03 Hz
-  Gain(Kdc)              4.000
+  Pole 0                 8.0000e+03 Hz
+  Pole 2                 2.1000e+04 Hz
+  Pole 3                 4.0000e+04 Hz
+  Zero 1                 3.0000e+03 Hz
+  Zero 2                 6.0000e+03 Hz
+  Gain(Kdc)              1.000
   Warp                   false
   PWM Frequency          1.0000e+05
   PWM Sampling Ratio     1
@@ -72,9 +72,9 @@
   H(s) = Kdc X --- X --------------------------
                 s    Wz1(Wz2)(Wp2 + s)(Wp3 + s)
 
-                 6.91e+03   2.51e+04(2.83e+05)(9.42e+03 + s)(3.14e+04 + s)
-  H(s) = 4.000 X -------- X ----------------------------------------------
-                    s       9.42e+03(3.14e+04)(2.51e+04 + s)(2.83e+05 + s)
+                 5.03e+04   1.32e+05(2.51e+05)(1.88e+04 + s)(3.77e+04 + s)
+  H(s) = 1.000 X -------- X ----------------------------------------------
+                    s       1.88e+04(3.77e+04)(1.32e+05 + s)(2.51e+05 + s)
 
 
 
@@ -82,13 +82,13 @@
 
   Name    Value     Normalized    Q15      Hex
   ----    -----     ----------    ---      ---
-  a1      1.605     1.000         32764    0x7FFC
-  a2      -0.472    -0.294        -9637    0xDA5B
-  a3      -0.133    -0.083        -2717    0xF563
-  b0      1.479     0.921         30194    0x75F2
-  b1      -0.945    -0.588        -19278   0xB4B2
-  b2      -1.443    -0.899        -29456   0x8CF0
-  b3      0.981     0.611         20016    0x4E30
+  a1      1.091     0.268         8779     0x224B
+  a2      -0.068    -0.017        -546     0xFDDE
+  a3      -0.023    -0.006        -187     0xFF45
+  b0      4.072     1.000         32764    0x7FFC
+  b1      -2.079    -0.510        -16727   0xBEA9
+  b2      -3.850    -0.945        -30974   0x8702
+  b3      2.302     0.565         18517    0x4855
 
 
   z-domain transfer function
@@ -97,23 +97,23 @@
   H(z) = --- = -----------------------------------
          e(z)  A0 - A1z^(-1) - A2z^(-2) - A3z^(-3)
 
-          (1.479) + (-0.945)z^(-1) + (-1.443)z^(-2) + (0.981)z^(-3)
+          (4.072) + (-2.079)z^(-1) + (-3.850)z^(-2) + (2.302)z^(-3)
   H(z) = -----------------------------------------------------------
-          1 - (1.605)z^(-1) - (-0.472)z^(-2) - (-0.133)z^(-3)
+          1 - (1.091)z^(-1) - (-0.068)z^(-2) - (-0.023)z^(-3)
 
 **/
 
 
 // Compensator Coefficient Defines
-#define ILOOP_T_COMP_3P3Z_COEFF_A1      0x7FFC
-#define ILOOP_T_COMP_3P3Z_COEFF_A2      0xDA5B
-#define ILOOP_T_COMP_3P3Z_COEFF_A3      0xF563
-#define ILOOP_T_COMP_3P3Z_COEFF_B0      0x75F2
-#define ILOOP_T_COMP_3P3Z_COEFF_B1      0xB4B2
-#define ILOOP_T_COMP_3P3Z_COEFF_B2      0x8CF0
-#define ILOOP_T_COMP_3P3Z_COEFF_B3      0x4E30
-#define ILOOP_T_COMP_3P3Z_POSTSCALER    0x66C0
-#define ILOOP_T_COMP_3P3Z_POSTSHIFT     0xFFFF
+#define ILOOP_T_COMP_3P3Z_COEFF_A1      0x224B
+#define ILOOP_T_COMP_3P3Z_COEFF_A2      0xFDDE
+#define ILOOP_T_COMP_3P3Z_COEFF_A3      0xFF45
+#define ILOOP_T_COMP_3P3Z_COEFF_B0      0x7FFC
+#define ILOOP_T_COMP_3P3Z_COEFF_B1      0xBEA9
+#define ILOOP_T_COMP_3P3Z_COEFF_B2      0x8702
+#define ILOOP_T_COMP_3P3Z_COEFF_B3      0x4855
+#define ILOOP_T_COMP_3P3Z_POSTSCALER    0x412A
+#define ILOOP_T_COMP_3P3Z_POSTSHIFT     0xFFFD
 #define ILOOP_T_COMP_3P3Z_PRESHIFT      0x0000
 
 
