@@ -6,8 +6,8 @@
 
   File Name:     vloop_dcdt.h
   Project Name:  vloop
-  Date:          2/26/2025
-  Time:          14:33.08
+  Date:          2/27/2025
+  Time:          15:00.10
 
   Software License Agreement
 
@@ -52,7 +52,7 @@
   Computational Delay    1.3500e-06
   Gate Drive Delay       1.5000e-07
   Control Output Min.    550
-  Control Output Max.    2500
+  Control Output Max.    3280
   Kuc Gain               7.6025e+00
   Use Kuc Gain           false
 
@@ -113,7 +113,7 @@
 
 // Compensator Clamp Limits
 #define VLOOP_COMP_2P2Z_MIN_CLAMP    0x0226
-#define VLOOP_COMP_2P2Z_MAX_CLAMP    0x09C4
+#define VLOOP_COMP_2P2Z_MAX_CLAMP    0x0CD0
 
 
 #endif
