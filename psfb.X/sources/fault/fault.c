@@ -49,8 +49,8 @@
 #define ISEC_OC_THRES_TRIG_A            210
 #define ISEC_OC_THRES_CLEAR_A           180
 
-#define ISEC_OC_THRES_TRIG_ADC          2271            // corrsesponds to 130 amps
-#define ISEC_OC_THRES_CLEAR_ADC         2100
+#define ISEC_OC_THRES_TRIG_ADC          3370            // corrsesponds to 220 amps
+#define ISEC_OC_THRES_CLEAR_ADC         3270
 
 #define FAULT_VPRI_OV   true
 #define FAULT_VPRI_UV   true

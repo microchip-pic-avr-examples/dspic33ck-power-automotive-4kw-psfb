@@ -266,7 +266,6 @@ void App_PBV_psfb_Build_Frame()
 
     // phase
     buffer_sixteen_tx[21] = PG1TRIGC;
-    buffer_sixteen_tx[22] = Dev_PwrCtrl_GetControl_Phase();
 
 
     PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 22);
