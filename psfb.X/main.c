@@ -62,6 +62,8 @@ int main(void)
     Dev_LED_Init();
     psfb_ptr->SecRec.SR_Enabled = 0;    // enabled after start power transfer
     psfb_ptr->SecRec.SR_Flag = 0;   // make sure it is off
+      
+    ADC1_SoftwareTriggerEnable(); // add it here so that the very first time the values are available
     dev_MeasureOffsets_Initialize();
     
     while (counter--> 0) Nop(); // implementing delay for values to settle
@@ -89,7 +91,6 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     psfb_ptr->Data.ISensePrimary = ADCBUF0;
     psfb_ptr->Data.ISenseSecondary = ADCBUF1;
     
-    ADC1_SoftwareTriggerEnable();
     PwrCtrl_UpdateADConverterData();
 
     // Execute the fault detection
@@ -100,7 +101,8 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     } 
 
     PwrCtrl_PWM_UpdateSecondaryRectifiers(); // check Ishunt within range
-
+    
+    ADC1_SoftwareTriggerEnable();
     GPIO_debug_SetLow();
     //clear the FB_P_CT_FILT interrupt flag
     IFS5bits.ADCAN0IF = 0;

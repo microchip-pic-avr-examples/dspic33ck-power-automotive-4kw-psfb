@@ -12,6 +12,8 @@
 #include "pwrctrl_typedef.h"
 #include "pwrctrl_pwm.h"
 
+#define DEAD_TIME_ADJ   240
+
 /*******************************************************************************
  * @ingroup pwrctrl-pwm
  * @brief  PWM distribution for DAB converter
@@ -204,11 +206,11 @@ void PwrCtrl_PWM_Initialize(void)
     PG1DTH = 640;   // set dead time to 160ns
     PG1DTL = 640;   // set dead time to 160ns
     PG2DTH = 0;     // no dead time on PWMxH
-    PG2DTL = 640;  // set dead time to 160ns
+    PG2DTL = 640 + DEAD_TIME_ADJ;  // set dead time to 160ns
     PG3DTH = 640;   // set dead time to 160ns
     PG3DTL = 640;   // set dead time to 160ns
     PG4DTH = 0;     // no dead time on PWMxH
-    PG4DTL = 640;  // set dead time to 160ns
+    PG4DTL = 640 + DEAD_TIME_ADJ;  // set dead time to 160ns
 
     // Set synchronization triggers
     PG1TRIGC = 0; // phase shift = 0
