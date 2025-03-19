@@ -254,7 +254,7 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
    }
 
    else if (pcInstance->Precharge.PrechargeEnabled == 1) {
-        pcInstance->Precharge.maxDutyCycle = 42;        //TODO: fix maths. and state machine 
+//        pcInstance->Precharge.maxDutyCycle = 42;        
         if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) {
             pcInstance->Precharge.delayCounter = pcInstance->Precharge.delayCounter + 1;
             if (pcInstance->Precharge.delayCounter > 499){                       //5ms each step increment

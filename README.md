@@ -60,20 +60,17 @@
 ### PRECHARGE : charging vcap to 12 volts in Precharge state
 
 1. after offsets are calculated, enable short circuit switch and pwm switching.
-2. in precharge state check if vcap voltage is 12 volts, if not, then increase duty cycle. Dutycycle capped up to max duty cycle. this corresponds to 15V at 800 Vin. each increment is 1% at 100us rate.
-3. if it is around 12 volts, then turn off pwm, and go to standby state.
-4. if the state machine is at init state or precharge state, then the Under voltage fault at Vcap is not monitored.
-5. max duty calculated  -> d% = (Vout  * 2 * 17 * 100) / Vin ---, vout = 11.5
-6. d% =  39100 /  Vin
-7. d% = 39100 / ( VinADC - 205 ) * 0.231 
-8. d% = 39100 / ( VinADC - 205) / 4.329 -> approx divide by 4, 
-9. d% = 39100 / ( VinADC - 205) >>2;
-10. unimplemented still, division results in 0. TODO fix. temp fix capped at 63percent.
-
+2. in precharge state calcuate the max duty cycle, and increase the duty cycle gradually in 100ms
+5. max duty calculated  -> d% = (Vout  * 2 * 17 * 100) / Vin ---, vout = 10
+6. d% =  34000 /  Vin
+7. d% = 34000 / ( VinADC - 205 ) * 0.231 
+8. d% = 34000 / ( VinADC - 205) / 4.329 
+9. d% = 146880 / ( VinADC - 205) 
+10. d% = [8 (146880 / 8) ]/ [8 ((VinADC - 205)/8)]   multiplying and divide by 8
+11. d% = [8 (18360) ]     / [8 ((VinADC - 205)>>3)]  multiplying and divide by 8 to keep it under 16bit
 
 ### SR turn on and off.
 
 1. PwrCtrl_PWM_UpdateSecondaryRectifiers is called cycle by cycle after every adc sample.
 2. thresholds are calculated once, and are calculated in init state, after offsets are determined.
 3. Threshold = offset + gain * amps
-4. hardcoded for now.

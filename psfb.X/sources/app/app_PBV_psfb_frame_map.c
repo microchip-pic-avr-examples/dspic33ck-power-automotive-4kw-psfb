@@ -266,12 +266,13 @@ void App_PBV_psfb_Build_Frame()
 
     // phase
     buffer_sixteen_tx[21] = PG1TRIGC;
+    buffer_sixteen_tx[22] = psfb_ptr->Precharge.maxDutyCycle;;
 
 
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 22);
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 23);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 22 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 23 * 2 ;
 }
 
 
@@ -320,6 +321,8 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
         case 0x00aa:
             //FAULT_EN_SetHigh();
             // charge_en = 1;
+
+            PwrCtrl_MaxDutyCycle();
             psfb_ptr->Precharge.PrechargeEnabled = 1;      
             PwrCtrl_PWM_Enable();
             break;

@@ -211,3 +211,16 @@ void PwrCtrl_ControlLoopInitialize(void)
     psfb.VLoop.Output = 0;
     psfb.VLoop.Reference = 0;
 }
+
+
+void PwrCtrl_MaxDutyCycle(void){
+               //10 volts
+    psfb_ptr->Precharge.primaryVoltage = Dev_PwrCtrl_GetAdc_Vpri() - 205;
+    //divided by 8 as scaler is also divided by 8
+    psfb_ptr->Precharge.primaryVoltage = psfb_ptr->Precharge.primaryVoltage >> 3; 
+
+    psfb_ptr->Precharge.maxDutyCycle  = __builtin_divud(psfb_ptr->Precharge.scaler, psfb_ptr->Precharge.primaryVoltage);
+
+    if (psfb_ptr->Precharge.maxDutyCycle > 80) 
+        psfb_ptr->Precharge.maxDutyCycle  = 80;   // limit precharge to 80 percent dutycycle
+}

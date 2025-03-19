@@ -210,6 +210,8 @@ struct PRECHARGE_s {
     uint8_t  precharged;    // is the system precharged
     uint16_t maxDutyCycle;  // max dutycycle in percentage
     uint16_t delayCounter;   // to further slow down the rate of change of Duty Cycle
+    uint16_t scaler;     // temp scaler
+    uint16_t primaryVoltage;   // denominator
 };
 typedef struct PRECHARGE_s PRECHARGE_t;
 

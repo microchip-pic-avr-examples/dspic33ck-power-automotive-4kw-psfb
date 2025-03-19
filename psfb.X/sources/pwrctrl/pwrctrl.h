@@ -11,7 +11,7 @@
 #include "pwrctrl_typedef.h"
 #include "pwrctrl_comm_interface.h"
 #include "pwrctrl_common.h"
-    
+#include <math.h>       
 
 //extern POWER_CONTROL_t psfb;
 extern POWER_CONTROL_t * psfb_ptr;
@@ -26,6 +26,6 @@ void Dev_PwrCtrl_Suspend(void);
 void Dev_PwrCtrl_ControlLoopInitialize(void);
 void PwrCtrl_Reset(void);
 
-
+void PwrCtrl_MaxDutyCycle(void);
 #endif	/* APP_PWRCTRL_H */
 
