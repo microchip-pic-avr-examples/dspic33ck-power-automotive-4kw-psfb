@@ -167,7 +167,7 @@ void Fault_Execute(void)
 
    // secondary over voltage fault handler
    #if defined(FAULT_VSEC_UV) && (FAULT_VSEC_UV ==  true)  
-   if ((psfb_ptr->State > 1) && (psfb_ptr->State < 6))  // after precharge and before fault    
+   if ((psfb_ptr->State > 1) && (psfb_ptr->State < 5))  // after precharge and before fault    
         faultCheck &= FAULT_CheckMin(&psfb_ptr->Fault.Object.VSecondaryUVP, psfb_ptr->Data.VCapVoltage, &Fault_Handler);
    #endif  
    
