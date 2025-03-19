@@ -40,7 +40,6 @@ enum  PWR_CTRL_STATES_e
   PWRCTRL_STATE_INITIALIZE = 0,       ///< power converter control state #0:  initializes object properties and clears status bits
   PWRCTRL_STATE_PRECHARGE,            ///< power converter control state #1:  charging output caps
   PWRCTRL_STATE_STANDBY,              ///< power converter control state #2:  waiting for status bits allowing power supply to run
-  PWRCTRL_STATE_START_CONTROL,        ///< power converter control state #3:  wait for some time to 
   PWRCTRL_STATE_SOFT_START,           ///< power converter control state #4:  performs soft-start sequence 
   PWRCTRL_STATE_UP_AND_RUNNING,       ///< power converter control state #5:  output is in regulation and power is OK (normal continuous operation)
   PWRCTRL_STATE_FAULT_DETECTION,      ///< power converter control state #6:  checks if a fault occurs

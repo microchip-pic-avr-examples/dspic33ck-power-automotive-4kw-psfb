@@ -478,26 +478,20 @@
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>PCS_START_CONTROL</Name>
+            <Name>PCS_SOFT_START</Name>
             <BitIndex>3</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>PCS_SOFT_START</Name>
+            <Name>PCS_UP_AND_RUNNING</Name>
             <BitIndex>4</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>008000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>PCS_UP_AND_RUNNING</Name>
-            <BitIndex>5</BitIndex>
-            <ControlType>radio</ControlType>
-            <ActiveColor>008000</ActiveColor>
-          </StatusBit>
-          <StatusBit>
             <Name>PCS_FAULT</Name>
-            <BitIndex>6</BitIndex>
+            <BitIndex>5</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>

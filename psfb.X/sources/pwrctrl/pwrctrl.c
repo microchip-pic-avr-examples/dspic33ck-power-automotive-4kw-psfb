@@ -129,7 +129,7 @@ static void PwrCtrl_StartUpInitialize(void)
     psfb.VRamp.ptrReference = (uint16_t*)&psfb.VLoop.Reference;
     psfb.VRamp.ptrReferenceTarget = &psfb.Properties.VSecReference;
     psfb.VRamp.StepSize = 1;
-    psfb.VRamp.Delay = 60;
+    psfb.VRamp.Delay = 4;
     psfb.VRamp.Counter = 0;
     psfb.VRamp.RampComplete = 0;
     

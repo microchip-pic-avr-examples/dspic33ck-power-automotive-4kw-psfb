@@ -50,7 +50,6 @@ static void PCS_WAIT_IF_FAULT_ACTIVE_handler(POWER_CONTROL_t* pcInstance);
 static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance);
 static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance);
 static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance);
-static void PCS_START_CONTROL_handler(POWER_CONTROL_t* pcInstance);
 static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance);
 
 /*******************************************************************************
@@ -77,10 +76,6 @@ void PwrCtrl_StateMachine(POWER_CONTROL_t* pcInstance)
 
         case PWRCTRL_STATE_STANDBY:
             PCS_STANDBY_handler(pcInstance);
-            break;
-
-        case PWRCTRL_STATE_START_CONTROL:
-            PCS_START_CONTROL_handler(pcInstance);
             break;
 
         case PWRCTRL_STATE_SOFT_START:
@@ -257,7 +252,7 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
 //        pcInstance->Precharge.maxDutyCycle = 42;        
         if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) {
             pcInstance->Precharge.delayCounter = pcInstance->Precharge.delayCounter + 1;
-            if (pcInstance->Precharge.delayCounter > 499){                       //5ms each step increment
+            if (pcInstance->Precharge.delayCounter > 25){                       //
                 Nop();
                 pcInstance->Precharge.delayCounter = 0;
                 pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
@@ -480,66 +475,66 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
 } 
 
 
-/*******************************************************************************
- * @ingroup pwrctrl-sm
- * @brief  Executes Standby State machine
- * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
- * @return void
- * 
- * @details This function waits until there is no fault event that has occurred 
- *  and when the power control enable bit is set. When Enable bit is set,  
- *  reset the fault objects status bits, reset PWM control settings, enable
- *  the power control running bit, enable PWM physical output, initialize 
- *  control loop references and then move to the next state STATE_SOFT_START. 
- * 
- * @note    In this application the power control enable bit is controlled 
- *  externally by Power Board Visualizer.  
- * 
- *********************************************************************************/
-static void PCS_START_CONTROL_handler(POWER_CONTROL_t* pcInstance)
-{
-    // Check for fault event 
-    if (pcInstance->Fault.FaultDetected)
-    {
-        // Clear power control enable bit
-        pcInstance->Properties.Enable = 0;
+// /*******************************************************************************
+//  * @ingroup pwrctrl-sm
+//  * @brief  Executes Standby State machine
+//  * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
+//  * @return void
+//  * 
+//  * @details This function waits until there is no fault event that has occurred 
+//  *  and when the power control enable bit is set. When Enable bit is set,  
+//  *  reset the fault objects status bits, reset PWM control settings, enable
+//  *  the power control running bit, enable PWM physical output, initialize 
+//  *  control loop references and then move to the next state STATE_SOFT_START. 
+//  * 
+//  * @note    In this application the power control enable bit is controlled 
+//  *  externally by Power Board Visualizer.  
+//  * 
+//  *********************************************************************************/
+// static void PCS_START_CONTROL_handler(POWER_CONTROL_t* pcInstance)
+// {
+//     // Check for fault event 
+//     if (pcInstance->Fault.FaultDetected)
+//     {
+//         // Clear power control enable bit
+//         pcInstance->Properties.Enable = 0;
         
-        // State back to STATE_FAULT_DETECTION
-        pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
-    }
+//         // State back to STATE_FAULT_DETECTION
+//         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
+//     }
     
-    // NOTE: Power control enable is controlled externally 
-    else if (pcInstance->Properties.Enable)
-    {
-        // Reset fault objects status bits
-        // Fault_Reset();
+//     // NOTE: Power control enable is controlled externally 
+//     else if (pcInstance->Properties.Enable)
+//     {
+//         // Reset fault objects status bits
+//         // Fault_Reset();
             
-        // Reset the power control properties and control loop histories
-        // PwrCtrl_Reset();
+//         // Reset the power control properties and control loop histories
+//         // PwrCtrl_Reset();
 
-        // Update PWM distribution
-//        PwrCtrl_PWM_Update(&psfb);
+//         // Update PWM distribution
+// //        PwrCtrl_PWM_Update(&psfb);
 
-        // Enable PWM physical output
-        //PwrCtrl_PWM_Enable();
+//         // Enable PWM physical output
+//         //PwrCtrl_PWM_Enable();
 
-        // Enable power control running bit
-        pcInstance->Status.bits.Running = 1;
+//         // Enable power control running bit
+//         pcInstance->Status.bits.Running = 1;
 
-        // Next State assigned to STATE_SOFT_START
-        pcInstance->State = PWRCTRL_STATE_SOFT_START;
+//         // Next State assigned to STATE_SOFT_START
+//         pcInstance->State = PWRCTRL_STATE_SOFT_START;
         
-    }     // Check if Enable bit has been cleared
-    else if (!pcInstance->Properties.Enable) 
-    {
-        // Disable PWM physical output
-        //PwrCtrl_PWM_Disable();
-        PwrCtrl_PWM_Stop_Switching();
+//     }     // Check if Enable bit has been cleared
+//     else if (!pcInstance->Properties.Enable) 
+//     {
+//         // Disable PWM physical output
+//         //PwrCtrl_PWM_Disable();
+//         PwrCtrl_PWM_Stop_Switching();
         
-        // Clear power control running bit
-        pcInstance->Status.bits.Running = 0;
+//         // Clear power control running bit
+//         pcInstance->Status.bits.Running = 0;
         
-        // State back to STATE_STANDBY
-        pcInstance->State = PWRCTRL_STATE_STANDBY; 
-    }
-}
+//         // State back to STATE_STANDBY
+//         pcInstance->State = PWRCTRL_STATE_STANDBY; 
+//     }
+// }
