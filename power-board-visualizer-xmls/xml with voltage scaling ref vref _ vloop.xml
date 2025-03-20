@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Module xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.microchip.com/dsmps">
   <Version>2.2.0.0</Version>
-  <ProjectName>4kw - Vloop</ProjectName>
+  <ProjectName>4kW dsPIC33C PSFB DC-DC DA </ProjectName>
   <Status>
     <SignalChannels>
       <SignalChannel>
@@ -70,7 +70,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Temp</Name>
+        <Name>Temperature</Name>
         <Scaling>0.0424</Scaling>
         <Offset>0</Offset>
         <Unit>°C</Unit>
@@ -83,7 +83,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-CT CT</Name>
+        <Name>CT Current</Name>
         <Scaling>0.004</Scaling>
         <Offset>-2.54</Offset>
         <Unit>A</Unit>
@@ -109,7 +109,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-CT offset</Name>
+        <Name>I-CT offset measured</Name>
         <Scaling>0.0008056</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
@@ -148,7 +148,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-SHUNT offset</Name>
+        <Name>I-SHUNT offset measured</Name>
         <Scaling>0.0008056</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
@@ -174,7 +174,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>I-Shunt Loop Output</Name>
+        <Name>I-Loop Output</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit xsi:nil="true" />
@@ -226,7 +226,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Vcap</Name>
+        <Name>V-CAP</Name>
         <Scaling>0.005232</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
@@ -239,7 +239,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>Vloop Reference</Name>
+        <Name>Vloop Ref (Debug)</Name>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <Unit>bits</Unit>
@@ -278,7 +278,7 @@
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
-        <Name>PG1TRIGC DC</Name>
+        <Name>PG1TRIGC (Duty)</Name>
         <Scaling>0.005</Scaling>
         <Offset>0</Offset>
         <Unit>%</Unit>
@@ -287,19 +287,6 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>21</SignalChannelIndex>
         <PositionInMessage>21</PositionInMessage>
-        <PageName>4kw</PageName>
-        <ProtocolID>516</ProtocolID>
-      </SignalChannel>
-      <SignalChannel>
-        <Name>max precharge DutyCycle</Name>
-        <Scaling>1</Scaling>
-        <Offset>0</Offset>
-        <Unit xsi:nil="true" />
-        <Plot>false</Plot>
-        <PlotValMin>0</PlotValMin>
-        <PlotValMax>0</PlotValMax>
-        <SignalChannelIndex>22</SignalChannelIndex>
-        <PositionInMessage>22</PositionInMessage>
         <PageName>4kw</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
@@ -362,27 +349,11 @@
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
-        <SignalChannelIndex>12</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
         <SignalChannelIndex>13</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>21</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>14</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>15</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>22</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
     </TableView>
@@ -427,8 +398,8 @@
         <AutoSendAfterChange>false</AutoSendAfterChange>
       </OutputValue>
       <OutputValue>
-        <Name>I-CT OCP</Name>
-        <Unit xsi:nil="true" />
+        <Name>I-CT OCP (Bits)</Name>
+        <Unit>Bits</Unit>
         <Scaling>1</Scaling>
         <Offset>0</Offset>
         <MinimumValue>845</MinimumValue>
@@ -441,8 +412,8 @@
         <PageName>4kw</PageName>
       </OutputValue>
       <OutputValue>
-        <Name>Vref loop</Name>
-        <Unit>bits</Unit>
+        <Name>Vref loop (V)</Name>
+        <Unit>V</Unit>
         <Scaling>191.131</Scaling>
         <Offset>0</Offset>
         <MinimumValue>1</MinimumValue>
@@ -517,48 +488,43 @@
             <ControlType>radio</ControlType>
           </StatusBit>
           <StatusBit>
-            <Name>Primary OC</Name>
+            <Name>Primary OCP</Name>
             <BitIndex>3</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>Secondary OC</Name>
+            <Name>Secondary OCP</Name>
             <BitIndex>4</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>FLT_ISNS_SCP</Name>
-            <BitIndex>5</BitIndex>
-            <ControlType>radio</ControlType>
-          </StatusBit>
-          <StatusBit>
-            <Name>Primary Voltage OV</Name>
+            <Name>Primary Voltage OVP</Name>
             <BitIndex>6</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>Primary Voltage UV</Name>
+            <Name>Primary Voltage UVLO</Name>
             <BitIndex>7</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>VCAP OV</Name>
+            <Name>VCAP OVP</Name>
             <BitIndex>8</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>VCAP UV</Name>
+            <Name>VCAP UVLO</Name>
             <BitIndex>9</BitIndex>
             <ControlType>radio</ControlType>
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
           <StatusBit>
-            <Name>Over Temp</Name>
+            <Name>Over Temperature Fault</Name>
             <BitIndex>10</BitIndex>
             <ControlType>radio</ControlType>
           </StatusBit>
@@ -609,7 +575,7 @@
     </StatusGroups>
     <SendRawDataButtons>
       <SendRawDataButton>
-        <Name>Start Pre Charge</Name>
+        <Name>Start Pre-Charge</Name>
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 00 aa</Data>

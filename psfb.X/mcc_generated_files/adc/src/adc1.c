@@ -289,8 +289,8 @@ void ADC1_Initialize (void)
 
     //TRGSRC0 PWM1 Trigger2; TRGSRC1 PWM1 Trigger2; 
     ADTRIG0L = 0x505;
-    //TRGSRC2 Common Software Trigger; TRGSRC3 None; 
-    ADTRIG0H = 0x1;
+    //TRGSRC2 PWM1 Trigger2; TRGSRC3 None; 
+    ADTRIG0H = 0x5;
     //TRGSRC4 None; TRGSRC5 None; 
     ADTRIG1L = 0x0;
     //TRGSRC6 None; TRGSRC7 None; 

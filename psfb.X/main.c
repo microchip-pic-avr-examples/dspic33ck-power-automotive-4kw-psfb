@@ -96,7 +96,9 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     psfb_ptr->Data.ISenseSecondary = ADCBUF1;
     
     PwrCtrl_UpdateADConverterData();
-
+    
+    ADC1_SoftwareTriggerEnable();
+    
     // Execute the fault detection
     Fault_Execute();    // moving it here, so that all other faults are checked other than VCAP undervoltage
 
@@ -106,7 +108,6 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
 
     PwrCtrl_PWM_UpdateSecondaryRectifiers(); // check Ishunt within range
     
-    ADC1_SoftwareTriggerEnable();
     GPIO_debug_SetLow();
     //clear the FB_P_CT_FILT interrupt flag
     IFS5bits.ADCAN0IF = 0;
