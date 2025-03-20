@@ -112,14 +112,22 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
     // pcInstance->Data.ISecSensorOffset = Dev_CurrentSensor_Get_Offset();
     
     // Ensure PWM output is disabled
-    PwrCtrl_PWM_Disable();
+    // PwrCtrl_PWM_Disable();
     
     //Disable short circuit for now  -> Temporary should go in fault set/reset
-    FAULT_EN_SetLow();
+    // FAULT_EN_SetLow();
     
     // Reset fault objects status bits
     Fault_Reset();
     
+    //reset control loop
+    PwrCtrl_Reset();
+
+        //disable Iloop here
+    pcInstance->ILoop.Enable = 0;
+    //disable Vloop here
+    pcInstance->VLoop.Enable = 0;
+
     // Clear power control fault active bit
     pcInstance->Status.bits.FaultActive = 0;
     // Clear power control running bit
@@ -127,11 +135,6 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
     // Clear power control enable bit
     pcInstance->Properties.Enable = 0;
     
-    // place holders
-//    pcInstance->IRamp.RampComplete = true;
-//    pcInstance->VRamp.RampComplete = true;
-//    pcInstance->PRamp.RampComplete = true;
-//    
     
     Dev_LED_Off(LED_BOARD_GREEN);
     Dev_LED_Off(LED_BOARD_RED);
@@ -177,7 +180,9 @@ static void PCS_WAIT_IF_FAULT_ACTIVE_handler(POWER_CONTROL_t* pcInstance)
     if (pcInstance->Fault.FaultDetected == 0)
     {
         pcInstance->Status.bits.FaultActive = 0;
-        pcInstance->State = PWRCTRL_STATE_PRECHARGE; // next state
+        FAULT_EN_SetLow();               // exiting fault, making sure secondary current has died down
+        dev_MeasureOffsets_Initialize(); // measure offsets again.
+        pcInstance->State = PWRCTRL_STATE_INITIALIZE; // reinit system
     }
     
         // Check for fault event 
@@ -185,6 +190,9 @@ static void PCS_WAIT_IF_FAULT_ACTIVE_handler(POWER_CONTROL_t* pcInstance)
     {
         // Clear power control enable bit
         pcInstance->Properties.Enable = 0;
+
+        // override precharge , if fault happens in precharge, to clear precharge bit
+       pcInstance->Precharge.PrechargeEnabled = 0 ;
         
         // State back to STATE_FAULT_DETECTION
         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
@@ -229,7 +237,7 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
        Fault_Reset();
            
        // Reset the power control properties and control loop histories
-       //PwrCtrl_Reset();
+       PwrCtrl_Reset();
 
        // Update PWM distribution
 //        PwrCtrl_PWM_Update(&psfb);
@@ -260,39 +268,17 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
             } 
             PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
             pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+            Dev_LED_Blink(LED_BOARD_GREEN);
+            Dev_LED_Off(LED_BOARD_RED);
    }
-    // else if (pcInstance->Precharge.PrechargeEnabled == 1) {
-    //     //Disable Iloop here - if we go back to precharge state 
-    //     //psfb_ptr->ILoop.Enable = 0;
-    //     pcInstance->Precharge.maxDutyCycle = 63;        //TODO: fix maths. and state machine 
-    //     if (pcInstance->Precharge.precharged == 1) {
-    //         pcInstance->State = PWRCTRL_STATE_STANDBY;
-    //     } else {
-    //         if (pcInstance->Precharge.DutyCycle < pcInstance->Precharge.maxDutyCycle) {
-    //             pcInstance->Precharge.delayCounter = pcInstance->Precharge.delayCounter + 1;
-    //             if (pcInstance->Precharge.delayCounter > 499){                       //5ms each step increment
-    //                 Nop();
-    //                 pcInstance->Precharge.delayCounter = 0;
-    //                 pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
-    //             }
-    //         } 
-    //         PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
-    //         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
-    //     }
-    //     // at 12v Vcap is around 11.5 * 191.131 = 2196
-    //     // at 7.5v Vcap is around 7.5 * 191.131 = 1433.4825
-    //     if (Dev_PwrCtrl_GetVoltage_Vcap() > 1433) {
-    //         pcInstance->Precharge.precharged = 1;
-    //         pcInstance->Precharge.DutyCycle = 0;
-    //         PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
-    //         pcInstance->State = PWRCTRL_STATE_STANDBY;
-    //         PwrCtrl_PWM_Stop_Switching();
-    //     }
-    // }
+   
+   else if(pcInstance->Precharge.PrechargeEnabled == 0) {
+        pcInstance->Precharge.DutyCycle = 0;
+        PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+        PwrCtrl_PWM_Stop_Switching();
+        pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+   }
 }
-//    float temp = (float)39100 / (float)(Dev_PwrCtrl_GetAdc_Vpri() - 205);
-//    pcInstance->Precharge.maxDutyCycle = (uint16_t)temp >> 4 ; 
-//}
 
 
 /*******************************************************************************
@@ -323,6 +309,13 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
     }
     
+        // Check if Enable bit has been cleared
+    else if (!pcInstance->Properties.Enable) 
+    {
+        // State back to STATE_INIT
+        pcInstance->State = PWRCTRL_STATE_INITIALIZE; 
+    }
+
     // NOTE: Power control enable is controlled externally 
     else if (pcInstance->Properties.Enable)
     {
@@ -335,8 +328,6 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         // Update PWM distribution
 //        PwrCtrl_PWM_Update(&psfb);
 
-
-
         // Enable power control running bit
         pcInstance->Status.bits.Running = 1;
 
@@ -347,16 +338,19 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         // PwrCtrl_PWM_Enable();
 
         // enable SR flag to be controlled by current
-        psfb_ptr->SecRec.SR_Enabled = 1;
+        pcInstance->SecRec.SR_Enabled = 1;
         //Enable Iloop here
-        psfb_ptr->ILoop.Enable = 1;
+        pcInstance->ILoop.Enable = 1;
         //Enable Vloop here
-        psfb_ptr->VLoop.Enable = 1;
+        pcInstance->VLoop.Enable = 1;
 
         //reference set to precharged caps on startup
-        psfb_ptr->VLoop.Reference =             psfb_ptr->Data.VOutVoltage;
-        psfb_ptr->Properties.VSecReference =    psfb_ptr->Data.VOutVoltage;
+        pcInstance->VLoop.Reference =             pcInstance->Data.VOutVoltage;
+        pcInstance->Properties.VSecReference =    pcInstance->Data.VOutVoltage;
     }
+
+    Dev_LED_On(LED_BOARD_GREEN);
+    Dev_LED_Off(LED_BOARD_RED);
 }
 
 /*******************************************************************************
@@ -386,14 +380,14 @@ static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance)
     // Check if Enable bit has been cleared
     else if (!pcInstance->Properties.Enable) 
     {
-        // Disable PWM physical output
+        // Disable PWM physical PRIMARY output
         //PwrCtrl_PWM_Disable();
         PwrCtrl_PWM_Stop_Switching();
         
         // Clear power control running bit
         pcInstance->Status.bits.Running = 0;
         
-        // State back to STATE_STANDBY
+        // State back to STATE_INIT
         pcInstance->State = PWRCTRL_STATE_STANDBY; 
     }
 
@@ -402,21 +396,13 @@ static void PCS_SOFT_START_handler(POWER_CONTROL_t* pcInstance)
         // Ramp Up the Voltage, Current and Power reference
         uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->VRamp);  
         
-
-//        uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->IRamp);
-//        rampComplete &= PwrCtrl_RampReference(&pcInstance->IRamp);
-//        rampComplete &= PwrCtrl_RampReference(&pcInstance->PRamp);
-//        rampComplete &= PwrCtrl_RampReference(&pcInstance->PhRamp);
-        
-        //removing softstart for open loop
-        
-        //uint16_t rampComplete = PwrCtrl_RampReference(&pcInstance->PhRamp);
-        // Check if ramp up is complete
-        //uint16_t rampComplete  = true;
         if (rampComplete)
             // Next State assigned to STATE_ONLINE
             pcInstance->State = PWRCTRL_STATE_UP_AND_RUNNING; 
     }
+        
+    Dev_LED_Blink(LED_BOARD_GREEN);
+    Dev_LED_Off(LED_BOARD_RED);
 }
 
 /*******************************************************************************
@@ -445,96 +431,25 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
         // Check if Enable bit has been cleared
         {
             // Disable PWM physical output
-            PwrCtrl_PWM_Disable();
+            //PwrCtrl_PWM_Disable();
+            PwrCtrl_PWM_Stop_Switching();
 
             // Clear power control running bit
             pcInstance->Status.bits.Running = 0;
 
-            // State back to STATE_INITIALIZE
-            pcInstance->State = PWRCTRL_STATE_INITIALIZE; 
+            // State back to STATE_STANDBY AND THEN INITIALITZE
+            pcInstance->State = PWRCTRL_STATE_STANDBY; 
             Dev_LED_Off(LED_BOARD_GREEN);
         }      
         //removing it for now
         
-//    #if defined (OPEN_LOOP_PBV) && (OPEN_LOOP_PBV == true)
-//        else if (pcInstance->Pwm.ControlPhase != pcInstance->Pwm.PBVControlPhaseTarget)
-//            pcInstance->State = PWRCTRL_STATE_SOFT_START;
-//    #endif    
-        
     // Check if there is change in power control references    
         
     else if (pcInstance->VLoop.Reference != pcInstance->Properties.VSecReference)
-//     else if ((pcInstance->ILoop.Reference != pcInstance->Properties.IReference) ||
-//                (pcInstance->VLoop.Reference != pcInstance->Properties.VSecReference) ||
-//                (pcInstance->PLoop.Reference != pcInstance->Properties.PwrReference))
      {    
             // State back to STATE_SOFT_START
             pcInstance->State = PWRCTRL_STATE_SOFT_START;
      }
-
+    Dev_LED_Blink(LED_BOARD_GREEN);
+    Dev_LED_Off(LED_BOARD_RED);
 } 
-
-
-// /*******************************************************************************
-//  * @ingroup pwrctrl-sm
-//  * @brief  Executes Standby State machine
-//  * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
-//  * @return void
-//  * 
-//  * @details This function waits until there is no fault event that has occurred 
-//  *  and when the power control enable bit is set. When Enable bit is set,  
-//  *  reset the fault objects status bits, reset PWM control settings, enable
-//  *  the power control running bit, enable PWM physical output, initialize 
-//  *  control loop references and then move to the next state STATE_SOFT_START. 
-//  * 
-//  * @note    In this application the power control enable bit is controlled 
-//  *  externally by Power Board Visualizer.  
-//  * 
-//  *********************************************************************************/
-// static void PCS_START_CONTROL_handler(POWER_CONTROL_t* pcInstance)
-// {
-//     // Check for fault event 
-//     if (pcInstance->Fault.FaultDetected)
-//     {
-//         // Clear power control enable bit
-//         pcInstance->Properties.Enable = 0;
-        
-//         // State back to STATE_FAULT_DETECTION
-//         pcInstance->State = PWRCTRL_STATE_FAULT_DETECTION;
-//     }
-    
-//     // NOTE: Power control enable is controlled externally 
-//     else if (pcInstance->Properties.Enable)
-//     {
-//         // Reset fault objects status bits
-//         // Fault_Reset();
-            
-//         // Reset the power control properties and control loop histories
-//         // PwrCtrl_Reset();
-
-//         // Update PWM distribution
-// //        PwrCtrl_PWM_Update(&psfb);
-
-//         // Enable PWM physical output
-//         //PwrCtrl_PWM_Enable();
-
-//         // Enable power control running bit
-//         pcInstance->Status.bits.Running = 1;
-
-//         // Next State assigned to STATE_SOFT_START
-//         pcInstance->State = PWRCTRL_STATE_SOFT_START;
-        
-//     }     // Check if Enable bit has been cleared
-//     else if (!pcInstance->Properties.Enable) 
-//     {
-//         // Disable PWM physical output
-//         //PwrCtrl_PWM_Disable();
-//         PwrCtrl_PWM_Stop_Switching();
-        
-//         // Clear power control running bit
-//         pcInstance->Status.bits.Running = 0;
-        
-//         // State back to STATE_STANDBY
-//         pcInstance->State = PWRCTRL_STATE_STANDBY; 
-//     }
-// }
