@@ -289,7 +289,8 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
     uint16_t switchcase = data[0];
     switch (switchcase) {
         case 0x0001:
-            PwrCtrl_SetEnable(true);
+            if (psfb_ptr->Precharge.precharged == 1)
+                PwrCtrl_SetEnable(true);
             break;
         case 0x0000:
             PwrCtrl_SetEnable(false);

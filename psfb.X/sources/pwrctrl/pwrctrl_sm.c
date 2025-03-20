@@ -231,8 +231,8 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
         return;     //TODO: fix state machine and fault jumps
     }
     //    // NOTE: Power control enable is controlled externally 
-   else if (pcInstance->Properties.Enable)
-   {
+   else if ((pcInstance->Properties.Enable)&&(pcInstance->Precharge.precharged == 1))
+   {       
        // Reset fault objects status bits
        Fault_Reset();
            
@@ -265,17 +265,21 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance)
                 pcInstance->Precharge.delayCounter = 0;
                 pcInstance->Precharge.DutyCycle = pcInstance->Precharge.DutyCycle + 1;
                 }
-            } 
-            PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
-            pcInstance->State = PWRCTRL_STATE_PRECHARGE;
-            Dev_LED_Blink(LED_BOARD_GREEN);
-            Dev_LED_Off(LED_BOARD_RED);
+            }
+        else {
+            pcInstance->Precharge.precharged = 1;
+        }     
+        PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
+        pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+        Dev_LED_Blink(LED_BOARD_GREEN);
+        Dev_LED_Off(LED_BOARD_RED);
    }
    
    else if(pcInstance->Precharge.PrechargeEnabled == 0) {
         pcInstance->Precharge.DutyCycle = 0;
         PwrCtrl_PWM_SetDutyCyclePrimary(pcInstance->Precharge.DutyCycle);
         PwrCtrl_PWM_Stop_Switching();
+        pcInstance->Precharge.precharged = 0;
         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
    }
 }
