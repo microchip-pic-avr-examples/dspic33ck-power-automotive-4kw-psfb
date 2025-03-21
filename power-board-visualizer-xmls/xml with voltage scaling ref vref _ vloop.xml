@@ -416,7 +416,7 @@
         <Unit>V</Unit>
         <Scaling>191.131</Scaling>
         <Offset>0</Offset>
-        <MinimumValue>1</MinimumValue>
+        <MinimumValue>6</MinimumValue>
         <MaximumValue>16</MaximumValue>
         <DefaultValue>12</DefaultValue>
         <Step>0.1</Step>
