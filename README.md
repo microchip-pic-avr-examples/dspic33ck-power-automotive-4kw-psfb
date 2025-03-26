@@ -4,73 +4,182 @@
     <img alt="Microchip Logo." src="images/microchip_logo_black_red.png">
 </picture> 
 
-## dspic33ck automotive lv dcdc
+--- 
+# 4kW dsPIC33C PSFB DC-DC Demonstration Application
 
+<p><center><a target="_blank" rel="nofollow">
+<p>
+<img src="images/DCDC1.png" alt="dsPIC33C PSFB DC-DC DA" width="800">
+</a>
+</center>
+</p>
+
+<p>
+<center>
+<a target="_blank" rel="nofollow">
+dsPIC33C PSFB DC-DC DA
+</a>
+</center>
+</p>
+
+---
 
 ## Summary
 
+This solution showcases the implementation of a 4kW dsPIC33C PSFB DC-DC application demonstration utilizing Microchip's dsPIC33C device, primarily aimed at automotive On-Board Charger applications. 
+
+The platform is designed to handle voltage levels of up to 400-800 VDC on the primary side and up to 8-16 VDC on the secondary side. Additionally, it includes a socket for dsPIC33 plug-in modules, enabling the system to be tested with various controllers. The pinout is compatible with EP, CK, and CH dsPIC DSC DP PIMs, ensuring flexibility and ease of use.
+
+---
+
 ## Related Documentation
 
+__Firmware Documentation__
 
-## Software Used 
+- [Online Firmware Documentation of this Code Example]()
+
+__Hardware Documentation__
+
+- [4kW dsPIC33C PSFB DC-DC application demonstration user's Guide]()
+- [4kW dsPIC33C PSFB DC-DC application demonstration operational manual]()
+
+__Target Device Documentation__
+
+- [dsPIC33CK256MP508 Family Data Sheet](https://www.microchip.com/70005349)
+- [dsPIC33CK256MP508 Family Silicon Errata and Data Sheet Clarification](https://www.microchip.com/80000796)
+
+__Please always check for the latest data sheets on the respective product websites:__
+
+- [dsPIC33CK256MP508 Family](https://www.microchip.com/dsPIC33CK256MP508)
+- [dsPIC33CH512MP508 Family](https://www.microchip.com/dsPIC33CH512MP508)
+
+---
+
+## Software Used
+
+- [Power Board Visualizer GUI](https://www.microchip.com/en-us/software-library/power_board_visualizer)
+- [MPLAB&reg; X IDE v6.20](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
+- [MPLAB&reg; XC-DSC Compiler v3.10](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc-dsc)
+- [Microchip Code Configurator v5.5.1](https://www.microchip.com/mplab/mplab-code-configurator)
+- [Digital Compensator Design Tool](https://www.microchip.com/developmenttools/ProductDetails/DCDT)
+  
+---
+
+## Directory Structure
+The directory structure for this project is summarized below.
+
+	├───psfb.X							        PSFB main project 
+	├───images									Images for the Readme 
+	├───power_board_visualizer_xmls				Power Board Visualizer Projects
+	├───pre_compiled_hex_files					Pre compiled Hex file
+	└───docs									doxygen files
+
+---
+
+## Programming Hex File using available hex files
+In this example ICD4 is being used, but any of the available debuggers/programmers can be used.
+
+1. Open <i>MPLAB X IPE</i>
+2. Select the device on DP-PIM : <i>dsPIC33CK256MP506</i>
+3. Connect computer to ICD4 via USB cable, connect ICD4 to 6 pin header on DP-PIM via RJ11 cable and RJ11 to ICSP adapter.
+4. Power the dpPIM through a microUSB cable.
+5. Click <i>Connect</i> on the MPLAB X IPE
+6. Wait for the device to connect
+7. Navigate to the folder pre_compiled_hex_files, and select the correct hex file
+8. Click <i>Program</i>
+9. Wait for the program/verify complete message.
+10. Disconnect programmer from Digital Power Plug-in Module.
+
+---
+
+## Quick Start Guide
+
+This Section will guide you on how to run and control the 4kW dsPIC33C PSFB DC-DC demonstration application using power board visualizer, once the electrical connections are made.
+
+### Hardware Setup
+Please consult the Users Guide for hardware setup considerations and verify that the correct load and source selections have been made. This readme does not include the electrical setup for the power board.
+
+To enable CAN communication from the PC to the PSFB board, a USB to CAN dongle is required. Note that the Power Board Visualizer is compatible only with PEAK System USB CAN-FD dongles. A RS232 DB9 Straight Through cable to connect the power board to the PEAK dongle.
+
+### Powering On board through Power Board Visualizer
+#### Prerequisites
+Following software must be installed on your pc to control/communicate between Power Board Visualizer and dsPIC33CK.
+ - Power Board Visualizer V2
+ - Peak System USB Drivers
+
+#### Setting up and Connecting the Power Board Visualizer
+After completing the hardware setup, go to the power board visualizer XMLs folder. Open the appropriate project using Power Board Visualizer. Once the project is open, you will see the following screen.
+
+<p><center><a target="_blank" rel="nofollow" href="images/psfb-pbv.jpg">
+<p>
+<img src="images/dashboard_anotated.png" alt="PSFB project running on Power Board Visualizer GUI" width="800">
+</a>
+</center>
+</p>
+
+<p>
+<center>
+<a target="_blank" rel="nofollow">
+Power Board Visualizer GUI
+</a>
+</center>
+</p>
+
+1. Table to monitor the system values in real time
+2. Buttons to start/stop power transfer
+    - Start Pre Charge  - This button starts the precharging of the output capacitors in open loop mode. The capacitors have to be precharged to maximum 10 volts before the Start power Transfer is activated.
+    - Start/Stop Power Transfer - These buttons turn on and off the power transfer by enabling or disabling the primary side switches. 
+
+3. Sliders to provide reference values
+    - Voltage Output Reference Slider - This slider is used to set reference value for output voltage. Ensure to press the Set button below the slider to communicate the reference value to the microcontroller.
+    - I-CT OCP Slider - This slider sets the input over current protection value.
+4.	System State and debug information.
+    - PSFB Controller State - This section displays the current state of the system. Detailed information about each state and the state machine can be found in the Firmware Overview section.
+    - PSFB Status Flags - This section lists the high-level state of the system and any fault conditions that occur.
+5.	Communication status and COM Selector
+	- The "COM?" button lists all available communication ports for the PBV. If the Peak Dongle drivers are installed and the Peak USB dongle is connected, it will appear as PCAN_USB:FD. Select the appropriate port and click enable. The Power Board Visualizer will then open the selected Comm port.
+
+    
+
+#### Sequence of Actions to Power On
+After opening the appropriate Power Board Visualizer project, follow these steps to start the board:
+
+1. Select the correct communication port and enable it.
+2. Verify that everything is set up correctly by checking for status/housekeeping data and ensuring the system is in the PCS_PRECHARGE state. Confirm that the correct operation mode is programmed by examining the status flags.
+3. Click on "Start Precharge". The system will charge the output caps in open loop.
+4. Click on "Start Power Transfer". The system will quickly transition through various states and should eventually reach the PCS_UP_AND_RUNNING state.
+5. Change the reference to desired output voltage value if necessary.
+
+<p><center><a target="_blank" rel="nofollow" href="images/psfb-in-pre-charge.png">
+<p>
+<img src="images/psfb-in-pre-charge.png" alt="PSFB in Pre-Charge state" width="800">
+</a>
+</center>
+</p>
+
+<p>
+<center>
+<a target="_blank" rel="nofollow">
+PSFB in Pre-Charge State
+</a>
+</center>
+</p>
 
 
-## Hardware Used
+<p><center><a target="_blank" rel="nofollow" href="images/psfb-running.png">
+<p>
+<img src="images/psfb-running.png" alt="PSFB in running state" width="800">
+</a>
+</center>
+</p>
 
+<p>
+<center>
+<a target="_blank" rel="nofollow">
+PSFB in running state
+</a>
+</center>
+</p>
 
-## Setup
-
-
-## Operation
-
-
-
-## feature notes 
-### cmp3 - CT OCP
-1. interrupt rising edge. higher priority. 
-2. Vdac = Dacout * Avdd/4096 where Dacout is between 205 and 3890
-3. with offset of 620, Dacout is limited between 620 and 3890. Corresponding to currents of 13 amps max.
-
-### Input Voltage
-1. gain at isolated side is 4.32mv
-2. after voltage to duty cycle and 5% minimum, the scaler is simplified to  = ( ADC value read - 205 ) * 0.231
-3. how to arrive at the number of 0.231 
-4. Vsense = 1.728 from schematic. the Vref is 4.096 at primary side. results in 42.1875% duty. add 5% and we get 47.1875%
-5. multiply this with full range of 4095 at secondary, i.e adc ref = 1932.3
-6. minus 5% i.e 205, we get 1727.32. 
-7. 400 divide by 1727.3281 we get 0.231
-
-1. ov threshold is then ADC Val * 0.231 = 900, -> 3896.1 + 205 = 4101    -> higher than the max adc val -> max can be 895V
-2. uv threshold is then ADC val = 1731.6 + 205  = 1936
-
-### output voltage / V cap voltage
-1. gain 154mv/v. 
-2. Vcap voltage = (ADC Val * 3.3)/4095 * (1/0.154)
-3. Vcap voltage = ADC VAL * 0.005232 
-4. ADC VAL = Vcap * 191.131
-
-1. VCAP OV Threshold 18V = 3440 adc
-2. VCAP UV Threshold 6V = 1146 adc
-
-### current sensors offset calculation
-
-1. wait for some time in main before state machine starts for values to settle.
-2. in the INIT state sample the i-pri and i-shunt lines for 64 times, calculate average. that is the offset
-
-### PRECHARGE : charging vcap to 12 volts in Precharge state
-
-1. after offsets are calculated, enable short circuit switch and pwm switching.
-2. in precharge state calcuate the max duty cycle, and increase the duty cycle gradually in 100ms
-5. max duty calculated  -> d% = (Vout  * 2 * 17 * 100) / Vin ---, vout = 10
-6. d% =  34000 /  Vin
-7. d% = 34000 / ( VinADC - 205 ) * 0.231 
-8. d% = 34000 / ( VinADC - 205) / 4.329 
-9. d% = 146880 / ( VinADC - 205) 
-10. d% = [8 (146880 / 8) ]/ [8 ((VinADC - 205)/8)]   multiplying and divide by 8
-11. d% = [8 (18360) ]     / [8 ((VinADC - 205)>>3)]  multiplying and divide by 8 to keep it under 16bit
-
-### SR turn on and off.
-
-1. PwrCtrl_PWM_UpdateSecondaryRectifiers is called cycle by cycle after every adc sample.
-2. thresholds are calculated once, and are calculated in init state, after offsets are determined.
-3. Threshold = offset + gain * amps
+---
+&copy; 2025, Microchip Technology Inc.

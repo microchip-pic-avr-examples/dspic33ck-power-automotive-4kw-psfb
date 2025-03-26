@@ -50,5 +50,6 @@ Makefile-genesis.properties
 *.doc
 *.docx
 
-
-
+#doxygen specific
+.mchp_private
+docs
