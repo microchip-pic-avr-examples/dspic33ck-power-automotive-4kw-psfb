@@ -103,11 +103,6 @@
           <itemPath>sources/fault/fault_comm_interface.h</itemPath>
           <itemPath>sources/fault/fault_typedef.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="mcc_extenstion"
-                       displayName="mcc_extenstion"
-                       projectFiles="true">
-          <itemPath>sources/mcc_extenstion/drv_mcc_extension.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="os" displayName="os" projectFiles="true">
           <itemPath>sources/os/os.h</itemPath>
           <itemPath>sources/os/os_reset.h</itemPath>
