@@ -9,7 +9,7 @@
 
 <p><center><a target="_blank" rel="nofollow">
 <p>
-<img src="images/DCDC1.png" alt="dsPIC33C PSFB DC-DC DA" width="800">
+<img src="images/DCDC1.png" alt="dsPIC33C PSFB DC-DC DA" width="1280">
 </a>
 </center>
 </p>
@@ -26,9 +26,9 @@ dsPIC33C PSFB DC-DC DA
 
 ## Summary
 
-This solution showcases the implementation of a 4kW dsPIC33C PSFB DC-DC application demonstration utilizing Microchip's dsPIC33C device, primarily aimed at automotive On-Board Charger applications. 
+The dsPIC33C Phase Shifted Full Bridge Demonstration Application (PSFB DA) is a development platform designed for quick prototyping and software development, utilizing the Microchip dsPIC33C DSP MCU and Silicon Carbide (SiC FET) Technology. This board is primarily aimed at 800V to 12V automotive OBC DCDC converter applications but is also suitable for other industrial or telecom applications requiring high voltage on the primary side and high current on the secondary side.
 
-The platform is designed to handle voltage levels of up to 400-800 VDC on the primary side and up to 8-16 VDC on the secondary side. Additionally, it includes a socket for dsPIC33 plug-in modules, enabling the system to be tested with various controllers. The pinout is compatible with EP, CK, and CH dsPIC DSC DP PIMs, ensuring flexibility and ease of use.
+The board features well-organized circuit sections, including an input EMI filter and protection, SiC primary PSFB, auxiliary power supply, CAN communication, and a socket for Microchip’s latest Digital Power Plug-In Modules (DP PIMs). The pinout is compatible with CK, CH, and the new AK dsPIC® DSC DP PIMs.
 
 ---
 
@@ -53,8 +53,6 @@ __Please always check for the latest data sheets on the respective product websi
 - [dsPIC33CK256MP508 Family](https://www.microchip.com/dsPIC33CK256MP508)
 - [dsPIC33CH512MP508 Family](https://www.microchip.com/dsPIC33CH512MP508)
 
----
-
 ## Software Used
 
 - [Power Board Visualizer GUI](https://www.microchip.com/en-us/software-library/power_board_visualizer)
@@ -65,8 +63,11 @@ __Please always check for the latest data sheets on the respective product websi
   
 ---
 
+
+## Quick Start Guide
+This section is designed to assist users in powering up the board using Power Board Visualizer after completing the hardware connections. It does not cover the hardware connection process itself. Please ensure that the load source connections are correct and that the operation is free from hazards. For detailed information, please refer to the user guide.
+
 ## Directory Structure
-The directory structure for this project is summarized below.
 
 	├───psfb.X							        PSFB main project 
 	├───images									Images for the Readme 
@@ -76,7 +77,7 @@ The directory structure for this project is summarized below.
 
 ---
 
-## Programming Hex File using available hex files
+## Programming Hex File on to the dsPIC33C Digital Power PIM using available hex files
 In this example ICD4 is being used, but any of the available debuggers/programmers can be used.
 
 1. Open <i>MPLAB X IPE</i>
@@ -90,16 +91,10 @@ In this example ICD4 is being used, but any of the available debuggers/programme
 9. Wait for the program/verify complete message.
 10. Disconnect programmer from Digital Power Plug-in Module.
 
----
 
-## Quick Start Guide
+### Power Board Visualizer Hardware Setup
 
-This Section will guide you on how to run and control the 4kW dsPIC33C PSFB DC-DC demonstration application using power board visualizer, once the electrical connections are made.
-
-### Hardware Setup
-Please consult the Users Guide for hardware setup considerations and verify that the correct load and source selections have been made. This readme does not include the electrical setup for the power board.
-
-To enable CAN communication from the PC to the PSFB board, a USB to CAN dongle is required. Note that the Power Board Visualizer is compatible only with PEAK System USB CAN-FD dongles. A RS232 DB9 Straight Through cable to connect the power board to the PEAK dongle.
+To establish CAN communication between the PC and the PSFB board, a USB to CAN dongle is required. It is important to note that the Power Board Visualizer is compatible only with PEAK System USB CAN-FD dongles. Additionally, an RS232 DB9 straight-through cable is could be used to connect the power board to the PEAK dongle.
 
 ### Powering On board through Power Board Visualizer
 #### Prerequisites
@@ -125,6 +120,7 @@ Power Board Visualizer GUI
 </center>
 </p>
 
+
 1. Table to monitor the system values in real time
 2. Buttons to start/stop power transfer
     - Start Pre Charge  - This button starts the precharging of the output capacitors in open loop mode. The capacitors have to be precharged to maximum 10 volts before the Start power Transfer is activated.
@@ -140,7 +136,6 @@ Power Board Visualizer GUI
 	- The "COM?" button lists all available communication ports for the PBV. If the Peak Dongle drivers are installed and the Peak USB dongle is connected, it will appear as PCAN_USB:FD. Select the appropriate port and click enable. The Power Board Visualizer will then open the selected Comm port.
 
     
-
 #### Sequence of Actions to Power On
 After opening the appropriate Power Board Visualizer project, follow these steps to start the board:
 
@@ -150,9 +145,9 @@ After opening the appropriate Power Board Visualizer project, follow these steps
 4. Click on "Start Power Transfer". The system will quickly transition through various states and should eventually reach the PCS_UP_AND_RUNNING state.
 5. Change the reference to desired output voltage value if necessary.
 
-<p><center><a target="_blank" rel="nofollow" href="images/psfb-in-pre-charge.png">
+<p><center><a target="_blank" rel="nofollow" href="images/Precharge.png">
 <p>
-<img src="images/psfb-in-pre-charge.png" alt="PSFB in Pre-Charge state" width="800">
+<img src="images/Precharge.png" alt="PSFB in Pre-Charge state" width="450">
 </a>
 </center>
 </p>
@@ -166,9 +161,24 @@ PSFB in Pre-Charge State
 </p>
 
 
-<p><center><a target="_blank" rel="nofollow" href="images/psfb-running.png">
+<p><center><a target="_blank" rel="nofollow" href="images/Precharged.png">
 <p>
-<img src="images/psfb-running.png" alt="PSFB in running state" width="800">
+<img src="images/Precharged.png" alt="PSFB in Pre-Charge state" width="450">
+</a>
+</center>
+</p>
+
+<p>
+<center>
+<a target="_blank" rel="nofollow">
+PSFB after Precharge completes
+</a>
+</center>
+</p>
+
+<p><center><a target="_blank" rel="nofollow" href="images/up_and_running.png">
+<p>
+<img src="images/up_and_running.png" alt="PSFB in running state" width="450">
 </a>
 </center>
 </p>
