@@ -31,7 +31,7 @@
 
 #include "pwrctrl/pwrctrl_typedef.h"
 #include "drv_mcc_extension_pwm.h"
-#include "config/macros.h"
+//#include "config/macros.h"
 #include "pwm_hs/pwm.h"
 
 /*********************************************************************************

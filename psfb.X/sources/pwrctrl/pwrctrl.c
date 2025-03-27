@@ -34,7 +34,7 @@
 #include "pwm_hs/pwm.h"
 
 //PSFB header files
-#include "config/macros.h"
+//#include "config/macros.h"
 #include "pwrctrl.h"
 //#include "fault/fault.h"
 

@@ -26,7 +26,6 @@
 #include "App_PBV_psfb_frame_map.h"
 
 #include "system/pins.h"
-#include "device/dev_sec_cur.h"
 #include "pwm_hs/pwm.h"
 
 #include "pwrctrl/pwrctrl_comm_interface.h"

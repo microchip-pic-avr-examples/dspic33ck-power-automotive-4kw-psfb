@@ -18,8 +18,8 @@
 #include "system/pins.h"
 
 // DAB header files
-#include "config/macros.h"
-#include "config/config.h"
+//#include "config/macros.h"
+//#include "config/config.h"
 #include "pwrctrl.h"
 #include "fault/fault.h"
 

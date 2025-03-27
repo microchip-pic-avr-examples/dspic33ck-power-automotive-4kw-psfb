@@ -36,10 +36,10 @@
 
 // PSFB header files
 #include "pwrctrl.h"
-#include "config/macros.h"
+//#include "config/macros.h"
 #include "device/device.h"
 #include "fault/fault.h"
-#include "config/config.h"
+//#include "config/config.h"
 #include "pwrctrl_pwm.h"
 #include "system/pins.h"
 
