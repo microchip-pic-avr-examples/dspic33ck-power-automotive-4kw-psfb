@@ -138,10 +138,6 @@
           <itemPath>sources/pwrctrl/pwrctrl_pwm.h</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_isr.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="x2cScope" displayName="x2cScope" projectFiles="true">
-          <itemPath>sources/x2cScope/X2CScope.h</itemPath>
-          <itemPath>sources/x2cScope/X2CScopeComm.h</itemPath>
-        </logicalFolder>
         <itemPath>sources/project_settings.h</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -268,10 +264,6 @@
           <itemPath>sources/pwrctrl/pwrctrl_isr.c</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_isr_extension.c</itemPath>
         </logicalFolder>
-        <logicalFolder name="x2cScope" displayName="x2cScope" projectFiles="true">
-          <itemPath>sources/x2cScope/X2CScope.c</itemPath>
-          <itemPath>sources/x2cScope/X2CScopeComm.c</itemPath>
-        </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>main_tasks.c</itemPath>
@@ -301,7 +293,6 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>sources/x2cScope/libx2cscope-33ck-elf.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>

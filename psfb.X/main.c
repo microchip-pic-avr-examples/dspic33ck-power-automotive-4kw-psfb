@@ -23,7 +23,6 @@
 #include "os/os_scheduler.h"
 #include "device/dev_led.h"
 #include "app/app_PBV_psfb_frame_map.h"
-#include "x2cScope/X2CScope.h"
 #include "config/comms_config.h"
 #include "pwm_hs/pwm.h"
 #include "fault/fault.h"
@@ -75,10 +74,6 @@ int main(void)
     OS_Init(); 
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
 
-  
-#if (X2CDEBUG_ENABLED == 1)
-X2CScope_Init();
-#endif
     
     OS_Scheduler_RunForever();
     

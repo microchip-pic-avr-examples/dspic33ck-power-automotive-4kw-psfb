@@ -48,7 +48,6 @@
 #include "app/app_PBV_psfb_frame_map.h"
 #include "app/app_PBV_interface.h"
 //#include "device/dev_fan.h"
-#include "x2cScope/X2CScope.h"
 #include "config/comms_config.h"
 //#include "device/measure_task.h"
 #include "device/dev_temp.h"
@@ -87,10 +86,6 @@ void Tasks_Realtime_100us(void)
     // put your application specific code here that needs to be called every 100 micro seconds from the interrupt
     // example: Drv_TestPin_Toggle(DBG_PIN1);
 
-#if (X2CDEBUG_ENABLED == 1)
-	X2CScope_Update();
-//    X2CScope_Communicate();     ///< commuincate needs to be in free running mode. in some while(1) loop
-#endif
     PwrCtrl_Execute();
     //Fault_Execute();
 
