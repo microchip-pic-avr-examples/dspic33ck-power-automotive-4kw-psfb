@@ -212,7 +212,14 @@ void PwrCtrl_ControlLoopInitialize(void)
     psfb.VLoop.Reference = 0;
 }
 
-
+/*******************************************************************************
+ * @ingroup pwrctrl
+ * @brief  Calculates the max duty cycle for precharge 
+ * @return void
+ * 
+ * @details This function calculates the max duty cycle for precharge
+ * based on input voltage
+ *********************************************************************************/
 void PwrCtrl_MaxDutyCycle(void){
                //10 volts
     psfb_ptr->Precharge.primaryVoltage = Dev_PwrCtrl_GetAdc_Vpri() - 205;

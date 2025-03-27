@@ -31,13 +31,22 @@
 #include "system/pins.h"
 #include "adc/adc1.h"
 
-// AR-241126: header file for calling custom peripheral configuration after MCC config
+// header file for calling custom peripheral configuration after MCC config
 #include "sources/driver/mcc_extension/mcc_custom_config.h"
+uint16_t counter = 65500;
+
 /*
     Main application
 */
 
-uint16_t counter = 65500;
+/*******************************************************************************
+ * @ingroup 
+ * @brief  Application main function executed after device comes out of RESET
+ * @details 
+ * This function is the starting point of the firmware. It is called after the
+ * device is coming out of RESET, starting to execute code. 
+ * 
+ *********************************************************************************/
 int main(void)
 {
     
@@ -54,7 +63,7 @@ int main(void)
     // Enabling CMP3 interrupt.
     IEC4bits.CMP3IE = 1;
 
-    // AR-241126: Calling Custom PWM Daisy Chain Configuration 
+    // Calling Custom PWM Daisy Chain Configuration 
     MCC_Custom_User_Config();   // pwm initialize and enable.
     
     App_PBV_psfb_Init();
@@ -83,6 +92,15 @@ int main(void)
     }    
 }
 
+/*******************************************************************************
+ * @ingroup pwrctrl-isr
+ * @brief  Executes the power converter control loop
+ * @return void
+ * 
+ * @details This interrupt function is a ADC Core 0 interrupt executed every 100KHz
+ * This ADC is triggered using trigger b of PG1. This trigger is half of the phase 
+ * difference between fixed and phase shifted leg
+ *********************************************************************************/
 void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
 {
     GPIO_debug_SetHigh();   // to keep track of the interrupt latency per cycle

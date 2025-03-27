@@ -11,10 +11,8 @@
 #include "pwrctrl/pwrctrl.h"
 
 
-//extern PWM_DISTRIBUTION_t PhaseShiftDistribution;
-
  void PwrCtrl_PWM_Update(void);
-//extern void PwrCtrl_PWM_Update(PWM_DISTRIBUTION_t* instance);
+
 
  void PwrCtrl_PWM_Enable(void);
  void PwrCtrl_PWM_Disable(void);

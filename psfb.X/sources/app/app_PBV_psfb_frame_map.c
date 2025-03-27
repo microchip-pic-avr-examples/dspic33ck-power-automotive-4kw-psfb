@@ -69,17 +69,13 @@ static uint32_t tick_counter = 0;
 static uint8_t transmit_firmware_id = 1;
 
 //temporary variables
-static uint16_t status_controller_state = 0 ;
-static uint16_t status_input_state = 0 ;
-static uint16_t status_output_state = 0 ;
-static uint16_t safety_flags = 0 ;
 static uint16_t slider_PS_PP = 0 ;
 static uint16_t dead_time_right = 0;
 static uint16_t voltage_ref = 0;
 static uint16_t current_ref = 0;
 static uint16_t current_slider_ref = 0;
 
-static uint8_t button_random_action = 0;
+
  static uint8_t button_start = 0;
 static uint8_t button_start_sync = 0;
 // static int16_t charge_en = 0;
@@ -248,8 +244,8 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[10] = PwrCtrl_GetAdc_Isec_shunt();
     buffer_sixteen_tx[11] = Dev_PwrCtrl_GetIsec_Offset();
     //buffer_sixteen_tx[12] = psfb_ptr->Properties.IReference;
-    buffer_sixteen_tx[12] = psfb_ptr->vloop_output;     // output of vloop will be reference of the iloop
-    buffer_sixteen_tx[13] = psfb_ptr->iloop_output;
+    buffer_sixteen_tx[12] = psfb_ptr->VLoop.Output;     // output of vloop will be reference of the iloop
+    buffer_sixteen_tx[13] = psfb_ptr->ILoop.Output;
     buffer_sixteen_tx[14] = psfb_ptr->SecRec.Threshold_high;
     buffer_sixteen_tx[15] = psfb_ptr->SecRec.Threshold_low;
 
@@ -260,7 +256,7 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[17] = Dev_PwrCtrl_GetVoltage_Vcap();
     buffer_sixteen_tx[18] = psfb_ptr->VLoop.Reference;
     buffer_sixteen_tx[19] = psfb_ptr->Properties.VSecReference;
-    buffer_sixteen_tx[20] = psfb_ptr->vloop_output;
+    buffer_sixteen_tx[20] = psfb_ptr->VLoop.Output;
 
     // phase
     buffer_sixteen_tx[21] = PG1TRIGC;
@@ -331,12 +327,11 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             break;
             
         case 0xFFFF:
-            //VCOMP.status.bits.enabled = 1;
+
             psfb_ptr->ILoop.Enable = 1;
             break;
         
         case 0xFF00:
-            //VCOMP.status.bits.enabled = 0;
             psfb_ptr->ILoop.Enable = 0;
             break;
         default:

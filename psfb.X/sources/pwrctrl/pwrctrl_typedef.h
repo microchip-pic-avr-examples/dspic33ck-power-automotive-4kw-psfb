@@ -189,20 +189,12 @@ struct PWR_CTRL_PROPERTIES_s
 typedef struct PWR_CTRL_PROPERTIES_s PWR_CTRL_PROPERTIES_t;  
 
 
-
-
-struct PWM_DISTRIBUTION_s {
-    uint16_t PhaseShift;        // target buffer of the control output value to be distributed across PWM registers
-    uint16_t* ptrPeriod;        // Pointer to the leading PWM channel period register
-    uint16_t* ptrPhaseShift;    // Pointer to leading PWM channel trigger register setting the phase shift between right- and left-leg
-    uint16_t* ptrDCSRR;         // Pointer to Duty Cycle register of the right-leg synchronous rectifier
-    uint16_t* ptrDCSRL;         // Pointer to Duty Cycle register of the left-leg synchronous rectifier
-    uint16_t* ptrUpdateReg;     // Pointer to Status register to set the UPDATE_REQUEST bit
-}__attribute__((aligned));
-typedef struct PWM_DISTRIBUTION_s PWM_DISTRIBUTION_t;
-
-
-
+/***********************************************************************************
+ * @ingroup pwrctrl-data-types
+ * @brief Collection of Precharge Properties
+ * @details
+ * This data structure manages the Precharge properties. 
+ **********************************************************************************/
 struct PRECHARGE_s {
     uint8_t PrechargeEnabled; // if precharge is enabled.
     uint16_t DutyCycle;     // current open loop dutycycle in percentage
@@ -214,6 +206,13 @@ struct PRECHARGE_s {
 };
 typedef struct PRECHARGE_s PRECHARGE_t;
 
+
+/***********************************************************************************
+ * @ingroup pwrctrl-data-types
+ * @brief Collection of Secondary Rectifier Properties
+ * @details
+ * This data structure manages the SR properties and control variables
+ **********************************************************************************/
 struct SEC_REC_s {
     uint8_t SR_Enabled;         // if SR is enabled or not. enabled after start power transfer
     uint8_t SR_Flag;            // SR flag o
@@ -232,7 +231,7 @@ struct POWER_CONTROL_s
 {
     STATUS_FLAGS_t      Status; ///< Power Supply status flags
     PWR_CTRL_STATE_t    State;  ///< Power Control State ID
-    PWR_CTRL_PROPERTIES_t Properties;    ///< Power Control properties    : clean this (no bidirectional, there will be only one reference)
+    PWR_CTRL_PROPERTIES_t Properties;    ///< Power Control properties  
     SWITCH_NODE_t       Pwm;    ///< Switch node settings
     FEEDBACK_SETTINGS_t Data;   ///< Feedback channel settings
     FAULT_SETTINGS_t    Fault;  ///< Fault flags and settings 
@@ -243,13 +242,9 @@ struct POWER_CONTROL_s
     CONTROLLER_t        ILoop;  ///< structure for current controller data
     CONTROLLER_t        VLoop;  ///< structure for voltage controller data
     CONTROLLER_t        PLoop;  ///< structure for power controller data
-    PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode   
-    uint16_t            vloop_output;
-    uint16_t            iloop_output;  ///< iloop output
-    uint16_t            vloop_delay;   ///< slowing down voltage loop
+    PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode  (for future)
     PRECHARGE_t         Precharge;
     SEC_REC_t           SecRec;
-    PWM_DISTRIBUTION_t PhaseShiftDistribution;  // phase shift distribution TODO: tie this uo with switch node data struct
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 
