@@ -69,12 +69,13 @@ This section is designed to assist users in powering up the board using Power Bo
 
 ## Directory Structure
 
+```
 	├───psfb.X							        PSFB main project 
 	├───images									Images for the Readme 
 	├───power_board_visualizer_xmls				Power Board Visualizer Projects
 	├───pre_compiled_hex_files					Pre compiled Hex file
 	└───docs									doxygen files
-
+```
 ---
 
 ## Programming Hex File on to the dsPIC33C Digital Power PIM using available hex files
