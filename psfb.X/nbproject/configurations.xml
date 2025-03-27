@@ -126,11 +126,6 @@
             <itemPath>sources/pwrctrl/dcdt/pwrctrl_dcdt.h</itemPath>
             <itemPath>sources/pwrctrl/dcdt/smps_control.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="vcomp" displayName="vcomp" projectFiles="true">
-            <itemPath>sources/pwrctrl/vcomp/npnz16b.h</itemPath>
-            <itemPath>sources/pwrctrl/vcomp/npnz16b.inc</itemPath>
-            <itemPath>sources/pwrctrl/vcomp/VCOMP.h</itemPath>
-          </logicalFolder>
           <itemPath>sources/pwrctrl/pwrctrl.h</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_comm_interface.h</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_typedef.h</itemPath>
@@ -251,10 +246,6 @@
             <itemPath>sources/pwrctrl/dcdt/XFT_smps_2p2z_dspic.s</itemPath>
             <itemPath>sources/pwrctrl/dcdt/smps_2p2z_dspic.s</itemPath>
             <itemPath>sources/pwrctrl/dcdt/smps_3p3z_dspic.s</itemPath>
-          </logicalFolder>
-          <logicalFolder name="vcomp" displayName="vcomp" projectFiles="true">
-            <itemPath>sources/pwrctrl/vcomp/VCOMP.c</itemPath>
-            <itemPath>sources/pwrctrl/vcomp/VCOMP_asm.s</itemPath>
           </logicalFolder>
           <itemPath>sources/pwrctrl/pwrctrl.c</itemPath>
           <itemPath>sources/pwrctrl/pwrctrl_comm_interface.c</itemPath>

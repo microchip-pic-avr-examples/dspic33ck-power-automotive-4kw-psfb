@@ -23,7 +23,6 @@
 #include "pwrctrl.h"
 #include "fault/fault.h"
 
-#include "pwrctrl/vcomp/VCOMP.h"   
 #include "pwrctrl/pwrctrl_pwm.h"
 
 // PRIVATE FUNCTIONS
