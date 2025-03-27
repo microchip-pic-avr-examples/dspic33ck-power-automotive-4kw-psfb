@@ -49,8 +49,6 @@
 #include "app/app_PBV_interface.h"
 //#include "device/dev_fan.h"
 #include "config/comms_config.h"
-//#include "device/measure_task.h"
-#include "device/dev_temp.h"
 
 static OS_SYSTIME_t sysTime;
 //=======================================================================================================
@@ -87,7 +85,6 @@ void Tasks_Realtime_100us(void)
     // example: Drv_TestPin_Toggle(DBG_PIN1);
 
     PwrCtrl_Execute();
-    //Fault_Execute();
 
 }
 #endif /* OS_USE_SCHEDULER_100us */
@@ -111,7 +108,6 @@ void Tasks_Realtime_1ms(void)
 void Tasks_100us(void)
 {
     app_PBV_Task_100us();
-//    Dev_Measure_Task_100us();
     
 }
 #endif /* OS_USE_SCHEDULER_100us */
@@ -125,7 +121,6 @@ void Tasks_1ms(void)
 //    App_ExampleSomethingOne_1ms();
 //    App_ExampleSomethingTwo_1ms();
         
-    //Dev_ADC_Sampling_Task_1ms();
 
 }
 
@@ -141,9 +136,6 @@ void Tasks_10ms(void)
     app_PBV_Task_10ms();
     App_PBV_psfb_Task_10ms();
     
-    
-    //Dev_Temp_Task_10ms();
-    //Dev_Sec_Task_10ms();
 }
 
 extern uint16_t os_resetCause;
@@ -154,11 +146,6 @@ extern uint16_t os_resetCause;
 void Tasks_100ms(void)
 {
     Dev_LED_Task_100ms();
-    //app_Develop_Debug_Task_100ms();
-    //Drv_Fan_Task_100ms();
-
-
-
 }
 
 //=======================================================================================================
