@@ -154,18 +154,6 @@ struct CONTROLLER_s
 };
 typedef struct CONTROLLER_s CONTROLLER_t;
 
-/***********************************************************************************
- * @ingroup pwrctrl-data-types
- * @brief   Enumeration of power controller charging state
- * @details
- * These is the enumeration of the psfb's charging state
- ***********************************************************************************/
-enum  PWR_CTRL_CHARGE_STATE_e
-{
-    PWR_CTRL_CHARGING,      ///< power converter is in charging mode
-    PWR_CTRL_DISCHARGING    ///< power converter is in discharging mode
-};
-typedef enum PWR_CTRL_CHARGE_STATE_e PWR_CTRL_CHARGE_STATE_t;
 
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
@@ -242,7 +230,6 @@ struct POWER_CONTROL_s
     CONTROLLER_t        ILoop;  ///< structure for current controller data
     CONTROLLER_t        VLoop;  ///< structure for voltage controller data
     CONTROLLER_t        PLoop;  ///< structure for power controller data
-    PWR_CTRL_CHARGE_STATE_t    PowerDirection;  ///< defines if the power converter is in charging or discharging mode  (for future)
     PRECHARGE_t         Precharge;
     SEC_REC_t           SecRec;
 };
