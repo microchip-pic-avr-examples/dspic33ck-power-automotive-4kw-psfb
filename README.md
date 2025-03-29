@@ -1,8 +1,5 @@
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/microchip_logo_white_red.png">
-	<source media="(prefers-color-scheme: light)" srcset="images/microchip_logo_black_red.png">
-    <img alt="Microchip Logo." src="images/microchip_logo_black_red.png">
-</picture> 
+![image](images/microchip.png) 
+
 
 --- 
 # 4kW dsPIC33C PSFB DC-DC Demonstration Application
@@ -36,7 +33,7 @@ The board features well-organized circuit sections, including an input EMI filte
 
 __Firmware Documentation__
 
-- [Online Firmware Documentation of this Code Example]()
+- [Online Firmware Documentation of this Code Example](./index.html)
 
 __Hardware Documentation__
 
@@ -78,7 +75,7 @@ This section is designed to assist users in powering up the board using Power Bo
 ```
 ---
 
-## Programming Hex File on to the dsPIC33C Digital Power PIM using available hex files
+## Programming Hex File on to the dsPIC33C Digital Power PIM using available hex file
 In this example ICD4 is being used, but any of the available debuggers/programmers can be used.
 
 1. Open <i>MPLAB X IPE</i>
@@ -124,7 +121,7 @@ Power Board Visualizer GUI
 
 1. Table to monitor the system values in real time
 2. Buttons to start/stop power transfer
-    - Start Pre Charge  - This button starts the precharging of the output capacitors in open loop mode. The capacitors have to be precharged to maximum 10 volts before the Start power Transfer is activated.
+    - Start Pre Charge  - This button starts the precharging of the output capacitors in open loop mode. The capacitors have to be precharged before the Start power Transfer is activated.
     - Start/Stop Power Transfer - These buttons turn on and off the power transfer by enabling or disabling the primary side switches. 
 
 3. Sliders to provide reference values
