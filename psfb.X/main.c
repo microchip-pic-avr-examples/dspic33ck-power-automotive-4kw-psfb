@@ -71,10 +71,7 @@ int main(void)
     psfb_ptr->SecRec.SR_Enabled = 0;    // enabled after start power transfer
     psfb_ptr->SecRec.SR_Flag = 0;   // make sure it is off
 
-    // for 10 volts
-    // divided by 8 to keep it within 16bits
-    psfb_ptr->Precharge.scaler = 10 * 2 * 17 * 54;
-      
+
     ADC1_SoftwareTriggerEnable(); // add it here so that the very first time the values are available
     dev_MeasureOffsets_Initialize();
     

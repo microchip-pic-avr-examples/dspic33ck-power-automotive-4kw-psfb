@@ -222,6 +222,9 @@ void PwrCtrl_ControlLoopInitialize(void)
  *********************************************************************************/
 void PwrCtrl_MaxDutyCycle(void){
                //10 volts
+        // for 10 volts
+    // divided by 8 to keep it within 16bits
+    psfb_ptr->Precharge.scaler = 10 * 2 * 17 * 54;
     psfb_ptr->Precharge.primaryVoltage = Dev_PwrCtrl_GetAdc_Vpri() - 205;
     //divided by 8 as scaler is also divided by 8
     psfb_ptr->Precharge.primaryVoltage = psfb_ptr->Precharge.primaryVoltage >> 3; 
