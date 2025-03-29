@@ -3,6 +3,8 @@
 Microcontroller-based Switch Mode Power Supplies need to be both real-time and deterministic, while also taking advantage of the flexibility offered by programmable microcontrollers. The firmware for these power supplies handles various tasks, some of which must be deterministic, while others, being less critical, do not require deterministic execution. This design approach is evident in the use of interrupts and the repetition of tasks at different frequencies. These aspects will be explored in detail in the Firmware Structure and Implementation section later.
 
 
+## Firmware components
+
 <p><center><a target="_blank" rel="nofollow" href="images/sensors.png">
 <p>
 <img src="images/sensors.png" alt="Overview of the sensors and microcontroller peripherals used in power transfer" width="800">
@@ -19,12 +21,11 @@ Overview of the sensors and microcontroller peripherals used in power transfer
 </p>
 
 
-## Firmware components
 The Firmware for PSFB DCDC Converter has the following components
 ### Input/Output Rail Sensing
 When designing a power converter, it's crucial to keep an eye on both the input and output voltages and currents. This is done by scaling the voltages to levels that the microcontroller's ADC sense lines can handle. The input current is measured with a current transformer, while the output current is detected using a shunt amplifier. Both of these current measurements are then converted into voltage signals that the analog sense lines can process. 
 
-#### Peripheral Used : High Speed 12-bit Analog to Digital Converter(ADC)
+##### Peripheral Used : High Speed 12-bit Analog to Digital Converter(ADC)
 The dsPIC33CK256MP506 devices have a high-speed, 12-bit Analog-to-Digital Converter (ADC) that features a low conversion latency, high resolution and oversampling capabilities to improve performance in AC/DC, DC/DC power converters. The devices implement the ADC with three SAR cores, two dedicated and one shared. Two of these cores are faster dedicated cores which are dedicated to specific channels and are used to sample the input and output currents. The other core, which is a shared core between a higher number of channels, is used to sample the input and output voltages. 
 
 The table lists all the analog channels of the PSFB converter
@@ -34,10 +35,10 @@ The table lists all the analog channels of the PSFB converter
 |     1       |     FB_P_CT_FILT      |     Dedicated Core 0 Conversion Time: 328ns                                                                   |     Primary Current.   Sensed through a CT.     |     Sampled during half   of the Duty Cycle.    |     Sampled Cycle by   Cycle, 100kHz    |
 |     2       |     I_SEC_AVG_FILT    |    Dedicated Core 1 Conversion Time: 328ns                                                                    |     Output Current.   Sensed through Shunt.     |     Sampled during half   of the Duty Cycle.    |     Sampled Cycle by   Cycle, 100kHz    |
 |     3       |     FB_VOUT           |     Shared Core    Channel 2    Conversion Time: 470ns                                                        |     Output Voltage    Shared Core, Channel 2    |     Sampled during half   of the Duty Cycle     |     Sampled Cycle by   Cycle, 100kHz    |
-|     4       |     VIN_INT_AN        |     Shared Core    Channel 10    Conversion Time: 900ns     (value available after 900ns after triggering)    |     Input Voltage                               |     Free Running                                |     Sampled Cycle by   Cycle, 100kHz    |
-| 5           | FB_VCAP               |     Shared Core    Channel     Conversion Time: 900ns     (value available after 900ns after triggering)      | Output Capacitor Voltage                        | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
-| 5           | FP_TEMP               |     Shared Core    Channel     Conversion Time: 900ns     (value available after 900ns after triggering)      | Temperature Sensor                              | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
-| 6           | FB_5V                 |     Shared Core    Channel     Conversion Time: 900ns     (value available after 900ns after triggering)      | 5 Volt Rail                                     | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
+|     4       |     VIN_INT_AN        |     Shared Core    Channel 10    Conversion Time: 670ns     (value available after 670ns after triggering)    |     Input Voltage                               |     Free Running                                |     Sampled Cycle by   Cycle, 100kHz    |
+| 5           | FB_VCAP               |     Shared Core    Channel 9    Conversion Time: 470ns     (value available after 470ns after triggering)      | Output Capacitor Voltage                        | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
+| 5           | FP_TEMP               |     Shared Core    Channel 14    Conversion Time: 900ns     (value available after 900ns after triggering)      | Temperature Sensor                              | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
+| 6           | FB_5V                 |     Shared Core    Channel   19  Conversion Time: 1400ns     (value available after 1388ns after triggering)      | 5 Volt Rail                                     | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
 
 #### Sensor calibration at startup
 
@@ -45,7 +46,7 @@ Input and Output Current sensors both have offsets of about 500mV. These are mea
 
 ### PWM Signals for Phase Shifted Operation
 In phase shifted design, the power transfer happens by the phase shift between the left and right legs of the bridge. Due to this phase shift a bipolar voltage appears at the primary of the transformer. 
-#### Peripheral Used: PWM Generator
+##### Peripheral Used: PWM Generator
 The control signal directed to the power stage is determined by the phase shift value between the fixed and phase-shifted legs. The primary side switches are actuated using the High-Resolution Pulse Width Modulation (PWM) with fine edge placement peripheral of the dsPIC33CK microcontroller. This peripheral is exceptionally versatile, facilitating the execution of intricate modulation schemes autonomously within the controller's core-independent peripheral. During phase-shifted operation, the phase-shifted leg is synchronized with the fixed leg. A delay or phase shift is introduced to generate a bipolar voltage at the transformer, utilizing a highly adaptable trigger mechanismThis phase-shift is the control output from the compensator to the power stage.  For more details on the workings of the PWM Peripheral, refer to the PWM Family Reference Manual.
 The Trigger mechanisms are summarized in the table below.
 
@@ -69,7 +70,7 @@ The 2-pole/2-zero and 3-pole/3-zero are digital implementations of type II analo
 
 <p><center><a target="_blank" rel="nofollow" href="images/2p2z.png">
 <p>
-<img src="images/2p2z.png" alt="2p2z" width="800">
+<img src="images/2p2z.png" alt="2p2z" width="600">
 </a>
 </center>
 </p>
@@ -77,14 +78,14 @@ The 2-pole/2-zero and 3-pole/3-zero are digital implementations of type II analo
 <p>
 <center>
 <a target="_blank" rel="nofollow">
-2p2z
+Digital implementation of type 2 Analog controller
 </a>
 </center>
 </p>
 
 <p><center><a target="_blank" rel="nofollow" href="images/3p3z.png">
 <p>
-<img src="images/3p3z.png" alt="4kw Control" width="800">
+<img src="images/3p3z.png" alt="4kw Control" width="600">
 </a>
 </center>
 </p>
@@ -92,10 +93,13 @@ The 2-pole/2-zero and 3-pole/3-zero are digital implementations of type II analo
 <p>
 <center>
 <a target="_blank" rel="nofollow">
-3p3z
+Digital implementation of type 3 Analog controller
 </a>
 </center>
 </p>
+
+#### DCDT SMPS Control Library
+The Analog controllers of two poles two zeros, and three poles three zeros are implemented in the digital domain by transforming the compensator transfer function from the s-domain to the z-domain. The Digital Compensator Design Tool (DCDT), a complimentary plugin available within the MPLAB X Integrated Development Environment (IDE), is employed to determine the digital compensator coefficients. Based on the locations of the poles and zeros, the coefficients for the z-domain equation are computed. These coefficients are utilized within the Switched-Mode Power Supply (SMPS) control library, which is also provided free of charge by Microchip. The SMPS control library offers efficient and high-speed assembly libraries to facilitate the updating of control loops. For more information on DCDT refer to the DCDT’s webapage.
 
 #### Voltage Loop
 A fundamental approach to regulating the output voltage involves the implementation of a voltage loop. This voltage loop continuously monitors the output voltage for any deviations and compensates for these fluctuations by adjusting the duty cycle applied to the plant. However, relying solely on the voltage loop is often insufficient due to its inherently slow response time. Additionally, the voltage loop lacks the capability for cycle-by-cycle current control, which is critical for maintaining precise and stable operation. A cascaded approach is essential that employes both a current loop and a voltage loop.
@@ -104,10 +108,10 @@ A fundamental approach to regulating the output voltage involves the implementat
 To address the limitations inherent in the voltage loop, the inclusion of a current loop is essential. In the context of this design, two methodologies for current loops were evaluated: Peak Current Mode Control and Average Current Mode Control
 
 #### Average current mode control vs Peak Current Mode Control
-In this design, the Average Current Mode is chosen. Average Current Mode Control provides various advantages in the context of Power Converter methodology, such as easier control schemes, working better with droop control methods, and providing more flexibility for maximum efficiency as it gives more control over edge positions.
-Peak Current Mode Control (PCMC) has its own advantages, such as rapid transient response and reduced computational workload on the CPU. 
-The fundamental difference between PCMC and Average Current Mode Control (ACMC) lies in managing transformer magnetization and current regulations.
-PCMC aims to prevent staircase saturation by ensuring equal currents, whereas ACMC achieves this by enforcing equal on-times to maintain balanced magnetization in the transformer. PCMC requires a highly symmetric current sense signal. On the contrary, ACMC is more tolerant of imprecise feedback, if the half-bridges respond uniformly.
+In this design, the Average Current Mode is chosen. Average Current Mode Control provides various advantages in the context of Power Converter methodology, such as easier control schemes, working better with droop control methods, and providing more flexibility for maximum efficiency as it gives more control over edge positions.  
+Peak Current Mode Control (PCMC) has its own advantages, such as rapid transient response and reduced computational workload on the CPU.   
+The fundamental difference between PCMC and Average Current Mode Control (ACMC) lies in managing transformer magnetization and current regulations.  
+PCMC aims to prevent staircase saturation by ensuring equal currents, whereas ACMC achieves this by enforcing equal on-times to maintain balanced magnetization in the transformer. PCMC requires a highly symmetric current sense signal. On the contrary, ACMC is more tolerant of imprecise feedback, if the half-bridges respond uniformly.  
 In well-designed systems, the switch timings of each bridge are typically synchronized, making ACMC a straightforward approach due to its leniency towards feedback signal symmetry. This tolerance simplifies the design process, as achieving a perfectly symmetric current feedback signal is not always feasible. 
 
 
@@ -139,7 +143,7 @@ dsPIC33CK has high speed analog comparator with slope compensation DAC. The Prim
 #### Software based fault monitoring
 The Primary Over/Under Voltage, Secondary Over/Under voltage, Secondary Overcurrent, and Over Temperature are sensed through ADC and monitored for fault conditions every PWM cycle of the fixed leg. The fault response is the same as the hardware fault response, i.e. turn off the PWM signals for fixed and phase shifted legs. Secondary side switches are turned off when the current falls below CCM/DCM threshold.
 
-### Commuincation and Visualization
+### Communication and Visualization
 The PSFB has an isolated CAN-FD interface. The design is intended to work with Power Board Visualizer. With Power Board Visualizer the important parameters and the current state of the PSFB can be observed in real time. The output voltage reference can also be changed using a voltage slider.
 
 #### Peripheral Used: Controller Area Network (CAN FD) Module
@@ -170,7 +174,7 @@ Firmware Architecture
 
 
 #### Power Supply State Maching
-The main state machine of the Power supply is updated every 100us using the 100us task update of the scheduler. 
+The state machine of the Power supply is updated every 100us using the 100us task update of the scheduler. 
 
 <p><center><a target="_blank" rel="nofollow" href="images/states.png">
 <p>
@@ -223,14 +227,11 @@ Interrupt Latency
 </p>
 
 
-### Tools
-#### DCDT SMPS Control Library
-The Analog controllers of two poles two zeros, and three poles three zeros are implemented in the digital domain by transforming the compensator transfer function from the s-domain to the z-domain. The Digital Compensator Design Tool (DCDT), a complimentary plugin available within the MPLAB X Integrated Development Environment (IDE), is employed to determine the digital compensator coefficients. Based on the locations of the poles and zeros, the coefficients for the z-domain equation are computed. These coefficients are utilized within the Switched-Mode Power Supply (SMPS) control library, which is also provided free of charge by Microchip. The SMPS control library offers efficient and high-speed assembly libraries to facilitate the updating of control loops. For more information on DCDT refer to the DCDT’s webapage.
+### Peripheral Initalization
 
 #### Microchip Code Configurator
 Microchip Code Configurator (MCC) is a user-friendly software tool designed to simplify the development process for embedded applications. It offers a graphical interface that allows developers to easily configure and generate initialization and application code for Microchip's 8-bit, 16-bit, and 32-bit microcontrollers. By automating the setup of peripherals and libraries, MCC enables developers to concentrate on creating their application logic, reducing development time and effort. 
-
-MCC is used to configure all the peripherals of the dsPIC33CK for this project.
+MCC is used to configure all the peripherals of the dsPIC33CK for this project. 
 
 ---
 
