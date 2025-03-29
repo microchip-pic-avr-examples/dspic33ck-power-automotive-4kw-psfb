@@ -276,35 +276,59 @@ uint16_t Dev_PwrCtrl_GetAveraging_Isec(void)
 
 /*********************************************************************************
  * @ingroup pwrctrl-comm
- * @brief   
- * @return  value   
+ * @brief   API function to get the value of the sampled ADC for Capacitor Voltage
+ * @return  value   Secondary Capacitor Value
  **********************************************************************************/
 uint16_t Dev_PwrCtrl_GetVoltage_Vcap(void)
 {
     return(psfb_ptr->Data.VCapVoltage);
 }
 
+/*********************************************************************************
+ * @ingroup pwrctrl-comm
+ * @brief   API function to get the value of the sampled ADC for input Voltage
+ * @return  value   Primary Input Voltage Value
+ **********************************************************************************/
 uint16_t Dev_PwrCtrl_GetAdc_Vpri(void)
 {
     return(psfb_ptr->Data.VInVoltage);
 }
 
+/*********************************************************************************
+ * @ingroup pwrctrl-comm
+ * @brief   API function to get the value of the sampled ADC for output Voltage
+ * @return  value   Secondary Output Voltage 
+ **********************************************************************************/
 uint16_t Dev_PwrCtrl_GetAdc_Vsec(void)
 {
     return(psfb_ptr->Data.VOutVoltage);
 }
 
-
+/*********************************************************************************
+ * @ingroup pwrctrl-comm
+ * @brief   API function to get the value of the phase value 
+ * @return  value   phase value
+ **********************************************************************************/
 uint16_t Dev_PwrCtrl_GetControl_Phase(void)
 {
     return(psfb_ptr->Pwm.ControlPhase);
 }
 
+/*********************************************************************************
+ * @ingroup pwrctrl-comm
+ * @brief   API function to get the value of the primary sensor offset value 
+ * @return  value   sensor offset value
+ **********************************************************************************/
 uint16_t Dev_PwrCtrl_GetIPri_Offset(void)
 {
     return(psfb_ptr->Data.IPriSensorOffset);
 }
 
+/*********************************************************************************
+ * @ingroup pwrctrl-comm
+ * @brief   API function to get the value of the secondary sensor offset value 
+ * @return  value   sensor offset value
+ **********************************************************************************/
 uint16_t Dev_PwrCtrl_GetIsec_Offset(void)
 {
     return(psfb_ptr->Data.ISecSensorOffset);

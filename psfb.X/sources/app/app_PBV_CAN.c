@@ -19,6 +19,12 @@
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
  */
+/* 
+ * @file    app_PBV_CAN.c  
+ * @author  M70027
+ * @ingroup PBV_CAN
+ * @brief   Power Board Visualizer CAN interface 
+ */
 
 // includes
 #include "app_PBV_CAN.h"
@@ -30,21 +36,18 @@ typedef struct CAN_MSG_OBJ CAN_MSG_OBJ_t;///< CAN Object data type
 
 /***********************************************************************************
  * @ingroup PBV_CAN
- * @struct  PBV_CAN_Object_TX
  * @brief   CAN object for Numeric TX. Initialized by PBV_CAN_Init()
  **********************************************************************************/
 CAN_MSG_OBJ_t PBV_CAN_Object_TX; //
 
 /***********************************************************************************
  * @ingroup PBV_CAN
- * @struct  PBV_CAN_Object_RX
  * @brief   CAN object for numeric RX. Does not have to be initialized.
  **********************************************************************************/
 CAN_MSG_OBJ_t PBV_CAN_Object_RX; //
 
 /***********************************************************************************
  * @ingroup PBV_CAN
- * @struct  PBV_CAN_Object_ASCII
  * @brief   CAN object for ascii TX. Initialized by PBV_CAN_Init()
  **********************************************************************************/
 CAN_MSG_OBJ_t PBV_CAN_Object_ASCII; //
@@ -57,7 +60,7 @@ CAN_MSG_OBJ_t PBV_CAN_Object_ASCII; //
  * @param   PBV_Datatype_TX_t * - ptr to rx numerical data. here as a place holder, only needed for completeness
  * @brief   initializes CAN objects with PBV objects ( only CAN IDs for now)
  * @return  void
- * @details 
+ * @details Initialize the CAN communication.
  **********************************************************************************/
 
 void PBV_CAN_Init(PBV_Datatype_TX_t* Board_To_PBV, PBV_Datatype_TX_t* Board_To_PBVAscii, PBV_Datatype_RX_t *PBV_To_Board)
@@ -80,8 +83,6 @@ void PBV_CAN_Init(PBV_Datatype_TX_t* Board_To_PBV, PBV_Datatype_TX_t* Board_To_P
 /*********************************************************************************
  * @ingroup PBV_CAN 
  * @fn      PBV_CAN_Receive_from_GUI
- * @param
- * @brief   
  * @return  int (0 on successful, 1 on unsuccessful)
  * @details checks the queue and if a message is received then links the data pointer to can object
  **********************************************************************************/
@@ -99,8 +100,6 @@ uint8_t PBV_CAN_Receive_from_GUI()
 /*********************************************************************************
  * @ingroup PBV_CAN 
  * @fn      PBV_CAN_Transmit_Ascii_to_GUI
- * @param   none
- * @brief   
  * @return  0 on successful transmission. 
  * @details transmits the Ascii msg to PBV 
  **********************************************************************************/
@@ -116,7 +115,6 @@ uint8_t PBV_CAN_Transmit_Ascii_to_GUI()
 /*********************************************************************************
  * @ingroup PBV_CAN 
  * @fn      PBV_CAN_Transmit_to_GUI
- * @param   none
  * @brief   transmits the numerical msg to PBV
  * @return  int
  * @details this function sends the message on CAN1 Transmit Queue. TODO: make this portable to other transmit queues. 
@@ -131,10 +129,9 @@ uint8_t PBV_CAN_Transmit_to_GUI()
 }
 /*********************************************************************************
  * @ingroup PBV_CAN 
- * @fn      PBV_CAN_Reniit
  * @param   PBV_Datatype_RX_t *
  * @brief   reinitializes the can object with new can id. 
- * @return  
+ * @return  void
  * @details This function is needed in CAN TX to reinit the CAN TX object with new parameters.
  **********************************************************************************/
 
@@ -259,10 +256,8 @@ void PBV_CAN_Reinit(PBV_Datatype_TX_t * ptr){
 
 /*********************************************************************************
  * @ingroup PBV_CAN 
- * @fn      PBV_CAN_Link_Data_TX
  * @param   PBV_Datatype_RX_t *
  * @brief   Links the data from TX PBV datatype to CAN TX object. 
- * @return  
  * @details This function links the data (uint_8 *) from the passing struct to the CAN object data (uint_8 *)
  **********************************************************************************/
 
@@ -275,7 +270,6 @@ void PBV_CAN_Link_Data_TX(PBV_Datatype_TX_t * ptr){
 
 /*********************************************************************************
  * @ingroup PBV_CAN 
- * @fn      PBV_CAN_Link_Data_RX
  * @param   PBV_Datatype_RX_t *
  * @brief   links the received data to the application data structure
  * @return  void

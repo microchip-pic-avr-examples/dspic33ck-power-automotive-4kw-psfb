@@ -1,24 +1,9 @@
-/*
-    (c) 2022 Microchip Technology Inc. and its subsidiaries. You may use this
-    software and any derivatives exclusively with Microchip products.
-
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-    WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-    PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION
-    WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION.
-
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-    BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-    FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-    ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-    THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-
-    MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
-    TERMS.
+/* 
+ * @file    app_PBV_UART.c
+ * @ingroup PBV_UART
+ * @brief   Power Board Visualizer UART interface 
  */
+
 //includes
 #include <stdint.h>
 #include <stdbool.h>
@@ -119,7 +104,6 @@
 
 /***********************************************************************************
  * @ingroup PBV_UART
- * @struct  UART_MSG_RX_OBJ
  * @brief   UART msg receive object. 
  **********************************************************************************/
 typedef struct UART_MSG_RX_OBJ
@@ -135,7 +119,6 @@ typedef struct UART_MSG_RX_OBJ
 
 /***********************************************************************************
  * @ingroup PBV_UART
- * @struct  UART_MSG_TX_OBJ
  * @brief   UART msg Transmit object. 
  **********************************************************************************/
 typedef struct UART_MSG_TX_OBJ
@@ -159,21 +142,18 @@ uint16_t PBV_Calculate_CRC(uint8_t *message, uint16_t length);
 
 /***********************************************************************************
  * @ingroup PBV_UART
- * @struct  PBV_UART_Object_TX
  * @brief   UART object for numeric tx
  **********************************************************************************/
 UART_MSG_TX_OBJ_t PBV_UART_Object_TX;
 
 /***********************************************************************************
  * @ingroup PBV_UART
- * @struct  PBV_UART_Object_RX
  * @brief   UART object for numeric rx
  **********************************************************************************/
 UART_MSG_RX_OBJ_t PBV_UART_Object_RX;
 
 /***********************************************************************************
  * @ingroup PBV_UART
- * @struct  PBV_UART_Object_ASCII
  * @brief   UART object for ascii tx
  **********************************************************************************/
 UART_MSG_TX_OBJ_t PBV_UART_Object_ASCII; //
@@ -184,7 +164,6 @@ UART_MSG_TX_OBJ_t PBV_UART_Object_ASCII; //
  * @param   PBV_Datatype_TX_t * - ptr to numerical data
  * @param   PBV_Datatype_TX_t * - ptr to ascii data
  * @param   PBV_Datatype_TX_t * - ptr to received data ( for completeness, not used now)
- * @brief   
  * @return  void
  * @details initializes UART objects with application objects. Also initializes uartActiveTx and uartActiveTxAscii
  **********************************************************************************/
@@ -210,7 +189,6 @@ void PBV_UART_Init(PBV_Datatype_TX_t * Board_To_PBV, PBV_Datatype_TX_t * Board_T
 /*********************************************************************************
  * @ingroup PBV_UART
  * @fn      PBV_UART_Receive_from_GUI
- * @param   none
  * @brief   implements the state machine for UART Frame receiving from PBV.
  * @return  int (1: ready to receive, 2: Receiving, 0: Received successfully, -1: CRC error)
  * @details implements the state machine for message RX. maintains internal state machine states as defined in RCV_<STATES>
@@ -340,10 +318,8 @@ uint8_t PBV_UART_Receive_from_GUI()
 }
 
 /*********************************************************************************
- * @ingroup  
+ * @ingroup PBV_UART 
  * @fn      PBV_UART_Transmit_Ascii_to_GUI
- * @param
- * @brief   
  * @return  int
  * @details implements the state machine for ascii  TX 
  **********************************************************************************/
@@ -425,10 +401,8 @@ uint8_t PBV_UART_Transmit_Ascii_to_GUI()
 }
 
 /*********************************************************************************
- * @ingroup  
+ * @ingroup  PBV_UART
  * @fn      PBV_UART_Transmit_to_GUI
- * @param
- * @brief   
  * @return  int
  * @details implements the state machine for numerical TX 
  **********************************************************************************/
@@ -512,9 +486,7 @@ uint8_t PBV_UART_Transmit_to_GUI()
 /*********************************************************************************
  * @ingroup PBV_UART
  * @fn      PBV_UART_Reniit
- * @param   
- * @brief   
- * @return  
+ * @param   PBV_Datatype_TX_t
  * @details reinitializes the UART object with new can id. 
  **********************************************************************************/
 

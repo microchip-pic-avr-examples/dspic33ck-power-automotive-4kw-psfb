@@ -122,7 +122,7 @@ void PwrCtrl_IComp_Initialize(void)
  * @ingroup pwrctrl-dcdt
  * @brief Data Object of current mode control
  * 
- * @details The 'IMC_2p2z' data object holds the control loop parameter of the 
+ * @details The 'IMC_3p3z' data object holds the control loop parameter of the 
  *  Current loop.
  *******************************************************************************/
 SMPS_3P3Z_T IMC_3p3z;

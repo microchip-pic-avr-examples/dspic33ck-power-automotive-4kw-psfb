@@ -1,28 +1,10 @@
-/*
-    (c) 2022 Microchip Technology Inc. and its subsidiaries. You may use this
-    software and any derivatives exclusively with Microchip products.
-
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
-    WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
-    PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION
-    WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION.
-
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
-    BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
-    FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
-    ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
-    THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-
-    MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
-    TERMS.
+/**
+ * @file    app_PBV_psfb_frame_map.h
+ * @brief   app PBV psfb Frame map file Example
+ * @author  M70027
+ * @ingroup app-pbv-psfb-map
  */
 
-// MCC header files
-
-// other header files
 #include "App_PBV_psfb_frame_map.h"
 
 #include "system/pins.h"
@@ -37,8 +19,7 @@
 #include "pwrctrl/pwrctrl_pwm.h"
 
 /*********************************************************************************
- * @ingroup pbv-protocol-ids
- * @
+ * @ingroup app-pbv-psfb-map
  * @brief   protocol ids defined. firmware id 0x1000 is fixed. the rest are arbitary
  **********************************************************************************/
 #define FIRMWARE_PROTOCOL_ID              0x1000          ///< Firmware ID
@@ -47,9 +28,9 @@
 #define PBV_GUI_SLIDERS                   0x203            ///< ID on which data is received Sliders. 
 #define PBV_SYSTEM_TO_GUI_ID              0x204             ///< ID on which data is sent
 #define PBV_LOG_ID                        0x300            ///< ID on which log data is sent. 
-/** @} */ // end of pbv-protocol-ids
 
-// static because these are private.
+
+// 
 
 static PBV_Datatype_TX_t App_PBV_psfb_TX;          ///< Application TX object
 static PBV_Datatype_RX_t App_PBV_psfb_RX;          ///< Application RX object
@@ -93,13 +74,13 @@ void App_PBV_psfb_Frame_Parser(uint16_t protocol_ID, uint16_t length, uint8_t * 
  **********************************************************************************/
 
 /***********************************************************************************
- * @ingroup app-pbv-public-function
- * @fn      App_PBV_psfb_Init
- * @param   void
- * @return  nothing
- * @brief   this function initializes the local pbv objects. these objects are then
+ * @ingroup app-pbv-psfb-map
+ * @return  void
+ * @brief   This function initializes the local pbv objects. these objects are then
  *          passed on to the app_PBV_init function to initialize the CAN/UART objects
  * @details
+ *          This function initializes the local pbv objects. these objects are then
+ *          passed on to the app_PBV_init function to initialize the CAN/UART objects.
  *          RX object just needs state change. 
  **********************************************************************************/
 void App_PBV_psfb_Init()
@@ -125,15 +106,11 @@ void App_PBV_psfb_Init()
 }
 
 /***********************************************************************************
- * @ingroup app-pbv-public-function
- * @fn      App_PBV_psfb_Task_10ms
- * @param   void
- * @return  nothing
+ * @ingroup app-pbv-psfb-map
+ * @return  void
  * @brief   this is high frequency task to simulate sending of high frequency numeric data.
  *          Also to check if there are any messages received, must be done at a high enough
  *          rate to ensure that the messages are not dropped.
- * @details
- *   
  **********************************************************************************/
 
 void App_PBV_psfb_Task_10ms(void)
@@ -157,14 +134,12 @@ void App_PBV_psfb_Task_10ms(void)
 }
 
 /***********************************************************************************
- * @ingroup app-pbv-public-function
- * @fn      App_PBV_psfb_Task_1s
- * @param   void
- * @return  nothing
- * @brief   this is a slow task simulating the low speed sending of ascii data
+ * @ingroup app-pbv-psfb-map
+ * @return  void
+ * @brief   1 second PBV task to be execution
+ * @details This is a slow task simulating the low speed sending of ascii data
  *           it sends the firmware id, and the switches to the log id.
- * @details
- *   
+ *  
  **********************************************************************************/
 void App_PBV_psfb_Task_1s(void)
 {
@@ -188,13 +163,11 @@ void App_PBV_psfb_Task_1s(void)
 }
 
 /***********************************************************************************
- * @ingroup app-pbv-public-function
+ * @ingroup app-pbv-psfb-map
  * @fn      App_PB_psfb_Get_TX_ASCII_ptr
  * @param   void
  * @return  PBV_Datatype_TX_t *
  * @brief   this function can be used to send log messages from other files.
- * @details
- *   
  **********************************************************************************/
 
 
@@ -209,13 +182,11 @@ PBV_Datatype_TX_t * App_PB_psfb_Get_TX_ASCII_ptr(void){
  **********************************************************************************/
 
 /***********************************************************************************
- * @ingroup pbv-private-function
+ * @ingroup app-pbv-psfb-map
  * @fn      App_PBV_psfb_Build_Frame
  * @param   void
  * @return  nothing
  * @brief   this builds frame
- * @details
- * @note
  **********************************************************************************/
 
 void App_PBV_psfb_Build_Frame()
@@ -271,13 +242,11 @@ void App_PBV_psfb_Build_Frame()
 
 
 /***********************************************************************************
- * @ingroup pbv-private-function
+ * @ingroup app-pbv-psfb-map
  * @fn      App_PBV_psfb_Process_Buttons
  * @param   void
  * @return  nothing
  * @brief   this processes buttons
- * @details
- * @note
  **********************************************************************************/
 void App_PBV_psfb_Process_Buttons(uint16_t * data) {
     uint16_t switchcase = data[0];
@@ -341,13 +310,11 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
 }
 
 /***********************************************************************************
- * @ingroup pbv-private-function
+ * @ingroup app-pbv-psfb-map
  * @fn      App_PBV_psfb_Process_Buttons
  * @param   void
  * @return  nothing
  * @brief   this processes sliders
- * @details
- * @note
  **********************************************************************************/
 void App_PBV_psfb_Process_Sliders(uint16_t * data) {
     uint16_t switchcase = data[0];
@@ -441,13 +408,12 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
     }
 }
 /***********************************************************************************
- * @ingroup pbv-private-function
+ * @ingroup app-pbv-psfb-map
  * @fn      App_PBV_psfb_Frame_Parser
  * @param   void
  * @return  nothing
  * @brief   default callback
- * @details
- * @note
+
  **********************************************************************************/
 void App_PBV_psfb_Frame_Parser(uint16_t protocol_ID, uint16_t length, uint8_t * data){
     PBV_Change_from_Eight_to_Sixteen(data, buffer_sixteen_rx, length);

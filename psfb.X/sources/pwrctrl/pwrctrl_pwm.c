@@ -16,13 +16,12 @@
 
 /*******************************************************************************
  * @ingroup pwrctrl-pwm
- * @brief  PWM distribution for DAB converter
- * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
+ * @brief  PWM distribution for PSFB converter
  * @return void
  * 
  * @details This function distributes the calculated control phase for the 
- *  half bridges of the DAB converter. PWM1 and PWM3 drives the primary half 
- *  bridges and PWM2 and PWM4 drives the secondary half bridges.
+ *  half bridges of the PSFB converter. PWM1 and PWM3 drives the primary half 
+ *  bridges and PWM2 and PWM4 drives the secondary rectifiers
  *********************************************************************************/
 void PwrCtrl_PWM_Update()
 {   
@@ -105,7 +104,6 @@ void PwrCtrl_PWM_Enable(void)
 /*******************************************************************************
  * @ingroup pwrctrl-pwm
  * @brief  Disable the PWM output
- * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
  * @return void
  * 
  * @details This function disable the physical PWM output by setting the override
@@ -139,6 +137,15 @@ void PwrCtrl_PWM_Disable(void)
     
 }
 
+
+/*******************************************************************************
+ * @ingroup pwrctrl-pwm
+ * @brief  Initialize the PWM peripheral
+ * @return void
+ * 
+ * @details This function configures additional parameters that are not configurable
+ * using MCC graphical interface
+ *********************************************************************************/
 void PwrCtrl_PWM_Initialize(void)
 {
     /*
@@ -218,25 +225,6 @@ void PwrCtrl_PWM_Initialize(void)
     PG2DC = (PG1PER - PG1TRIGC - PG2DTL);
     PG4DC = (PG1PER - PG1TRIGC - PG4DTL);
     
-    // Configure the PWM value distribution data structure
-//    PhaseShiftDistribution.PhaseShift = 0;  // Clear output value of phase shift
-//    PhaseShiftDistribution.ptrPhaseShift = &PG1TRIGC;
-//    PhaseShiftDistribution.ptrPeriod = &PG1PER;
-//    PhaseShiftDistribution.ptrDCSRL = &PG4DC;
-//    PhaseShiftDistribution.ptrDCSRR = &PG2DC;
-//    PhaseShiftDistribution.ptrUpdateReg = &PG1STAT;
-    
-//    psfb_ptr->PhaseShiftDistribution.PhaseShift = 0;  // Clear output value of phase shift
-//    psfb_ptr->PhaseShiftDistribution.ptrPhaseShift = &PG1TRIGC;
-//    psfb_ptr->PhaseShiftDistribution.ptrPeriod = &PG1PER;
-//    psfb_ptr->PhaseShiftDistribution.ptrDCSRL = &PG4DC;
-//    psfb_ptr->PhaseShiftDistribution.ptrDCSRR = &PG2DC;
-//    psfb_ptr->PhaseShiftDistribution.ptrUpdateReg = &PG1STAT;
-
-    // pwm1 enable interrupt.
-    // hook the ControlLoop_Interrupt_CallBack to pwm ISR
-    // disable the SCCP timer.
-    
 }
 
 
@@ -275,6 +263,17 @@ void PwrCtrl_PWM_SetDutyCyclePrimary(uint16_t dutycycle){
     PWM_TriggerBCompareValueSet(PWM_PRI_1, phaseValue>>1);
     PWM_SoftwareUpdateRequest(PWM_PRI_1);   
 }
+
+
+/*******************************************************************************
+ * @ingroup pwrctrl-pwm
+ * @brief  set the PWM output to particular duty cycle. 
+ * @param void
+ * @return void
+ * 
+ * @details This function independently controls the Secondary rectifiers
+ * by checking agains the CCM DCM conditions
+ *********************************************************************************/
 
 void PwrCtrl_PWM_UpdateSecondaryRectifiers (void) {
     if (psfb_ptr->SecRec.SR_Enabled == 0){

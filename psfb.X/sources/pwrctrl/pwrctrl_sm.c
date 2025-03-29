@@ -152,8 +152,6 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
 
         pcInstance->State = PWRCTRL_STATE_PRECHARGE;
 
-        //  float temp = (float)39100 / (float)(Dev_PwrCtrl_GetAdc_Vpri() - 205);
-        //  pcInstance->Precharge.maxDutyCycle = (uint16_t)temp >> 4 ; 
 
         FAULT_EN_SetHigh();
     }

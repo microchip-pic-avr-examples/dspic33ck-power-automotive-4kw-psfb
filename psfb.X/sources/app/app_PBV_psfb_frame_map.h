@@ -23,7 +23,7 @@
  * @file    app_PBV_psfb_frame_map.h
  * @brief   app PBV psfb Frame map file Example
  * @author  M70027
- * @date    15/02/2024
+ * @ingroup app-pbv-psfb-map
  */
 // This is a guard condition so that contents of this file are not included
 // more than once.  

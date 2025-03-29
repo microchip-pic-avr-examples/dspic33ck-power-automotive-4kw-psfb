@@ -140,39 +140,7 @@ static void PwrCtrl_StartUpInitialize(void)
     psfb.IRamp.Delay = 60;
     psfb.IRamp.Counter = 0;
     psfb.IRamp.RampComplete = 0;
-    
-    // //Initialize Power ramp-up settings
-    // psfb.PRamp.ptrReference = (uint16_t*)&psfb.PLoop.Reference;
-    // psfb.PRamp.ptrReferenceTarget = &psfb.Properties.PwrReference;
-    // psfb.PRamp.StepSize = 1;
-    // psfb.PRamp.Delay = 4;
-    // psfb.PRamp.Counter = 0;
-    // psfb.PRamp.RampComplete = 0;
-    
-    #if defined (OPEN_LOOP_PBV) && (OPEN_LOOP_PBV == true)
-    // The PWM Period bits [2:0] needs to be mask when using cascaded PWM setup 
-    // (please refer to Section 4.1.3.3 in High Resolution PWM FRM)
-    uint16_t PeriodMask = 0x7; 
-    
-    // Initialize Voltage ramp-up settings for Period control
-    psfb.Pwm.ControlPeriod = psfb.Pwm.ControlPeriod & ~(PeriodMask);
-    psfb.Pwm.PBVPeriodTarget = psfb.Pwm.PBVPeriodTarget & ~(PeriodMask);
-    
-    psfb.VRamp.ptrReference = &psfb.Pwm.ControlPeriod;
-    psfb.VRamp.ptrReferenceTarget = &psfb.Pwm.PBVPeriodTarget;
-    psfb.VRamp.StepSize = 0xE;
-    psfb.VRamp.Delay = 0;
-    
-    //Initialize Current ramp-up settings for Phase control
-    psfb.Pwm.ControlPhase = psfb.Pwm.ControlPhase & ~(PeriodMask);
-    psfb.Pwm.PBVControlPhaseTarget = psfb.Pwm.PBVControlPhaseTarget & ~(PeriodMask);
-    
-    psfb.IRamp.ptrReference = &psfb.Pwm.ControlPhase;
-    psfb.IRamp.ptrReferenceTarget = &psfb.Pwm.PBVControlPhaseTarget;
-    psfb.IRamp.StepSize = 0xE;
-    psfb.IRamp.Delay = 0;
-    
-#endif
+       
 }
 
 

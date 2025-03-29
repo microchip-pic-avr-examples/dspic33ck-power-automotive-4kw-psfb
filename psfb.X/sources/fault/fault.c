@@ -66,7 +66,6 @@
 
 
 // PRIVATE FUNCTIONS
-static void Fault_EnableShortCircuitProtection(void);
 static void Fault_PrimaryOverCurrent_EventHandler(void);
 bool loadDisconnect = false;
 
@@ -274,57 +273,17 @@ void Fault_Reset(void)
     psfb_ptr->Status.bits.FaultActive = 0;
 }
 
-/*******************************************************************************
- * @ingroup fault
- * @brief   Enable Short circuit hardware protection
- * @return void
- * 
- * @details This function setup the short circuit protection threshold and
- *  turns on the DAC (Digital-to-Analog) module. This hardware protection use
- *  Comparator DACs to detect short circuit.   
- *********************************************************************************/
-static void Fault_EnableShortCircuitProtection(void)
-{
-//  // on dsPIC33CK DP-PIM:
-//  // CMP1B used for short circuit protection on the secondary side 
-//  // CMP3B used for short circuit protection on the primary side
-//
-//  // initialize thresholds of comparators used for short circuit protection
-//  CMP_ISEC_SC_DACDataWrite(ISEC_SC_THRES_TRIG);   
-//  CMP_IPRI_SC_DACDataWrite(IPRI_SC_THRES_TRIG);   
-//  
-//  // turn on comparator DACs 
-//  CMP_IPRI_SC_DACEnable();
-//  CMP_ISEC_SC_DACEnable();
-  
-}
+
 
 /*******************************************************************************
  * @ingroup fault
- * @brief   Fault evaluation for Temperature and other slow fault detection 
- *  executed every 100ms
+ * @brief   callback for primary OC
  * @return void
  * 
- * @details This function checks if the board temperature is within the nominal
- *  operating range. When value exceeds the limit, the power control
- *  can trip or perform temperature derating for temperature fault. 
+ * @details This function evaluates if any of the fault objects has been tripped. 
+ *  When fault detection occurs, the power converter will shutdown thus turn-off
+ *  the power converter. 
  *********************************************************************************/
-void Fault_Execute_100ms(void) 
-{
-    #if defined (FAULT_PS_OTP) && (FAULT_PS_OTP ==  true)
-    if(FAULT_CheckMin(&psfb_ptr->Fault.Object.PowerSupplyOTP, psfb_ptr->Data.Temperature, &Fault_Handler))
-    {
-       devTempData.OverTemperatureFlag = 1; //for over temperature
-       psfb_ptr->Status.bits.FaultActive = 1;
-    }
-    else
-    {
-        devTempData.OverTemperatureFlag = 0; //for over temperature
-        psfb_ptr->Status.bits.FaultActive = 0;
-    }
-    #endif
-}
-
 
 void Fault_PrimaryOverCurrent_EventHandler(){
             //Fault_Handler();

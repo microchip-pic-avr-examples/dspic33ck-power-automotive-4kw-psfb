@@ -17,15 +17,15 @@
 //=======================================================================================================
 // @file os_scheduler_100us.c
 //
-// @brief contains the 100µs scheduler that calls all the tasks that need to be called regularly
+// @brief contains the 100ï¿½s scheduler that calls all the tasks that need to be called regularly
 //        two different timing priorities are available:
-//          1. 100µs and 1ms Tasks called from the scheduler interrupt
-//              the jitter that you will have in the 100µs realtime tasks called by the interrupt depends
+//          1. 100ï¿½s and 1ms Tasks called from the scheduler interrupt
+//              the jitter that you will have in the 100ï¿½s realtime tasks called by the interrupt depends
 //              on other interrupts that have a higher interrupt priority
 //              the jitter that you will have in the 1ms realtime tasks called by the interrupt depends
 //              on other interrupts that have a higher interrupt priority amd by the duration of the
-//              100µs realtime task
-//          2. 100µs, 1ms, 10ms, 100ms, 1s Tasks called from the main loop
+//              100ï¿½s realtime task
+//          2. 100ï¿½s, 1ms, 10ms, 100ms, 1s Tasks called from the main loop
 //              these tasks are for soft realtime and not for hard realtime
 //              so in average they are called with the required timing but the jitter can be very huge,
 //              depending on the calls before.
@@ -79,12 +79,12 @@ void TMR1_CallBack(void);
 //                              choose wisely between real-time and non-realtime!
 //
 //  Interrupt Realtime Functions:
-//  Tasks_Realtime_100us:   is called by the 100µs interrupt    - for time critical low jitter stuff
+//  Tasks_Realtime_100us:   is called by the 100ï¿½s interrupt    - for time critical low jitter stuff
 //  Tasks_Realtime_1ms  :   is called by the interrupt every ms - for time critical low jitter stuff
 //
 //
 //  Mainloop Non-Realtime Functions:
-//  Tasks_100us         :   function is called by the main loop in average every 100µs
+//  Tasks_100us         :   function is called by the main loop in average every 100ï¿½s
 //  Tasks_1ms           :   function is called by the main loop in average every 1ms
 //  Tasks_10ms          :   function is called by the main loop in average every 10ms
 //  Tasks_100ms         :   function is called by the main loop in average every 100ms
@@ -136,8 +136,10 @@ static inline void OS_Scheduler_Init_Timer1_100us(void)
 #endif
 
 //=======================================================================================================
+/**  @ingroup sched-layer
 //  @brief  Initializes Scheduler
 //  @note   call this function in your main routine before calling the RunForever function
+*/
 //=======================================================================================================
 void OS_Scheduler_Init(void)
 {
@@ -155,9 +157,11 @@ void OS_Scheduler_Init(void)
 
 
 //=======================================================================================================
-//  @brief  Timer 1 interrupt routine for generating the 100µs timing for the scheduler
+/**  @ingroup sched-layer
+//  @brief  Timer 1 interrupt routine for generating the 100ï¿½s timing for the scheduler
 //  @note   with this simple implementation we do not lose any tick from the timer, even when the tasks
-//          in the main loop take longer than 100µs
+//          in the main loop take longer than 100ï¿½s
+*/
 //=======================================================================================================
 #if OS_USE_MCC_TIMER1 == 1
 /* TMR1_CallBack is a weak linked function in the tmr1.c */
@@ -186,10 +190,12 @@ void __attribute__((__interrupt__,no_auto_psv)) _T1Interrupt(void)
 
 
 //=======================================================================================================
+/**  @ingroup sched-layer
 //  @brief  Scheduler function for calling all the Tasks regularly ( 100us, 1ms, 10ms, 100ms, 1s )
 //  @note   call this function as last function in main.c after calling the Init-function
 //          please consider that the timing of the calls are dependent on the duration of the last call
 //          the resulting jitter therefore depends on the timing of the calls before
+*/
 //=======================================================================================================
 /* OS_Scheduler_RunOnce() is not called in this application, but is 
  available to do so */
@@ -206,7 +212,7 @@ void OS_Scheduler_RunOnce(void)
     if (scheduler_interrupt_follower_100us != scheduler_interrupt_leader_100us)
     {
         scheduler_interrupt_follower_100us += 1U;
-        Tasks_100us();                              //call 100µs tasks
+        Tasks_100us();                              //call 100ï¿½s tasks
         scheduler_1ms_timer += 1U;
         if (scheduler_1ms_timer >= 10U)
         {
@@ -243,10 +249,12 @@ void OS_Scheduler_RunOnce(void)
 
 
 //=======================================================================================================
+/**  @ingroup sched-layer
 //  @brief  Scheduler function for calling all the Tasks regularly ( 100us, 1ms, 10ms, 100ms, 1s )
 //  @note   call this function as last function in main.c after calling the Init-function
 //          please consider that the timing of the calls are dependent on the duration of the last call
 //          the resulting jitter therefore depends on the timing of the calls before
+*/
 //=======================================================================================================
 void OS_Scheduler_RunForever(void)
 {

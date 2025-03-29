@@ -60,10 +60,6 @@ AVERAGING_t iSecAveraging;
 AVERAGING_t vCapAveraging;
 
 
-// STATIC VARIABLES and FUNCTIONS
-static void PwrCtrl_AdaptiveGainUpdate(void);
-static bool VLoopInterleaveExec = true;
-
 /*******************************************************************************
  * @ingroup pwrctrl-isr
  * @brief  This function updates the DAB data members with ADC raw values
@@ -189,44 +185,4 @@ void PwrCtrl_ControlLoopExecute(void)
     }
 }
 
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief Updates the Adaptive gain for the power converter control loop 
- * @return void
- * 
- * @details AGC is a specific method for tuning the overall feedback loop gain 
- * during runtime. This function handles the calculation of the gain at a particular 
- * input voltage. AGC is active when it is above the minimum AGC input voltage.
- *********************************************************************************/
-static void PwrCtrl_AdaptiveGainUpdate(void)
-{
-
-}
-
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief  This function updates the DAB data members with phase values normalized 
- *  in degree
- * @return void
- * 
- * @details This function updates the DAB data members with phase values normalized 
- * in degree. The calculated phase is scaled by 10x to have better phase resolution.
- *********************************************************************************/
-void PwrCtrl_PrimToSecPHDegree(void)
-{
-
-}
-
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief  This function updates the DAB data members dead time based on load. 
- * @return void
- * 
- * @details This function updates the DAB data members dead time based on load. 
- * The phase and dead-time in this function is based on the actual board test.
- *********************************************************************************/
-void PwrCtrl_DeadTimeAdjust(void)
-{
-
-}
 
