@@ -260,28 +260,12 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             psfb_ptr->Precharge.PrechargeEnabled = 0;
             //FAULT_EN_SetLow();
             break;
-        case 0x0101:
-            button_start_sync = 1;
-//            PG2CONLbits.ON = 1;
-//            PG4CONLbits.ON = 1;
-            PG4IOCONLbits.OVRENL = 0;
-            PG2IOCONLbits.OVRENL = 0;
-            break;
-        case 0x0100:
-            button_start_sync = 0;
-            PG4IOCONLbits.OVRENL = 1;
-            PG2IOCONLbits.OVRENL = 1;
-//            PG2CONLbits.ON = 0;
-//            PG4CONLbits.ON = 0;
-            break;
+
         case 0xaa00:
 //            Dev_Reset_Average_Buffer();
             Fault_Reset();
             break;
-//        case 0xFFFF:
-//            button_random_action ^= 1;
-////            dev_fan_data_ptr->override_flag  ^= 1;
-////            break;
+
         case 0x00aa:
             //FAULT_EN_SetHigh();
             // charge_en = 1;
@@ -295,14 +279,6 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             // charge_en = 0;
             break;
             
-        case 0xFFFF:
-
-            psfb_ptr->ILoop.Enable = 1;
-            break;
-        
-        case 0xFF00:
-            psfb_ptr->ILoop.Enable = 0;
-            break;
         default:
             break;
     }
@@ -331,23 +307,7 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
                 break;
             else {
                 slider_PS_PP = data[1];
-//            PWM_DutyCycleSet(4, PG4PER - (data[1] * 112));
-//            PWM_TriggerACompareValueSet(1, data[1] * 112);
-//            PwrCtrl_SetPhaseTarget(data[1] * 112);
 
-            // AR-241126: Extended above timing computation and update in 
-            //            accordance with new PWM daisy chain configuration
-            /*
-            PWM_TriggerCCompareValueSet(1, data[1] * 112);
-            PWM_DutyCycleSet(4, PG4PER - (data[1] * 112));
-            PWM_DutyCycleSet(2, PG2PER - (data[1] * 112));
-            PwrCtrl_SetPhaseTarget(data[1] * 112);
-            */
-            
-            //GPIO_debug_SetHigh();
-            //psfb_ptr->PhaseShiftDistribution.PhaseShift = (data[1] * 112);
-//            GPIO_debug_SetLow();
-            //PwrCtrl_SetPhaseTarget(data[1] * 112);
             PwrCtrl_SetPhaseTarget(data[1]);
             //PWM_TriggerCCompareValueSet(1, data[1] * 56);
             //GPIO_Debug_high();
