@@ -16,10 +16,6 @@
 //extern POWER_CONTROL_t psfb;
 extern POWER_CONTROL_t * psfb_ptr;
 
-extern AVERAGING_t vPrimAveraging;
-extern AVERAGING_t vOutAveraging;
-extern AVERAGING_t iSecAveraging;
-
 void PwrCtrl_Initialize(void);
 void PwrCtrl_Execute(void);
 void Dev_PwrCtrl_Suspend(void);

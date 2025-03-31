@@ -24,41 +24,6 @@
 #include "dcdt/pwrctrl_dcdt.h"
 
 
-    
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief Data Object of primary voltage averaging
- * 
- * @details The 'VprimAveraging' data object holds the averaging parameter of the 
- *  Primary Voltage.
- *******************************************************************************/
-AVERAGING_t vPrimAveraging;
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief Data Object of secondary voltage averaging
- * 
- * @details The 'vOutAveraging' data object holds the averaging parameter of the 
- *  Secondary Voltage.
- *******************************************************************************/
-AVERAGING_t vOutAveraging;
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief Data Object of secondary current averaging
- * 
- * @details The 'IsecAveraging' data object holds the averaging parameter of the 
- *  Secondary Current.
- *******************************************************************************/
-AVERAGING_t iSecAveraging;
-
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief Data Object of secondary voltage averaging
- * 
- * @details The 'VcapAveraging' data object holds the averaging parameter of the 
- *  Secondary Voltage.
- *******************************************************************************/
-AVERAGING_t vCapAveraging;
-
 
 /*******************************************************************************
  * @ingroup pwrctrl-isr
@@ -110,29 +75,6 @@ void PwrCtrl_UpdateADConverterData (void)
 //    }
 }
 
-/*******************************************************************************
- * @ingroup pwrctrl-isr
- * @brief  This function prepares the data for control loop and selects which 
- *  control loop will be executed. 
- * @return void
- * 
- * @details This function prepares the data for Voltage loop control and Power
- *  loop control.
- *********************************************************************************/
-void PwrCtrl_PrepareData(void)
-{
-//    vPrimAveraging.AverageValue = (uint16_t)(__builtin_divud(vPrimAveraging.Accumulator, vPrimAveraging.Counter));
-//    vPrimAveraging.Accumulator = 0;
-//    vPrimAveraging.Counter = 0;
-//
-//    iSecAveraging.AverageValue = (uint16_t)(__builtin_divud(iSecAveraging.Accumulator, iSecAveraging.Counter));
-//    iSecAveraging.Accumulator = 0;
-//    iSecAveraging.Counter = 0;
-//
-//    vOutAveraging.AverageValue = (uint16_t)(__builtin_divud(vOutAveraging.Accumulator, vOutAveraging.Counter));
-//    vOutAveraging.Accumulator = 0;
-//    vOutAveraging.Counter = 0;         
-}   
 
 /*******************************************************************************
  * @ingroup pwrctrl-isr

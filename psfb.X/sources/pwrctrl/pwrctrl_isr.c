@@ -36,8 +36,6 @@ void PwrCtrl_ControlLoopExecute(void);
  *********************************************************************************/
 void ControlLoop_Interrupt_CallBack(void)
 {      
-    
     PwrCtrl_ControlLoopExecute();
-        
-    
+
 }
