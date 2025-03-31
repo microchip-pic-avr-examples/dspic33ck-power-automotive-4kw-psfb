@@ -62,11 +62,11 @@ AVERAGING_t vCapAveraging;
 
 /*******************************************************************************
  * @ingroup pwrctrl-isr
- * @brief  This function updates the DAB data members with ADC raw values
+ * @brief  This function updates the PSFB data members with ADC raw values
  * @return void
  * 
  * @details This function is called every 100KHz and triggers the ADC module. This
- *  also handles the updating of DAB data members with its latest ADC raw values
+ *  also handles the updating of PSFB data members with its latest ADC raw values
  *  and collection of data for averaging.
  *********************************************************************************/
 void PwrCtrl_UpdateADConverterData (void)
@@ -78,7 +78,7 @@ void PwrCtrl_UpdateADConverterData (void)
         psfb_ptr->Data.ISenseSecondary = ADC1_ConversionResultGet(I_SEC_AVG_FILT);  */
     
 /*     if(ADC1_IsConversionComplete(IPRI_CT))
-        dab.Data.ISensePrimary = ADC1_ConversionResultGet(IPRI_CT);    */
+        psfb_ptr->Data.ISensePrimary = ADC1_ConversionResultGet(IPRI_CT);    */
     
     if(ADC1_IsConversionComplete(FB_5V)){
         psfb_ptr->Data.VRail_5V = ADC1_ConversionResultGet(FB_5V); 

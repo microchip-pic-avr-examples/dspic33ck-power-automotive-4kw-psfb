@@ -35,10 +35,10 @@ The table lists all the analog channels of the PSFB converter
 |     1       |     FB_P_CT_FILT      |     Dedicated Core 0 Conversion Time: 328ns                                                                   |     Primary Current.   Sensed through a CT.     |     Sampled during half   of the Duty Cycle.    |     Sampled Cycle by   Cycle, 100kHz    |
 |     2       |     I_SEC_AVG_FILT    |    Dedicated Core 1 Conversion Time: 328ns                                                                    |     Output Current.   Sensed through Shunt.     |     Sampled during half   of the Duty Cycle.    |     Sampled Cycle by   Cycle, 100kHz    |
 |     3       |     FB_VOUT           |     Shared Core    Channel 2    Conversion Time: 470ns                                                        |     Output Voltage    Shared Core, Channel 2    |     Sampled during half   of the Duty Cycle     |     Sampled Cycle by   Cycle, 100kHz    |
-|     4       |     VIN_INT_AN        |     Shared Core    Channel 10    Conversion Time: 670ns     (value available after 670ns after triggering)    |     Input Voltage                               |     Free Running                                |     Sampled Cycle by   Cycle, 100kHz    |
-| 5           | FB_VCAP               |     Shared Core    Channel 9    Conversion Time: 470ns     (value available after 470ns after triggering)      | Output Capacitor Voltage                        | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
-| 5           | FP_TEMP               |     Shared Core    Channel 14    Conversion Time: 900ns     (value available after 900ns after triggering)      | Temperature Sensor                              | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
-| 6           | FB_5V                 |     Shared Core    Channel   19  Conversion Time: 1400ns     (value available after 1388ns after triggering)      | 5 Volt Rail                                     | Free Running                                    | Sampled Cycle by Cycle, 100khz          |
+|     4       |     VIN_INT_AN        |     Shared Core    Channel 10    Conversion Time: 670ns     (value available after 670ns after triggering)    |     Input Voltage                               |     Software Trigger                                |     Sampled Cycle by   Cycle, 100kHz    |
+| 5           | FB_VCAP               |     Shared Core    Channel 9    Conversion Time: 470ns     (value available after 470ns after triggering)      | Output Capacitor Voltage                        | Software Trigger                                    | Sampled Cycle by Cycle, 100khz          |
+| 5           | FP_TEMP               |     Shared Core    Channel 14    Conversion Time: 900ns     (value available after 900ns after triggering)      | Temperature Sensor                              | Software Trigger                                    | Sampled Cycle by Cycle, 100khz          |
+| 6           | FB_5V                 |     Shared Core    Channel   19  Conversion Time: 1400ns     (value available after 1388ns after triggering)      | 5 Volt Rail                                     | Software Trigger                                    | Sampled Cycle by Cycle, 100khz          |
 
 #### Sensor calibration at startup
 
@@ -50,7 +50,7 @@ In phase shifted design, the power transfer happens by the phase shift between t
 The control signal directed to the power stage is determined by the phase shift value between the fixed and phase-shifted legs. The primary side switches are actuated using the High-Resolution Pulse Width Modulation (PWM) with fine edge placement peripheral of the dsPIC33CK microcontroller. This peripheral is exceptionally versatile, facilitating the execution of intricate modulation schemes autonomously within the controller's core-independent peripheral. During phase-shifted operation, the phase-shifted leg is synchronized with the fixed leg. A delay or phase shift is introduced to generate a bipolar voltage at the transformer, utilizing a highly adaptable trigger mechanismThis phase-shift is the control output from the compensator to the power stage.  For more details on the workings of the PWM Peripheral, refer to the PWM Family Reference Manual.
 The Trigger mechanisms are summarized in the table below.
 
-|      PWM Generator Number    |                                     Details                                    |                           Function                          |                        Start of Cycle Trigger                       |                                  Mechanism                                |
+|      PWM Generator Number    |                                     Details                                    |                           Function                          |                        Start of Cycle Trigger                       |                                  Peripheral Setting                                |
 |:----------------------------:|:------------------------------------------------------------------------------:|:-----------------------------------------------------------:|:-------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
 |     PWM Generator 1 (PG1)    |     Complimentary PWM at 100Khz    at 50% Duty Cycle                           |     Generating Signals for the Fixed Leg of PSFB            |     Self-Running                                                    |     PG1 End of Cycle                                                      |
 |     PWM Generator 3 (PG3)    |     Complimentary PWM at 100Khz    at 50% Duty Cycle                           |     Generating Signals for the Phase Shifted Leg of PSFB    |     Phase Delayed and Synchronized to PG1                           |     Trigger Value from PG1                                                |
@@ -99,7 +99,26 @@ Digital implementation of type 3 Analog controller
 </p>
 
 #### DCDT SMPS Control Library
-The Analog controllers of two poles two zeros, and three poles three zeros are implemented in the digital domain by transforming the compensator transfer function from the s-domain to the z-domain. The Digital Compensator Design Tool (DCDT), a complimentary plugin available within the MPLAB X Integrated Development Environment (IDE), is employed to determine the digital compensator coefficients. Based on the locations of the poles and zeros, the coefficients for the z-domain equation are computed. These coefficients are utilized within the Switched-Mode Power Supply (SMPS) control library, which is also provided free of charge by Microchip. The SMPS control library offers efficient and high-speed assembly libraries to facilitate the updating of control loops. For more information on DCDT refer to the DCDT’s webapage.
+The Analog controllers of two poles two zeros, and three poles three zeros are implemented in the digital domain by transforming the compensator transfer function from the s-domain to the z-domain. 
+
+The Digital Compensator Design Tool (DCDT), a complimentary plugin available within the MPLAB X Integrated Development Environment (IDE), is employed to determine the digital compensator coefficients by entering the location of Poles and Zeros in frequence domain. Based on the locations of the poles and zeros, the coefficients for the z-domain equation are computed. 
+
+These coefficients are utilized within the Switched-Mode Power Supply (SMPS) control library, which is also provided free of charge by Microchip. The SMPS control library offers efficient and high-speed assembly libraries to facilitate the updating of control loops. For more information on DCDT refer to the [DCDT’s webapage.](https://www.microchip.com/en-us/development-tool/dcdt)
+
+<p><center><a target="_blank" rel="nofollow" href="images/DCDT.png">
+<p>
+<img src="images/DCDT.png" alt="4kw Control" width="800">
+</a>
+</center>
+</p>
+
+<p>
+<center>
+<a target="_blank" rel="nofollow">
+Digital Compensator Design Tool
+</a>
+</center>
+</p>
 
 #### Voltage Loop
 A fundamental approach to regulating the output voltage involves the implementation of a voltage loop. This voltage loop continuously monitors the output voltage for any deviations and compensates for these fluctuations by adjusting the duty cycle applied to the plant. However, relying solely on the voltage loop is often insufficient due to its inherently slow response time. Additionally, the voltage loop lacks the capability for cycle-by-cycle current control, which is critical for maintaining precise and stable operation. A cascaded approach is essential that employes both a current loop and a voltage loop.
@@ -149,8 +168,11 @@ The PSFB has an isolated CAN-FD interface. The design is intended to work with P
 #### Peripheral Used: Controller Area Network (CAN FD) Module
 dsPIC33CK comes with a highly versatile CAN FD module. The transmission and receiving of messages are taken care of by the peripheral.
 
+The complete information about the CAN-FD messages can be seen by clicking the info tab of the PBV Project.
+
 ### House Keeping
 The system monitors additionally the five-volt line, as well as the system temperature. Overtemperature, or a dip in five-volt line will also generate a fault condition.
+
 ## Implementation
 
 ### Firmware Architecture
@@ -191,9 +213,30 @@ Power Supply State Machine
 </center>
 </p>
 
+##### PCS_INIT
+Initial State of the power converter. In this state the sensor offsets are measured, and the system transtions for PCS_PRECHARGE State
+
+##### PCS_PRECHARGE
+Next State of the power converter. here the converter waits for the Start Precharge command from PBV. After the Precharge, it stays in this state, and waits for the Start Power Transfer command from the PBV.
+
+##### PCS_STANDBY
+In this state all the controllers are Initialized. And then the control of the switches is handed over to Control loops, and the SR control is handed over to DCM/CCM monitor
+
+##### PCS_SOFTSTART
+In this state, the Voltage reference to the loop is ramped up and down.
+
+##### PCS_UP_AND_RUNNING
+In this state, the controller maintains the output voltage to the setpoint from Power Board Visualizer. In case the user changes the voltage reference from PBV using the voltage reference slider, the refernce is incremently/decremently applied to the voltage loop in the PCS_SOFTSTART state.
+
+##### PCS_FAULT
+In any fault condition, the primary side switches are turned off. The output current is allowed to dissipate, and then the Secondary Rectifiers are turned off. The system is taken out of Fault condition by clicking the Fault Reset button on PBV. Note that if the conditions for fault exist, then the system will immediately jump back into fault state.
 
 #### Interupt Based Control Update
-In parallel to this, an interrupt is generated synchronized with the fixed leg PWM signal. Here all the analog values are updated and are analyzed for fault conditions. The control loops are called every cycle, and the new values for the Phase shift are calculated.
+In parallel to Statemachine, an interrupt is generated synchronized with the fixed leg PWM signal. Here all the analog values are updated. These are triggerd as described above. Based on these values faults are monitored, and control loop's feedbacks are updated, and new control loops output values are used to update the PWM Duty Cycles.
+
+The secondary side current read here is also responisble to determine the CCM/DCM conditions. The Secondary Rectifiers are switched on and off based on the output current.
+
+
 
 <p><center><a target="_blank" rel="nofollow" href="images/int.png">
 <p>
@@ -227,11 +270,15 @@ Interrupt Latency
 </p>
 
 
-### Peripheral Initalization
+### Peripheral Initalization and Device Drivers
 
 #### Microchip Code Configurator
 Microchip Code Configurator (MCC) is a user-friendly software tool designed to simplify the development process for embedded applications. It offers a graphical interface that allows developers to easily configure and generate initialization and application code for Microchip's 8-bit, 16-bit, and 32-bit microcontrollers. By automating the setup of peripherals and libraries, MCC enables developers to concentrate on creating their application logic, reducing development time and effort. 
 MCC is used to configure all the peripherals of the dsPIC33CK for this project. 
+
+MCC comes bundled together with MPLAB X Ide. To visualize the periphreal settings for this projects please click on MCC icon from the toolbar of MPLAB X Ide, once the project has been opened.
+
+
 
 ---
 

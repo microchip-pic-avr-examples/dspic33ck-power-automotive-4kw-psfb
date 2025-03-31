@@ -2,7 +2,7 @@
 /**
  * @file      pwrctrl_pwm.c
  * @ingroup   pwrctrl-pwm   
- * @brief     Contains DAB control phase calculation between primary and 
+ * @brief     Contains PSFB control phase calculation between primary and 
  *  secondary, and the PWM distribution.
  */
 
