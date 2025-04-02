@@ -217,21 +217,21 @@ typedef struct SEC_REC_s SEC_REC_t;
  ***********************************************************************************/
 struct POWER_CONTROL_s
 {
-    STATUS_FLAGS_t      Status; ///< Power Supply status flags
-    PWR_CTRL_STATE_t    State;  ///< Power Control State ID
+    STATUS_FLAGS_t      Status;     ///< Power Supply status flags
+    PWR_CTRL_STATE_t    State;      ///< Power Control State ID
     PWR_CTRL_PROPERTIES_t Properties;    ///< Power Control properties  
-    SWITCH_NODE_t       Pwm;    ///< Switch node settings
-    FEEDBACK_SETTINGS_t Data;   ///< Feedback channel settings
-    FAULT_SETTINGS_t    Fault;  ///< Fault flags and settings 
-    START_UP_RAMP_t     IRamp;  ///< Current ramp-up settings
-    START_UP_RAMP_t     VRamp;  ///< Voltage ramp-up settings
-    START_UP_RAMP_t     PRamp;  ///< Power ramp-up settings
-    START_UP_RAMP_t     PhRamp;  ///< Phase ramp-up settings (for open loop)
-    CONTROLLER_t        ILoop;  ///< structure for current controller data
-    CONTROLLER_t        VLoop;  ///< structure for voltage controller data
-    CONTROLLER_t        PLoop;  ///< structure for power controller data
-    PRECHARGE_t         Precharge;
-    SEC_REC_t           SecRec;
+    SWITCH_NODE_t       Pwm;        ///< Switch node settings
+    FEEDBACK_SETTINGS_t Data;       ///< Feedback channel settings
+    FAULT_SETTINGS_t    Fault;      ///< Fault flags and settings 
+    START_UP_RAMP_t     IRamp;      ///< Current ramp-up settings
+    START_UP_RAMP_t     VRamp;      ///< Voltage ramp-up settings
+    START_UP_RAMP_t     PRamp;      ///< Power ramp-up settings
+    START_UP_RAMP_t     PhRamp;     ///< Phase ramp-up settings (for open loop)
+    CONTROLLER_t        ILoop;      ///< structure for current controller data
+    CONTROLLER_t        VLoop;      ///< structure for voltage controller data
+    CONTROLLER_t        PLoop;      ///< structure for power controller data
+    PRECHARGE_t         Precharge;  ///< structure for precharge data
+    SEC_REC_t           SecRec;     ///< structure for secondary rectification data
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 

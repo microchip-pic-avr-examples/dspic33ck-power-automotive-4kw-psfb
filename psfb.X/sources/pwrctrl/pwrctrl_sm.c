@@ -57,10 +57,9 @@ static void PCS_PRECHARGE_handler(POWER_CONTROL_t* pcInstance);
  * @brief  Manages the power control state machine
  * @param  pcInstance  Pointer to a power control data object of type POWER_CONTROL_t
  * @return void
- * 
- * @details This function manages the state machine of the converter. There are
-
- * 
+ * @details This function manages the state machine of the converter. This is called
+ * every every 100us. The events on which the state machine changes states are either 
+ * updated from Power Board Visualizer, or from the controller interrupt.
  *********************************************************************************/
 void PwrCtrl_StateMachine(POWER_CONTROL_t* pcInstance)
 { 

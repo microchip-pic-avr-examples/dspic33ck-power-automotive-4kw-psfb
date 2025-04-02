@@ -48,7 +48,6 @@ __Target Device Documentation__
 __Please always check for the latest data sheets on the respective product websites:__
 
 - [dsPIC33CK256MP508 Family](https://www.microchip.com/dsPIC33CK256MP508)
-- [dsPIC33CH512MP508 Family](https://www.microchip.com/dsPIC33CH512MP508)
 
 ## Software Used
 
