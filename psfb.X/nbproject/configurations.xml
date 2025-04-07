@@ -7,7 +7,6 @@
       <logicalFolder name="dcdt_generated_code"
                      displayName="DCDT Generated Files"
                      projectFiles="true">
-        <itemPath>dcdt/iloop/dcdt_generated_code/exp1_dcdt.h</itemPath>
         <itemPath>dcdt/iloop/dcdt_generated_code/iloop_dcdt.h</itemPath>
         <itemPath>dcdt/vloop/dcdt_generated_code/vloop_dcdt.h</itemPath>
         <itemPath>dcdt/iloop33/dcdt_generated_code/iloop_t_dcdt.h</itemPath>
