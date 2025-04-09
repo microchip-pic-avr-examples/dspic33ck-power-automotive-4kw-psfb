@@ -30,10 +30,13 @@
 #include "pwrctrl/pwrctrl.h"
 #include "system/pins.h"
 #include "adc/adc1.h"
+#include "sources/config/macros.h"
 
 // header file for calling custom peripheral configuration after MCC config
 #include "sources/driver/mcc_extension/mcc_custom_config.h"
 uint16_t counter = 65500;
+
+uint16_t macro_debug = 0;
 
 /*
     Main application
@@ -79,8 +82,15 @@ int main(void)
     
     OS_Init(); 
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
-
     
+    // ISEC_OC_THRES_TRIG 3350
+    // VSEC_OV_THRES_TRIG 764
+    // VPRI_OV_THRES_TRIG 4048
+    // VPRI_UV_THRES_TRIG 1932 
+    // VSEC_UV_THRES_TRIG 764
+    // VRAIL_5V_UV_THRES_TRIG 2321
+    // primary voltage equation to be revisted
+    macro_debug = OTP_THRES_BLANK_TRIG;
     OS_Scheduler_RunForever();
     
     while(1)
