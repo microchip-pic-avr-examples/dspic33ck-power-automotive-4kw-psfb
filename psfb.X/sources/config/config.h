@@ -70,13 +70,13 @@
  ******************************************************************************/
 #define T_ADC_SAMPLE_SECS                   (float) (10.0e-6) ///< ADC sampling rate
 
-// #define IPRI_OC_THRES_TRIG_AMPS             (float) (15.0) ///< Primary over current trigger threshold
+//   #define IPRI_OC_THRES_TRIG_AMPS             (float) (15.0) ///< Primary over current trigger threshold
 // #define IPRI_OC_THRES_CLEAR_AMPS            (float) (2.0)
 // #define IPRI_OC_T_BLANK_TRIG_SEC            (float) (10.0e-6)
 // #define IPRI_OC_T_BLANK_CLEAR_SEC           (float) (0.0)
 // #define IPRI_OC_TICK_SEC                    (T_ADC_SAMPLE_SECS)
 
-// #define IPRI_SC_THRES_TRIG_AMPS             (float) (15.0)
+#define IPRI_SC_THRES_TRIG_AMPS             (float) (15.0)
 /** @} */ // end of group ~~~~~~~~~~~~~~~~~~~~
 
 /******************************************************************************
@@ -84,9 +84,9 @@
  * @{
  ******************************************************************************/
 #define ISEC_OC_THRES_TRIG_AMPS             (float) (220.0)
-#define ISEC_OC_THRES_CLEAR_AMPS            (float)  (2.0)
+#define ISEC_OC_THRES_CLEAR_AMPS            (float) (2.0)
 #define ISEC_OC_T_BLANK_TRIG_SEC            (float) (10.0e-6)
-#define ISEC_OC_T_BLANK_CLEAR_SEC           (float)  (10.0e-6)
+#define ISEC_OC_T_BLANK_CLEAR_SEC           (float) (10.0e-6)
 #define ISEC_OC_TICK_SEC                    (T_ADC_SAMPLE_SECS) 
 
 #define ISEC_SC_THRES_TRIG_AMPS             (float) (220.0)
@@ -130,8 +130,8 @@
 // #define VSEC_OV_THRES_TRIG_VOLTS            (float)(500.0)
 // #define VSEC_OV_THRES_CLEAR_VOLTS           (float) (20.0)
 // #elif(DCDC800V_SYSTEM)
-#define VSEC_OV_THRES_TRIG_VOLTS            (float)4.0
-#define VSEC_OV_THRES_CLEAR_VOLTS           (float)6.0
+#define VSEC_OV_THRES_TRIG_VOLTS            (float)18.0
+#define VSEC_OV_THRES_CLEAR_VOLTS           (float)11.0
 //#endif
 #define VSEC_OV_T_BLANK_TRIG_SEC            (float) (10.0e-6)
 #define VSEC_OV_T_BLANK_CLEAR_SEC           (float) (10.0e-6)
@@ -144,9 +144,9 @@
 #define VSEC_UV_THRES_TRIG_VOLTS            (float) 4.0
 #define VSEC_UV_THRES_CLEAR_VOLTS           (float) 6.0
 // #endif
-// #define VSEC_UV_T_BLANK_TRIG_SEC            (float)  (0.0)
-// #define VSEC_UV_T_BLANK_CLEAR_SEC           (float)  (0.0)
-// #define VSEC_UV_TICK_SEC                    (T_ADC_SAMPLE_SECS)
+#define VSEC_UV_T_BLANK_TRIG_SEC            (float) (10.0e-6)
+#define VSEC_UV_T_BLANK_CLEAR_SEC           (float) (10.0e-6)
+#define VSEC_UV_TICK_SEC                    (T_ADC_SAMPLE_SECS)
 
 // #define VSEC_LOAD_STEP_CLAMPING_VOLTS       (float) (16)
 // #define VPRIM_LOAD_STEP_CLAMPING_VOLTS       (float) (16)
@@ -168,8 +168,8 @@
  * @{
  ******************************************************************************/
 // #define TEMPERATURE_PBV_OFFSET_CELSIUS         (40u)     ///< To allow the PBV to support up to -40C, an offset was added
-#define OTP_THRES_TRIG_CELCIUS                 (75u)  ///< Degrees Celcius
-#define OTP_THRES_CLEAR_CELCIUS                (70u)  ///< Degrees Celcius
+#define OTP_THRES_TRIG_CELCIUS                 (70u)  ///< Degrees Celcius
+#define OTP_THRES_CLEAR_CELCIUS                (65u)  ///< Degrees Celcius
 #define FAULT_PERSISTENCE_COUNT_TEMP           (2u)
 
 // // Stabilize the temperature around 40 degrees C by varying
@@ -204,15 +204,15 @@
 // fault disables (for debug only)
 // during debug mode, Current calibration needs to be set to false
 //------------------------------------------------------------------------------
-#define FAULT_VPRI_OV_   true
-#define FAULT_VPRI_UV_   false
-#define FAULT_ISEC_OC_   true
-#define FAULT_IPRI_OC_   true
-#define FAULT_VSEC_OV_   true
-#define FAULT_PS_OTP_    true
-#define FAULT_SHORT_CCT_ true
-#define FAULT_VRAIL_5V_  true
-#define LOAD_DISCONNECT_ true
+#define FAULT_VPRI_OV   true
+#define FAULT_VPRI_UV   true
+#define FAULT_ISEC_OC   true
+//#define FAULT_IPRI_OC_   true
+#define FAULT_VSEC_OV   true
+#define FAULT_PS_OTP    true
+#define FAULT_SHORT_CCT false
+#define FAULT_VRAIL_5V  false
+#define LOAD_DISCONNECT false
 //------------------------------------------------------------------------------
 
 #endif	/* CONFIG_H */

@@ -209,7 +209,7 @@ void App_PBV_psfb_Build_Frame()
     buffer_sixteen_tx[6] = PwrCtrl_GetAdc_Ipri_ct();
     buffer_sixteen_tx[7] = DAC3DATH;
     buffer_sixteen_tx[8] = Dev_PwrCtrl_GetIPri_Offset();
-    buffer_sixteen_tx[9] = current_slider_ref - Dev_PwrCtrl_GetIPri_Offset();
+    buffer_sixteen_tx[9] = DAC3DATH - Dev_PwrCtrl_GetIPri_Offset();
     
     // I-SHUNT
     buffer_sixteen_tx[10] = PwrCtrl_GetAdc_Isec_shunt();
@@ -353,14 +353,14 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
         
         case 0xdd:
             //current slider ref -- DACDATH update here.
-            temp = data[1];
-//            temp = temp * 0.18;
-//            temp = 0.5 + temp;
-//            temp = ( temp * 4095 )/3.3 ; 
 //            temp = data[1];
-//            temp = temp * 1241;
-            current_slider_ref = temp;
-            DAC3DATH = temp;
+////            temp = temp * 0.18;
+////            temp = 0.5 + temp;
+////            temp = ( temp * 4095 )/3.3 ; 
+////            temp = data[1];
+////            temp = temp * 1241;
+//            current_slider_ref = temp;
+            DAC3DATH = data[1];
             break;
         
         default:

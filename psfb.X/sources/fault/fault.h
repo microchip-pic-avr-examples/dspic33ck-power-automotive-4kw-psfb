@@ -18,7 +18,8 @@
 //#include "pwrctrl/pwrctrl_pwm.h"
 #include "pwrctrl/pwrctrl_typedef.h"
 //#include "pwrctrl/pwrctrl_common.h"
-//#include "config/config.h"
+#include "config/config.h"
+#include "config/macros.h"
 
 
 //------------------------------------------------------------------------------

@@ -90,7 +90,7 @@ int main(void)
     // VSEC_UV_THRES_TRIG 764
     // VRAIL_5V_UV_THRES_TRIG 2321
     // primary voltage equation to be revisted
-    macro_debug = OTP_THRES_BLANK_TRIG;
+    macro_debug = IPRI_SC_THRES_TRIG;
     OS_Scheduler_RunForever();
     
     while(1)

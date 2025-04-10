@@ -44,7 +44,7 @@
  ******************************************************************************/
 // IPRI_CT_SNS = IPRI_CT * IPRI_CT_SNS_GAIN + IPRI_CT_SNS_OFS
 // note that the IPRI_CT_SNS is rectified via hardware
-#define IPRI_CT_SNS_GAIN            (82.5e-3)  // V/A
+#define IPRI_CT_SNS_GAIN            (152.4e-3)  // V/A
 #define IPRI_CT_SNS_OFS             (0.5)      // V
 /** @} */ // end of group ~~~~~~~~~~~~~~~~~~~~
 

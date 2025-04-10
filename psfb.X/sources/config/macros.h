@@ -69,7 +69,7 @@
  * @{
  ******************************************************************************/
 #define ISEC_OC_THRES_TRIG                  (UNITS_FROM_ENG_TO_ADC(ISEC_OC_THRES_TRIG_AMPS,ISEC_AVG_SNS_GAIN,ISEC_AVG_SNS_OFS))
-#define ISEC_OC_THRES_CLEAR                 (UNITS_FROM_ENG_TO_ADC(ISEC_OC_THRES_CLEAR_AMPS,ISEC_CT_SNS_GAIN,ISEC_CT_SNS_OFS))
+#define ISEC_OC_THRES_CLEAR                 (UNITS_FROM_ENG_TO_ADC(ISEC_OC_THRES_CLEAR_AMPS,ISEC_AVG_SNS_GAIN,ISEC_AVG_SNS_OFS))
 
 #define ISEC_OC_T_BLANK_TRIG                ((uint16_t)(_rnd(ISEC_OC_T_BLANK_TRIG_SEC / ISEC_OC_TICK_SEC)))
 #define ISEC_OC_T_BLANK_CLEAR               ((uint16_t)(_rnd(ISEC_OC_T_BLANK_CLEAR_SEC / ISEC_OC_TICK_SEC)))
@@ -90,13 +90,13 @@
  * @ingroup primary-current-feedback-macros
  * @{ TODO: revisit after equations are confirmed
  ******************************************************************************/
-#define IPRI_OC_THRES_TRIG                  (UNITS_FROM_ENG_TO_ADC(IPRI_OC_THRES_TRIG_AMPS,IPRI_CT_SNS_GAIN,IPRI_CT_SNS_OFS))
-#define IPRI_OC_THRES_CLEAR                 (UNITS_FROM_ENG_TO_ADC(IPRI_OC_THRES_CLEAR_AMPS,IPRI_CT_SNS_GAIN,IPRI_CT_SNS_OFS))
-#define IPRI_OC_T_BLANK_TRIG                ((uint16_t)(_rnd(IPRI_OC_T_BLANK_TRIG_SEC / IPRI_OC_TICK_SEC)))      
-#define IPRI_OC_T_BLANK_CLEAR               ((uint16_t)(_rnd(IPRI_OC_T_BLANK_CLEAR_SEC / IPRI_OC_TICK_SEC))) 
+//#define IPRI_OC_THRES_TRIG                  (UNITS_FROM_ENG_TO_ADC(IPRI_OC_THRES_TRIG_AMPS,IPRI_CT_SNS_GAIN,IPRI_CT_SNS_OFS))
+//#define IPRI_OC_THRES_CLEAR                 (UNITS_FROM_ENG_TO_ADC(IPRI_OC_THRES_CLEAR_AMPS,IPRI_CT_SNS_GAIN,IPRI_CT_SNS_OFS))
+//#define IPRI_OC_T_BLANK_TRIG                ((uint16_t)(_rnd(IPRI_OC_T_BLANK_TRIG_SEC / IPRI_OC_TICK_SEC)))      
+//#define IPRI_OC_T_BLANK_CLEAR               ((uint16_t)(_rnd(IPRI_OC_T_BLANK_CLEAR_SEC / IPRI_OC_TICK_SEC))) 
 
 #define IPRI_SC_THRES_TRIG                  (UNITS_FROM_ENG_TO_ADC(IPRI_SC_THRES_TRIG_AMPS,IPRI_CT_SNS_GAIN,IPRI_CT_SNS_OFS))
-#define I_SC_T_BLANK_CLEAR                  ((uint16_t)(_rnd(I_SC_T_BLANK_CLEAR_SEC / I_SC_TICK_SEC)))
+//#define I_SC_T_BLANK_CLEAR                  ((uint16_t)(_rnd(I_SC_T_BLANK_CLEAR_SEC / I_SC_TICK_SEC)))
 /** @} */ // end of group ~~~~~~~~~~~~~~~~~~~~
 
 /******************************************************************************
