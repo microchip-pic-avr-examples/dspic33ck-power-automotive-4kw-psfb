@@ -262,8 +262,9 @@ void App_PBV_psfb_Process_Buttons(uint16_t * data) {
             break;
 
         case 0xaa00:
-//            Dev_Reset_Average_Buffer();
+//          Dev_Reset_Average_Buffer();
             Fault_Reset();
+            PwrCtrl_Reset();
             break;
 
         case 0x00aa:
