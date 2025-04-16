@@ -190,6 +190,15 @@ struct SEC_REC_s {
 };
 typedef struct SEC_REC_s SEC_REC_t;
 
+struct AVERAGING_s
+{  
+  uint32_t  Accumulator; 
+  uint16_t  Counter; 
+  uint16_t  AveragingCount;
+  uint16_t  AverageValue;
+};
+typedef struct AVERAGING_s AVERAGING_t;
+
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -212,6 +221,8 @@ struct POWER_CONTROL_s
     CONTROLLER_t        PLoop;      ///< structure for power controller data
     PRECHARGE_t         Precharge;  ///< structure for precharge data
     SEC_REC_t           SecRec;     ///< structure for secondary rectification data
+    AVERAGING_t         PrimaryCT_Offset;
+    AVERAGING_t         SecondarySh_Offset;
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 

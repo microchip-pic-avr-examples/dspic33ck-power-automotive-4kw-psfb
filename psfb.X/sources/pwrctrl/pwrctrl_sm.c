@@ -118,23 +118,50 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
 
     //add delay of some ms to for values to be stable
 
-    if (dev_AreOffsetsCalculated() == 1){
-        pcInstance->Data.ISecSensorOffset = dev_Get_SecondaryShuntOffset();
-        pcInstance->Data.IPriSensorOffset = dev_Get_PrimaryCTOffset();
+    if( PwrCtrl_UpdateAverage(
+            &pcInstance->PrimaryCT_Offset,
+            PwrCtrl_GetAdc_Ipri_ct()) !=0 
+            &&
+        PwrCtrl_UpdateAverage(
+            &pcInstance->SecondarySh_Offset,
+            PwrCtrl_GetAdc_Isec_shunt()) !=0)
+        {
+            pcInstance->Data.IPriSensorOffset = PwrCtrl_UpdateAverage(
+                                                    &pcInstance->PrimaryCT_Offset,
+                                                    PwrCtrl_GetAdc_Ipri_ct());
+
+            pcInstance->Data.ISecSensorOffset = PwrCtrl_UpdateAverage(
+                                                    &pcInstance->SecondarySh_Offset,
+                                                    PwrCtrl_GetAdc_Isec_shunt());
         
-        //34 amps
-        pcInstance->SecRec.Threshold_high = pcInstance->Data.ISecSensorOffset + 421;
-        //30amps
-        pcInstance->SecRec.Threshold_low = pcInstance->Data.ISecSensorOffset + 372;
+            //34 amps
+            pcInstance->SecRec.Threshold_high = pcInstance->Data.ISecSensorOffset + 421;
+            //30amps
+            pcInstance->SecRec.Threshold_low = pcInstance->Data.ISecSensorOffset + 372;
 
-        pcInstance->State = PWRCTRL_STATE_PRECHARGE;
-
+            pcInstance->State = PWRCTRL_STATE_PRECHARGE;
 
         FAULT_EN_SetHigh();
-    }
-    else {
-        dev_MeasureOffsets();
-    }
+        }    
+
+
+    // if (dev_AreOffsetsCalculated() == 1){
+    //     pcInstance->Data.ISecSensorOffset = dev_Get_SecondaryShuntOffset();
+    //     pcInstance->Data.IPriSensorOffset = dev_Get_PrimaryCTOffset();
+        
+    //     //34 amps
+    //     pcInstance->SecRec.Threshold_high = pcInstance->Data.ISecSensorOffset + 421;
+    //     //30amps
+    //     pcInstance->SecRec.Threshold_low = pcInstance->Data.ISecSensorOffset + 372;
+
+    //     pcInstance->State = PWRCTRL_STATE_PRECHARGE;
+
+
+    //     FAULT_EN_SetHigh();
+    // }
+    // else {
+    //     dev_MeasureOffsets();
+    // }
 
     //pcInstance->State = PWRCTRL_STATE_PRECHARGE;
     

@@ -30,6 +30,7 @@ POWER_CONTROL_t * psfb_ptr = &psfb;
 // PRIVATE FUNCTIONS
 static void PwrCtrl_StartUpInitialize(void);
 static void PwrCtrl_ControlLoopInitialize(void);
+static void PwrCtrl_OffsetDatatypesInitalize(void);
 
 //// PUBLIC FUNCTIONS
 extern void PwrCtrl_StateMachine(POWER_CONTROL_t* pcInstance);
@@ -170,13 +171,34 @@ void PwrCtrl_MaxDutyCycle(void){
                //10 volts
         // for 10 volts
     // divided by 8 to keep it within 16bits
-    psfb_ptr->Precharge.scaler = 10 * 2 * 17 * 54;
-    psfb_ptr->Precharge.primaryVoltage = Dev_PwrCtrl_GetAdc_Vpri() - 205;
+    psfb.Precharge.scaler = 10 * 2 * 17 * 54;
+    psfb.Precharge.primaryVoltage = Dev_PwrCtrl_GetAdc_Vpri() - 205;
     //divided by 8 as scaler is also divided by 8
-    psfb_ptr->Precharge.primaryVoltage = psfb_ptr->Precharge.primaryVoltage >> 3; 
+    psfb.Precharge.primaryVoltage = psfb.Precharge.primaryVoltage >> 3; 
 
-    psfb_ptr->Precharge.maxDutyCycle  = __builtin_divud(psfb_ptr->Precharge.scaler, psfb_ptr->Precharge.primaryVoltage);
+    psfb.Precharge.maxDutyCycle  = __builtin_divud(psfb.Precharge.scaler, psfb.Precharge.primaryVoltage);
 
-    if (psfb_ptr->Precharge.maxDutyCycle > 80) 
-        psfb_ptr->Precharge.maxDutyCycle  = 80;   // limit precharge to 80 percent dutycycle
+    if (psfb.Precharge.maxDutyCycle > 80) 
+        psfb.Precharge.maxDutyCycle  = 80;   // limit precharge to 80 percent dutycycle
+}
+
+/*******************************************************************************
+ * @ingroup pwrctrl
+ * @brief  reset offset data types
+ * @return void
+ * 
+ * @details This function resets current sensor offsets
+ *********************************************************************************/
+void PwrCtrl_OffsetDatatypesInitalize(void){
+    
+    psfb.PrimaryCT_Offset.Counter = 0;
+    psfb.PrimaryCT_Offset.AveragingCount = 63;
+    psfb.PrimaryCT_Offset.AverageValue = 0;
+    psfb.PrimaryCT_Offset.Counter = 0;
+    
+    psfb.SecondarySh_Offset.Counter = 0;
+    psfb.SecondarySh_Offset.AveragingCount = 63;
+    psfb.SecondarySh_Offset.AverageValue = 0;
+    psfb.SecondarySh_Offset.Counter = 0;
+
 }
