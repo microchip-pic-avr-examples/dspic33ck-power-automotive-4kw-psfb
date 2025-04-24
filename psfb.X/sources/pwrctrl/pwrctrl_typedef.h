@@ -199,6 +199,23 @@ struct AVERAGING_s
 };
 typedef struct AVERAGING_s AVERAGING_t;
 
+
+
+/***********************************************************************************
+ * @ingroup pwrctrl-data-types
+ * @brief Collection of Secondary Rectifier Properties
+ * @details
+ * This data structure manages the SR properties and control variables
+ **********************************************************************************/
+struct DROOP_s {
+    uint8_t Droop_Enabled;                      // if SR is enabled or not. enabled after start power transfer
+    uint8_t Droop_Flag;                         // SR flag o
+    uint16_t Droop_Delay_Counter;               // Threhshold high
+    uint16_t Droop_Voltage_Reference_from_PBV;
+    uint16_t Droop_New_Voltage_Reference;       // placeholder
+};
+typedef struct DROOP_s DROOP_t;
+
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -223,6 +240,7 @@ struct POWER_CONTROL_s
     SEC_REC_t           SecRec;     ///< structure for secondary rectification data
     AVERAGING_t         PrimaryCT_Offset;
     AVERAGING_t         SecondarySh_Offset;
+    DROOP_t             Droop;      ///< droop controller data
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 

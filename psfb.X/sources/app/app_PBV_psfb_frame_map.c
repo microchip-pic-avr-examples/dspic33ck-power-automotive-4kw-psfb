@@ -350,6 +350,7 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
         case 0xee:
             voltage_ref = data[1];
             PwrCtrl_SetVSecReference(voltage_ref);
+            psfb_ptr->Droop.Droop_Voltage_Reference_from_PBV = voltage_ref;
             break;
         
         case 0xdd:
