@@ -21,9 +21,10 @@
 
 #include "pwrctrl/pwrctrl_pwm.h"
 
-// PRIVATE FUNCTIONS
+
 void PwrCtrl_UpdateADConverterData(void);
 void PwrCtrl_ControlLoopExecute(void);
+void PwrCtrl_DroopAverage(void);
 
 /*******************************************************************************
  * @ingroup pwrctrl-isr

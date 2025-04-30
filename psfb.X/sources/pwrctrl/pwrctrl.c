@@ -30,7 +30,7 @@ POWER_CONTROL_t * psfb_ptr = &psfb;
 // PRIVATE FUNCTIONS
 static void PwrCtrl_StartUpInitialize(void);
 static void PwrCtrl_ControlLoopInitialize(void);
-static void PwrCtrl_OffsetDatatypesInitalize(void);
+
 
 //// PUBLIC FUNCTIONS
 extern void PwrCtrl_StateMachine(POWER_CONTROL_t* pcInstance);
@@ -200,5 +200,9 @@ void PwrCtrl_OffsetDatatypesInitalize(void){
     psfb.SecondarySh_Offset.AveragingCount = 63;
     psfb.SecondarySh_Offset.AverageValue = 0;
     psfb.SecondarySh_Offset.Counter = 0;
-
+    
+    psfb.VoutCalibratingAveraging.Counter = 0;
+    psfb.VoutCalibratingAveraging.AveragingCount = 63;
+    psfb.VoutCalibratingAveraging.AverageValue = 0;
+    psfb.VoutCalibratingAveraging.Counter = 0;
 }

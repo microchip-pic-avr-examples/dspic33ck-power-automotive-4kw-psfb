@@ -21,7 +21,7 @@ void PwrCtrl_Execute(void);
 void Dev_PwrCtrl_Suspend(void);
 void Dev_PwrCtrl_ControlLoopInitialize(void);
 void PwrCtrl_Reset(void);
-
+void PwrCtrl_OffsetDatatypesInitalize(void);
 void PwrCtrl_MaxDutyCycle(void);
 #endif	/* APP_PWRCTRL_H */
 

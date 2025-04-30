@@ -128,3 +128,11 @@ void PwrCtrl_ControlLoopExecute(void)
 }
 
 
+void PwrCtrl_DroopAverage(void) {
+    // average of last 1000 values
+    if(psfb_ptr->ISecAveraging.Counter >= 99) {
+        psfb_ptr->ISecAveraging.AverageValue = (uint16_t)(__builtin_divud(psfb_ptr->ISecAveraging.Accumulator, psfb_ptr->ISecAveraging.Counter));
+        psfb_ptr->ISecAveraging.Accumulator = 0;
+        psfb_ptr->ISecAveraging.Counter = 0;
+    }
+}

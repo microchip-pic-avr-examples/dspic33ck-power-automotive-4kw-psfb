@@ -77,6 +77,7 @@ int main(void)
 
     ADC1_SoftwareTriggerEnable(); // add it here so that the very first time the values are available
     dev_MeasureOffsets_Initialize();
+    PwrCtrl_OffsetDatatypesInitalize();
     
     while (counter--> 0) Nop(); // implementing delay for values to settle
     
@@ -114,6 +115,9 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     //Read all the ADC value from the ADCBUF
     psfb_ptr->Data.ISensePrimary = ADCBUF0;
     psfb_ptr->Data.ISenseSecondary = ADCBUF1;
+    
+    psfb_ptr->ISecAveraging.Accumulator += psfb_ptr->Data.ISenseSecondary;
+    psfb_ptr->ISecAveraging.Counter = psfb_ptr->ISecAveraging.Counter + 1;
     
     PwrCtrl_UpdateADConverterData();
     

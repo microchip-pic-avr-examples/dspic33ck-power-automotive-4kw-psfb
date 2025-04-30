@@ -14,7 +14,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>0</SignalChannelIndex>
         <PositionInMessage>0</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -27,7 +27,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>1</SignalChannelIndex>
         <PositionInMessage>1</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -40,7 +40,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>2</SignalChannelIndex>
         <PositionInMessage>2</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -53,7 +53,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>3</SignalChannelIndex>
         <PositionInMessage>3</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -66,7 +66,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>4</SignalChannelIndex>
         <PositionInMessage>4</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -79,7 +79,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>5</SignalChannelIndex>
         <PositionInMessage>5</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -92,7 +92,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>6</SignalChannelIndex>
         <PositionInMessage>6</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -105,7 +105,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>7</SignalChannelIndex>
         <PositionInMessage>7</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -118,7 +118,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>8</SignalChannelIndex>
         <PositionInMessage>8</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -131,7 +131,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>9</SignalChannelIndex>
         <PositionInMessage>9</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -144,7 +144,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>10</SignalChannelIndex>
         <PositionInMessage>10</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -157,7 +157,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>11</SignalChannelIndex>
         <PositionInMessage>11</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -170,7 +170,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>12</SignalChannelIndex>
         <PositionInMessage>12</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -183,7 +183,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>13</SignalChannelIndex>
         <PositionInMessage>13</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -222,7 +222,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>16</SignalChannelIndex>
         <PositionInMessage>16</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -235,7 +235,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>17</SignalChannelIndex>
         <PositionInMessage>17</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -248,7 +248,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>18</SignalChannelIndex>
         <PositionInMessage>18</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -261,7 +261,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>19</SignalChannelIndex>
         <PositionInMessage>19</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -274,7 +274,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>20</SignalChannelIndex>
         <PositionInMessage>20</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -287,7 +287,59 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>21</SignalChannelIndex>
         <PositionInMessage>21</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>i-SHUNT-AVG</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-52</Offset>
+        <Unit>A</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>23</SignalChannelIndex>
+        <PositionInMessage>23</PositionInMessage>
+        <PageName>4kw 204</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>ref diff</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>24</SignalChannelIndex>
+        <PositionInMessage>24</PositionInMessage>
+        <PageName>4kw 204</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Vout12V Calculated</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>25</SignalChannelIndex>
+        <PositionInMessage>25</PositionInMessage>
+        <PageName>4kw 204</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Real Averaged Value</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>26</SignalChannelIndex>
+        <PositionInMessage>26</PositionInMessage>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -300,7 +352,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>40</SignalChannelIndex>
         <PositionInMessage>0</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -313,7 +365,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>41</SignalChannelIndex>
         <PositionInMessage>1</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -326,7 +378,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>42</SignalChannelIndex>
         <PositionInMessage>2</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -339,7 +391,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>43</SignalChannelIndex>
         <PositionInMessage>3</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -352,7 +404,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>44</SignalChannelIndex>
         <PositionInMessage>4</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -365,7 +417,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>45</SignalChannelIndex>
         <PositionInMessage>5</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -378,7 +430,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>46</SignalChannelIndex>
         <PositionInMessage>6</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -391,7 +443,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>47</SignalChannelIndex>
         <PositionInMessage>7</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -404,7 +456,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>48</SignalChannelIndex>
         <PositionInMessage>8</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -417,7 +469,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>49</SignalChannelIndex>
         <PositionInMessage>9</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -430,7 +482,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>50</SignalChannelIndex>
         <PositionInMessage>10</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -443,7 +495,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>51</SignalChannelIndex>
         <PositionInMessage>11</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -469,7 +521,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>53</SignalChannelIndex>
         <PositionInMessage>13</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -508,7 +560,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>56</SignalChannelIndex>
         <PositionInMessage>16</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -521,7 +573,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>57</SignalChannelIndex>
         <PositionInMessage>17</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -534,7 +586,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>58</SignalChannelIndex>
         <PositionInMessage>18</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -547,7 +599,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>59</SignalChannelIndex>
         <PositionInMessage>19</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -560,7 +612,7 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>60</SignalChannelIndex>
         <PositionInMessage>20</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -573,138 +625,222 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>61</SignalChannelIndex>
         <PositionInMessage>21</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
+        <ProtocolID>532</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>i-SHUNT-AVG2</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-52</Offset>
+        <Unit>A</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>63</SignalChannelIndex>
+        <PositionInMessage>23</PositionInMessage>
+        <PageName>4kw2 214</PageName>
+        <ProtocolID>532</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>ref diff 2</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>64</SignalChannelIndex>
+        <PositionInMessage>24</PositionInMessage>
+        <PageName>4kw2 214</PageName>
+        <ProtocolID>532</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Vout12V Calculated2</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>65</SignalChannelIndex>
+        <PositionInMessage>25</PositionInMessage>
+        <PageName>4kw2 214</PageName>
+        <ProtocolID>532</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Real Averaged Value2</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit>V</Unit>
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>66</SignalChannelIndex>
+        <PositionInMessage>26</PositionInMessage>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
         <SignalChannelIndex>3</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>4</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>5</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>6</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>7</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>9</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>8</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>11</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>17</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>16</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>19</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>18</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>20</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>10</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>13</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>23</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>24</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>21</SignalChannelIndex>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </TableViewItem>
-            <TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>25</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>26</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>43</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>44</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>45</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>46</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>47</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>49</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>48</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>51</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>57</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>56</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>59</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>58</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>60</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>50</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>53</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>63</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>64</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>61</SignalChannelIndex>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>65</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>66</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
       </TableViewItem>
     </TableView>
     <OutputValues>
@@ -759,7 +895,7 @@
         <ButtonText>update ref</ButtonText>
         <Data>0203 0004 00DD [value]</Data>
         <AutoSendAfterChange>true</AutoSendAfterChange>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </OutputValue>
       <OutputValue>
         <Name>Vref loop (V)</Name>
@@ -773,7 +909,7 @@
         <ButtonText>update Vref</ButtonText>
         <Data>0203 0004 00EE [value]</Data>
         <AutoSendAfterChange>false</AutoSendAfterChange>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </OutputValue>
     </OutputValues>
     <StatusGroups>
@@ -817,7 +953,7 @@
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
         </StatusBits>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </StatusGroup>
       <StatusGroup>
         <SignalChannelIndex>1</SignalChannelIndex>
@@ -884,7 +1020,7 @@
             <ControlType>radio</ControlType>
           </StatusBit>
         </StatusBits>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </StatusGroup>
       <StatusGroup>
         <SignalChannelIndex>2</SignalChannelIndex>
@@ -920,9 +1056,8 @@
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
         </StatusBits>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </StatusGroup>
-
       <StatusGroup>
         <SignalChannelIndex>40</SignalChannelIndex>
         <StatusBits>
@@ -963,7 +1098,7 @@
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
         </StatusBits>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </StatusGroup>
       <StatusGroup>
         <SignalChannelIndex>41</SignalChannelIndex>
@@ -1030,7 +1165,7 @@
             <ControlType>radio</ControlType>
           </StatusBit>
         </StatusBits>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </StatusGroup>
       <StatusGroup>
         <SignalChannelIndex>42</SignalChannelIndex>
@@ -1066,9 +1201,8 @@
             <ActiveColor>FF0000</ActiveColor>
           </StatusBit>
         </StatusBits>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
       </StatusGroup>
-
     </StatusGroups>
     <SendRawDataButtons>
       <SendRawDataButton>
@@ -1076,7 +1210,7 @@
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 00 aa</Data>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Stop Charge</Name>
@@ -1089,14 +1223,14 @@
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 00 01</Data>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Stop Power Transfer</Name>
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 00 00</Data>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>Start Sync</Name>
@@ -1115,7 +1249,7 @@
         <Enabled>true</Enabled>
         <RawDataVisible>true</RawDataVisible>
         <Data>02 02 00 02 aa 00</Data>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
       </SendRawDataButton>
       <SendRawDataButton>
         <Name>I Controller ON - test</Name>

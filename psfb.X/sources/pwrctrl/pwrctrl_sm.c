@@ -125,27 +125,34 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
     //add delay of some ms to for values to be stable
     if (delay_count-- == 0) {
         delay_count = 3;
+        // review the
         if( PwrCtrl_UpdateAverage(
             &pcInstance->PrimaryCT_Offset,
             PwrCtrl_GetAdc_Ipri_ct()) !=0 
             &&
         PwrCtrl_UpdateAverage(
             &pcInstance->SecondarySh_Offset,
-            PwrCtrl_GetAdc_Isec_shunt()) !=0)
+            PwrCtrl_GetAdc_Isec_shunt()) !=0
+            &&
+        PwrCtrl_UpdateAverage(
+            &pcInstance->VoutCalibratingAveraging,
+            pcInstance->Data.VOutVoltage) !=0        
+            )
         {
-            pcInstance->Data.IPriSensorOffset = PwrCtrl_UpdateAverage(
-                                                    &pcInstance->PrimaryCT_Offset,
-                                                    PwrCtrl_GetAdc_Ipri_ct());
-
-            pcInstance->Data.ISecSensorOffset = PwrCtrl_UpdateAverage(
-                                                    &pcInstance->SecondarySh_Offset,
-                                                    PwrCtrl_GetAdc_Isec_shunt());
+            pcInstance->Data.IPriSensorOffset = pcInstance->PrimaryCT_Offset.AverageValue;
+            pcInstance->Data.ISecSensorOffset = pcInstance->SecondarySh_Offset.AverageValue;
+            pcInstance->VoutCalibrate.real_value = pcInstance->VoutCalibratingAveraging.AverageValue;
         
             //34 amps
             pcInstance->SecRec.Threshold_high = pcInstance->Data.ISecSensorOffset + 421;
             //30amps
             pcInstance->SecRec.Threshold_low = pcInstance->Data.ISecSensorOffset + 372;
-
+            
+            pcInstance->VoutCalibrate.calculated_value = 2293; // for 12 volts
+            pcInstance->VoutCalibrate.gain_factor = 
+                    (float)psfb_ptr->VoutCalibrate.real_value/ 
+                    (float)psfb_ptr->VoutCalibrate.calculated_value;
+            
             pcInstance->State = PWRCTRL_STATE_PRECHARGE;
 
         FAULT_EN_SetHigh();
@@ -358,10 +365,11 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         //Enable Vloop here
         pcInstance->VLoop.Enable = 1;
 
-        //reference set to precharged caps on startup
-        pcInstance->VLoop.Reference =                           pcInstance->Data.VOutVoltage;
-        pcInstance->Properties.VSecReference =                  pcInstance->Data.VOutVoltage;
-        pcInstance->Droop.Droop_Voltage_Reference_from_PBV =    pcInstance->Data.VOutVoltage;
+        //reference set to calibrated 12V 
+        float vreftem = (float)2293 * pcInstance->VoutCalibrate.gain_factor;
+        pcInstance->VLoop.Reference =                           (uint16_t)vreftem;
+        pcInstance->Properties.VSecReference =                  (uint16_t)vreftem;
+        pcInstance->Droop.Droop_Voltage_Reference_from_PBV =    (uint16_t)vreftem;
     }
 
     Dev_LED_On(LED_BOARD_GREEN);
@@ -461,35 +469,35 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
     // Check if there is change in power control references    
         
     else if (pcInstance->VLoop.Reference != pcInstance->Properties.VSecReference)
-     {    
+    {    
             // State back to STATE_SOFT_START
             pcInstance->State = PWRCTRL_STATE_SOFT_START;
-     }
-         
-    else if (pcInstance->Droop.Droop_Delay_Counter++>998)
-    {
-        // pcInstance->Properties.VSecReference
-        //pcInstance->Droop.Droop_New_Voltage_Reference = pcInstance->Data.ISenseSecondary;
-//        Nop();
-//        uint16_t current_da = 1303; // corresponding to 105 amps
-        Nop();
-        temp = pcInstance->Data.ISenseSecondary - pcInstance->Data.ISecSensorOffset; // * 0.073;
-        if (temp > 10) // kick in at 3 amps
-        {
-            temp = temp * 0.042;
-            ref_diff = (uint16_t)temp;
-        }
-        else 
-            ref_diff = 0;
-        
-        if (ref_diff > 200) ref_diff = 0 ; // voltage drop of 1 volt, something is wrong, set droop to 0
-        
-        pcInstance->Properties.VSecReference = pcInstance->Droop.Droop_Voltage_Reference_from_PBV  - ref_diff ;
-        //pcInstance->Droop.Droop_New_Voltage_Reference = pcInstance->Droop.Droop_New_Voltage_Reference >> 8;
-        //pcInstance->Properties.VSecReference = pcInstance->Droop.Droop_Voltage_Reference_from_PBV  - pcInstance->Droop.Droop_New_Voltage_Reference ; 
-        pcInstance->Droop.Droop_Delay_Counter = 0;
     }
     
+    else {
+        // average last 1000 ->each sample 10us, called every 100us * 100 times 
+        PwrCtrl_DroopAverage();
+        // droop update
+        if (++pcInstance->Droop.Droop_Delay_Counter>=999)
+        {
+            temp = pcInstance->ISecAveraging.AverageValue - pcInstance->Data.ISecSensorOffset; // * 0.073;
+            if (temp > 10) // avoid gar
+            {
+                temp = temp * 0.0855;
+                pcInstance->Droop.ref_diff = (uint16_t)temp;
+            }
+            else 
+                pcInstance->Droop.ref_diff = 0;
+            
+            if (pcInstance->Droop.ref_diff > 400) pcInstance->Droop.ref_diff = 0 ; // voltage drop of 1 volt, something is wrong, set droop to 0
+            if (pcInstance->Droop.ref_diff > 200) pcInstance->Droop.ref_diff = 191; // clamp to 0.5 V in normal operation
+            
+            pcInstance->Properties.VSecReference = pcInstance->Droop.Droop_Voltage_Reference_from_PBV  - pcInstance->Droop.ref_diff ;
+            //pcInstance->Droop.Droop_New_Voltage_Reference = pcInstance->Droop.Droop_New_Voltage_Reference >> 8;
+            //pcInstance->Properties.VSecReference = pcInstance->Droop.Droop_Voltage_Reference_from_PBV  - pcInstance->Droop.Droop_New_Voltage_Reference ; 
+            pcInstance->Droop.Droop_Delay_Counter = 0;
+        } 
+    }  
     Dev_LED_Blink(LED_BOARD_GREEN);
     Dev_LED_Off(LED_BOARD_RED);
 } 

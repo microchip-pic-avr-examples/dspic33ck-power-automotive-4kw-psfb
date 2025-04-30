@@ -59,6 +59,7 @@ static uint16_t current_slider_ref = 0;
 
  static uint8_t button_start = 0;
 static uint8_t button_start_sync = 0;
+float temp_;
 // static int16_t charge_en = 0;
 
 /***********************************************************************************
@@ -231,13 +232,21 @@ void App_PBV_psfb_Build_Frame()
 
     // phase
     buffer_sixteen_tx[21] = PG1TRIGC;
-    buffer_sixteen_tx[22] = psfb_ptr->Precharge.maxDutyCycle;;
+    buffer_sixteen_tx[22] = psfb_ptr->Precharge.maxDutyCycle;
+    
+    //(PwrCtrl_GetAdc_Temperature() > 497) ? (PwrCtrl_GetAdc_Temperature() - 497 ) : 0;
+    //temp_ = psfb_ptr->ISecAveraging.AverageValue;
+    buffer_sixteen_tx[23] = psfb_ptr->ISecAveraging.AverageValue;
+    buffer_sixteen_tx[24] = psfb_ptr->Droop.ref_diff;
+    
+    buffer_sixteen_tx[25] = psfb_ptr->VoutCalibrate.calculated_value;
+    buffer_sixteen_tx[26] = psfb_ptr->VoutCalibrate.real_value;
+    buffer_sixteen_tx[27] = (uint16_t)psfb_ptr->VoutCalibrate.gain_factor;
 
-
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 23);
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 28);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 23 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 28 * 2 ;
 }
 
 
@@ -349,8 +358,10 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
 
         case 0xee:
             voltage_ref = data[1];
-            PwrCtrl_SetVSecReference(voltage_ref);
-            psfb_ptr->Droop.Droop_Voltage_Reference_from_PBV = voltage_ref;
+            float vreftemp = (float)voltage_ref * psfb_ptr->VoutCalibrate.gain_factor;
+            if (abs(vreftemp - voltage_ref)>372) vreftemp = (float)voltage_ref; // if difference is greater than 0.3 v
+            PwrCtrl_SetVSecReference((uint16_t)vreftemp);
+            psfb_ptr->Droop.Droop_Voltage_Reference_from_PBV = (uint16_t)vreftemp;
             break;
         
         case 0xdd:

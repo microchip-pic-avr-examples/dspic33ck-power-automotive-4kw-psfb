@@ -213,9 +213,16 @@ struct DROOP_s {
     uint16_t Droop_Delay_Counter;               // Threhshold high
     uint16_t Droop_Voltage_Reference_from_PBV;
     uint16_t Droop_New_Voltage_Reference;       // placeholder
+    uint16_t ref_diff;                          //temp
 };
 typedef struct DROOP_s DROOP_t;
 
+struct CALIBRATE_S{
+    uint16_t real_value;
+    uint16_t calculated_value;
+    float gain_factor;
+};
+typedef struct CALIBRATE_S CALIBRATE_t;
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -240,6 +247,9 @@ struct POWER_CONTROL_s
     SEC_REC_t           SecRec;     ///< structure for secondary rectification data
     AVERAGING_t         PrimaryCT_Offset;
     AVERAGING_t         SecondarySh_Offset;
+    AVERAGING_t         VoutCalibratingAveraging;
+    CALIBRATE_t         VoutCalibrate;
+    AVERAGING_t         ISecAveraging;  ///<secondary current average
     DROOP_t             Droop;      ///< droop controller data
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
