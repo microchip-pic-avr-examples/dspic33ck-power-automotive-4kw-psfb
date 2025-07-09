@@ -26,7 +26,7 @@
 void PwrCtrl_PWM_Update()
 {   
     if (psfb_ptr->ILoop.Enable == 0){
-        psfb_ptr->Pwm.ControlPhase = psfb_ptr->Pwm.PBVControlPhaseTarget * 112;      // could add a ramp here as well :/
+        psfb_ptr->Pwm.ControlPhase = psfb_ptr->Pwm.PBVControlPhaseTarget * 112;      // placeholder for openloop :/
     } else {
         psfb_ptr->Pwm.ControlPhase = psfb_ptr->Pwm.PBVControlPhaseTarget; 
     }

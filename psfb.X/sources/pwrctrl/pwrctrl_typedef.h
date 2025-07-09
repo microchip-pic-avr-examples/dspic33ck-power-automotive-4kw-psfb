@@ -190,6 +190,12 @@ struct SEC_REC_s {
 };
 typedef struct SEC_REC_s SEC_REC_t;
 
+/***********************************************************************************
+ * @ingroup pwrctrl-data-types
+ * @brief Averaging data type
+ * @details
+ * This data structure manages averaging data strucutre, used in PwrCtrl_UpdateAverage
+ **********************************************************************************/
 struct AVERAGING_s
 {  
   uint32_t  Accumulator; 
@@ -208,21 +214,28 @@ typedef struct AVERAGING_s AVERAGING_t;
  * This data structure manages the SR properties and control variables
  **********************************************************************************/
 struct DROOP_s {
-    uint8_t Droop_Enabled;                      // if SR is enabled or not. enabled after start power transfer
-    uint8_t Droop_Flag;                         // SR flag o
-    uint16_t Droop_Delay_Counter;               // Threhshold high
+    uint8_t Droop_Enabled;                      
+    uint8_t Droop_Flag;                         
+    uint16_t Droop_Delay_Counter;              
     uint16_t Droop_Voltage_Reference_from_PBV;
-    uint16_t Droop_New_Voltage_Reference;       // placeholder
-    uint16_t ref_diff;                          //temp
+    uint16_t Droop_New_Voltage_Reference;       
+    uint16_t ref_diff;                          
 };
 typedef struct DROOP_s DROOP_t;
 
+/***********************************************************************************
+ * @ingroup pwrctrl-data-types
+ * @brief Collection of calibrate Properties
+ * @details
+ * This data structure manages the calibration properties
+ **********************************************************************************/
 struct CALIBRATE_S{
     uint16_t real_value;
     uint16_t calculated_value;
     float gain_factor;
 };
 typedef struct CALIBRATE_S CALIBRATE_t;
+
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -245,12 +258,12 @@ struct POWER_CONTROL_s
     CONTROLLER_t        PLoop;      ///< structure for power controller data
     PRECHARGE_t         Precharge;  ///< structure for precharge data
     SEC_REC_t           SecRec;     ///< structure for secondary rectification data
-    AVERAGING_t         PrimaryCT_Offset;
-    AVERAGING_t         SecondarySh_Offset;
-    AVERAGING_t         VoutCalibratingAveraging;
-    CALIBRATE_t         VoutCalibrate;
+    AVERAGING_t         PrimaryCT_Offset; ///< structure for averaging primary CT offset
+    AVERAGING_t         SecondarySh_Offset; ///< structure for averaging secondary sensor offset
+    AVERAGING_t         VoutCalibratingAveraging; ///< structure for averaging Vout during Droop 
+    CALIBRATE_t         VoutCalibrate;  ///< structure for Calibrating Vout during Droop using Averaged value
     AVERAGING_t         ISecAveraging;  ///<secondary current average
-    DROOP_t             Droop;      ///< droop controller data
+    DROOP_t             Droop;          ///< droop controller data
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 

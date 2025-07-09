@@ -23,7 +23,7 @@
 
 
 // temp
-uint16_t current_da = 1303;
+//uint16_t current_da = 1303;
 float temp;
 uint16_t ref_diff;
 uint16_t delay_count = 2;
@@ -366,7 +366,7 @@ static void PCS_STANDBY_handler(POWER_CONTROL_t* pcInstance)
         pcInstance->VLoop.Enable = 1;
 
         //reference set to calibrated 12V 
-        float vreftem = (float)2293 * pcInstance->VoutCalibrate.gain_factor;
+        float vreftem = (float)2293 * pcInstance->VoutCalibrate.gain_factor; // 2293 = 12 V (2293/4095 * 3.3 * Gain) Gain =154mv/v
         pcInstance->VLoop.Reference =                           (uint16_t)vreftem;
         pcInstance->Properties.VSecReference =                  (uint16_t)vreftem;
         pcInstance->Droop.Droop_Voltage_Reference_from_PBV =    (uint16_t)vreftem;
@@ -483,14 +483,14 @@ static void PCS_UP_AND_RUNNING_handler(POWER_CONTROL_t* pcInstance)
             temp = pcInstance->ISecAveraging.AverageValue - pcInstance->Data.ISecSensorOffset; // * 0.073;
             if (temp > 10) // avoid gar
             {
-                temp = temp * 0.0855;
+                temp = temp * 0.0855;   //droop variable 0.0855 adc counts per amp:
                 pcInstance->Droop.ref_diff = (uint16_t)temp;
             }
             else 
                 pcInstance->Droop.ref_diff = 0;
             
-            if (pcInstance->Droop.ref_diff > 400) pcInstance->Droop.ref_diff = 0 ; // voltage drop of 1 volt, something is wrong, set droop to 0
-            if (pcInstance->Droop.ref_diff > 200) pcInstance->Droop.ref_diff = 191; // clamp to 0.5 V in normal operation
+            if (pcInstance->Droop.ref_diff > 400) pcInstance->Droop.ref_diff = 0 ; // voltage drop of 1 volt results in 191 counts, something is wrong, set droop to 0
+            if (pcInstance->Droop.ref_diff > 200) pcInstance->Droop.ref_diff = 191; // clamp to 1 V in normal operation
             
             pcInstance->Properties.VSecReference = pcInstance->Droop.Droop_Voltage_Reference_from_PBV  - pcInstance->Droop.ref_diff ;
             //pcInstance->Droop.Droop_New_Voltage_Reference = pcInstance->Droop.Droop_New_Voltage_Reference >> 8;

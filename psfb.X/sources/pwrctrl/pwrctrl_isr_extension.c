@@ -127,9 +127,15 @@ void PwrCtrl_ControlLoopExecute(void)
     }
 }
 
-
+/*******************************************************************************
+ * @ingroup pwrctrl-isr
+ * @brief Averages secondary current for droop 
+ * @return void
+ * 
+ * @details This function is called to keep and average of last 100 values needed in droop
+ *********************************************************************************/
 void PwrCtrl_DroopAverage(void) {
-    // average of last 1000 values
+    // average of last 100 values
     if(psfb_ptr->ISecAveraging.Counter >= 99) {
         psfb_ptr->ISecAveraging.AverageValue = (uint16_t)(__builtin_divud(psfb_ptr->ISecAveraging.Accumulator, psfb_ptr->ISecAveraging.Counter));
         psfb_ptr->ISecAveraging.Accumulator = 0;

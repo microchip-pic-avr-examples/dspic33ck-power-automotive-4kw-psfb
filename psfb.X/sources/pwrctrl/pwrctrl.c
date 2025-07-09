@@ -35,7 +35,14 @@ static void PwrCtrl_ControlLoopInitialize(void);
 //// PUBLIC FUNCTIONS
 extern void PwrCtrl_StateMachine(POWER_CONTROL_t* pcInstance);
 
-
+/*******************************************************************************
+ * @ingroup pwrctrl
+ * @brief  Initialize the power control parameters
+ * @return void
+ * 
+ * @details This function initialize the power control settings, 
+ * start-up configuration and control loop configuration. 
+ *******************************************************************************/
 void PwrCtrl_Initialize(void){
 
     // Clear references
@@ -46,7 +53,7 @@ void PwrCtrl_Initialize(void){
 
 
     // Initialize Start-Up ramp settings
-    PwrCtrl_StartUpInitialize(); // ramp stuff
+    PwrCtrl_StartUpInitialize(); // ramp initialize
 
     // Initialize Power Control Loop
     PwrCtrl_ControlLoopInitialize(); //coefficents and SMPS_Controller2P2ZInitialize
@@ -54,12 +61,27 @@ void PwrCtrl_Initialize(void){
     //TODO: ??
 
 }
-
+/*******************************************************************************
+ * @ingroup pwrctrl
+ * @brief  Executes the power control state machine
+ * @return void
+ * 
+ * @details After initialization this function has to be called on a deterministic, 
+ *  constant time base. Each execution step, this function will call the power control
+ *  state machine.
+ *********************************************************************************/
 void PwrCtrl_Execute(void) {
     // Execute the state machine
     PwrCtrl_StateMachine(psfb_ptr);
 }
 
+/*******************************************************************************
+ * @ingroup pwrctrl
+ * @brief  Resets the power control properties
+ * @return void
+ * 
+ * @details This function resets the power control properties and control loop references.
+ *********************************************************************************/
 void PwrCtrl_Reset(void){
     //set the period to maximum  
 
@@ -168,12 +190,12 @@ void PwrCtrl_ControlLoopInitialize(void)
  * based on input voltage
  *********************************************************************************/
 void PwrCtrl_MaxDutyCycle(void){
-               //10 volts
+        // 10 volts
         // for 10 volts
-    // divided by 8 to keep it within 16bits
+        // divided by 8 to keep it within 16bits
     psfb.Precharge.scaler = 10 * 2 * 17 * 54;
     psfb.Precharge.primaryVoltage = Dev_PwrCtrl_GetAdc_Vpri() - 205;
-    //divided by 8 as scaler is also divided by 8
+    //  divided by 8 as scaler is also divided by 8
     psfb.Precharge.primaryVoltage = psfb.Precharge.primaryVoltage >> 3; 
 
     psfb.Precharge.maxDutyCycle  = __builtin_divud(psfb.Precharge.scaler, psfb.Precharge.primaryVoltage);

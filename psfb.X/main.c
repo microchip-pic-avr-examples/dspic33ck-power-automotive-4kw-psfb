@@ -36,8 +36,6 @@
 #include "sources/driver/mcc_extension/mcc_custom_config.h"
 uint16_t counter = 65500;
 
-uint16_t macro_debug = 0;
-
 /*
     Main application
 */
@@ -74,7 +72,6 @@ int main(void)
     psfb_ptr->SecRec.SR_Enabled = 0;    // enabled after start power transfer
     psfb_ptr->SecRec.SR_Flag = 0;   // make sure it is off
 
-
     ADC1_SoftwareTriggerEnable(); // add it here so that the very first time the values are available
     dev_MeasureOffsets_Initialize();
     PwrCtrl_OffsetDatatypesInitalize();
@@ -84,14 +81,6 @@ int main(void)
     OS_Init(); 
     TMR1_TimeoutCallbackRegister (TMR1_CallBack);  // scheduler timer 100us. statemachine
     
-    // ISEC_OC_THRES_TRIG 3350
-    // VSEC_OV_THRES_TRIG 764
-    // VPRI_OV_THRES_TRIG 4048
-    // VPRI_UV_THRES_TRIG 1932 
-    // VSEC_UV_THRES_TRIG 764
-    // VRAIL_5V_UV_THRES_TRIG 2321
-    // primary voltage equation to be revisted
-    macro_debug = IPRI_SC_THRES_TRIG;
     OS_Scheduler_RunForever();
     
     while(1)
