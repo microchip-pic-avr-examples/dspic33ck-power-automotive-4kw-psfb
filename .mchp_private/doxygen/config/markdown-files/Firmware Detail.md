@@ -23,10 +23,10 @@ Overview of the sensors and microcontroller peripherals used in power transfer
 
 The Firmware for PSFB DCDC Converter has the following components
 ### Input/Output Rail Sensing
-When designing a power converter, it's important to monitor both the input and output voltages and currents. This is done by scaling the voltages to levels that the microcontroller's ADC sense lines can handle. The input current is measured with a current transformer, while the output current is detected using a shunt amplifier. Both of these current measurements are then converted into voltage signals that the analog sense lines can process. 
+When designing a power converter, it's important to monitor both the input and output voltages and currents. This is done by scaling the voltages to levels that the microcontroller's ADC sense lines can handle. The primary side current is measured with a current transformer, while the output current is detected using a shunt amplifier. Both of these current measurements are then converted into voltage signals that the analog sense lines can process. 
 
 ##### Peripheral Used : High Speed 12-bit Analog to Digital Converter(ADC)
-The dsPIC33CK256MP506 devices have a high-speed, 12-bit Analog-to-Digital Converter (ADC) that features a low conversion latency, high resolution and oversampling capabilities to improve performance in AC/DC, DC/DC power converters. The devices implement the ADC with three SAR cores, two dedicated and one shared. Two of these cores are faster dedicated cores which are dedicated to specific channels and are used to sample the input and output currents. The other core, which is a shared core between a higher number of channels, is used to sample the input and output voltages. 
+The dsPIC33CK256MP506 devices have a high-speed, 12-bit Analog-to-Digital Converter (ADC) that features a low conversion latency, high resolution and oversampling capabilities to improve performance in AC/DC, DC/DC power converters. The devices implement the ADC with three SAR cores, two dedicated and one shared. Two of these cores are faster dedicated cores which are dedicated to specific channels and are used to sample the input and output currents. The other core, which is a shared core supporting a higher number of channels, is used to sample the input and output voltages. 
 
 Following table lists all the analog channels of the PSFB converter
 
@@ -53,10 +53,10 @@ The Trigger mechanisms are summarized in the table below.
 
 |      PWM Generator Number    |                                     Details                                    |                           Function                          |                        Start of Cycle Trigger                       |                                  Peripheral Setting                                |
 |:----------------------------:|:------------------------------------------------------------------------------:|:-----------------------------------------------------------:|:-------------------------------------------------------------------:|:-------------------------------------------------------------------------:|
-|     PWM Generator 1 (PG1)    |    Complimentary PWM at 100Khz    at 50% Duty Cycle, Dead Time 160ns                           |     Generating Signals for the Fixed Leg of PSFB            |     Self-Running                                                    |     PG1 End of Cycle                                                      |
-|     PWM Generator 3 (PG3)    |     Complimentary PWM at 100Khz    at 50% Duty Cycle, Dead Time 160ns                          |     Generating Signals for the Phase Shifted Leg of PSFB    |     Phase Delayed and Synchronized to PG1                           |     Trigger Value from PG1                                                |
-|     PWM Generator 2 (PG2)    |     Complimentary PWM at 100Khz,    Swapped.     Only High Side signal used    |     Generating the Synchronous rectifier signal for SR2     |     Synchronized to PG3.      Duty Cycle = Period – Phase Delay     |     Trigger value from PG3 and swapping the high and low side signal.     |
-|     PWM Generator 4 (PG4)    |     Complimentary PWM at 100Khz,    Swapped.     Only High Side Signal used    |     Generating the Synchronous rectifier signal for SR1     |     Synchronized to PG1.    Duty Cycle = Period – Phase Delay       |     Trigger value from PG1 and swapping the high and low side signal.     |
+|     PWM Generator 1 (PG1)    |    Complimentary PWM at 100kHz    at 50% Duty Cycle, Dead Time 160ns                           |     Generating Signals for the Fixed Leg of PSFB            |     Self-Running                                                    |     PG1 End of Cycle                                                      |
+|     PWM Generator 3 (PG3)    |     Complimentary PWM at 100kHz    at 50% Duty Cycle, Dead Time 160ns                          |     Generating Signals for the Phase Shifted Leg of PSFB    |     Phase Delayed and Synchronized to PG1                           |     Trigger Value from PG1                                                |
+|     PWM Generator 2 (PG2)    |     Complimentary PWM at 100kHz,    Swapped.     Only High Side signal used    |     Generating the Synchronous rectifier signal for SR2     |     Synchronized to PG3.      Duty Cycle = Period – Phase Delay     |     Trigger value from PG3 and swapping the high and low side signal.     |
+|     PWM Generator 4 (PG4)    |     Complimentary PWM at 100kHz,    Swapped.     Only High Side Signal used    |     Generating the Synchronous rectifier signal for SR1     |     Synchronized to PG1.    Duty Cycle = Period – Phase Delay       |     Trigger value from PG1 and swapping the high and low side signal.     |
 
 
 #### Seconndary Rectifiers DCM/CCM
@@ -82,7 +82,7 @@ PSFB PWM waveforms. D0 and D1 are complementary waveforms for fixed leg, D2 and 
 The changes to the input and output voltages and/or currents must not affect the stability of the system or damage the connected load. To ensure the integrity of the operation, the changes to the output and input voltages and currents are compensated for by using established control theory practices.
 
 #### Voltage Loop
-A fundamental approach to regulating the output voltage involves the implementation of a voltage loop. This voltage loop continuously monitors the output voltage for any deviations and compensates for these fluctuations by adjusting the duty cycle applied to the plant. However, relying solely on the voltage loop is often insufficient due to its inherently slow response time. Additionally, the voltage loop lacks the capability for cycle-by-cycle current control, which is critical for maintaining precise and stable operation. A cascaded approach is essential that employes both a current loop and a voltage loop.
+A fundamental approach to regulating the output voltage involves the implementation of a voltage loop. This voltage loop continuously monitors the output voltage for any deviations and compensates for these fluctuations by adjusting the controlled parameter applied to the plant (i.e. duty cycle, period, etc.) applied to the plant. However, relying solely on the voltage loop is often insufficient due to its inherently slow response time. Additionally, the voltage loop lacks the capability for cycle-by-cycle current control, which is critical for maintaining precise and stable operation. A cascaded approach is essential that employes both a current loop and a voltage loop.
 
 #### Current Loop
 To address the limitations inherent in the voltage loop, the inclusion of a current loop is essential. In the context of this design, two methodologies for current loops were evaluated: Peak Current Mode Control and Average Current Mode Control
@@ -100,20 +100,6 @@ In well-designed systems, the switch timings of each bridge are typically synchr
 The 2-pole/2-zero and 3-pole/3-zero are digital implementations of type II analog and type III analog compensators. These are filters designed to introduce specific gain and phase boosts by strategically placing poles and zeros in the frequency domain. 
 
 
-<p><center><a target="_blank" rel="nofollow" href="images/2p2z.png">
-<p>
-<img src="images/2p2z.png" alt="2p2z" width="600">
-</a>
-</center>
-</p>
-
-<p>
-<center>
-<a target="_blank" rel="nofollow">
-Digital implementation of type 2 Analog controller
-</a>
-</center>
-</p>
 
 <p><center><a target="_blank" rel="nofollow" href="images/3p3z.png">
 <p>

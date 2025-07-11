@@ -61,21 +61,22 @@ __Please always check for the latest data sheets on the respective product websi
 
 
 ## Quick Start Guide
-This section is designed to assist users in powering up the board using Power Board Visualizer after completing the hardware connections. It does not cover the hardware connection process itself. Please ensure that the load source connections are correct and that the operation is free from hazards. For detailed information, please refer to the user guide.
+This section is designed to assist users in powering up the board using the Power Board Visualizer after completing the hardware connections. It does not cover the hardware connection process itself, nor does it address droop or parallel operation. Please ensure that the load and source connections are correct and that the operation is free from hazards. For detailed information, please refer to the user guide. For droop applications, please refer to the parallel operation section in the firmware documentation.
 
 ## Directory Structure
 
 ```
-	├───psfb.X							        PSFB main project 
-	├───images									Images for the Readme 
-	├───power_board_visualizer_xmls				Power Board Visualizer Projects
-	├───pre_compiled_hex_files					Pre compiled Hex file
-	└───docs									doxygen files
+	├───psfb_droop.X							        PSFB project for parallel operation
+    ├───psfb_single.X							        PSFB project for standalone operation
+	├───images									        Images for the Readme 
+	├───power_board_visualizer_xmls				        Power Board Visualizer Projects
+	├───pre_compiled_hex_files					        Pre compiled Hex file
+	└───docs									        doxygen files
 ```
 ---
 
 ## Programming Hex File on to the dsPIC33C Digital Power PIM using available hex file
-In this example ICD4 is being used, but any of the available debuggers/programmers can be used.
+In this example ICD4 is being used, but any of the available debuggers/programmers can be used. Hex file for standalone operation is provided in this code example. For Parallel/droop application please refer to the firmware documentation. 
 
 1. Open <i>MPLAB X IPE</i>
 2. Select the device on DP-PIM : <i>dsPIC33CK256MP506</i>
@@ -137,10 +138,11 @@ Power Board Visualizer GUI
 After opening the appropriate Power Board Visualizer project, follow these steps to start the board:
 
 1. Select the correct communication port and enable it.
-2. Verify that everything is set up correctly by checking for status/housekeeping data and ensuring the system is in the PCS_PRECHARGE state. Confirm that the correct operation mode is programmed by examining the status flags.
+2. Verify that everything is set up correctly by checking for status/housekeeping data and ensuring the system is in the PCS_PRECHARGE state.
 3. Click on "Start Precharge". The system will charge the output caps in open loop.
 4. Click on "Start Power Transfer". The system will quickly transition through various states and should eventually reach the PCS_UP_AND_RUNNING state.
 5. Change the reference to desired output voltage value if necessary.
+
 
 <p><center><a target="_blank" rel="nofollow" href="images/Precharge.png">
 <p>
