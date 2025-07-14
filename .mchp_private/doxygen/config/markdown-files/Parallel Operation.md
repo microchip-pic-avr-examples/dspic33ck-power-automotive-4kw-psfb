@@ -47,8 +47,7 @@ As the load increases, each power source’s output voltage drops slightly accor
    R_d\,\text{counts} = \frac{1V \times 154\,\text{mV}/V \times 4095 / 3.3}{180A \times 10\,\text{mV}/A \times 4095 / 3.3}
    $$
 
-   where $154\,\text{mV}/V$ is the gain of the output voltage feedback, and $10\,\text{mV}/A$ is the gain of the output current sensor.
-
+   where 154mV/V is the gain of the output voltage feedback, and 10mV/A is the gain of the output current sensor.
 
    $$
    R_d\,\text{counts} = \frac{1V \times 154\,\text{mV}/V}{180 \times 10\,\text{mV}/A} = 0.0855\,\text{counts}
@@ -61,7 +60,7 @@ As the load increases, each power source’s output voltage drops slightly accor
     {180A \times 10\,\text{mV}/A \times 4095 / 3.3 = 2233.63}
     $$
 
-    multiplying this with $R_d$ 
+    multiplying this with R<sub>out</sub>
 
     $$
     {2233.63 \times 0.0855 = 190.97 \approx 191}
@@ -87,7 +86,7 @@ $$
 V_{ref'} = V_{ref PBV} - (I_{out} \times R_{droop})  
 $$
 
-I<sub>out</sub> is the average output current for that power module. The new V<sub>ref</sub> setpoint causes the State machine to jump back into the Soft Start state, where it slowly ramps down the Vref.
+I<sub>out</sub> is the average output current for that power module. The new V<sub>ref</sub> setpoint causes the State machine to jump back into the Soft Start state, where it slowly ramps down the V<sub>ref</sub>.
 
 ## How to operate in Droop Mode
 ### Preparing DP-PIMs
