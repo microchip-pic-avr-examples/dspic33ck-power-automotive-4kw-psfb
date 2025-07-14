@@ -33,7 +33,7 @@ The board features well-organized circuit sections, including an input EMI filte
 
 __Firmware Documentation__
 
-- [Online Firmware Documentation of this Code Example](./index.html)
+- [Online Firmware Documentation of this Code Example](https://microchip-pic-avr-examples.github.io/dspic33ck-automotive-lv-dcdc/)
 
 __Hardware Documentation__
 
