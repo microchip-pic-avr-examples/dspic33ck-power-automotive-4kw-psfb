@@ -37,8 +37,8 @@ __Firmware Documentation__
 
 __Hardware Documentation__
 
-- [4kW dsPIC33C PSFB DC-DC application demonstration user's Guide]()
-- [4kW dsPIC33C PSFB DC-DC application demonstration operational manual]()
+- 4kW dsPIC33C PSFB DC-DC application demonstration user's Guide
+- 4kW dsPIC33C PSFB DC-DC application demonstration operational manual
 
 __Target Device Documentation__
 
