@@ -37,7 +37,7 @@ As the load increases, each power source’s output voltage drops slightly accor
 
    Output Current Range is 180 amps.
 
-2. **Droop Coefficient R<sub>d</sub> :**  
+2. **Droop Coefficient Rd:**  
    Desired Droop Voltage is 1 Volt over entire voltage range. This was selected 
    $$
    R_d = \frac{1V}{180A}
