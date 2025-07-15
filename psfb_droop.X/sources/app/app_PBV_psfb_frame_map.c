@@ -5,7 +5,7 @@
  * @ingroup app-pbv-psfb-map
  */
 
-#include "App_PBV_psfb_frame_map.h"
+#include "app_PBV_psfb_frame_map.h"
 
 #include "system/pins.h"
 #include "pwm_hs/pwm.h"
