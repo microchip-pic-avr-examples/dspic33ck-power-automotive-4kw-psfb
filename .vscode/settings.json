@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "pwrctrl_dcdt.h": "c",
+        "iloop_dcdt.h": "c",
+        "smps_control.h": "c",
+        "pwrctrl_typedef.h": "c",
+        "stdbool.h": "c",
+        "pwm.h": "c",
+        "pwrctrl_pwm.h": "c",
+        "macros.h": "c",
+        "device.h": "c",
+        "fault_common.h": "c",
+        "pwrctrl.h": "c",
+        "useful_macros.h": "c",
+        "hardware.h": "c",
+        "config.h": "c",
+        "pins.h": "c",
+        "fault_comm_interface.h": "c",
+        "dev_adc_sensor_offsets.h": "c",
+        "fault.h": "c",
+        "iloop_t_dcdt.h": "c",
+        "vloop_dcdt.h": "c",
+        "pwrctrl_common.h": "c"
+    }
+}

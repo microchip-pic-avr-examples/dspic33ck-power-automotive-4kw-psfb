@@ -1,0 +1,1000 @@
+19952 1734540349327 XXXX 1734540349327, Thread 19952: XXXX 1734540349327, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540349428 XXXX 1734540349428, Thread 19952: XXXX 1734540349428, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540349430 XXXX 1734540349430, Thread 19952: XXXX 1734540349430, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540349528 XXXX 1734540349528, Thread 19952: XXXX 1734540349528, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540349529 XXXX 1734540349529, Thread 19952: XXXX 1734540349529, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540349629 XXXX 1734540349629, Thread 19952: XXXX 1734540349629, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540349631 XXXX 1734540349631, Thread 19952: XXXX 1734540349631, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540349729 XXXX 1734540349729, Thread 19952: XXXX 1734540349729, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540349731 XXXX 1734540349731, Thread 19952: XXXX 1734540349731, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540349830 XXXX 1734540349830, Thread 19952: XXXX 1734540349830, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540349831 XXXX 1734540349831, Thread 19952: XXXX 1734540349831, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540349931 XXXX 1734540349931, Thread 19952: XXXX 1734540349931, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540349933 XXXX 1734540349933, Thread 19952: XXXX 1734540349933, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350031 XXXX 1734540350031, Thread 19952: XXXX 1734540350031, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350033 XXXX 1734540350033, Thread 19952: XXXX 1734540350033, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350132 XXXX 1734540350132, Thread 19952: XXXX 1734540350132, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350133 XXXX 1734540350133, Thread 19952: XXXX 1734540350133, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350233 XXXX 1734540350233, Thread 19952: XXXX 1734540350233, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350235 XXXX 1734540350235, Thread 19952: XXXX 1734540350235, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350333 XXXX 1734540350333, Thread 19952: XXXX 1734540350333, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350335 XXXX 1734540350335, Thread 19952: XXXX 1734540350334, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350434 XXXX 1734540350434, Thread 19952: XXXX 1734540350434, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350436 XXXX 1734540350436, Thread 19952: XXXX 1734540350436, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350534 XXXX 1734540350534, Thread 19952: XXXX 1734540350534, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350536 XXXX 1734540350536, Thread 19952: XXXX 1734540350536, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350635 XXXX 1734540350635, Thread 19952: XXXX 1734540350635, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350636 XXXX 1734540350636, Thread 19952: XXXX 1734540350636, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350736 XXXX 1734540350736, Thread 19952: XXXX 1734540350736, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350738 XXXX 1734540350738, Thread 19952: XXXX 1734540350738, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350836 XXXX 1734540350836, Thread 19952: XXXX 1734540350836, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350838 XXXX 1734540350838, Thread 19952: XXXX 1734540350838, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540350938 XXXX 1734540350938, Thread 19952: XXXX 1734540350938, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540350940 XXXX 1734540350940, Thread 19952: XXXX 1734540350940, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351039 XXXX 1734540351039, Thread 19952: XXXX 1734540351039, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351041 XXXX 1734540351041, Thread 19952: XXXX 1734540351041, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351139 XXXX 1734540351139, Thread 19952: XXXX 1734540351139, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351141 XXXX 1734540351141, Thread 19952: XXXX 1734540351141, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351241 XXXX 1734540351241, Thread 19952: XXXX 1734540351241, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351243 XXXX 1734540351243, Thread 19952: XXXX 1734540351243, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351342 XXXX 1734540351342, Thread 19952: XXXX 1734540351342, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351344 XXXX 1734540351344, Thread 19952: XXXX 1734540351344, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351443 XXXX 1734540351443, Thread 19952: XXXX 1734540351443, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351445 XXXX 1734540351445, Thread 19952: XXXX 1734540351445, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351543 XXXX 1734540351543, Thread 19952: XXXX 1734540351543, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351545 XXXX 1734540351545, Thread 19952: XXXX 1734540351545, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351644 XXXX 1734540351644, Thread 19952: XXXX 1734540351644, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351646 XXXX 1734540351646, Thread 19952: XXXX 1734540351646, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351746 XXXX 1734540351746, Thread 19952: XXXX 1734540351746, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351748 XXXX 1734540351748, Thread 19952: XXXX 1734540351748, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351847 XXXX 1734540351847, Thread 19952: XXXX 1734540351847, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351849 XXXX 1734540351849, Thread 19952: XXXX 1734540351849, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540351947 XXXX 1734540351947, Thread 19952: XXXX 1734540351947, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540351948 XXXX 1734540351948, Thread 19952: XXXX 1734540351948, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352048 XXXX 1734540352048, Thread 19952: XXXX 1734540352048, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352050 XXXX 1734540352050, Thread 19952: XXXX 1734540352050, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352149 XXXX 1734540352149, Thread 19952: XXXX 1734540352149, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352151 XXXX 1734540352151, Thread 19952: XXXX 1734540352151, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352249 XXXX 1734540352249, Thread 19952: XXXX 1734540352249, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352251 XXXX 1734540352251, Thread 19952: XXXX 1734540352251, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352350 XXXX 1734540352350, Thread 19952: XXXX 1734540352350, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352352 XXXX 1734540352352, Thread 19952: XXXX 1734540352352, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352450 XXXX 1734540352450, Thread 19952: XXXX 1734540352450, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352452 XXXX 1734540352452, Thread 19952: XXXX 1734540352452, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352552 XXXX 1734540352552, Thread 19952: XXXX 1734540352552, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352554 XXXX 1734540352554, Thread 19952: XXXX 1734540352554, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352652 XXXX 1734540352652, Thread 19952: XXXX 1734540352652, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352654 XXXX 1734540352654, Thread 19952: XXXX 1734540352654, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352754 XXXX 1734540352754, Thread 19952: XXXX 1734540352754, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352755 XXXX 1734540352755, Thread 19952: XXXX 1734540352755, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352855 XXXX 1734540352855, Thread 19952: XXXX 1734540352855, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352857 XXXX 1734540352857, Thread 19952: XXXX 1734540352857, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540352955 XXXX 1734540352955, Thread 19952: XXXX 1734540352955, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540352957 XXXX 1734540352957, Thread 19952: XXXX 1734540352957, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353057 XXXX 1734540353057, Thread 19952: XXXX 1734540353057, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353059 XXXX 1734540353059, Thread 19952: XXXX 1734540353059, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353158 XXXX 1734540353158, Thread 19952: XXXX 1734540353158, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353160 XXXX 1734540353160, Thread 19952: XXXX 1734540353160, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353258 XXXX 1734540353258, Thread 19952: XXXX 1734540353258, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353259 XXXX 1734540353259, Thread 19952: XXXX 1734540353259, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353360 XXXX 1734540353360, Thread 19952: XXXX 1734540353360, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353362 XXXX 1734540353362, Thread 19952: XXXX 1734540353362, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353461 XXXX 1734540353461, Thread 19952: XXXX 1734540353461, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353463 XXXX 1734540353463, Thread 19952: XXXX 1734540353463, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353562 XXXX 1734540353562, Thread 19952: XXXX 1734540353562, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353563 XXXX 1734540353563, Thread 19952: XXXX 1734540353563, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353664 XXXX 1734540353664, Thread 19952: XXXX 1734540353664, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353666 XXXX 1734540353666, Thread 19952: XXXX 1734540353666, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353764 XXXX 1734540353764, Thread 19952: XXXX 1734540353764, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353766 XXXX 1734540353766, Thread 19952: XXXX 1734540353766, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353865 XXXX 1734540353865, Thread 19952: XXXX 1734540353865, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353866 XXXX 1734540353866, Thread 19952: XXXX 1734540353866, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540353967 XXXX 1734540353967, Thread 19952: XXXX 1734540353967, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540353969 XXXX 1734540353969, Thread 19952: XXXX 1734540353969, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354067 XXXX 1734540354067, Thread 19952: XXXX 1734540354067, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354069 XXXX 1734540354069, Thread 19952: XXXX 1734540354069, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354168 XXXX 1734540354168, Thread 19952: XXXX 1734540354168, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354170 XXXX 1734540354170, Thread 19952: XXXX 1734540354170, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354270 XXXX 1734540354270, Thread 19952: XXXX 1734540354270, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354272 XXXX 1734540354272, Thread 19952: XXXX 1734540354272, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354370 XXXX 1734540354370, Thread 19952: XXXX 1734540354370, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354371 XXXX 1734540354371, Thread 19952: XXXX 1734540354371, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354470 XXXX 1734540354470, Thread 19952: XXXX 1734540354470, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354472 XXXX 1734540354472, Thread 19952: XXXX 1734540354472, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354571 XXXX 1734540354571, Thread 19952: XXXX 1734540354571, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354573 XXXX 1734540354573, Thread 19952: XXXX 1734540354573, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354672 XXXX 1734540354672, Thread 19952: XXXX 1734540354672, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354674 XXXX 1734540354674, Thread 19952: XXXX 1734540354674, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354772 XXXX 1734540354772, Thread 19952: XXXX 1734540354772, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354774 XXXX 1734540354774, Thread 19952: XXXX 1734540354774, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354873 XXXX 1734540354873, Thread 19952: XXXX 1734540354873, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354875 XXXX 1734540354875, Thread 19952: XXXX 1734540354875, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540354974 XXXX 1734540354974, Thread 19952: XXXX 1734540354974, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540354976 XXXX 1734540354976, Thread 19952: XXXX 1734540354976, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355074 XXXX 1734540355074, Thread 19952: XXXX 1734540355074, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355076 XXXX 1734540355076, Thread 19952: XXXX 1734540355076, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355176 XXXX 1734540355176, Thread 19952: XXXX 1734540355176, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355178 XXXX 1734540355178, Thread 19952: XXXX 1734540355178, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355277 XXXX 1734540355277, Thread 19952: XXXX 1734540355277, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355279 XXXX 1734540355279, Thread 19952: XXXX 1734540355279, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355377 XXXX 1734540355377, Thread 19952: XXXX 1734540355377, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355378 XXXX 1734540355378, Thread 19952: XXXX 1734540355378, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355478 XXXX 1734540355478, Thread 19952: XXXX 1734540355478, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355480 XXXX 1734540355480, Thread 19952: XXXX 1734540355480, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355579 XXXX 1734540355579, Thread 19952: XXXX 1734540355579, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355580 XXXX 1734540355580, Thread 19952: XXXX 1734540355580, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355681 XXXX 1734540355681, Thread 19952: XXXX 1734540355681, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355683 XXXX 1734540355683, Thread 19952: XXXX 1734540355683, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355781 XXXX 1734540355781, Thread 19952: XXXX 1734540355781, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355783 XXXX 1734540355783, Thread 19952: XXXX 1734540355783, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355882 XXXX 1734540355882, Thread 19952: XXXX 1734540355882, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355883 XXXX 1734540355883, Thread 19952: XXXX 1734540355883, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540355984 XXXX 1734540355984, Thread 19952: XXXX 1734540355984, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540355986 XXXX 1734540355986, Thread 19952: XXXX 1734540355986, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356084 XXXX 1734540356084, Thread 19952: XXXX 1734540356084, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356086 XXXX 1734540356086, Thread 19952: XXXX 1734540356086, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356185 XXXX 1734540356185, Thread 19952: XXXX 1734540356185, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356186 XXXX 1734540356186, Thread 19952: XXXX 1734540356186, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356286 XXXX 1734540356286, Thread 19952: XXXX 1734540356286, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356288 XXXX 1734540356288, Thread 19952: XXXX 1734540356288, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356386 XXXX 1734540356386, Thread 19952: XXXX 1734540356386, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356387 XXXX 1734540356387, Thread 19952: XXXX 1734540356387, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356486 XXXX 1734540356486, Thread 19952: XXXX 1734540356486, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356487 XXXX 1734540356487, Thread 19952: XXXX 1734540356487, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356588 XXXX 1734540356588, Thread 19952: XXXX 1734540356588, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356590 XXXX 1734540356590, Thread 19952: XXXX 1734540356590, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356689 XXXX 1734540356689, Thread 19952: XXXX 1734540356689, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356691 XXXX 1734540356691, Thread 19952: XXXX 1734540356691, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356789 XXXX 1734540356789, Thread 19952: XXXX 1734540356789, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356790 XXXX 1734540356790, Thread 19952: XXXX 1734540356790, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356891 XXXX 1734540356891, Thread 19952: XXXX 1734540356891, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356893 XXXX 1734540356893, Thread 19952: XXXX 1734540356893, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540356991 XXXX 1734540356991, Thread 19952: XXXX 1734540356991, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540356993 XXXX 1734540356993, Thread 19952: XXXX 1734540356993, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357092 XXXX 1734540357092, Thread 19952: XXXX 1734540357092, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357094 XXXX 1734540357094, Thread 19952: XXXX 1734540357094, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357192 XXXX 1734540357192, Thread 19952: XXXX 1734540357192, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357194 XXXX 1734540357194, Thread 19952: XXXX 1734540357194, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357293 XXXX 1734540357293, Thread 19952: XXXX 1734540357293, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357294 XXXX 1734540357294, Thread 19952: XXXX 1734540357294, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357393 XXXX 1734540357393, Thread 19952: XXXX 1734540357393, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357395 XXXX 1734540357395, Thread 19952: XXXX 1734540357395, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357494 XXXX 1734540357494, Thread 19952: XXXX 1734540357494, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357496 XXXX 1734540357496, Thread 19952: XXXX 1734540357496, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357594 XXXX 1734540357594, Thread 19952: XXXX 1734540357594, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357596 XXXX 1734540357596, Thread 19952: XXXX 1734540357596, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357695 XXXX 1734540357695, Thread 19952: XXXX 1734540357695, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357696 XXXX 1734540357696, Thread 19952: XXXX 1734540357696, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357796 XXXX 1734540357796, Thread 19952: XXXX 1734540357796, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357798 XXXX 1734540357798, Thread 19952: XXXX 1734540357798, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357896 XXXX 1734540357896, Thread 19952: XXXX 1734540357896, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357898 XXXX 1734540357898, Thread 19952: XXXX 1734540357898, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540357997 XXXX 1734540357997, Thread 19952: XXXX 1734540357997, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540357998 XXXX 1734540357998, Thread 19952: XXXX 1734540357998, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358098 XXXX 1734540358098, Thread 19952: XXXX 1734540358098, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358100 XXXX 1734540358100, Thread 19952: XXXX 1734540358100, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358198 XXXX 1734540358198, Thread 19952: XXXX 1734540358198, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358200 XXXX 1734540358200, Thread 19952: XXXX 1734540358200, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358299 XXXX 1734540358299, Thread 19952: XXXX 1734540358299, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358300 XXXX 1734540358300, Thread 19952: XXXX 1734540358300, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358399 XXXX 1734540358399, Thread 19952: XXXX 1734540358399, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358401 XXXX 1734540358401, Thread 19952: XXXX 1734540358401, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358500 XXXX 1734540358500, Thread 19952: XXXX 1734540358500, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358502 XXXX 1734540358502, Thread 19952: XXXX 1734540358502, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358601 XXXX 1734540358601, Thread 19952: XXXX 1734540358601, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358603 XXXX 1734540358603, Thread 19952: XXXX 1734540358603, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358701 XXXX 1734540358701, Thread 19952: XXXX 1734540358701, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358703 XXXX 1734540358703, Thread 19952: XXXX 1734540358703, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358803 XXXX 1734540358803, Thread 19952: XXXX 1734540358803, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358805 XXXX 1734540358805, Thread 19952: XXXX 1734540358805, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540358904 XXXX 1734540358904, Thread 19952: XXXX 1734540358904, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540358906 XXXX 1734540358906, Thread 19952: XXXX 1734540358906, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359004 XXXX 1734540359004, Thread 19952: XXXX 1734540359004, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359005 XXXX 1734540359005, Thread 19952: XXXX 1734540359005, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359106 XXXX 1734540359106, Thread 19952: XXXX 1734540359106, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359108 XXXX 1734540359108, Thread 19952: XXXX 1734540359108, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359207 XXXX 1734540359207, Thread 19952: XXXX 1734540359207, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359209 XXXX 1734540359209, Thread 19952: XXXX 1734540359209, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359307 XXXX 1734540359307, Thread 19952: XXXX 1734540359307, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359309 XXXX 1734540359309, Thread 19952: XXXX 1734540359309, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359408 XXXX 1734540359408, Thread 19952: XXXX 1734540359408, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359409 XXXX 1734540359409, Thread 19952: XXXX 1734540359409, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359509 XXXX 1734540359509, Thread 19952: XXXX 1734540359509, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359511 XXXX 1734540359511, Thread 19952: XXXX 1734540359511, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359610 XXXX 1734540359610, Thread 19952: XXXX 1734540359610, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359611 XXXX 1734540359611, Thread 19952: XXXX 1734540359611, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359711 XXXX 1734540359711, Thread 19952: XXXX 1734540359711, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359713 XXXX 1734540359713, Thread 19952: XXXX 1734540359713, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359811 XXXX 1734540359811, Thread 19952: XXXX 1734540359811, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359813 XXXX 1734540359813, Thread 19952: XXXX 1734540359813, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540359912 XXXX 1734540359912, Thread 19952: XXXX 1734540359912, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540359913 XXXX 1734540359913, Thread 19952: XXXX 1734540359913, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360013 XXXX 1734540360013, Thread 19952: XXXX 1734540360013, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360015 XXXX 1734540360015, Thread 19952: XXXX 1734540360015, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360113 XXXX 1734540360113, Thread 19952: XXXX 1734540360113, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360115 XXXX 1734540360115, Thread 19952: XXXX 1734540360115, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360214 XXXX 1734540360214, Thread 19952: XXXX 1734540360214, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360215 XXXX 1734540360215, Thread 19952: XXXX 1734540360215, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360315 XXXX 1734540360315, Thread 19952: XXXX 1734540360315, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360317 XXXX 1734540360317, Thread 19952: XXXX 1734540360317, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360416 XXXX 1734540360416, Thread 19952: XXXX 1734540360416, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360418 XXXX 1734540360417, Thread 19952: XXXX 1734540360417, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360517 XXXX 1734540360517, Thread 19952: XXXX 1734540360517, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360519 XXXX 1734540360519, Thread 19952: XXXX 1734540360519, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360617 XXXX 1734540360617, Thread 19952: XXXX 1734540360617, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360619 XXXX 1734540360619, Thread 19952: XXXX 1734540360619, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360719 XXXX 1734540360719, Thread 19952: XXXX 1734540360719, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360721 XXXX 1734540360721, Thread 19952: XXXX 1734540360721, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360820 XXXX 1734540360820, Thread 19952: XXXX 1734540360820, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360822 XXXX 1734540360822, Thread 19952: XXXX 1734540360822, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540360920 XXXX 1734540360920, Thread 19952: XXXX 1734540360920, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540360922 XXXX 1734540360922, Thread 19952: XXXX 1734540360922, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361022 XXXX 1734540361022, Thread 19952: XXXX 1734540361022, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361024 XXXX 1734540361024, Thread 19952: XXXX 1734540361024, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361122 XXXX 1734540361122, Thread 19952: XXXX 1734540361122, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361124 XXXX 1734540361124, Thread 19952: XXXX 1734540361124, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361224 XXXX 1734540361224, Thread 19952: XXXX 1734540361224, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361226 XXXX 1734540361226, Thread 19952: XXXX 1734540361226, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361325 XXXX 1734540361325, Thread 19952: XXXX 1734540361325, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361327 XXXX 1734540361327, Thread 19952: XXXX 1734540361327, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361425 XXXX 1734540361425, Thread 19952: XXXX 1734540361425, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361427 XXXX 1734540361427, Thread 19952: XXXX 1734540361427, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361526 XXXX 1734540361526, Thread 19952: XXXX 1734540361526, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361528 XXXX 1734540361528, Thread 19952: XXXX 1734540361528, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361627 XXXX 1734540361627, Thread 19952: XXXX 1734540361627, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361628 XXXX 1734540361628, Thread 19952: XXXX 1734540361628, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361729 XXXX 1734540361729, Thread 19952: XXXX 1734540361729, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361731 XXXX 1734540361731, Thread 19952: XXXX 1734540361731, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361829 XXXX 1734540361829, Thread 19952: XXXX 1734540361829, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361831 XXXX 1734540361831, Thread 19952: XXXX 1734540361831, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540361930 XXXX 1734540361930, Thread 19952: XXXX 1734540361930, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540361931 XXXX 1734540361931, Thread 19952: XXXX 1734540361931, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362031 XXXX 1734540362031, Thread 19952: XXXX 1734540362031, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362033 XXXX 1734540362033, Thread 19952: XXXX 1734540362033, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362131 XXXX 1734540362131, Thread 19952: XXXX 1734540362131, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362133 XXXX 1734540362133, Thread 19952: XXXX 1734540362133, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362232 XXXX 1734540362232, Thread 19952: XXXX 1734540362232, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362233 XXXX 1734540362233, Thread 19952: XXXX 1734540362233, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362333 XXXX 1734540362333, Thread 19952: XXXX 1734540362333, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362335 XXXX 1734540362335, Thread 19952: XXXX 1734540362335, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362434 XXXX 1734540362434, Thread 19952: XXXX 1734540362434, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362435 XXXX 1734540362435, Thread 19952: XXXX 1734540362435, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362534 XXXX 1734540362534, Thread 19952: XXXX 1734540362534, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362536 XXXX 1734540362536, Thread 19952: XXXX 1734540362536, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362635 XXXX 1734540362635, Thread 19952: XXXX 1734540362635, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362636 XXXX 1734540362636, Thread 19952: XXXX 1734540362636, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362736 XXXX 1734540362736, Thread 19952: XXXX 1734540362736, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362738 XXXX 1734540362738, Thread 19952: XXXX 1734540362738, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362836 XXXX 1734540362836, Thread 19952: XXXX 1734540362836, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362838 XXXX 1734540362838, Thread 19952: XXXX 1734540362838, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540362938 XXXX 1734540362938, Thread 19952: XXXX 1734540362938, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540362939 XXXX 1734540362939, Thread 19952: XXXX 1734540362939, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363039 XXXX 1734540363039, Thread 19952: XXXX 1734540363039, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363041 XXXX 1734540363041, Thread 19952: XXXX 1734540363041, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363139 XXXX 1734540363139, Thread 19952: XXXX 1734540363139, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363141 XXXX 1734540363141, Thread 19952: XXXX 1734540363141, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363240 XXXX 1734540363240, Thread 19952: XXXX 1734540363240, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363242 XXXX 1734540363242, Thread 19952: XXXX 1734540363241, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363340 XXXX 1734540363340, Thread 19952: XXXX 1734540363340, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363342 XXXX 1734540363342, Thread 19952: XXXX 1734540363342, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363441 XXXX 1734540363441, Thread 19952: XXXX 1734540363441, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363443 XXXX 1734540363443, Thread 19952: XXXX 1734540363443, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363541 XXXX 1734540363541, Thread 19952: XXXX 1734540363541, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363542 XXXX 1734540363542, Thread 19952: XXXX 1734540363542, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363642 XXXX 1734540363642, Thread 19952: XXXX 1734540363642, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363644 XXXX 1734540363644, Thread 19952: XXXX 1734540363644, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363743 XXXX 1734540363743, Thread 19952: XXXX 1734540363743, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363745 XXXX 1734540363745, Thread 19952: XXXX 1734540363745, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363843 XXXX 1734540363843, Thread 19952: XXXX 1734540363843, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363845 XXXX 1734540363845, Thread 19952: XXXX 1734540363845, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540363945 XXXX 1734540363945, Thread 19952: XXXX 1734540363945, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540363947 XXXX 1734540363947, Thread 19952: XXXX 1734540363947, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364046 XXXX 1734540364046, Thread 19952: XXXX 1734540364046, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364048 XXXX 1734540364048, Thread 19952: XXXX 1734540364048, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364146 XXXX 1734540364146, Thread 19952: XXXX 1734540364146, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364147 XXXX 1734540364147, Thread 19952: XXXX 1734540364147, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364247 XXXX 1734540364247, Thread 19952: XXXX 1734540364247, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364249 XXXX 1734540364249, Thread 19952: XXXX 1734540364249, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364347 XXXX 1734540364347, Thread 19952: XXXX 1734540364347, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364348 XXXX 1734540364348, Thread 19952: XXXX 1734540364348, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364449 XXXX 1734540364449, Thread 19952: XXXX 1734540364449, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364451 XXXX 1734540364451, Thread 19952: XXXX 1734540364451, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364549 XXXX 1734540364549, Thread 19952: XXXX 1734540364549, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364550 XXXX 1734540364550, Thread 19952: XXXX 1734540364550, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364651 XXXX 1734540364651, Thread 19952: XXXX 1734540364651, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364653 XXXX 1734540364653, Thread 19952: XXXX 1734540364653, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364751 XXXX 1734540364751, Thread 19952: XXXX 1734540364751, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364753 XXXX 1734540364753, Thread 19952: XXXX 1734540364753, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364852 XXXX 1734540364852, Thread 19952: XXXX 1734540364852, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364853 XXXX 1734540364853, Thread 19952: XXXX 1734540364853, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540364954 XXXX 1734540364954, Thread 19952: XXXX 1734540364954, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540364956 XXXX 1734540364956, Thread 19952: XXXX 1734540364956, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365054 XXXX 1734540365054, Thread 19952: XXXX 1734540365054, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365056 XXXX 1734540365056, Thread 19952: XXXX 1734540365056, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365155 XXXX 1734540365155, Thread 19952: XXXX 1734540365155, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365156 XXXX 1734540365156, Thread 19952: XXXX 1734540365156, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365256 XXXX 1734540365256, Thread 19952: XXXX 1734540365256, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365258 XXXX 1734540365258, Thread 19952: XXXX 1734540365258, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365356 XXXX 1734540365356, Thread 19952: XXXX 1734540365356, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365357 XXXX 1734540365357, Thread 19952: XXXX 1734540365357, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365457 XXXX 1734540365457, Thread 19952: XXXX 1734540365457, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365458 XXXX 1734540365458, Thread 19952: XXXX 1734540365458, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365558 XXXX 1734540365558, Thread 19952: XXXX 1734540365558, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365560 XXXX 1734540365560, Thread 19952: XXXX 1734540365560, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365659 XXXX 1734540365659, Thread 19952: XXXX 1734540365659, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365661 XXXX 1734540365661, Thread 19952: XXXX 1734540365661, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365759 XXXX 1734540365759, Thread 19952: XXXX 1734540365759, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365761 XXXX 1734540365761, Thread 19952: XXXX 1734540365761, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365861 XXXX 1734540365861, Thread 19952: XXXX 1734540365861, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365863 XXXX 1734540365863, Thread 19952: XXXX 1734540365863, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540365962 XXXX 1734540365962, Thread 19952: XXXX 1734540365962, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540365964 XXXX 1734540365964, Thread 19952: XXXX 1734540365964, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366062 XXXX 1734540366062, Thread 19952: XXXX 1734540366062, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366064 XXXX 1734540366064, Thread 19952: XXXX 1734540366064, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366163 XXXX 1734540366163, Thread 19952: XXXX 1734540366163, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366165 XXXX 1734540366165, Thread 19952: XXXX 1734540366165, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366264 XXXX 1734540366264, Thread 19952: XXXX 1734540366264, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366266 XXXX 1734540366266, Thread 19952: XXXX 1734540366266, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366364 XXXX 1734540366364, Thread 19952: XXXX 1734540366364, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366366 XXXX 1734540366366, Thread 19952: XXXX 1734540366366, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366466 XXXX 1734540366466, Thread 19952: XXXX 1734540366466, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366468 XXXX 1734540366468, Thread 19952: XXXX 1734540366468, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366566 XXXX 1734540366566, Thread 19952: XXXX 1734540366566, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366568 XXXX 1734540366568, Thread 19952: XXXX 1734540366568, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366666 XXXX 1734540366666, Thread 19952: XXXX 1734540366666, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366668 XXXX 1734540366668, Thread 19952: XXXX 1734540366668, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366768 XXXX 1734540366768, Thread 19952: XXXX 1734540366768, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366769 XXXX 1734540366769, Thread 19952: XXXX 1734540366769, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366869 XXXX 1734540366869, Thread 19952: XXXX 1734540366869, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366871 XXXX 1734540366871, Thread 19952: XXXX 1734540366871, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540366969 XXXX 1734540366969, Thread 19952: XXXX 1734540366969, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540366971 XXXX 1734540366971, Thread 19952: XXXX 1734540366971, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367071 XXXX 1734540367071, Thread 19952: XXXX 1734540367071, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367073 XXXX 1734540367073, Thread 19952: XXXX 1734540367073, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367171 XXXX 1734540367171, Thread 19952: XXXX 1734540367171, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367173 XXXX 1734540367173, Thread 19952: XXXX 1734540367173, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367273 XXXX 1734540367273, Thread 19952: XXXX 1734540367273, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367275 XXXX 1734540367275, Thread 19952: XXXX 1734540367275, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367373 XXXX 1734540367373, Thread 19952: XXXX 1734540367373, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367374 XXXX 1734540367374, Thread 19952: XXXX 1734540367374, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367475 XXXX 1734540367475, Thread 19952: XXXX 1734540367475, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367477 XXXX 1734540367477, Thread 19952: XXXX 1734540367477, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367575 XXXX 1734540367575, Thread 19952: XXXX 1734540367575, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367576 XXXX 1734540367576, Thread 19952: XXXX 1734540367576, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367677 XXXX 1734540367677, Thread 19952: XXXX 1734540367677, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367679 XXXX 1734540367679, Thread 19952: XXXX 1734540367679, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367778 XXXX 1734540367778, Thread 19952: XXXX 1734540367778, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367780 XXXX 1734540367780, Thread 19952: XXXX 1734540367780, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367878 XXXX 1734540367878, Thread 19952: XXXX 1734540367878, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367880 XXXX 1734540367880, Thread 19952: XXXX 1734540367880, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540367980 XXXX 1734540367980, Thread 19952: XXXX 1734540367980, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540367982 XXXX 1734540367982, Thread 19952: XXXX 1734540367982, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368081 XXXX 1734540368081, Thread 19952: XXXX 1734540368081, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368083 XXXX 1734540368083, Thread 19952: XXXX 1734540368083, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368181 XXXX 1734540368181, Thread 19952: XXXX 1734540368181, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368182 XXXX 1734540368182, Thread 19952: XXXX 1734540368182, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368283 XXXX 1734540368283, Thread 19952: XXXX 1734540368283, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368285 XXXX 1734540368285, Thread 19952: XXXX 1734540368285, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368383 XXXX 1734540368383, Thread 19952: XXXX 1734540368383, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368384 XXXX 1734540368384, Thread 19952: XXXX 1734540368384, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368484 XXXX 1734540368484, Thread 19952: XXXX 1734540368484, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368486 XXXX 1734540368486, Thread 19952: XXXX 1734540368486, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368585 XXXX 1734540368585, Thread 19952: XXXX 1734540368585, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368586 XXXX 1734540368586, Thread 19952: XXXX 1734540368586, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368686 XXXX 1734540368686, Thread 19952: XXXX 1734540368686, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368688 XXXX 1734540368688, Thread 19952: XXXX 1734540368688, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368786 XXXX 1734540368786, Thread 19952: XXXX 1734540368786, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368788 XXXX 1734540368788, Thread 19952: XXXX 1734540368788, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368887 XXXX 1734540368887, Thread 19952: XXXX 1734540368887, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368888 XXXX 1734540368888, Thread 19952: XXXX 1734540368888, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540368988 XXXX 1734540368988, Thread 19952: XXXX 1734540368988, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540368990 XXXX 1734540368990, Thread 19952: XXXX 1734540368990, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369088 XXXX 1734540369088, Thread 19952: XXXX 1734540369088, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369090 XXXX 1734540369090, Thread 19952: XXXX 1734540369090, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369189 XXXX 1734540369189, Thread 19952: XXXX 1734540369189, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369190 XXXX 1734540369190, Thread 19952: XXXX 1734540369190, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369290 XXXX 1734540369290, Thread 19952: XXXX 1734540369290, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369292 XXXX 1734540369292, Thread 19952: XXXX 1734540369292, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369390 XXXX 1734540369390, Thread 19952: XXXX 1734540369390, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369391 XXXX 1734540369391, Thread 19952: XXXX 1734540369391, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369490 XXXX 1734540369490, Thread 19952: XXXX 1734540369490, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369492 XXXX 1734540369492, Thread 19952: XXXX 1734540369492, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369591 XXXX 1734540369591, Thread 19952: XXXX 1734540369591, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369592 XXXX 1734540369592, Thread 19952: XXXX 1734540369592, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369692 XXXX 1734540369692, Thread 19952: XXXX 1734540369692, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369694 XXXX 1734540369694, Thread 19952: XXXX 1734540369694, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369792 XXXX 1734540369792, Thread 19952: XXXX 1734540369792, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369794 XXXX 1734540369794, Thread 19952: XXXX 1734540369794, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369894 XXXX 1734540369894, Thread 19952: XXXX 1734540369894, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369895 XXXX 1734540369895, Thread 19952: XXXX 1734540369895, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540369995 XXXX 1734540369995, Thread 19952: XXXX 1734540369995, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540369997 XXXX 1734540369997, Thread 19952: XXXX 1734540369997, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370095 XXXX 1734540370095, Thread 19952: XXXX 1734540370095, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370097 XXXX 1734540370097, Thread 19952: XXXX 1734540370097, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370196 XXXX 1734540370196, Thread 19952: XXXX 1734540370196, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370198 XXXX 1734540370198, Thread 19952: XXXX 1734540370198, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370297 XXXX 1734540370297, Thread 19952: XXXX 1734540370297, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370299 XXXX 1734540370299, Thread 19952: XXXX 1734540370299, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370397 XXXX 1734540370397, Thread 19952: XXXX 1734540370397, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370399 XXXX 1734540370399, Thread 19952: XXXX 1734540370399, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370497 XXXX 1734540370497, Thread 19952: XXXX 1734540370497, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370498 XXXX 1734540370498, Thread 19952: XXXX 1734540370498, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370599 XXXX 1734540370599, Thread 19952: XXXX 1734540370599, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370601 XXXX 1734540370601, Thread 19952: XXXX 1734540370601, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370699 XXXX 1734540370699, Thread 19952: XXXX 1734540370699, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370701 XXXX 1734540370701, Thread 19952: XXXX 1734540370701, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370800 XXXX 1734540370800, Thread 19952: XXXX 1734540370800, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370802 XXXX 1734540370802, Thread 19952: XXXX 1734540370802, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540370902 XXXX 1734540370902, Thread 19952: XXXX 1734540370902, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540370904 XXXX 1734540370904, Thread 19952: XXXX 1734540370904, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371002 XXXX 1734540371002, Thread 19952: XXXX 1734540371002, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371004 XXXX 1734540371004, Thread 19952: XXXX 1734540371004, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371103 XXXX 1734540371103, Thread 19952: XXXX 1734540371103, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371104 XXXX 1734540371104, Thread 19952: XXXX 1734540371104, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371205 XXXX 1734540371205, Thread 19952: XXXX 1734540371205, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371207 XXXX 1734540371207, Thread 19952: XXXX 1734540371207, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371306 XXXX 1734540371306, Thread 19952: XXXX 1734540371306, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371308 XXXX 1734540371308, Thread 19952: XXXX 1734540371308, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371406 XXXX 1734540371406, Thread 19952: XXXX 1734540371406, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371408 XXXX 1734540371408, Thread 19952: XXXX 1734540371408, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371507 XXXX 1734540371507, Thread 19952: XXXX 1734540371507, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371509 XXXX 1734540371509, Thread 19952: XXXX 1734540371509, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371607 XXXX 1734540371607, Thread 19952: XXXX 1734540371607, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371609 XXXX 1734540371609, Thread 19952: XXXX 1734540371609, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371709 XXXX 1734540371709, Thread 19952: XXXX 1734540371709, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371711 XXXX 1734540371711, Thread 19952: XXXX 1734540371711, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371810 XXXX 1734540371810, Thread 19952: XXXX 1734540371810, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371812 XXXX 1734540371812, Thread 19952: XXXX 1734540371812, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540371910 XXXX 1734540371910, Thread 19952: XXXX 1734540371910, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540371912 XXXX 1734540371912, Thread 19952: XXXX 1734540371912, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372012 XXXX 1734540372012, Thread 19952: XXXX 1734540372012, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372014 XXXX 1734540372014, Thread 19952: XXXX 1734540372014, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372114 XXXX 1734540372114, Thread 19952: XXXX 1734540372114, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372116 XXXX 1734540372116, Thread 19952: XXXX 1734540372116, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372215 XXXX 1734540372215, Thread 19952: XXXX 1734540372215, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372217 XXXX 1734540372217, Thread 19952: XXXX 1734540372217, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372315 XXXX 1734540372315, Thread 19952: XXXX 1734540372315, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372317 XXXX 1734540372317, Thread 19952: XXXX 1734540372317, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372417 XXXX 1734540372417, Thread 19952: XXXX 1734540372417, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372419 XXXX 1734540372419, Thread 19952: XXXX 1734540372419, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372517 XXXX 1734540372517, Thread 19952: XXXX 1734540372517, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372518 XXXX 1734540372518, Thread 19952: XXXX 1734540372518, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372619 XXXX 1734540372619, Thread 19952: XXXX 1734540372619, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372621 XXXX 1734540372621, Thread 19952: XXXX 1734540372621, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372719 XXXX 1734540372719, Thread 19952: XXXX 1734540372719, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372721 XXXX 1734540372721, Thread 19952: XXXX 1734540372721, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372820 XXXX 1734540372820, Thread 19952: XXXX 1734540372820, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372822 XXXX 1734540372822, Thread 19952: XXXX 1734540372822, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540372922 XXXX 1734540372922, Thread 19952: XXXX 1734540372922, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540372924 XXXX 1734540372924, Thread 19952: XXXX 1734540372924, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373022 XXXX 1734540373022, Thread 19952: XXXX 1734540373022, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373024 XXXX 1734540373024, Thread 19952: XXXX 1734540373024, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373123 XXXX 1734540373123, Thread 19952: XXXX 1734540373123, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373124 XXXX 1734540373124, Thread 19952: XXXX 1734540373124, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373224 XXXX 1734540373224, Thread 19952: XXXX 1734540373224, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373226 XXXX 1734540373226, Thread 19952: XXXX 1734540373226, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373324 XXXX 1734540373324, Thread 19952: XXXX 1734540373324, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373326 XXXX 1734540373326, Thread 19952: XXXX 1734540373326, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373426 XXXX 1734540373426, Thread 19952: XXXX 1734540373426, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373428 XXXX 1734540373428, Thread 19952: XXXX 1734540373428, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373526 XXXX 1734540373526, Thread 19952: XXXX 1734540373526, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373527 XXXX 1734540373527, Thread 19952: XXXX 1734540373527, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373628 XXXX 1734540373628, Thread 19952: XXXX 1734540373628, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373630 XXXX 1734540373630, Thread 19952: XXXX 1734540373630, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373729 XXXX 1734540373729, Thread 19952: XXXX 1734540373729, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373730 XXXX 1734540373730, Thread 19952: XXXX 1734540373730, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373830 XXXX 1734540373830, Thread 19952: XXXX 1734540373830, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373832 XXXX 1734540373832, Thread 19952: XXXX 1734540373832, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540373932 XXXX 1734540373932, Thread 19952: XXXX 1734540373932, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540373934 XXXX 1734540373934, Thread 19952: XXXX 1734540373934, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374032 XXXX 1734540374032, Thread 19952: XXXX 1734540374032, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374034 XXXX 1734540374034, Thread 19952: XXXX 1734540374034, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374133 XXXX 1734540374133, Thread 19952: XXXX 1734540374133, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374134 XXXX 1734540374134, Thread 19952: XXXX 1734540374134, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374235 XXXX 1734540374235, Thread 19952: XXXX 1734540374235, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374237 XXXX 1734540374237, Thread 19952: XXXX 1734540374237, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374335 XXXX 1734540374335, Thread 19952: XXXX 1734540374335, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374336 XXXX 1734540374336, Thread 19952: XXXX 1734540374336, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374437 XXXX 1734540374437, Thread 19952: XXXX 1734540374437, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374439 XXXX 1734540374439, Thread 19952: XXXX 1734540374439, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374537 XXXX 1734540374537, Thread 19952: XXXX 1734540374537, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374538 XXXX 1734540374538, Thread 19952: XXXX 1734540374538, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374638 XXXX 1734540374638, Thread 19952: XXXX 1734540374638, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374640 XXXX 1734540374640, Thread 19952: XXXX 1734540374640, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374738 XXXX 1734540374738, Thread 19952: XXXX 1734540374738, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374740 XXXX 1734540374740, Thread 19952: XXXX 1734540374740, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374839 XXXX 1734540374839, Thread 19952: XXXX 1734540374839, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374840 XXXX 1734540374840, Thread 19952: XXXX 1734540374840, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540374940 XXXX 1734540374940, Thread 19952: XXXX 1734540374940, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540374942 XXXX 1734540374942, Thread 19952: XXXX 1734540374942, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375040 XXXX 1734540375040, Thread 19952: XXXX 1734540375040, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375042 XXXX 1734540375042, Thread 19952: XXXX 1734540375042, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375141 XXXX 1734540375141, Thread 19952: XXXX 1734540375141, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375143 XXXX 1734540375143, Thread 19952: XXXX 1734540375143, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375242 XXXX 1734540375242, Thread 19952: XXXX 1734540375242, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375244 XXXX 1734540375244, Thread 19952: XXXX 1734540375244, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375342 XXXX 1734540375342, Thread 19952: XXXX 1734540375342, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375344 XXXX 1734540375344, Thread 19952: XXXX 1734540375344, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375444 XXXX 1734540375444, Thread 19952: XXXX 1734540375444, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375446 XXXX 1734540375446, Thread 19952: XXXX 1734540375446, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375544 XXXX 1734540375544, Thread 19952: XXXX 1734540375544, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375545 XXXX 1734540375545, Thread 19952: XXXX 1734540375545, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375646 XXXX 1734540375646, Thread 19952: XXXX 1734540375646, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375648 XXXX 1734540375648, Thread 19952: XXXX 1734540375648, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375746 XXXX 1734540375746, Thread 19952: XXXX 1734540375746, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375748 XXXX 1734540375748, Thread 19952: XXXX 1734540375748, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375847 XXXX 1734540375847, Thread 19952: XXXX 1734540375847, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375849 XXXX 1734540375849, Thread 19952: XXXX 1734540375849, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540375949 XXXX 1734540375949, Thread 19952: XXXX 1734540375949, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540375951 XXXX 1734540375951, Thread 19952: XXXX 1734540375951, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376049 XXXX 1734540376049, Thread 19952: XXXX 1734540376049, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376051 XXXX 1734540376051, Thread 19952: XXXX 1734540376051, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376150 XXXX 1734540376150, Thread 19952: XXXX 1734540376150, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376151 XXXX 1734540376151, Thread 19952: XXXX 1734540376151, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376252 XXXX 1734540376252, Thread 19952: XXXX 1734540376252, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376254 XXXX 1734540376254, Thread 19952: XXXX 1734540376254, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376352 XXXX 1734540376352, Thread 19952: XXXX 1734540376352, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376353 XXXX 1734540376353, Thread 19952: XXXX 1734540376353, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376454 XXXX 1734540376454, Thread 19952: XXXX 1734540376454, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376456 XXXX 1734540376456, Thread 19952: XXXX 1734540376456, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376554 XXXX 1734540376554, Thread 19952: XXXX 1734540376554, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376556 XXXX 1734540376556, Thread 19952: XXXX 1734540376556, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376655 XXXX 1734540376655, Thread 19952: XXXX 1734540376655, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376656 XXXX 1734540376656, Thread 19952: XXXX 1734540376656, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376756 XXXX 1734540376756, Thread 19952: XXXX 1734540376756, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376758 XXXX 1734540376758, Thread 19952: XXXX 1734540376758, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376856 XXXX 1734540376856, Thread 19952: XXXX 1734540376856, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376858 XXXX 1734540376858, Thread 19952: XXXX 1734540376858, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540376957 XXXX 1734540376957, Thread 19952: XXXX 1734540376957, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540376959 XXXX 1734540376959, Thread 19952: XXXX 1734540376958, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377058 XXXX 1734540377058, Thread 19952: XXXX 1734540377058, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377060 XXXX 1734540377060, Thread 19952: XXXX 1734540377060, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377158 XXXX 1734540377158, Thread 19952: XXXX 1734540377158, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377160 XXXX 1734540377160, Thread 19952: XXXX 1734540377160, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377259 XXXX 1734540377259, Thread 19952: XXXX 1734540377259, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377260 XXXX 1734540377260, Thread 19952: XXXX 1734540377260, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377361 XXXX 1734540377361, Thread 19952: XXXX 1734540377361, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377362 XXXX 1734540377362, Thread 19952: XXXX 1734540377362, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377462 XXXX 1734540377462, Thread 19952: XXXX 1734540377462, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377463 XXXX 1734540377463, Thread 19952: XXXX 1734540377463, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377564 XXXX 1734540377564, Thread 19952: XXXX 1734540377564, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377566 XXXX 1734540377566, Thread 19952: XXXX 1734540377566, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377664 XXXX 1734540377664, Thread 19952: XXXX 1734540377664, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377666 XXXX 1734540377666, Thread 19952: XXXX 1734540377666, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377765 XXXX 1734540377765, Thread 19952: XXXX 1734540377765, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377766 XXXX 1734540377766, Thread 19952: XXXX 1734540377766, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377866 XXXX 1734540377866, Thread 19952: XXXX 1734540377866, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377868 XXXX 1734540377868, Thread 19952: XXXX 1734540377868, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540377966 XXXX 1734540377966, Thread 19952: XXXX 1734540377966, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540377968 XXXX 1734540377968, Thread 19952: XXXX 1734540377968, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378067 XXXX 1734540378067, Thread 19952: XXXX 1734540378067, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378068 XXXX 1734540378068, Thread 19952: XXXX 1734540378068, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378168 XXXX 1734540378168, Thread 19952: XXXX 1734540378168, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378170 XXXX 1734540378170, Thread 19952: XXXX 1734540378170, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378268 XXXX 1734540378268, Thread 19952: XXXX 1734540378268, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378270 XXXX 1734540378270, Thread 19952: XXXX 1734540378270, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378369 XXXX 1734540378369, Thread 19952: XXXX 1734540378369, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378371 XXXX 1734540378371, Thread 19952: XXXX 1734540378371, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378470 XXXX 1734540378470, Thread 19952: XXXX 1734540378470, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378472 XXXX 1734540378472, Thread 19952: XXXX 1734540378472, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378571 XXXX 1734540378571, Thread 19952: XXXX 1734540378571, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378572 XXXX 1734540378572, Thread 19952: XXXX 1734540378572, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378673 XXXX 1734540378673, Thread 19952: XXXX 1734540378673, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378675 XXXX 1734540378675, Thread 19952: XXXX 1734540378675, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378773 XXXX 1734540378773, Thread 19952: XXXX 1734540378773, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378775 XXXX 1734540378775, Thread 19952: XXXX 1734540378775, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378874 XXXX 1734540378874, Thread 19952: XXXX 1734540378874, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378876 XXXX 1734540378876, Thread 19952: XXXX 1734540378876, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540378975 XXXX 1734540378975, Thread 19952: XXXX 1734540378975, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540378977 XXXX 1734540378977, Thread 19952: XXXX 1734540378977, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379075 XXXX 1734540379075, Thread 19952: XXXX 1734540379075, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379077 XXXX 1734540379077, Thread 19952: XXXX 1734540379077, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379176 XXXX 1734540379176, Thread 19952: XXXX 1734540379176, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379177 XXXX 1734540379177, Thread 19952: XXXX 1734540379177, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379278 XXXX 1734540379278, Thread 19952: XXXX 1734540379278, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379280 XXXX 1734540379280, Thread 19952: XXXX 1734540379280, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379378 XXXX 1734540379378, Thread 19952: XXXX 1734540379378, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379379 XXXX 1734540379379, Thread 19952: XXXX 1734540379379, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379478 XXXX 1734540379478, Thread 19952: XXXX 1734540379478, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379480 XXXX 1734540379480, Thread 19952: XXXX 1734540379480, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379579 XXXX 1734540379579, Thread 19952: XXXX 1734540379579, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379580 XXXX 1734540379580, Thread 19952: XXXX 1734540379580, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379680 XXXX 1734540379680, Thread 19952: XXXX 1734540379680, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379682 XXXX 1734540379682, Thread 19952: XXXX 1734540379682, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379780 XXXX 1734540379780, Thread 19952: XXXX 1734540379780, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379782 XXXX 1734540379782, Thread 19952: XXXX 1734540379782, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379882 XXXX 1734540379882, Thread 19952: XXXX 1734540379882, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379883 XXXX 1734540379883, Thread 19952: XXXX 1734540379883, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540379983 XXXX 1734540379983, Thread 19952: XXXX 1734540379983, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540379985 XXXX 1734540379985, Thread 19952: XXXX 1734540379985, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380083 XXXX 1734540380083, Thread 19952: XXXX 1734540380083, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380085 XXXX 1734540380085, Thread 19952: XXXX 1734540380085, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380184 XXXX 1734540380184, Thread 19952: XXXX 1734540380184, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380185 XXXX 1734540380185, Thread 19952: XXXX 1734540380185, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380285 XXXX 1734540380285, Thread 19952: XXXX 1734540380285, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380287 XXXX 1734540380287, Thread 19952: XXXX 1734540380287, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380385 XXXX 1734540380385, Thread 19952: XXXX 1734540380385, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380387 XXXX 1734540380387, Thread 19952: XXXX 1734540380387, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380485 XXXX 1734540380485, Thread 19952: XXXX 1734540380485, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380486 XXXX 1734540380486, Thread 19952: XXXX 1734540380486, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380587 XXXX 1734540380587, Thread 19952: XXXX 1734540380587, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380589 XXXX 1734540380589, Thread 19952: XXXX 1734540380589, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380687 XXXX 1734540380687, Thread 19952: XXXX 1734540380687, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380689 XXXX 1734540380689, Thread 19952: XXXX 1734540380689, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380788 XXXX 1734540380788, Thread 19952: XXXX 1734540380788, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380789 XXXX 1734540380789, Thread 19952: XXXX 1734540380789, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380889 XXXX 1734540380889, Thread 19952: XXXX 1734540380889, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380891 XXXX 1734540380891, Thread 19952: XXXX 1734540380891, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540380989 XXXX 1734540380989, Thread 19952: XXXX 1734540380989, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540380991 XXXX 1734540380991, Thread 19952: XXXX 1734540380991, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381090 XXXX 1734540381090, Thread 19952: XXXX 1734540381090, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381091 XXXX 1734540381091, Thread 19952: XXXX 1734540381091, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381192 XXXX 1734540381192, Thread 19952: XXXX 1734540381192, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381194 XXXX 1734540381194, Thread 19952: XXXX 1734540381194, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381292 XXXX 1734540381292, Thread 19952: XXXX 1734540381292, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381294 XXXX 1734540381294, Thread 19952: XXXX 1734540381294, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381393 XXXX 1734540381393, Thread 19952: XXXX 1734540381393, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381395 XXXX 1734540381395, Thread 19952: XXXX 1734540381395, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381493 XXXX 1734540381493, Thread 19952: XXXX 1734540381493, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381495 XXXX 1734540381495, Thread 19952: XXXX 1734540381495, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381593 XXXX 1734540381593, Thread 19952: XXXX 1734540381593, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381595 XXXX 1734540381595, Thread 19952: XXXX 1734540381595, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381694 XXXX 1734540381694, Thread 19952: XXXX 1734540381694, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381696 XXXX 1734540381696, Thread 19952: XXXX 1734540381696, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381795 XXXX 1734540381795, Thread 19952: XXXX 1734540381795, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381796 XXXX 1734540381796, Thread 19952: XXXX 1734540381796, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381897 XXXX 1734540381897, Thread 19952: XXXX 1734540381897, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540381898 XXXX 1734540381898, Thread 19952: XXXX 1734540381898, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540381998 XXXX 1734540381998, Thread 19952: XXXX 1734540381998, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382000 XXXX 1734540382000, Thread 19952: XXXX 1734540382000, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382098 XXXX 1734540382098, Thread 19952: XXXX 1734540382098, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382100 XXXX 1734540382100, Thread 19952: XXXX 1734540382100, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382199 XXXX 1734540382199, Thread 19952: XXXX 1734540382199, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382201 XXXX 1734540382201, Thread 19952: XXXX 1734540382201, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382299 XXXX 1734540382299, Thread 19952: XXXX 1734540382299, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382301 XXXX 1734540382301, Thread 19952: XXXX 1734540382301, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382400 XXXX 1734540382400, Thread 19952: XXXX 1734540382400, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382401 XXXX 1734540382401, Thread 19952: XXXX 1734540382401, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382500 XXXX 1734540382500, Thread 19952: XXXX 1734540382500, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382502 XXXX 1734540382502, Thread 19952: XXXX 1734540382502, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382601 XXXX 1734540382601, Thread 19952: XXXX 1734540382601, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382602 XXXX 1734540382602, Thread 19952: XXXX 1734540382602, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382702 XXXX 1734540382702, Thread 19952: XXXX 1734540382702, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382704 XXXX 1734540382704, Thread 19952: XXXX 1734540382704, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382802 XXXX 1734540382802, Thread 19952: XXXX 1734540382802, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382804 XXXX 1734540382804, Thread 19952: XXXX 1734540382804, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540382904 XXXX 1734540382904, Thread 19952: XXXX 1734540382904, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540382905 XXXX 1734540382905, Thread 19952: XXXX 1734540382905, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383005 XXXX 1734540383005, Thread 19952: XXXX 1734540383005, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383007 XXXX 1734540383007, Thread 19952: XXXX 1734540383007, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383105 XXXX 1734540383105, Thread 19952: XXXX 1734540383105, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383107 XXXX 1734540383107, Thread 19952: XXXX 1734540383107, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383206 XXXX 1734540383206, Thread 19952: XXXX 1734540383206, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383208 XXXX 1734540383208, Thread 19952: XXXX 1734540383208, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383306 XXXX 1734540383306, Thread 19952: XXXX 1734540383306, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383307 XXXX 1734540383307, Thread 19952: XXXX 1734540383307, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383408 XXXX 1734540383408, Thread 19952: XXXX 1734540383408, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383410 XXXX 1734540383410, Thread 19952: XXXX 1734540383410, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383508 XXXX 1734540383508, Thread 19952: XXXX 1734540383508, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383509 XXXX 1734540383509, Thread 19952: XXXX 1734540383509, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383610 XXXX 1734540383610, Thread 19952: XXXX 1734540383610, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383612 XXXX 1734540383612, Thread 19952: XXXX 1734540383612, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383710 XXXX 1734540383710, Thread 19952: XXXX 1734540383710, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383712 XXXX 1734540383712, Thread 19952: XXXX 1734540383712, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383811 XXXX 1734540383811, Thread 19952: XXXX 1734540383811, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383812 XXXX 1734540383812, Thread 19952: XXXX 1734540383812, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540383913 XXXX 1734540383913, Thread 19952: XXXX 1734540383913, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540383915 XXXX 1734540383915, Thread 19952: XXXX 1734540383915, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384013 XXXX 1734540384013, Thread 19952: XXXX 1734540384013, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384015 XXXX 1734540384015, Thread 19952: XXXX 1734540384015, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384114 XXXX 1734540384114, Thread 19952: XXXX 1734540384114, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384115 XXXX 1734540384115, Thread 19952: XXXX 1734540384115, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384216 XXXX 1734540384216, Thread 19952: XXXX 1734540384216, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384218 XXXX 1734540384218, Thread 19952: XXXX 1734540384218, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384316 XXXX 1734540384316, Thread 19952: XXXX 1734540384316, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384317 XXXX 1734540384317, Thread 19952: XXXX 1734540384317, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384418 XXXX 1734540384418, Thread 19952: XXXX 1734540384418, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384420 XXXX 1734540384420, Thread 19952: XXXX 1734540384420, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384518 XXXX 1734540384518, Thread 19952: XXXX 1734540384518, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384520 XXXX 1734540384520, Thread 19952: XXXX 1734540384520, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384619 XXXX 1734540384619, Thread 19952: XXXX 1734540384619, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384620 XXXX 1734540384620, Thread 19952: XXXX 1734540384620, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384721 XXXX 1734540384721, Thread 19952: XXXX 1734540384721, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384723 XXXX 1734540384723, Thread 19952: XXXX 1734540384723, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384821 XXXX 1734540384821, Thread 19952: XXXX 1734540384821, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384823 XXXX 1734540384823, Thread 19952: XXXX 1734540384823, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540384922 XXXX 1734540384922, Thread 19952: XXXX 1734540384922, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540384923 XXXX 1734540384923, Thread 19952: XXXX 1734540384923, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385024 XXXX 1734540385024, Thread 19952: XXXX 1734540385024, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385026 XXXX 1734540385026, Thread 19952: XXXX 1734540385026, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385124 XXXX 1734540385124, Thread 19952: XXXX 1734540385124, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385126 XXXX 1734540385126, Thread 19952: XXXX 1734540385126, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385225 XXXX 1734540385225, Thread 19952: XXXX 1734540385225, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385226 XXXX 1734540385226, Thread 19952: XXXX 1734540385226, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385327 XXXX 1734540385327, Thread 19952: XXXX 1734540385327, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385329 XXXX 1734540385329, Thread 19952: XXXX 1734540385329, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385428 XXXX 1734540385428, Thread 19952: XXXX 1734540385428, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385430 XXXX 1734540385430, Thread 19952: XXXX 1734540385430, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385529 XXXX 1734540385529, Thread 19952: XXXX 1734540385529, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385531 XXXX 1734540385531, Thread 19952: XXXX 1734540385531, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385629 XXXX 1734540385629, Thread 19952: XXXX 1734540385629, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385631 XXXX 1734540385631, Thread 19952: XXXX 1734540385631, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385731 XXXX 1734540385731, Thread 19952: XXXX 1734540385731, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385733 XXXX 1734540385733, Thread 19952: XXXX 1734540385733, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385832 XXXX 1734540385832, Thread 19952: XXXX 1734540385832, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385834 XXXX 1734540385834, Thread 19952: XXXX 1734540385834, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540385932 XXXX 1734540385932, Thread 19952: XXXX 1734540385932, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540385934 XXXX 1734540385934, Thread 19952: XXXX 1734540385934, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386034 XXXX 1734540386034, Thread 19952: XXXX 1734540386034, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386036 XXXX 1734540386036, Thread 19952: XXXX 1734540386036, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386135 XXXX 1734540386135, Thread 19952: XXXX 1734540386135, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386137 XXXX 1734540386137, Thread 19952: XXXX 1734540386137, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386235 XXXX 1734540386235, Thread 19952: XXXX 1734540386235, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386236 XXXX 1734540386236, Thread 19952: XXXX 1734540386236, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386336 XXXX 1734540386336, Thread 19952: XXXX 1734540386336, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386338 XXXX 1734540386338, Thread 19952: XXXX 1734540386338, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386437 XXXX 1734540386437, Thread 19952: XXXX 1734540386437, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386438 XXXX 1734540386438, Thread 19952: XXXX 1734540386438, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386539 XXXX 1734540386539, Thread 19952: XXXX 1734540386539, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386541 XXXX 1734540386541, Thread 19952: XXXX 1734540386541, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386639 XXXX 1734540386639, Thread 19952: XXXX 1734540386639, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386641 XXXX 1734540386641, Thread 19952: XXXX 1734540386641, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386740 XXXX 1734540386740, Thread 19952: XXXX 1734540386740, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386741 XXXX 1734540386741, Thread 19952: XXXX 1734540386741, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386841 XXXX 1734540386841, Thread 19952: XXXX 1734540386841, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386843 XXXX 1734540386843, Thread 19952: XXXX 1734540386843, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540386941 XXXX 1734540386941, Thread 19952: XXXX 1734540386941, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540386943 XXXX 1734540386943, Thread 19952: XXXX 1734540386943, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387042 XXXX 1734540387042, Thread 19952: XXXX 1734540387042, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387044 XXXX 1734540387044, Thread 19952: XXXX 1734540387044, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387142 XXXX 1734540387142, Thread 19952: XXXX 1734540387142, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387144 XXXX 1734540387144, Thread 19952: XXXX 1734540387144, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387243 XXXX 1734540387243, Thread 19952: XXXX 1734540387243, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387244 XXXX 1734540387244, Thread 19952: XXXX 1734540387244, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387343 XXXX 1734540387343, Thread 19952: XXXX 1734540387343, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387344 XXXX 1734540387344, Thread 19952: XXXX 1734540387344, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387444 XXXX 1734540387444, Thread 19952: XXXX 1734540387444, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387446 XXXX 1734540387446, Thread 19952: XXXX 1734540387446, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387544 XXXX 1734540387544, Thread 19952: XXXX 1734540387544, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387545 XXXX 1734540387545, Thread 19952: XXXX 1734540387545, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387645 XXXX 1734540387645, Thread 19952: XXXX 1734540387645, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387647 XXXX 1734540387647, Thread 19952: XXXX 1734540387647, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387745 XXXX 1734540387745, Thread 19952: XXXX 1734540387745, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387747 XXXX 1734540387747, Thread 19952: XXXX 1734540387747, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387846 XXXX 1734540387846, Thread 19952: XXXX 1734540387846, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387847 XXXX 1734540387847, Thread 19952: XXXX 1734540387847, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540387947 XXXX 1734540387947, Thread 19952: XXXX 1734540387947, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540387949 XXXX 1734540387949, Thread 19952: XXXX 1734540387949, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388047 XXXX 1734540388047, Thread 19952: XXXX 1734540388047, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388049 XXXX 1734540388049, Thread 19952: XXXX 1734540388049, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388148 XXXX 1734540388148, Thread 19952: XXXX 1734540388148, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388149 XXXX 1734540388149, Thread 19952: XXXX 1734540388149, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388249 XXXX 1734540388249, Thread 19952: XXXX 1734540388249, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388251 XXXX 1734540388251, Thread 19952: XXXX 1734540388251, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388349 XXXX 1734540388349, Thread 19952: XXXX 1734540388349, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388351 XXXX 1734540388351, Thread 19952: XXXX 1734540388351, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388450 XXXX 1734540388450, Thread 19952: XXXX 1734540388450, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388452 XXXX 1734540388452, Thread 19952: XXXX 1734540388452, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388550 XXXX 1734540388550, Thread 19952: XXXX 1734540388550, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388552 XXXX 1734540388552, Thread 19952: XXXX 1734540388552, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388651 XXXX 1734540388651, Thread 19952: XXXX 1734540388651, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388653 XXXX 1734540388653, Thread 19952: XXXX 1734540388653, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388751 XXXX 1734540388751, Thread 19952: XXXX 1734540388751, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388753 XXXX 1734540388753, Thread 19952: XXXX 1734540388753, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388853 XXXX 1734540388853, Thread 19952: XXXX 1734540388853, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388855 XXXX 1734540388855, Thread 19952: XXXX 1734540388855, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540388954 XXXX 1734540388954, Thread 19952: XXXX 1734540388954, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540388956 XXXX 1734540388956, Thread 19952: XXXX 1734540388956, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389054 XXXX 1734540389054, Thread 19952: XXXX 1734540389054, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389056 XXXX 1734540389056, Thread 19952: XXXX 1734540389056, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389156 XXXX 1734540389156, Thread 19952: XXXX 1734540389156, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389158 XXXX 1734540389158, Thread 19952: XXXX 1734540389158, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389257 XXXX 1734540389257, Thread 19952: XXXX 1734540389257, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389258 XXXX 1734540389258, Thread 19952: XXXX 1734540389258, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389358 XXXX 1734540389358, Thread 19952: XXXX 1734540389358, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389360 XXXX 1734540389360, Thread 19952: XXXX 1734540389360, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389458 XXXX 1734540389458, Thread 19952: XXXX 1734540389458, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389460 XXXX 1734540389460, Thread 19952: XXXX 1734540389460, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389558 XXXX 1734540389558, Thread 19952: XXXX 1734540389558, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389560 XXXX 1734540389560, Thread 19952: XXXX 1734540389560, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389659 XXXX 1734540389659, Thread 19952: XXXX 1734540389659, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389660 XXXX 1734540389660, Thread 19952: XXXX 1734540389660, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389761 XXXX 1734540389761, Thread 19952: XXXX 1734540389761, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389763 XXXX 1734540389763, Thread 19952: XXXX 1734540389763, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389861 XXXX 1734540389861, Thread 19952: XXXX 1734540389861, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389863 XXXX 1734540389863, Thread 19952: XXXX 1734540389863, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540389962 XXXX 1734540389962, Thread 19952: XXXX 1734540389962, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540389963 XXXX 1734540389963, Thread 19952: XXXX 1734540389963, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390064 XXXX 1734540390064, Thread 19952: XXXX 1734540390064, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390066 XXXX 1734540390066, Thread 19952: XXXX 1734540390066, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390164 XXXX 1734540390164, Thread 19952: XXXX 1734540390164, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390166 XXXX 1734540390166, Thread 19952: XXXX 1734540390166, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390265 XXXX 1734540390265, Thread 19952: XXXX 1734540390265, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390266 XXXX 1734540390266, Thread 19952: XXXX 1734540390266, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390365 XXXX 1734540390365, Thread 19952: XXXX 1734540390365, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390367 XXXX 1734540390367, Thread 19952: XXXX 1734540390367, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390466 XXXX 1734540390466, Thread 19952: XXXX 1734540390466, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390468 XXXX 1734540390468, Thread 19952: XXXX 1734540390468, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390568 XXXX 1734540390568, Thread 19952: XXXX 1734540390568, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390570 XXXX 1734540390570, Thread 19952: XXXX 1734540390570, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390669 XXXX 1734540390669, Thread 19952: XXXX 1734540390669, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390671 XXXX 1734540390671, Thread 19952: XXXX 1734540390671, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390769 XXXX 1734540390769, Thread 19952: XXXX 1734540390769, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390771 XXXX 1734540390771, Thread 19952: XXXX 1734540390771, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390871 XXXX 1734540390871, Thread 19952: XXXX 1734540390871, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390873 XXXX 1734540390873, Thread 19952: XXXX 1734540390873, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540390972 XXXX 1734540390972, Thread 19952: XXXX 1734540390972, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540390974 XXXX 1734540390974, Thread 19952: XXXX 1734540390974, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391072 XXXX 1734540391072, Thread 19952: XXXX 1734540391072, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391074 XXXX 1734540391074, Thread 19952: XXXX 1734540391074, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391174 XXXX 1734540391174, Thread 19952: XXXX 1734540391174, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391176 XXXX 1734540391176, Thread 19952: XXXX 1734540391176, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391275 XXXX 1734540391275, Thread 19952: XXXX 1734540391275, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391276 XXXX 1734540391276, Thread 19952: XXXX 1734540391276, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391376 XXXX 1734540391376, Thread 19952: XXXX 1734540391376, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391378 XXXX 1734540391378, Thread 19952: XXXX 1734540391378, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391477 XXXX 1734540391477, Thread 19952: XXXX 1734540391477, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391479 XXXX 1734540391479, Thread 19952: XXXX 1734540391479, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391577 XXXX 1734540391577, Thread 19952: XXXX 1734540391577, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391579 XXXX 1734540391579, Thread 19952: XXXX 1734540391579, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391678 XXXX 1734540391678, Thread 19952: XXXX 1734540391678, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391680 XXXX 1734540391680, Thread 19952: XXXX 1734540391680, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391780 XXXX 1734540391780, Thread 19952: XXXX 1734540391780, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391782 XXXX 1734540391782, Thread 19952: XXXX 1734540391782, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391881 XXXX 1734540391881, Thread 19952: XXXX 1734540391881, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391883 XXXX 1734540391883, Thread 19952: XXXX 1734540391883, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540391981 XXXX 1734540391981, Thread 19952: XXXX 1734540391981, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540391982 XXXX 1734540391982, Thread 19952: XXXX 1734540391982, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392082 XXXX 1734540392082, Thread 19952: XXXX 1734540392082, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392084 XXXX 1734540392084, Thread 19952: XXXX 1734540392084, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392182 XXXX 1734540392182, Thread 19952: XXXX 1734540392182, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392184 XXXX 1734540392184, Thread 19952: XXXX 1734540392184, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392283 XXXX 1734540392283, Thread 19952: XXXX 1734540392283, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392284 XXXX 1734540392284, Thread 19952: XXXX 1734540392284, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392384 XXXX 1734540392384, Thread 19952: XXXX 1734540392384, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392386 XXXX 1734540392386, Thread 19952: XXXX 1734540392386, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392485 XXXX 1734540392485, Thread 19952: XXXX 1734540392485, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392487 XXXX 1734540392487, Thread 19952: XXXX 1734540392487, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392587 XXXX 1734540392587, Thread 19952: XXXX 1734540392587, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392588 XXXX 1734540392588, Thread 19952: XXXX 1734540392588, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392688 XXXX 1734540392688, Thread 19952: XXXX 1734540392688, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392690 XXXX 1734540392690, Thread 19952: XXXX 1734540392690, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392788 XXXX 1734540392788, Thread 19952: XXXX 1734540392788, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392790 XXXX 1734540392790, Thread 19952: XXXX 1734540392790, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392890 XXXX 1734540392890, Thread 19952: XXXX 1734540392890, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392892 XXXX 1734540392892, Thread 19952: XXXX 1734540392892, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540392991 XXXX 1734540392991, Thread 19952: XXXX 1734540392991, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540392993 XXXX 1734540392993, Thread 19952: XXXX 1734540392993, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393091 XXXX 1734540393091, Thread 19952: XXXX 1734540393091, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393093 XXXX 1734540393093, Thread 19952: XXXX 1734540393093, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393193 XXXX 1734540393193, Thread 19952: XXXX 1734540393193, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393195 XXXX 1734540393195, Thread 19952: XXXX 1734540393195, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393293 XXXX 1734540393293, Thread 19952: XXXX 1734540393293, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393294 XXXX 1734540393294, Thread 19952: XXXX 1734540393294, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393395 XXXX 1734540393395, Thread 19952: XXXX 1734540393395, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393397 XXXX 1734540393397, Thread 19952: XXXX 1734540393397, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393496 XXXX 1734540393496, Thread 19952: XXXX 1734540393496, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393498 XXXX 1734540393498, Thread 19952: XXXX 1734540393498, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393596 XXXX 1734540393596, Thread 19952: XXXX 1734540393596, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393598 XXXX 1734540393598, Thread 19952: XXXX 1734540393598, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393698 XXXX 1734540393698, Thread 19952: XXXX 1734540393698, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393700 XXXX 1734540393700, Thread 19952: XXXX 1734540393700, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393799 XXXX 1734540393799, Thread 19952: XXXX 1734540393799, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393801 XXXX 1734540393801, Thread 19952: XXXX 1734540393801, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540393899 XXXX 1734540393899, Thread 19952: XXXX 1734540393899, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540393901 XXXX 1734540393901, Thread 19952: XXXX 1734540393901, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394001 XXXX 1734540394001, Thread 19952: XXXX 1734540394001, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394003 XXXX 1734540394003, Thread 19952: XXXX 1734540394003, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394102 XXXX 1734540394102, Thread 19952: XXXX 1734540394102, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394104 XXXX 1734540394104, Thread 19952: XXXX 1734540394104, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394202 XXXX 1734540394202, Thread 19952: XXXX 1734540394202, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394204 XXXX 1734540394204, Thread 19952: XXXX 1734540394204, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394304 XXXX 1734540394304, Thread 19952: XXXX 1734540394304, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394306 XXXX 1734540394306, Thread 19952: XXXX 1734540394306, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394404 XXXX 1734540394404, Thread 19952: XXXX 1734540394404, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394406 XXXX 1734540394406, Thread 19952: XXXX 1734540394406, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394505 XXXX 1734540394505, Thread 19952: XXXX 1734540394505, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394507 XXXX 1734540394507, Thread 19952: XXXX 1734540394507, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394606 XXXX 1734540394606, Thread 19952: XXXX 1734540394606, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394608 XXXX 1734540394608, Thread 19952: XXXX 1734540394608, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394708 XXXX 1734540394708, Thread 19952: XXXX 1734540394708, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394710 XXXX 1734540394710, Thread 19952: XXXX 1734540394710, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394808 XXXX 1734540394808, Thread 19952: XXXX 1734540394808, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394810 XXXX 1734540394810, Thread 19952: XXXX 1734540394810, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540394909 XXXX 1734540394909, Thread 19952: XXXX 1734540394909, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540394911 XXXX 1734540394911, Thread 19952: XXXX 1734540394911, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395011 XXXX 1734540395011, Thread 19952: XXXX 1734540395011, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395013 XXXX 1734540395013, Thread 19952: XXXX 1734540395013, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395111 XXXX 1734540395111, Thread 19952: XXXX 1734540395111, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395113 XXXX 1734540395113, Thread 19952: XXXX 1734540395113, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395212 XXXX 1734540395212, Thread 19952: XXXX 1734540395212, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395214 XXXX 1734540395214, Thread 19952: XXXX 1734540395214, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395313 XXXX 1734540395313, Thread 19952: XXXX 1734540395313, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395315 XXXX 1734540395315, Thread 19952: XXXX 1734540395315, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395415 XXXX 1734540395415, Thread 19952: XXXX 1734540395415, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395416 XXXX 1734540395416, Thread 19952: XXXX 1734540395416, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395516 XXXX 1734540395516, Thread 19952: XXXX 1734540395516, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395518 XXXX 1734540395518, Thread 19952: XXXX 1734540395518, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395616 XXXX 1734540395616, Thread 19952: XXXX 1734540395616, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395618 XXXX 1734540395618, Thread 19952: XXXX 1734540395618, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395717 XXXX 1734540395717, Thread 19952: XXXX 1734540395717, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395718 XXXX 1734540395718, Thread 19952: XXXX 1734540395718, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395818 XXXX 1734540395818, Thread 19952: XXXX 1734540395818, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395820 XXXX 1734540395820, Thread 19952: XXXX 1734540395820, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540395918 XXXX 1734540395918, Thread 19952: XXXX 1734540395918, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540395920 XXXX 1734540395920, Thread 19952: XXXX 1734540395920, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396020 XXXX 1734540396020, Thread 19952: XXXX 1734540396020, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396021 XXXX 1734540396021, Thread 19952: XXXX 1734540396021, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396121 XXXX 1734540396121, Thread 19952: XXXX 1734540396121, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396123 XXXX 1734540396123, Thread 19952: XXXX 1734540396123, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396221 XXXX 1734540396221, Thread 19952: XXXX 1734540396221, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396223 XXXX 1734540396223, Thread 19952: XXXX 1734540396223, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396322 XXXX 1734540396322, Thread 19952: XXXX 1734540396322, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396324 XXXX 1734540396324, Thread 19952: XXXX 1734540396324, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396424 XXXX 1734540396424, Thread 19952: XXXX 1734540396424, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396426 XXXX 1734540396426, Thread 19952: XXXX 1734540396426, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396525 XXXX 1734540396525, Thread 19952: XXXX 1734540396525, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396527 XXXX 1734540396527, Thread 19952: XXXX 1734540396527, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396625 XXXX 1734540396625, Thread 19952: XXXX 1734540396625, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396627 XXXX 1734540396627, Thread 19952: XXXX 1734540396627, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396727 XXXX 1734540396727, Thread 19952: XXXX 1734540396727, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396729 XXXX 1734540396729, Thread 19952: XXXX 1734540396729, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396829 XXXX 1734540396829, Thread 19952: XXXX 1734540396829, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396830 XXXX 1734540396830, Thread 19952: XXXX 1734540396830, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540396930 XXXX 1734540396930, Thread 19952: XXXX 1734540396930, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540396931 XXXX 1734540396931, Thread 19952: XXXX 1734540396931, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397030 XXXX 1734540397030, Thread 19952: XXXX 1734540397030, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397032 XXXX 1734540397032, Thread 19952: XXXX 1734540397032, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397131 XXXX 1734540397131, Thread 19952: XXXX 1734540397131, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397132 XXXX 1734540397132, Thread 19952: XXXX 1734540397132, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397232 XXXX 1734540397232, Thread 19952: XXXX 1734540397232, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397234 XXXX 1734540397234, Thread 19952: XXXX 1734540397234, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397332 XXXX 1734540397332, Thread 19952: XXXX 1734540397332, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397334 XXXX 1734540397334, Thread 19952: XXXX 1734540397334, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397433 XXXX 1734540397433, Thread 19952: XXXX 1734540397433, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397434 XXXX 1734540397434, Thread 19952: XXXX 1734540397434, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397534 XXXX 1734540397534, Thread 19952: XXXX 1734540397534, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397536 XXXX 1734540397536, Thread 19952: XXXX 1734540397536, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397634 XXXX 1734540397634, Thread 19952: XXXX 1734540397634, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397636 XXXX 1734540397636, Thread 19952: XXXX 1734540397636, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397735 XXXX 1734540397735, Thread 19952: XXXX 1734540397735, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397736 XXXX 1734540397736, Thread 19952: XXXX 1734540397736, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397836 XXXX 1734540397836, Thread 19952: XXXX 1734540397836, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397838 XXXX 1734540397838, Thread 19952: XXXX 1734540397838, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540397936 XXXX 1734540397936, Thread 19952: XXXX 1734540397936, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540397938 XXXX 1734540397938, Thread 19952: XXXX 1734540397938, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398037 XXXX 1734540398037, Thread 19952: XXXX 1734540398037, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398039 XXXX 1734540398039, Thread 19952: XXXX 1734540398039, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398138 XXXX 1734540398138, Thread 19952: XXXX 1734540398138, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398140 XXXX 1734540398140, Thread 19952: XXXX 1734540398140, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398238 XXXX 1734540398238, Thread 19952: XXXX 1734540398238, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398239 XXXX 1734540398239, Thread 19952: XXXX 1734540398239, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398340 XXXX 1734540398340, Thread 19952: XXXX 1734540398340, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398341 XXXX 1734540398341, Thread 19952: XXXX 1734540398341, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398441 XXXX 1734540398441, Thread 19952: XXXX 1734540398441, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398442 XXXX 1734540398442, Thread 19952: XXXX 1734540398442, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398543 XXXX 1734540398543, Thread 19952: XXXX 1734540398543, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398545 XXXX 1734540398545, Thread 19952: XXXX 1734540398545, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398644 XXXX 1734540398644, Thread 19952: XXXX 1734540398644, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398645 XXXX 1734540398645, Thread 19952: XXXX 1734540398645, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398745 XXXX 1734540398745, Thread 19952: XXXX 1734540398745, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398747 XXXX 1734540398747, Thread 19952: XXXX 1734540398747, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398847 XXXX 1734540398847, Thread 19952: XXXX 1734540398847, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398849 XXXX 1734540398849, Thread 19952: XXXX 1734540398849, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540398952 XXXX 1734540398952, Thread 19952: XXXX 1734540398952, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540398957 XXXX 1734540398957, Thread 19952: XXXX 1734540398957, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540399053 XXXX 1734540399053, Thread 19952: XXXX 1734540399053, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540399056 XXXX 1734540399056, Thread 19952: XXXX 1734540399056, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540399154 XXXX 1734540399154, Thread 19952: XXXX 1734540399154, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540399156 XXXX 1734540399156, Thread 19952: XXXX 1734540399156, Exiting Thread 19952: Commands::runScriptBasic  
+19952 1734540399254 XXXX 1734540399254, Thread 19952: XXXX 1734540399254, Entering Thread 19952: Commands::runScriptBasic, script name = GetHaltStatus, timeOut = -1 ms  
+19952 1734540399259 XXXX 1734540399259, Thread 19952: com.Send returned false 
+19952 1734540399260 XXXX 1734540399260, Thread 19952: transfer: exception after writeHeaderAndGetResult null 
+19952 1734540399260 XXXX 1734540399260, Thread 19952: XXXX 1734540399260, Entering Thread 19952: ToolCommUsb::recoverFromProtocolError, type = NO_SCRIPT  
+19952 1734540399261 XXXX 1734540399261, Thread 19952: Send Abort Script Engine Command 
+19952 1734540399261 XXXX 1734540399261, Thread 19952: XXXX 1734540399261, Entering Thread 19952: ToolCommUsb::killScriptEngine  
+19952 1734540399262 XXXX 1734540399262, Thread 19952: com.Send returned false 
+19952 1734540399262 XXXX 1734540399262, Thread 19952: Failed sending Abort Script Engine Command. Set nuclear option = true 
+19952 1734540399262 XXXX 1734540399262, Thread 19952: About to nuke 
+19952 1734540399262 XXXX 1734540399262, Thread 19952: XXXX 1734540399262, Entering Thread 19952: ToolCommUsb::nuclearOption  
+19952 1734540399263 XXXX 1734540399263, Thread 19952: com.Send returned false 
