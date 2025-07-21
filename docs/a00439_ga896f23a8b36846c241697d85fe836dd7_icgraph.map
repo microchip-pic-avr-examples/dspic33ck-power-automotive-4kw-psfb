@@ -1,0 +1,9 @@
+<map id="Dev_PwrCtrl_GetAdc_Vpri" name="Dev_PwrCtrl_GetAdc_Vpri">
+<area shape="rect" id="Node000001" title="API function to get the value of the sampled ADC for input Voltage." alt="" coords="440,43,612,69"/>
+<area shape="rect" id="Node000002" href="$a00426.html#ga96b58cf519f2a436993861504db6b3e1" title="this builds frame" alt="" coords="242,5,387,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="425,45,387,39,388,34,426,39"/>
+<area shape="rect" id="Node000004" href="$a00434.html#ga96ea2cafc6b933ce163fe8fa8a9d9cf8" title="Calculates the max duty cycle for precharge." alt="" coords="237,72,392,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="426,73,393,77,392,72,425,67"/>
+<area shape="rect" id="Node000003" href="$a00426.html#ga34ef08c06d636819aa039ff4a8f85c50" title="this is high frequency task to simulate sending of high frequency numeric data. Also to check if ther..." alt="" coords="5,13,189,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,29,189,29,189,24,227,24"/>
+</map>

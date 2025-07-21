@@ -1,0 +1,5 @@
+<map id="PWM_Swap_PWMxL_and_PWMxH" name="PWM_Swap_PWMxL_and_PWMxH">
+<area shape="rect" id="Node000001" title="Enable/Disable the PWM instance output swap bit." alt="" coords="237,5,412,48"/>
+<area shape="rect" id="Node000002" href="$a00431.html#gac779b9d8bce64e8de686bd78be25ea09" title="Contains PWM initialization that was not supported by MCC generated code." alt="" coords="5,13,189,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,29,189,29,189,24,222,24"/>
+</map>

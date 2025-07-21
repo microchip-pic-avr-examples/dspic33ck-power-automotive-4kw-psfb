@@ -1,0 +1,19 @@
+<map id="psfb_droop.X/mcc_generated_files/pwm_hs/pwm.h" name="psfb_droop.X/mcc_generated_files/pwm_hs/pwm.h">
+<area shape="rect" id="Node000001" title="This is the generated driver header file for the PWM driver." alt="" coords="719,5,907,48"/>
+<area shape="rect" id="Node000002" href="$a00056_source.html" title=" " alt="" coords="5,112,144,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="704,34,590,41,452,53,304,72,156,99,106,114,105,109,155,93,303,66,452,48,590,36,704,29"/>
+<area shape="rect" id="Node000003" href="$a00131.html" title="This is the generated driver source file for PWM driver." alt="" coords="168,104,357,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="705,44,545,67,368,99,337,106,335,101,367,93,544,62,704,39"/>
+<area shape="rect" id="Node000004" href="$a00176.html" title="This is the generated driver header file for the System driver." alt="" coords="380,104,569,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="727,55,548,106,546,101,726,50"/>
+<area shape="rect" id="Node000005" href="$a00233_source.html" title=" " alt="" coords="593,104,812,147"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="781,60,728,105,725,101,777,56"/>
+<area shape="rect" id="Node000006" href="$a00281.html" title="Contains PWM initialization that was not supported by MCC generated code." alt="" coords="835,96,1013,155"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="849,56,893,94,889,98,846,60"/>
+<area shape="rect" id="Node000007" href="$a00299.html" title="Contains fault functions including the fault handler, fault object initialization and fault execution..." alt="" coords="1037,104,1182,147"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="893,50,1026,93,1049,101,1047,106,1024,99,891,56"/>
+<area shape="rect" id="Node000008" href="$a00380.html" title="Contains power control initialization including control loop initialization and start&#45;up initializati..." alt="" coords="1206,104,1351,147"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="923,40,1054,63,1195,93,1221,101,1220,106,1194,99,1053,68,922,46"/>
+<area shape="rect" id="Node000009" href="$a00407.html" title="Contains PSFB control phase calculation between primary and secondary, and the PWM distribution." alt="" coords="1375,104,1526,147"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="922,33,1128,54,1247,71,1364,93,1392,101,1391,106,1363,99,1246,76,1128,59,922,38"/>
+</map>

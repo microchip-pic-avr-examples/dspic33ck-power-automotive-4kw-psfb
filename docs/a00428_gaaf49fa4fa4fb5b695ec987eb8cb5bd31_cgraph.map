@@ -1,0 +1,9 @@
+<map id="dev_MeasureOffsets" name="dev_MeasureOffsets">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,144,61"/>
+<area shape="rect" id="Node000002" href="$a00428.html#ga96b0fadd9410b8b69eb6cd3962175834" title=" " alt="" coords="192,35,340,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,45,177,45,177,51,144,51"/>
+<area shape="rect" id="Node000003" href="$a00439.html#ga6450795c316e2284ae94eb16f0da1fe8" title="API function to get the raw ADC value for primary current transformer current." alt="" coords="388,5,544,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="340,35,373,30,373,35,341,40"/>
+<area shape="rect" id="Node000004" href="$a00439.html#ga73e4778085abb276456fb9611ae26feb" title="API function to get the raw ADC value for secondary current transformer current." alt="" coords="394,56,539,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="341,56,379,62,379,67,340,61"/>
+</map>

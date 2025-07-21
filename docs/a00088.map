@@ -1,0 +1,13 @@
+<map id="psfb_droop.X/mcc_generated_files/can/can_types.h" name="psfb_droop.X/mcc_generated_files/can/can_types.h">
+<area shape="rect" id="Node000001" title="This is the generated driver types header file for the CAN driver using CCL." alt="" coords="85,5,274,48"/>
+<area shape="rect" id="Node000002" href="$a00077.html" title="This is the generated driver header file for the CAN1 driver using CCL." alt="" coords="45,187,234,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,58,93,75,75,97,69,117,75,138,91,163,113,184,109,188,87,167,70,140,64,117,70,95,89,71,112,54"/>
+<area shape="rect" id="Node000003" href="$a00089.html" title="This is the generated driver source file for CAN1 driver using CCL." alt="" coords="217,277,406,320"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="245,54,269,72,288,95,309,142,318,193,319,241,317,277,312,277,314,241,313,194,304,144,284,97,265,76,241,58"/>
+<area shape="rect" id="Node000005" href="$a00083_source.html" title=" " alt="" coords="85,96,274,139"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="182,63,182,96,177,96,177,63"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,234,273,274,270,279,191,239"/>
+<area shape="rect" id="Node000004" href="$a00176.html" title="This is the generated driver header file for the System driver." alt="" coords="5,277,194,320"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="127,244,111,278,106,276,122,242"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="167,153,151,187,146,185,162,151"/>
+</map>

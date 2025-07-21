@@ -1,0 +1,5 @@
+<map id="Fault_PrimaryOverCurrent_EventHandler" name="Fault_PrimaryOverCurrent_EventHandler">
+<area shape="rect" id="Node000001" title="callback for primary OC" alt="" coords="158,5,328,48"/>
+<area shape="rect" id="Node000002" href="$a00443.html#gaaa5a7a6dc7ce982dec4f07edcd73e874" title="Initialize the fault objects." alt="" coords="5,13,110,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,29,110,29,110,24,143,24"/>
+</map>

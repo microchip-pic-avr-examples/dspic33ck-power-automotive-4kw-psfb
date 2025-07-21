@@ -1,0 +1,5 @@
+<map id="Device Layer" name="Device Layer">
+<area shape="rect" id="Node000002" href="$a00428.html" title="The Current Sensor Calibration device layer is a proprietary user code utilized for configuring the s..." alt="" coords="149,5,322,32"/>
+<area shape="rect" id="Node000001" title="Contains all the application tasks that will be executed." alt="" coords="5,31,101,57"/>
+<area shape="rect" id="Node000003" href="$a00429.html" title="The LED device layer is the proprietary user code used to configure and drive the on&#45;board debugging ..." alt="" coords="189,56,282,83"/>
+</map>

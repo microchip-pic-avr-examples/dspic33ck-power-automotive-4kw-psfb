@@ -51,7 +51,7 @@ Makefile-genesis.properties
 *.docx
 
 #doxygen specific
-docs
+#docs
 
 # droop projects
 psfb_d.X

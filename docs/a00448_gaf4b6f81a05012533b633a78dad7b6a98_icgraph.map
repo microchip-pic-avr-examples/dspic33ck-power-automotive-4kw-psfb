@@ -1,0 +1,7 @@
+<map id="ADC1_ConversionResultGet" name="ADC1_ConversionResultGet">
+<area shape="rect" id="Node000001" title="Returns the conversion value for the channel selected." alt="" coords="408,5,591,32"/>
+<area shape="rect" id="Node000002" href="$a00435.html#gaa34c5b66d8f20f01daef50d0e88cf20e" title="This function updates the PSFB data members with ADC raw values." alt="" coords="150,5,360,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,21,361,21,361,16,393,16"/>
+<area shape="rect" id="Node000003" href="$a00435.html#ga2068c3c2584547dbc1c8b9bca2d55b18" title="Executes the power converter control loop." alt="" coords="5,5,102,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,21,102,21,102,16,135,16"/>
+</map>

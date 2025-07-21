@@ -1,0 +1,94 @@
+<map id="psfb_droop.X/sources/pwrctrl/pwrctrl_sm.c" name="psfb_droop.X/sources/pwrctrl/pwrctrl_sm.c">
+<area shape="rect" id="Node000001" title="Contains power control state machine functions that is executed every 100us." alt="" coords="655,5,800,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="439,544,485,571"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="655,38,623,46,591,58,561,75,536,98,518,131,503,180,491,240,481,305,470,434,466,529,460,529,465,433,476,304,485,239,497,179,513,129,532,94,558,71,589,53,622,41,654,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="430,627,494,653"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="705,51,653,102,626,136,603,172,577,228,560,278,550,324,543,367,531,459,519,512,499,572,479,614,474,612,494,570,514,510,526,458,538,367,544,323,555,277,572,226,598,169,622,133,649,99,701,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="1168,627,1242,653"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="801,31,1012,50,1273,82,1395,102,1496,125,1535,138,1565,152,1584,166,1591,182,1591,260,1595,296,1604,327,1630,380,1641,406,1648,433,1647,463,1637,497,1622,525,1605,544,1584,558,1555,573,1477,604,1396,624,1320,635,1257,640,1257,635,1319,630,1395,619,1476,599,1553,568,1581,554,1601,540,1617,522,1632,495,1642,462,1642,433,1636,407,1625,382,1599,329,1590,297,1586,260,1586,183,1580,170,1562,156,1533,143,1494,131,1394,107,1272,87,1011,55,800,36"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="1391,544,1459,571"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="801,27,1002,32,1255,43,1377,52,1483,63,1563,77,1591,85,1609,94,1628,113,1638,132,1642,155,1642,183,1642,409,1640,458,1632,477,1616,498,1584,523,1547,539,1509,550,1474,556,1473,550,1507,545,1545,534,1581,518,1612,494,1628,475,1635,456,1637,409,1637,183,1636,156,1633,134,1624,116,1606,98,1589,90,1562,82,1482,68,1377,57,1255,49,1002,37,800,32"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1677,96,1741,123"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="800,27,956,32,1170,43,1413,63,1659,93,1663,94,1662,99,1658,99,1412,68,1169,48,956,37,800,32"/>
+<area shape="rect" id="Node000007" href="$a00383_source.html" title=" " alt="" coords="719,245,789,272"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="733,48,754,231,748,231,727,49"/>
+<area shape="rect" id="Node000014" href="$a00263.html" title="Contains h files that are part of device layer." alt="" coords="269,96,378,123"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="655,45,393,97,391,92,654,40"/>
+<area shape="rect" id="Node000021" href="$a00302.html" title="Contains public fault functions." alt="" coords="1136,320,1220,347"/>
+<area shape="poly" id="edge34_Node000001_Node000021" title=" " alt="" coords="760,46,1149,309,1146,314,757,51"/>
+<area shape="rect" id="Node000028" href="$a00410.html" title="Contains public functions for PWM." alt="" coords="613,171,717,197"/>
+<area shape="poly" id="edge59_Node000001_Node000028" title=" " alt="" coords="722,49,678,158,673,156,717,47"/>
+<area shape="rect" id="Node000029" href="$a00146_source.html" title=" " alt="" coords="361,245,465,272"/>
+<area shape="poly" id="edge62_Node000001_Node000029" title=" " alt="" coords="655,35,613,41,568,53,524,72,485,98,459,128,440,164,428,200,420,231,415,230,422,198,435,162,455,125,482,94,522,67,566,48,612,36,654,29"/>
+<area shape="rect" id="Node000008" href="$a00416_source.html" title=" " alt="" coords="895,395,1014,421"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="788,270,831,290,876,318,911,349,938,381,934,385,907,353,873,322,829,295,786,275"/>
+<area shape="rect" id="Node000011" href="$a00395.html" title="Contains public functions relevant for power control communication interface." alt="" coords="692,320,862,347"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="761,272,771,305,766,307,756,273"/>
+<area shape="rect" id="Node000012" href="$a00389.html" title="Contains the power control reusable functions." alt="" coords="937,320,1065,347"/>
+<area shape="poly" id="edge13_Node000007_Node000012" title=" " alt="" coords="790,268,945,313,943,318,789,273"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="562,469,624,496"/>
+<area shape="poly" id="edge15_Node000007_Node000013" title=" " alt="" coords="737,275,710,295,683,322,658,356,636,393,606,457,601,454,632,390,653,353,679,318,706,291,733,270"/>
+<area shape="rect" id="Node000009" href="$a00317.html" title="Contains fault data types." alt="" coords="890,469,1024,496"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="957,422,959,454,953,455,952,422"/>
+<area shape="rect" id="Node000010" href="$a00308.html" title="Contains fault generic public functions." alt="" coords="942,544,1055,571"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="966,495,986,530,982,532,962,498"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="941,570,923,573,509,635,509,629,922,568,941,565"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="1031,569,1160,618,1158,623,1029,574"/>
+<area shape="poly" id="edge14_Node000012_Node000008" title=" " alt="" coords="995,349,972,384,968,381,990,346"/>
+<area shape="rect" id="Node000015" href="$a00275_source.html" title=" " alt="" coords="261,469,336,496"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="325,123,303,455,297,454,320,123"/>
+<area shape="rect" id="Node000016" href="$a00269.html" title="measure current sensor offsets" alt="" coords="116,171,286,197"/>
+<area shape="poly" id="edge20_Node000014_Node000016" title=" " alt="" coords="303,126,236,165,234,160,301,121"/>
+<area shape="poly" id="edge18_Node000015_Node000002" title=" " alt="" coords="328,494,427,537,424,542,326,499"/>
+<area shape="poly" id="edge19_Node000015_Node000003" title=" " alt="" coords="313,495,440,614,437,618,310,499"/>
+<area shape="poly" id="edge21_Node000016_Node000002" title=" " alt="" coords="212,196,447,530,443,533,207,199"/>
+<area shape="poly" id="edge22_Node000016_Node000003" title=" " alt="" coords="204,198,217,347,231,435,240,470,251,495,287,537,330,572,376,599,417,619,415,624,373,604,327,576,283,541,247,497,235,472,225,436,211,348,199,198"/>
+<area shape="poly" id="edge23_Node000016_Node000007" title=" " alt="" coords="286,194,705,248,704,254,286,199"/>
+<area shape="rect" id="Node000017" href="$a00062.html" title="This is the generated driver header file for the ADC1 driver." alt="" coords="101,469,186,496"/>
+<area shape="poly" id="edge24_Node000016_Node000017" title=" " alt="" coords="201,198,151,455,146,454,196,197"/>
+<area shape="poly" id="edge25_Node000017_Node000002" title=" " alt="" coords="187,491,425,545,424,550,186,496"/>
+<area shape="poly" id="edge27_Node000017_Node000003" title=" " alt="" coords="160,494,207,530,269,568,345,601,416,624,415,629,343,606,266,573,204,534,157,499"/>
+<area shape="poly" id="edge26_Node000017_Node000004" title=" " alt="" coords="177,494,288,532,357,552,428,568,531,586,637,600,844,620,1025,631,1153,635,1153,641,1024,636,844,626,637,606,531,591,427,573,356,557,286,537,176,499"/>
+<area shape="rect" id="Node000018" href="$a00071.html" title="This is the generated driver types header file for the ADC driver." alt="" coords="5,627,98,653"/>
+<area shape="poly" id="edge28_Node000017_Node000018" title=" " alt="" coords="126,499,101,519,79,545,65,579,57,613,52,611,60,578,75,543,98,515,123,494"/>
+<area shape="rect" id="Node000019" href="$a00068_source.html" title=" " alt="" coords="89,544,198,571"/>
+<area shape="poly" id="edge29_Node000017_Node000019" title=" " alt="" coords="146,497,146,529,141,529,141,497"/>
+<area shape="poly" id="edge30_Node000019_Node000003" title=" " alt="" coords="194,569,416,624,415,629,193,574"/>
+<area shape="poly" id="edge31_Node000019_Node000004" title=" " alt="" coords="199,560,1153,632,1153,637,198,565"/>
+<area shape="poly" id="edge32_Node000019_Node000018" title=" " alt="" coords="131,573,78,619,74,615,127,569"/>
+<area shape="rect" id="Node000020" href="$a00143_source.html" title=" " alt="" coords="121,619,249,661"/>
+<area shape="poly" id="edge33_Node000019_Node000020" title=" " alt="" coords="152,570,170,605,165,607,148,572"/>
+<area shape="poly" id="edge35_Node000021_Node000005" title=" " alt="" coords="1200,345,1275,395,1320,429,1363,467,1390,499,1412,530,1408,534,1386,503,1359,471,1317,433,1272,399,1197,349"/>
+<area shape="poly" id="edge43_Node000021_Node000008" title=" " alt="" coords="1140,350,1008,392,1006,387,1138,345"/>
+<area shape="poly" id="edge42_Node000021_Node000021" title=" " alt="" coords="1221,317,1239,321,1247,333,1244,342,1236,347,1233,343,1240,339,1242,334,1236,325,1220,322"/>
+<area shape="rect" id="Node000022" href="$a00095.html" title="This is the generated driver header file for the CMP3 driver." alt="" coords="1468,395,1561,421"/>
+<area shape="poly" id="edge36_Node000021_Node000022" title=" " alt="" coords="1221,341,1454,391,1452,396,1220,346"/>
+<area shape="rect" id="Node000024" href="$a00248_source.html" title=" " alt="" coords="1207,469,1312,496"/>
+<area shape="poly" id="edge44_Node000021_Node000024" title=" " alt="" coords="1187,346,1248,455,1243,458,1183,348"/>
+<area shape="rect" id="Node000025" href="$a00254_source.html" title=" " alt="" coords="1038,395,1151,421"/>
+<area shape="poly" id="edge49_Node000021_Node000025" title=" " alt="" coords="1165,349,1121,387,1118,383,1162,345"/>
+<area shape="poly" id="edge38_Node000022_Node000004" title=" " alt="" coords="1552,420,1579,433,1604,450,1619,471,1621,484,1617,497,1595,528,1570,546,1504,573,1440,597,1373,615,1257,635,1256,630,1372,609,1438,592,1503,568,1568,542,1591,525,1612,495,1615,484,1614,473,1600,454,1576,437,1549,424"/>
+<area shape="poly" id="edge37_Node000022_Node000005" title=" " alt="" coords="1509,423,1479,471,1442,533,1437,530,1475,468,1504,420"/>
+<area shape="rect" id="Node000023" href="$a00098_source.html" title=" " alt="" coords="1488,469,1602,496"/>
+<area shape="poly" id="edge39_Node000022_Node000023" title=" " alt="" coords="1522,421,1536,455,1531,457,1517,423"/>
+<area shape="poly" id="edge40_Node000023_Node000004" title=" " alt="" coords="1540,498,1513,535,1494,556,1472,573,1418,600,1360,618,1305,630,1257,637,1257,632,1304,625,1359,613,1416,595,1469,568,1490,552,1509,532,1536,495"/>
+<area shape="poly" id="edge41_Node000023_Node000005" title=" " alt="" coords="1525,499,1460,538,1457,534,1523,494"/>
+<area shape="poly" id="edge45_Node000024_Node000002" title=" " alt="" coords="1207,492,1145,499,500,556,500,550,1145,493,1207,487"/>
+<area shape="poly" id="edge46_Node000024_Node000003" title=" " alt="" coords="1208,492,1080,511,1005,527,931,547,902,560,872,573,772,599,672,617,509,638,509,632,671,612,771,594,871,568,900,555,929,541,1004,521,1079,506,1207,487"/>
+<area shape="poly" id="edge47_Node000024_Node000004" title=" " alt="" coords="1258,498,1217,614,1211,612,1253,496"/>
+<area shape="poly" id="edge48_Node000024_Node000005" title=" " alt="" coords="1289,494,1384,535,1381,540,1287,499"/>
+<area shape="poly" id="edge50_Node000025_Node000002" title=" " alt="" coords="1038,424,926,448,835,472,807,485,778,499,702,520,625,536,501,554,500,549,624,530,700,514,776,493,804,480,833,467,925,443,1037,418"/>
+<area shape="poly" id="edge51_Node000025_Node000003" title=" " alt="" coords="1038,425,962,445,879,472,825,498,651,570,509,624,507,619,649,565,822,494,877,467,961,440,1037,419"/>
+<area shape="poly" id="edge52_Node000025_Node000004" title=" " alt="" coords="1109,420,1128,441,1147,468,1166,505,1181,544,1201,611,1196,613,1176,546,1161,508,1143,471,1124,445,1105,423"/>
+<area shape="poly" id="edge53_Node000025_Node000005" title=" " alt="" coords="1152,414,1236,433,1281,448,1325,467,1370,498,1406,531,1402,535,1366,502,1322,472,1279,453,1234,438,1151,420"/>
+<area shape="poly" id="edge54_Node000025_Node000013" title=" " alt="" coords="1037,422,1027,424,919,437,834,445,748,454,639,472,638,467,747,448,833,439,918,432,1026,419,1037,417"/>
+<area shape="poly" id="edge57_Node000025_Node000024" title=" " alt="" coords="1124,419,1218,460,1216,465,1122,424"/>
+<area shape="rect" id="Node000026" href="$a00257_source.html" title=" " alt="" coords="648,469,764,496"/>
+<area shape="poly" id="edge55_Node000025_Node000026" title=" " alt="" coords="1037,423,780,470,779,465,1036,417"/>
+<area shape="rect" id="Node000027" href="$a00251_source.html" title=" " alt="" coords="1048,469,1132,496"/>
+<area shape="poly" id="edge58_Node000025_Node000027" title=" " alt="" coords="1096,422,1094,455,1089,454,1091,422"/>
+<area shape="poly" id="edge56_Node000026_Node000002" title=" " alt="" coords="664,499,500,548,499,542,663,494"/>
+<area shape="poly" id="edge61_Node000028_Node000007" title=" " alt="" coords="682,196,729,234,726,238,679,200"/>
+<area shape="poly" id="edge60_Node000028_Node000008" title=" " alt="" coords="664,198,659,228,657,267,663,309,671,328,683,345,695,355,714,364,764,379,880,397,879,403,763,384,712,369,692,359,679,348,666,330,658,310,652,267,654,227,659,197"/>
+<area shape="poly" id="edge63_Node000029_Node000002" title=" " alt="" coords="418,272,460,529,455,530,412,273"/>
+</map>

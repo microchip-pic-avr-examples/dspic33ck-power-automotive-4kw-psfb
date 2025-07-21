@@ -1,0 +1,43 @@
+<map id="psfb_droop.X/sources/pwrctrl/pwrctrl_pwm.c" name="psfb_droop.X/sources/pwrctrl/pwrctrl_pwm.c">
+<area shape="rect" id="Node000001" title="Contains PSFB control phase calculation between primary and secondary, and the PWM distribution." alt="" coords="129,5,280,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,469,52,496"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,51,135,74,102,104,77,141,70,161,67,183,67,335,65,368,58,401,41,456,36,455,53,400,59,367,62,335,62,183,65,160,72,138,98,100,131,70,165,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="469,544,543,571"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="280,30,427,43,511,55,594,70,670,90,732,114,757,129,775,145,787,163,791,182,791,410,784,446,766,475,739,499,705,518,667,533,629,543,558,555,557,550,628,538,666,527,703,513,735,495,762,472,779,444,786,409,786,183,782,165,771,149,754,133,730,119,669,95,593,75,510,60,426,48,280,35"/>
+<area shape="rect" id="Node000004" href="$a00119.html" title="This is the generated driver header file for the PWM driver." alt="" coords="138,395,250,421"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,49,170,108,161,145,156,183,156,260,159,293,166,325,185,380,180,382,161,327,154,294,151,260,151,183,155,144,165,107,191,47"/>
+<area shape="rect" id="Node000009" href="$a00416_source.html" title=" " alt="" coords="348,320,467,347"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="203,49,196,93,194,152,197,184,204,215,215,244,232,270,253,290,278,305,306,316,334,323,332,328,304,321,276,310,250,295,228,274,211,246,199,216,192,184,189,152,191,93,197,48"/>
+<area shape="rect" id="Node000012" href="$a00410.html" title="Contains public functions for PWM." alt="" coords="416,96,521,123"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="273,46,414,89,412,94,272,51"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="166,424,67,468,64,463,164,419"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="251,419,318,438,388,467,440,499,483,532,479,536,437,503,386,472,316,443,249,424"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="355,544,419,571"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="251,414,310,431,339,447,364,468,381,497,388,529,383,530,376,499,360,471,336,451,308,436,249,419"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="286,469,350,496"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="217,420,285,459,283,464,214,424"/>
+<area shape="rect" id="Node000007" href="$a00128.html" title="This is the generated driver types header file for the PWM driver." alt="" coords="82,544,202,571"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="167,424,139,443,126,456,116,470,112,485,114,501,127,531,122,533,109,502,107,485,111,468,122,453,135,439,164,420"/>
+<area shape="rect" id="Node000008" href="$a00125_source.html" title=" " alt="" coords="126,469,262,496"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="197,422,197,454,191,454,191,422"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="249,494,455,542,454,547,248,499"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="228,494,342,536,340,541,227,499"/>
+<area shape="poly" id="edge12_Node000008_Node000007" title=" " alt="" coords="187,498,161,533,157,530,183,495"/>
+<area shape="rect" id="Node000010" href="$a00317.html" title="Contains fault data types." alt="" coords="403,395,537,421"/>
+<area shape="poly" id="edge14_Node000009_Node000010" title=" " alt="" coords="420,345,451,381,447,385,416,349"/>
+<area shape="rect" id="Node000011" href="$a00308.html" title="Contains fault generic public functions." alt="" coords="476,469,589,496"/>
+<area shape="poly" id="edge15_Node000010_Node000011" title=" " alt="" coords="483,420,514,456,510,460,479,424"/>
+<area shape="poly" id="edge17_Node000011_Node000003" title=" " alt="" coords="530,497,518,531,513,529,525,496"/>
+<area shape="poly" id="edge16_Node000011_Node000005" title=" " alt="" coords="508,499,427,539,425,534,506,494"/>
+<area shape="poly" id="edge19_Node000012_Node000009" title=" " alt="" coords="522,120,598,142,638,157,674,175,704,196,723,219,728,232,728,245,724,259,714,274,699,286,677,297,617,313,548,324,482,331,482,325,548,319,616,308,675,292,696,282,711,270,719,257,723,245,723,233,719,222,700,200,672,180,636,162,596,147,520,125"/>
+<area shape="rect" id="Node000013" href="$a00383_source.html" title=" " alt="" coords="412,171,525,197"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="471,123,471,156,466,156,466,123"/>
+<area shape="poly" id="edge21_Node000013_Node000009" title=" " alt="" coords="463,199,436,246,416,306,411,304,431,244,458,196"/>
+<area shape="rect" id="Node000014" href="$a00395.html" title="Contains public functions relevant for power control communication interface." alt="" coords="445,245,615,272"/>
+<area shape="poly" id="edge22_Node000013_Node000014" title=" " alt="" coords="481,196,512,232,508,236,477,200"/>
+<area shape="rect" id="Node000015" href="$a00389.html" title="Contains the power control reusable functions." alt="" coords="242,245,370,272"/>
+<area shape="poly" id="edge23_Node000013_Node000015" title=" " alt="" coords="441,200,349,241,346,236,439,195"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="639,245,701,272"/>
+<area shape="poly" id="edge25_Node000013_Node000016" title=" " alt="" coords="504,195,626,239,624,244,503,200"/>
+<area shape="poly" id="edge24_Node000015_Node000009" title=" " alt="" coords="325,270,379,309,376,313,322,275"/>
+</map>

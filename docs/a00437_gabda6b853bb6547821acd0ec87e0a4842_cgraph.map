@@ -1,0 +1,7 @@
+<map id="PCS_SOFT_START_handler" name="PCS_SOFT_START_handler">
+<area shape="rect" id="Node000001" title="Executes the power control soft start state machine." alt="" coords="5,31,192,57"/>
+<area shape="rect" id="Node000002" href="$a00436.html#gae13a0db6addfe827e4c48e0f2250e3f2" title="Disable the PWM output." alt="" coords="240,5,440,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,32,225,28,225,33,192,37"/>
+<area shape="rect" id="Node000003" href="$a00440.html#ga59bb2fab32dc783d76f800283b4c7e2b" title="Softly increment / decrement to the set reference target." alt="" coords="259,56,421,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,51,244,57,244,62,192,56"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="PWM_SoftwareUpdateRequest" name="PWM_SoftwareUpdateRequest">
+<area shape="rect" id="Node000001" title="This inline function requests to update the data registers for specific PWM generator selected by the..." alt="" coords="844,43,1044,69"/>
+<area shape="rect" id="Node000002" href="$a00436.html#gadd5e4ddb9642de13028547e4a4316f0c" title="set the PWM output to particular duty cycle." alt="" coords="605,5,796,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="829,45,796,41,797,36,829,40"/>
+<area shape="rect" id="Node000006" href="$a00436.html#ga054f3de472c33a84cb37459b27a0d3b3" title="PWM distribution for PSFB converter." alt="" coords="625,72,776,99"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="829,72,777,79,776,74,829,67"/>
+<area shape="rect" id="Node000003" href="$a00437.html#ga175dce657b908bab1509d14d90b547de" title="Executes Standby State machine." alt="" coords="371,13,557,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="590,29,557,29,557,24,590,24"/>
+<area shape="rect" id="Node000004" href="$a00437.html#ga2408c0b52cd2c2487f43716f261434e6" title="Manages the power control state machine." alt="" coords="172,13,322,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="356,29,322,29,322,24,356,24"/>
+<area shape="rect" id="Node000005" href="$a00434.html#ga48dcb018afa53b60b6112cde00561c4b" title="Executes the power control state machine." alt="" coords="5,13,124,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="157,29,124,29,124,24,157,24"/>
+<area shape="rect" id="Node000007" href="$a00435.html#ga2eeebdb0cef4bbfeed446752525dd879" title="Executes the power converter control loop." alt="" coords="370,72,557,99"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="610,88,558,88,558,83,610,83"/>
+<area shape="rect" id="Node000008" href="$a00435.html#gae32c9e5ed4d1fb98fc13b26601782c10" title="Executes the power converter control loop." alt="" coords="175,64,319,107"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="355,88,319,88,319,83,355,83"/>
+<area shape="rect" id="Node000009" href="$a00435.html#ga2068c3c2584547dbc1c8b9bca2d55b18" title="Executes the power converter control loop." alt="" coords="16,72,113,99"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="160,88,113,88,113,83,160,83"/>
+</map>
