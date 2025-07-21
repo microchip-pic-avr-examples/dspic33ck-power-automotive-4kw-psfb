@@ -1,0 +1,7 @@
+<map id="MCC_Custom_User_Config" name="MCC_Custom_User_Config">
+<area shape="rect" id="Node000001" title="Contains custom peripheral initialization." alt="" coords="5,31,185,57"/>
+<area shape="rect" id="Node000002" href="$a00436.html#gae20d34fb8fc7fbaa57f6c68b2907807f" title="Enable the PWM output." alt="" coords="236,5,387,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,31,221,27,222,32,185,36"/>
+<area shape="rect" id="Node000003" href="$a00436.html#ga9be2e37dc5f6e9cf92adc031d2463c4c" title="Initialize the PWM peripheral." alt="" coords="233,56,390,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,52,218,56,217,61,185,57"/>
+</map>

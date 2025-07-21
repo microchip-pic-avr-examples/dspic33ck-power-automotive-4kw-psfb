@@ -1,0 +1,9 @@
+<map id="dev_CalculateAverage" name="dev_CalculateAverage">
+<area shape="rect" id="Node000001" title="Averages the ADC samples." alt="" coords="451,31,598,57"/>
+<area shape="rect" id="Node000002" href="$a00428.html#ga0c23d5a65f61e93198d800d07386e9b1" title=" " alt="" coords="259,31,403,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="436,47,404,47,404,41,436,41"/>
+<area shape="rect" id="Node000003" href="$a00428.html#ga602ca3089eba0f5de69f13a9857557c2" title=" " alt="" coords="23,5,193,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="243,37,193,31,194,26,244,31"/>
+<area shape="rect" id="Node000004" href="$a00428.html#gadeba83d587bc87b905f825cf8bd9a7ca" title=" " alt="" coords="5,56,211,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="244,57,212,60,211,55,243,51"/>
+</map>

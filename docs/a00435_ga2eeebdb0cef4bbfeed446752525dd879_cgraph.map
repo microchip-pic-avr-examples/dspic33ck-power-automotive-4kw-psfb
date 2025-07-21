@@ -1,0 +1,19 @@
+<map id="PwrCtrl_ControlLoopExecute" name="PwrCtrl_ControlLoopExecute">
+<area shape="rect" id="Node000001" title="Executes the power converter control loop." alt="" coords="5,157,193,184"/>
+<area shape="rect" id="Node000002" href="$a00436.html#ga054f3de472c33a84cb37459b27a0d3b3" title="PWM distribution for PSFB converter." alt="" coords="261,81,413,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,154,240,117,266,110,267,115,241,123,137,159"/>
+<area shape="rect" id="Node000007" href="$a00439.html#gae62d241af8152bb7989d448f30adc55e" title="API function to set the target PWM phase." alt="" coords="255,132,419,159"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="193,158,240,153,241,158,194,163"/>
+<area shape="rect" id="Node000008" href="$a00374.html#ac4c8852561395f2969c08ff062325e03" title=" " alt="" coords="241,183,433,209"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="194,178,226,182,226,187,193,183"/>
+<area shape="rect" id="Node000009" href="$a00374.html#a8ba04b5d00e0c881d269a9429b3ed34b" title=" " alt="" coords="241,233,433,260"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="137,182,241,219,267,226,266,232,240,224,136,187"/>
+<area shape="rect" id="Node000003" href="$a00454.html#ga37968a783e44cd80643478d2b559dbf4" title="This inline function sets the PWM generator specific duty cycle register." alt="" coords="518,5,659,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="373,78,480,41,509,34,510,39,482,47,375,83"/>
+<area shape="rect" id="Node000004" href="$a00454.html#ga83e780358618114f0d424ca7467cf751" title="This inline function requests to update the data registers for specific PWM generator selected by the..." alt="" coords="488,56,688,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="413,84,473,78,474,84,413,90"/>
+<area shape="rect" id="Node000005" href="$a00454.html#ga3453a907bf8e14bb9bb434ddd0e82500" title="This inline function sets the Trigger B compare value in count for a specific PWM generator selected ..." alt="" coords="481,107,695,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="413,100,466,105,466,110,413,105"/>
+<area shape="rect" id="Node000006" href="$a00454.html#gacc5575148a6e8da6577d9be9e20541ce" title="This inline function sets the Trigger C compare value in count for a specific PWM generator selected ..." alt="" coords="481,157,695,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="399,106,434,118,458,130,482,143,505,150,503,155,480,148,456,135,432,122,398,111"/>
+</map>

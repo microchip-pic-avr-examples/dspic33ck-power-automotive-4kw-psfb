@@ -1,0 +1,31 @@
+<map id="POWER_CONTROL_s" name="POWER_CONTROL_s">
+<area shape="rect" id="Node000001" title="Power control API structure." alt="" coords="1264,1112,1409,1181"/>
+<area shape="rect" id="Node000002" href="$a00605.html" title="Power converter status flags." alt="" coords="5,736,377,891"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,888,327,942,399,997,481,1048,524,1069,567,1085,625,1099,701,1111,888,1128,1084,1137,1247,1141,1247,1147,1084,1142,887,1133,700,1116,624,1105,566,1091,521,1073,478,1052,396,1002,324,946,263,892"/>
+<area shape="rect" id="Node000003" href="$a00625.html" title="Collection of power control properties." alt="" coords="402,725,589,901"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="545,900,572,938,603,974,645,1014,681,1043,720,1064,775,1085,813,1096,865,1105,991,1121,1247,1139,1247,1144,991,1126,864,1111,812,1101,773,1091,718,1069,678,1047,641,1019,599,978,567,942,540,903"/>
+<area shape="rect" id="Node000004" href="$a00597.html" title="Power converter switch&#45;node specifications." alt="" coords="613,683,815,944"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="801,942,829,974,868,1013,901,1041,938,1063,987,1086,1053,1108,1122,1123,1247,1139,1247,1144,1121,1128,1052,1113,985,1090,935,1068,898,1045,865,1017,825,978,797,946"/>
+<area shape="rect" id="Node000005" href="$a00601.html" title="Publicly accessible data buffer of most recent runtime data values." alt="" coords="839,651,1007,976"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1009,963,1066,1031,1100,1061,1136,1086,1191,1111,1248,1127,1247,1132,1189,1116,1134,1090,1097,1065,1063,1035,1005,966"/>
+<area shape="rect" id="Node000006" href="$a00565.html" title="Contains Fault settings." alt="" coords="1032,779,1169,848"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1114,847,1133,897,1162,960,1200,1026,1247,1086,1262,1100,1259,1104,1243,1090,1195,1029,1157,963,1128,899,1109,849"/>
+<area shape="rect" id="Node000007" href="$a00561.html" title="Collection of faults to be monitored." alt="" coords="1067,509,1134,579"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1103,579,1103,761,1098,761,1098,579"/>
+<area shape="rect" id="Node000008" href="$a00557.html" title="The Fault object data structure contains a list of elements/variables that are used to detect/check a..." alt="" coords="1041,5,1160,267"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1103,266,1103,492,1098,492,1098,266"/>
+<area shape="rect" id="Node000009" href="$a00617.html" title="Stores data related to the ramping up/down of the reference." alt="" coords="1193,725,1331,901"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1278,901,1296,991,1319,1087,1321,1095,1316,1097,1313,1089,1290,992,1273,902"/>
+<area shape="rect" id="Node000010" href="$a00621.html" title="Stores data related to the control loop properties." alt="" coords="1355,736,1468,891"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1417,891,1410,987,1400,1039,1384,1089,1380,1099,1375,1097,1380,1087,1395,1038,1405,986,1412,890"/>
+<area shape="rect" id="Node000011" href="$a00629.html" title="Collection of Precharge Properties." alt="" coords="1492,715,1621,912"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1546,912,1534,957,1518,1004,1495,1049,1465,1090,1447,1106,1426,1119,1423,1115,1444,1102,1461,1086,1490,1047,1513,1002,1529,956,1541,911"/>
+<area shape="rect" id="Node000012" href="$a00633.html" title="Collection of Secondary Rectifier Properties." alt="" coords="1645,747,1756,880"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1696,881,1685,932,1666,989,1637,1043,1619,1068,1597,1090,1568,1106,1526,1119,1427,1137,1426,1132,1525,1113,1566,1101,1594,1086,1615,1065,1633,1041,1661,987,1679,931,1691,879"/>
+<area shape="rect" id="Node000013" href="$a00637.html" title="Averaging data type." alt="" coords="1780,747,1893,880"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1830,880,1818,933,1797,990,1766,1045,1747,1069,1724,1090,1702,1103,1672,1113,1595,1129,1508,1139,1426,1145,1426,1139,1508,1134,1594,1123,1670,1108,1699,1098,1720,1086,1743,1065,1762,1042,1792,988,1813,931,1825,879"/>
+<area shape="rect" id="Node000014" href="$a00645.html" title="Collection of calibrate Properties." alt="" coords="1921,757,2040,869"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1995,869,2001,921,2000,981,1995,1011,1986,1040,1972,1066,1953,1090,1926,1103,1877,1114,1736,1130,1571,1140,1426,1146,1426,1140,1571,1135,1735,1125,1876,1109,1924,1098,1950,1086,1968,1063,1981,1038,1990,1010,1995,980,1996,921,1990,869"/>
+<area shape="rect" id="Node000015" href="$a00641.html" title="Collection of Secondary Rectifier Properties." alt="" coords="2065,709,2238,917"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="2160,918,2155,963,2144,1010,2125,1053,2094,1090,2058,1105,1995,1117,1812,1134,1604,1143,1426,1147,1426,1142,1603,1138,1812,1129,1994,1112,2057,1100,2091,1086,2120,1051,2139,1008,2150,963,2155,917"/>
+</map>

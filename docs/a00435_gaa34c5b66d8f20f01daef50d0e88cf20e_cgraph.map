@@ -1,0 +1,7 @@
+<map id="PwrCtrl_UpdateADConverterData" name="PwrCtrl_UpdateADConverterData">
+<area shape="rect" id="Node000001" title="This function updates the PSFB data members with ADC raw values." alt="" coords="5,31,216,57"/>
+<area shape="rect" id="Node000002" href="$a00448.html#gaf4b6f81a05012533b633a78dad7b6a98" title="Returns the conversion value for the channel selected." alt="" coords="267,5,451,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,31,252,27,253,32,216,36"/>
+<area shape="rect" id="Node000003" href="$a00448.html#ga0a80bc862861bd96a1034b39589adf9f" title="This inline function returns the status of conversion.This function is used to determine if conversio..." alt="" coords="264,56,454,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,52,249,55,249,61,216,57"/>
+</map>

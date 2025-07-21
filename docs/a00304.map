@@ -1,0 +1,14 @@
+<map id="psfb_droop.X/sources/fault/fault.h" name="psfb_droop.X/sources/fault/fault.h">
+<area shape="rect" id="Node000001" title="Contains public fault functions." alt="" coords="337,5,482,48"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="497,11,505,17,508,27,501,40,483,47,481,42,497,36,503,26,501,20,494,15"/>
+<area shape="rect" id="Node000002" href="$a00056_source.html" title=" " alt="" coords="5,112,144,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,52,155,99,109,114,108,109,154,93,322,47"/>
+<area shape="rect" id="Node000003" href="$a00299.html" title="Contains fault functions including the fault handler, fault object initialization and fault execution..." alt="" coords="167,104,313,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="362,58,277,106,275,101,359,53"/>
+<area shape="rect" id="Node000004" href="$a00398.html" title="Contains Control loop interrupt Callback that acquires the ADC raw data and process it in the control..." alt="" coords="337,104,482,147"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="412,63,412,104,407,104,407,63"/>
+<area shape="rect" id="Node000005" href="$a00404.html" title="Contains some of the functions used in the interrupt service routine of control loop." alt="" coords="506,96,651,155"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="459,53,529,93,527,98,457,58"/>
+<area shape="rect" id="Node000006" href="$a00413.html" title="Contains power control state machine functions that is executed every 100us." alt="" coords="675,104,821,147"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="497,47,665,93,688,101,687,106,663,99,496,53"/>
+</map>

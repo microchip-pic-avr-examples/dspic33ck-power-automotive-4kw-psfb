@@ -1,0 +1,22 @@
+<map id="psfb_droop.X/mcc_generated_files/adc/src/adc1.c" name="psfb_droop.X/mcc_generated_files/adc/src/adc1.c">
+<area shape="rect" id="Node000001" title="This is the generated driver source file for ADC1 driver." alt="" coords="5,5,194,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="19,96,87,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,50,70,84,65,82,85,47"/>
+<area shape="rect" id="Node000003" href="$a00062.html" title="This is the generated driver header file for the ADC1 driver." alt="" coords="110,96,182,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,47,134,82,129,84,109,50"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="12,171,59,197"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="128,125,68,165,65,160,125,121"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="16,253,90,280"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="141,125,70,242,65,239,136,122"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="114,253,178,280"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="149,123,149,238,144,238,144,123"/>
+<area shape="rect" id="Node000007" href="$a00071.html" title="This is the generated driver types header file for the ADC driver." alt="" coords="353,253,446,280"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="184,117,243,137,306,168,350,204,383,240,379,244,346,208,303,173,241,142,182,122"/>
+<area shape="rect" id="Node000008" href="$a00068_source.html" title=" " alt="" coords="184,171,293,197"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="164,121,213,159,209,164,161,125"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="210,200,96,250,94,245,208,195"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="226,200,173,246,169,242,222,196"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="265,195,363,244,360,249,262,200"/>
+<area shape="rect" id="Node000009" href="$a00143_source.html" title=" " alt="" coords="203,245,330,288"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="245,197,257,230,252,232,240,199"/>
+</map>

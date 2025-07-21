@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['calibration_0',['Current Sensor Calibration',['../a00428.html',1,'']]],
+  ['can_20communication_1',['CAN Communication',['../a00422.html',1,'']]],
+  ['can_20fd_20driver_2',['CAN FD Driver',['../a00449.html',1,'']]],
+  ['clcdriver_3',['Clcdriver',['../a00450.html',1,'']]],
+  ['clock_20driver_4',['Clock Driver',['../a00461.html',1,'']]],
+  ['cmp_20dac_20driver_5',['CMP DAC Driver',['../a00451.html',1,'']]],
+  ['code_20adc_6',['MCC Custom Code ADC',['../a00432.html',1,'']]],
+  ['code_20generator_7',['MPLABX MCC Melody Code Generator',['../a00446.html',1,'']]],
+  ['code_20pwm_8',['MCC Custom Code PWM',['../a00431.html',1,'']]],
+  ['communication_9',['Communication',['../a00422.html',1,'CAN Communication'],['../a00423.html',1,'UART Communication']]],
+  ['communication_20interface_10',['Power Control Communication Interface',['../a00439.html',1,'']]],
+  ['communication_20layer_11',['Communication Layer',['../a00420.html',1,'']]],
+  ['configbits_20driver_12',['CONFIGBITS Driver',['../a00465.html',1,'']]],
+  ['configuration_13',['Configuration',['../a00438.html',1,'Control Loop Configuration'],['../a00443.html',1,'Fault Configuration'],['../a00434.html',1,'Power Control Configuration'],['../a00436.html',1,'PWM Configuration'],['../a00425.html',1,'User Configuration']]],
+  ['content_14',['Hide-content',['../a00447.html',1,'']]],
+  ['control_15',['Power Control',['../a00433.html',1,'']]],
+  ['control_20communication_20interface_16',['Power Control Communication Interface',['../a00439.html',1,'']]],
+  ['control_20configuration_17',['Power Control Configuration',['../a00434.html',1,'']]],
+  ['control_20data_20types_18',['Power Control Data Types',['../a00441.html',1,'']]],
+  ['control_20loop_20configuration_19',['Control Loop Configuration',['../a00438.html',1,'']]],
+  ['crc_20driver_20',['CRC Driver',['../a00452.html',1,'']]],
+  ['current_20sensor_20calibration_21',['Current Sensor Calibration',['../a00428.html',1,'']]],
+  ['custom_20code_20adc_22',['MCC Custom Code ADC',['../a00432.html',1,'']]],
+  ['custom_20code_20pwm_23',['MCC Custom Code PWM',['../a00431.html',1,'']]]
+];

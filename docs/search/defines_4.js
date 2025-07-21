@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['iloop_5fcomp_5f2p2z_5fcoeff_5fa1_0',['ILOOP_COMP_2P2Z_COEFF_A1',['../a00047.html#ab869beb0902fefe4f9fb8faeb1e1651d',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fcoeff_5fa2_1',['ILOOP_COMP_2P2Z_COEFF_A2',['../a00047.html#af42bc9ca9c52e1ba962b11924d5cd038',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fcoeff_5fb0_2',['ILOOP_COMP_2P2Z_COEFF_B0',['../a00047.html#a3211b5f02973a180f6680f72e5e9f15c',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fcoeff_5fb1_3',['ILOOP_COMP_2P2Z_COEFF_B1',['../a00047.html#ae30ad0570ee93e9a671b2d953e55f755',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fcoeff_5fb2_4',['ILOOP_COMP_2P2Z_COEFF_B2',['../a00047.html#ac68c889e8969268d472959f7e45848bd',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fmax_5fclamp_5',['ILOOP_COMP_2P2Z_MAX_CLAMP',['../a00047.html#a4be945e54036add4e3001c72c5376d7d',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fmin_5fclamp_6',['ILOOP_COMP_2P2Z_MIN_CLAMP',['../a00047.html#affd13ac7b60062301aed0c2b15bbe858',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fpostscaler_7',['ILOOP_COMP_2P2Z_POSTSCALER',['../a00047.html#a4fa403f35c92149df0eb3becc2ccb430',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fpostshift_8',['ILOOP_COMP_2P2Z_POSTSHIFT',['../a00047.html#ab0f0922009456631d15c15ba9ed86a35',1,'iloop_dcdt.h']]],
+  ['iloop_5fcomp_5f2p2z_5fpreshift_9',['ILOOP_COMP_2P2Z_PRESHIFT',['../a00047.html#a2e88416be84b70b022547b024b1e5f48',1,'iloop_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fcoeff_5fa1_10',['ILOOP_T_COMP_3P3Z_COEFF_A1',['../a00050.html#af62084603e9dc1083c03b9246333b2f1',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fcoeff_5fa2_11',['ILOOP_T_COMP_3P3Z_COEFF_A2',['../a00050.html#ac79dfea34409976d718dae7b32fa1a33',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fcoeff_5fa3_12',['ILOOP_T_COMP_3P3Z_COEFF_A3',['../a00050.html#a480c6d5d0aa1a6f65fd635c2bf87bc35',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fcoeff_5fb0_13',['ILOOP_T_COMP_3P3Z_COEFF_B0',['../a00050.html#aa52648b1fd37ad41f65bee0e5e144c4c',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fcoeff_5fb1_14',['ILOOP_T_COMP_3P3Z_COEFF_B1',['../a00050.html#a4465b2cfbcc67df977569c0ed60576e4',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fcoeff_5fb2_15',['ILOOP_T_COMP_3P3Z_COEFF_B2',['../a00050.html#a566543fe6664ae21bd66c6ec98c381b6',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fcoeff_5fb3_16',['ILOOP_T_COMP_3P3Z_COEFF_B3',['../a00050.html#ae11fb091457e40279d867bce86802de3',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fmax_5fclamp_17',['ILOOP_T_COMP_3P3Z_MAX_CLAMP',['../a00050.html#a8b00b0f822e08b7712cb2f8cc6b1be5d',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fmin_5fclamp_18',['ILOOP_T_COMP_3P3Z_MIN_CLAMP',['../a00050.html#a4d97979912aad7f17973fcfd2a7e9309',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fpostscaler_19',['ILOOP_T_COMP_3P3Z_POSTSCALER',['../a00050.html#a70acd38ae89cd4a87d05129c34bf93ad',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fpostshift_20',['ILOOP_T_COMP_3P3Z_POSTSHIFT',['../a00050.html#a746d8566ed552a99b31e921e643510c7',1,'iloop_t_dcdt.h']]],
+  ['iloop_5ft_5fcomp_5f3p3z_5fpreshift_21',['ILOOP_T_COMP_3P3Z_PRESHIFT',['../a00050.html#a5676b70b1f964fb1a08b890e356aa50e',1,'iloop_t_dcdt.h']]]
+];

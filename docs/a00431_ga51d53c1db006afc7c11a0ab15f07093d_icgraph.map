@@ -1,0 +1,5 @@
+<map id="PWM_Trigger_Mode" name="PWM_Trigger_Mode">
+<area shape="rect" id="Node000001" title="Set source of fault PCI acceptance qualifier." alt="" coords="237,5,376,32"/>
+<area shape="rect" id="Node000002" href="$a00431.html#gac779b9d8bce64e8de686bd78be25ea09" title="Contains PWM initialization that was not supported by MCC generated code." alt="" coords="5,5,189,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,21,189,21,189,16,222,16"/>
+</map>

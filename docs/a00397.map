@@ -1,0 +1,45 @@
+<map id="psfb_droop.X/sources/pwrctrl/pwrctrl_comm_interface.h" name="psfb_droop.X/sources/pwrctrl/pwrctrl_comm_interface.h">
+<area shape="rect" id="Node000001" title="Contains public functions relevant for power control communication interface." alt="" coords="282,5,430,64"/>
+<area shape="rect" id="Node000002" href="$a00233_source.html" title=" " alt="" coords="5,317,224,360"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,73,233,97,191,126,153,162,124,204,113,232,109,263,113,317,108,317,104,263,108,231,119,201,149,159,188,122,230,92,272,69"/>
+<area shape="rect" id="Node000003" href="$a00383_source.html" title=" " alt="" coords="633,112,778,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="445,58,633,109,631,114,444,63"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="618,137,499,141,365,152,301,160,244,172,197,187,164,205,143,230,129,260,122,291,118,317,113,316,116,290,124,258,138,227,161,201,195,182,243,167,300,155,365,146,499,136,618,132"/>
+<area shape="rect" id="Node000004" href="$a00056_source.html" title=" " alt="" coords="175,219,313,245"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="618,150,483,173,332,205,281,221,279,215,331,200,482,168,617,145"/>
+<area shape="rect" id="Node000005" href="$a00269.html" title="measure current sensor offsets" alt="" coords="685,203,843,261"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="727,166,749,201,744,204,723,169"/>
+<area shape="rect" id="Node000008" href="$a00299.html" title="Contains fault functions including the fault handler, fault object initialization and fault execution..." alt="" coords="413,416,558,459"/>
+<area shape="poly" id="edge11_Node000003_Node000008" title=" " alt="" coords="618,144,510,164,453,181,400,205,341,255,307,289,289,311,280,340,281,352,289,366,314,392,345,410,379,422,413,429,412,434,377,427,342,414,310,396,284,370,276,354,274,339,284,308,303,285,338,251,397,200,452,176,509,159,617,139"/>
+<area shape="rect" id="Node000009" href="$a00413.html" title="Contains power control state machine functions that is executed every 100us." alt="" coords="919,416,1065,459"/>
+<area shape="poly" id="edge25_Node000003_Node000009" title=" " alt="" coords="793,134,1047,143,1366,156,1645,176,1736,187,1764,194,1779,201,1808,241,1816,259,1819,276,1817,293,1811,308,1788,335,1752,358,1705,377,1650,393,1587,406,1447,425,1304,435,1171,439,1065,440,1065,434,1171,434,1303,430,1447,419,1586,401,1648,388,1704,372,1750,353,1785,331,1806,305,1812,292,1813,277,1811,260,1804,243,1775,205,1762,199,1735,193,1644,181,1366,162,1047,148,793,140"/>
+<area shape="rect" id="Node000010" href="$a00293_source.html" title=" " alt="" coords="573,309,725,368"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="662,166,645,183,632,204,625,230,625,258,639,308,634,309,620,258,620,229,627,202,640,180,658,162"/>
+<area shape="rect" id="Node000011" href="$a00311.html" title="Contains API functions for fault protection." alt="" coords="868,211,1055,253"/>
+<area shape="poly" id="edge12_Node000003_Node000011" title=" " alt="" coords="775,158,907,208,905,213,773,163"/>
+<area shape="rect" id="Node000012" href="$a00380.html" title="Contains power control initialization including control loop initialization and start&#45;up initializati..." alt="" coords="1079,211,1225,253"/>
+<area shape="poly" id="edge13_Node000003_Node000012" title=" " alt="" coords="793,145,923,168,1067,200,1093,208,1092,213,1066,205,922,173,792,150"/>
+<area shape="rect" id="Node000013" href="$a00392.html" title="Contains power control interface with communication/gui." alt="" coords="1248,203,1397,261"/>
+<area shape="poly" id="edge14_Node000003_Node000013" title=" " alt="" coords="793,138,997,159,1118,177,1238,200,1248,203,1247,208,1237,205,1117,182,996,164,792,143"/>
+<area shape="rect" id="Node000014" href="$a00386.html" title="Contains generic functions that handles power control ramp Up/Down and the averaging generic function..." alt="" coords="1421,211,1595,253"/>
+<area shape="poly" id="edge15_Node000003_Node000014" title=" " alt="" coords="793,135,1069,155,1239,173,1410,200,1442,207,1441,213,1409,205,1239,179,1069,160,793,141"/>
+<area shape="rect" id="Node000015" href="$a00398.html" title="Contains Control loop interrupt Callback that acquires the ADC raw data and process it in the control..." alt="" coords="750,317,895,360"/>
+<area shape="poly" id="edge16_Node000003_Node000015" title=" " alt="" coords="686,169,676,190,669,214,668,238,675,260,689,273,712,287,769,314,767,319,709,292,686,277,671,263,663,239,664,213,671,189,681,166"/>
+<area shape="rect" id="Node000016" href="$a00404.html" title="Contains some of the functions used in the interrupt service routine of control loop." alt="" coords="1619,203,1765,261"/>
+<area shape="poly" id="edge17_Node000003_Node000016" title=" " alt="" coords="793,132,947,134,1151,144,1378,165,1494,180,1607,200,1619,203,1618,208,1606,205,1493,186,1378,170,1150,150,947,140,793,137"/>
+<area shape="rect" id="Node000017" href="$a00410.html" title="Contains public functions for PWM." alt="" coords="410,211,560,253"/>
+<area shape="poly" id="edge18_Node000003_Node000017" title=" " alt="" coords="646,163,533,213,531,208,644,159"/>
+<area shape="rect" id="Node000006" href="$a00266_source.html" title=" " alt="" coords="1089,309,1247,368"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="858,259,970,283,1078,307,1089,310,1088,315,1077,312,969,288,857,264"/>
+<area shape="rect" id="Node000007" href="$a00263.html" title="Contains h files that are part of device layer." alt="" coords="919,317,1065,360"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="841,265,948,314,945,319,838,270"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="921,367,908,371,815,391,720,408,559,431,558,425,719,403,814,386,907,365,920,362"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="995,375,995,416,989,416,989,375"/>
+<area shape="poly" id="edge19_Node000017_Node000002" title=" " alt="" coords="399,260,188,319,187,314,397,255"/>
+<area shape="poly" id="edge21_Node000017_Node000008" title=" " alt="" coords="488,268,488,415,483,415,483,268"/>
+<area shape="poly" id="edge24_Node000017_Node000009" title=" " alt="" coords="497,266,521,319,540,345,563,366,589,379,626,391,721,410,826,422,919,429,919,435,825,427,721,415,625,396,587,384,560,370,536,348,517,322,492,268"/>
+<area shape="poly" id="edge20_Node000017_Node000010" title=" " alt="" coords="531,259,606,307,603,311,528,264"/>
+<area shape="poly" id="edge22_Node000017_Node000015" title=" " alt="" coords="569,255,738,307,761,314,759,319,736,312,568,260"/>
+<area shape="rect" id="Node000018" href="$a00407.html" title="Contains PSFB control phase calculation between primary and secondary, and the PWM distribution." alt="" coords="298,317,448,360"/>
+<area shape="poly" id="edge23_Node000017_Node000018" title=" " alt="" coords="455,265,397,319,393,315,451,261"/>
+</map>

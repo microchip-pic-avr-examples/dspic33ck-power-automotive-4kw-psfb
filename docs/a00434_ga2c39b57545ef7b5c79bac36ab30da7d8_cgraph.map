@@ -1,0 +1,15 @@
+<map id="PwrCtrl_Initialize" name="PwrCtrl_Initialize">
+<area shape="rect" id="Node000001" title="Initialize the power control parameters." alt="" coords="5,68,123,95"/>
+<area shape="rect" id="Node000002" href="$a00434.html#gae58162e874535adf2003e9ed8a13b656" title="Initializes the control loop." alt="" coords="171,43,357,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,71,156,67,156,72,123,77"/>
+<area shape="rect" id="Node000007" href="$a00434.html#ga45940145031d4886842c27f5e5277e9b" title="Initialize the StartUp Ramp configuration." alt="" coords="183,93,345,120"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="123,86,169,92,168,97,123,91"/>
+<area shape="rect" id="Node000003" href="$a00438.html#ga683c378ec457def5ed040dac9759eb44" title="Initialize the Current Loop Control." alt="" coords="418,5,560,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="357,41,402,35,403,41,358,46"/>
+<area shape="rect" id="Node000005" href="$a00438.html#ga8603aa8f7d4f64fa925228cf9c99de83" title="Initialize the Voltage Loop Control." alt="" coords="405,72,572,99"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="358,66,391,70,390,75,357,71"/>
+<area shape="rect" id="Node000004" href="$a00374.html#a4201f46447c8802666c1fe6ade902908" title=" " alt="" coords="620,13,819,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="560,24,605,24,605,29,560,29"/>
+<area shape="rect" id="Node000006" href="$a00374.html#a8d0d916c7a3ca172408fcded86a6baa2" title=" " alt="" coords="620,72,819,99"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="572,83,605,83,605,88,572,88"/>
+</map>
