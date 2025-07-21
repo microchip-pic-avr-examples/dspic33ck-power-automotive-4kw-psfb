@@ -1,0 +1,11 @@
+<map id="Fault_GetFlags" name="Fault_GetFlags">
+<area shape="rect" id="Node000001" title=" " alt="" coords="430,43,540,69"/>
+<area shape="rect" id="Node000002" href="$a00426.html#ga96b58cf519f2a436993861504db6b3e1" title="this builds frame" alt="" coords="237,5,382,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="415,47,382,41,383,36,416,42"/>
+<area shape="rect" id="Node000004" href="$a00443.html#gacd1ca209275dae0bc2388ac954858d83" title="Executes the fault handlers." alt="" coords="257,72,362,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="416,70,363,79,362,74,415,65"/>
+<area shape="rect" id="Node000003" href="$a00426.html#ga34ef08c06d636819aa039ff4a8f85c50" title="this is high frequency task to simulate sending of high frequency numeric data. Also to check if ther..." alt="" coords="5,13,189,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="222,29,189,29,189,24,222,24"/>
+<area shape="rect" id="Node000005" href="$a00435.html#ga2068c3c2584547dbc1c8b9bca2d55b18" title="Executes the power converter control loop." alt="" coords="49,72,145,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="242,88,146,88,146,83,242,83"/>
+</map>

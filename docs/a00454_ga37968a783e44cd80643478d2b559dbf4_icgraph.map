@@ -1,0 +1,11 @@
+<map id="PWM_DutyCycleSet" name="PWM_DutyCycleSet">
+<area shape="rect" id="Node000001" title="This inline function sets the PWM generator specific duty cycle register." alt="" coords="777,13,918,40"/>
+<area shape="rect" id="Node000002" href="$a00436.html#ga054f3de472c33a84cb37459b27a0d3b3" title="PWM distribution for PSFB converter." alt="" coords="577,13,729,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="762,29,729,29,729,24,762,24"/>
+<area shape="rect" id="Node000003" href="$a00435.html#ga2eeebdb0cef4bbfeed446752525dd879" title="Executes the power converter control loop." alt="" coords="342,13,529,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="563,29,530,29,530,24,563,24"/>
+<area shape="rect" id="Node000004" href="$a00435.html#gae32c9e5ed4d1fb98fc13b26601782c10" title="Executes the power converter control loop." alt="" coords="150,5,294,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="327,29,294,29,294,24,327,24"/>
+<area shape="rect" id="Node000005" href="$a00435.html#ga2068c3c2584547dbc1c8b9bca2d55b18" title="Executes the power converter control loop." alt="" coords="5,13,102,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="135,29,102,29,102,24,135,24"/>
+</map>

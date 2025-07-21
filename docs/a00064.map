@@ -1,0 +1,27 @@
+<map id="psfb_droop.X/mcc_generated_files/adc/adc1.h" name="psfb_droop.X/mcc_generated_files/adc/adc1.h">
+<area shape="rect" id="Node000001" title="This is the generated driver header file for the ADC1 driver." alt="" coords="578,5,766,48"/>
+<area shape="rect" id="Node000002" href="$a00056_source.html" title=" " alt="" coords="5,112,144,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="563,39,372,60,263,77,156,99,107,114,105,109,155,93,263,72,371,55,562,33"/>
+<area shape="rect" id="Node000003" href="$a00074.html" title="This is the generated driver source file for ADC1 driver." alt="" coords="168,104,357,147"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="564,54,368,99,339,106,338,101,367,93,562,49"/>
+<area shape="rect" id="Node000004" href="$a00176.html" title="This is the generated driver header file for the System driver." alt="" coords="380,104,569,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="618,57,518,106,516,101,615,53"/>
+<area shape="rect" id="Node000005" href="$a00269.html" title="measure current sensor offsets" alt="" coords="593,96,751,155"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="675,63,675,96,669,96,669,63"/>
+<area shape="rect" id="Node000010" href="$a00278.html" title="Contains ADC initialization that was not supported by MCC generated code." alt="" coords="776,96,947,155"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="727,53,806,93,804,98,724,58"/>
+<area shape="rect" id="Node000012" href="$a00398.html" title="Contains Control loop interrupt Callback that acquires the ADC raw data and process it in the control..." alt="" coords="971,104,1117,147"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="781,49,959,93,984,101,982,106,958,99,780,54"/>
+<area shape="rect" id="Node000013" href="$a00404.html" title="Contains some of the functions used in the interrupt service routine of control loop." alt="" coords="1141,96,1286,155"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="781,36,946,58,1039,74,1130,93,1141,96,1139,101,1129,99,1038,79,945,63,780,41"/>
+<area shape="rect" id="Node000006" href="$a00266_source.html" title=" " alt="" coords="425,203,583,261"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="615,165,551,205,548,200,612,160"/>
+<area shape="rect" id="Node000007" href="$a00263.html" title="Contains h files that are part of device layer." alt="" coords="607,211,753,253"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="678,169,681,210,676,211,672,170"/>
+<area shape="rect" id="Node000008" href="$a00299.html" title="Contains fault functions including the fault handler, fault object initialization and fault execution..." alt="" coords="523,309,669,352"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="655,266,616,311,612,307,651,263"/>
+<area shape="rect" id="Node000009" href="$a00413.html" title="Contains power control state machine functions that is executed every 100us." alt="" coords="693,309,838,352"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="709,263,749,307,745,311,705,266"/>
+<area shape="rect" id="Node000011" href="$a00293_source.html" title=" " alt="" coords="785,203,937,261"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="864,170,864,202,859,202,859,170"/>
+</map>

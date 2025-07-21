@@ -1,0 +1,33 @@
+<map id="psfb_droop.X/mcc_generated_files/adc/adc_types.h" name="psfb_droop.X/mcc_generated_files/adc/adc_types.h">
+<area shape="rect" id="Node000001" title="This is the generated driver types header file for the ADC driver." alt="" coords="779,5,967,48"/>
+<area shape="rect" id="Node000002" href="$a00062.html" title="This is the generated driver header file for the ADC1 driver." alt="" coords="647,187,835,229"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="814,58,789,75,769,98,757,119,750,143,744,186,739,186,745,142,752,117,764,94,786,71,811,53"/>
+<area shape="rect" id="Node000014" href="$a00404.html" title="Contains some of the functions used in the interrupt service routine of control loop." alt="" coords="1141,277,1286,336"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="923,54,981,94,1097,191,1186,275,1183,279,1094,195,978,98,920,59"/>
+<area shape="rect" id="Node000015" href="$a00068_source.html" title=" " alt="" coords="779,96,967,139"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="876,63,876,96,871,96,871,63"/>
+<area shape="rect" id="Node000003" href="$a00056_source.html" title=" " alt="" coords="5,293,144,320"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="632,218,411,238,283,256,156,280,107,295,105,290,155,275,282,250,410,232,632,212"/>
+<area shape="rect" id="Node000004" href="$a00074.html" title="This is the generated driver source file for ADC1 driver." alt="" coords="168,285,357,328"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="633,229,506,252,368,280,338,287,337,282,367,275,505,247,632,224"/>
+<area shape="rect" id="Node000005" href="$a00176.html" title="This is the generated driver header file for the System driver." alt="" coords="380,285,569,328"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="671,237,533,287,531,282,669,232"/>
+<area shape="rect" id="Node000006" href="$a00269.html" title="measure current sensor offsets" alt="" coords="593,277,751,336"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="720,243,694,279,690,275,716,240"/>
+<area shape="rect" id="Node000011" href="$a00278.html" title="Contains ADC initialization that was not supported by MCC generated code." alt="" coords="776,277,947,336"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="779,236,827,275,824,279,776,241"/>
+<area shape="rect" id="Node000013" href="$a00398.html" title="Contains Control loop interrupt Callback that acquires the ADC raw data and process it in the control..." alt="" coords="971,285,1117,328"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="822,232,959,275,982,282,981,287,958,280,821,237"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="850,221,984,244,1130,275,1141,278,1139,283,1129,280,983,249,850,227"/>
+<area shape="rect" id="Node000007" href="$a00266_source.html" title=" " alt="" coords="425,384,583,443"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="615,346,551,386,548,381,612,342"/>
+<area shape="rect" id="Node000008" href="$a00263.html" title="Contains h files that are part of device layer." alt="" coords="607,392,753,435"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="678,351,681,392,676,392,672,351"/>
+<area shape="rect" id="Node000009" href="$a00299.html" title="Contains fault functions including the fault handler, fault object initialization and fault execution..." alt="" coords="523,491,669,533"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="655,447,616,492,612,489,651,444"/>
+<area shape="rect" id="Node000010" href="$a00413.html" title="Contains power control state machine functions that is executed every 100us." alt="" coords="693,491,838,533"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="709,444,749,489,745,492,705,447"/>
+<area shape="rect" id="Node000012" href="$a00293_source.html" title=" " alt="" coords="785,384,937,443"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="864,351,864,384,859,384,859,351"/>
+<area shape="poly" id="edge15_Node000015_Node000002" title=" " alt="" coords="832,150,773,188,770,184,829,145"/>
+</map>

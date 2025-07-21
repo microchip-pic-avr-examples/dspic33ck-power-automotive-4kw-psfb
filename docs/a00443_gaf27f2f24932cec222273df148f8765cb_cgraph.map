@@ -1,0 +1,5 @@
+<map id="Fault_Handler" name="Fault_Handler">
+<area shape="rect" id="Node000001" title="Handles the fault trip by turning off the power control switching." alt="" coords="5,5,107,32"/>
+<area shape="rect" id="Node000002" href="$a00436.html#gae13a0db6addfe827e4c48e0f2250e3f2" title="Disable the PWM output." alt="" coords="155,5,355,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,16,140,16,140,21,107,21"/>
+</map>

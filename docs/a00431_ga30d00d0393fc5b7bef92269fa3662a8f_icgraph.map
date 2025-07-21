@@ -1,0 +1,5 @@
+<map id="PWM_PCI_Fault_AcceptanceCriteria" name="PWM_PCI_Fault_AcceptanceCriteria">
+<area shape="rect" id="Node000001" title="Set PCI fault acceptance criteria." alt="" coords="237,5,431,48"/>
+<area shape="rect" id="Node000002" href="$a00431.html#gac779b9d8bce64e8de686bd78be25ea09" title="Contains PWM initialization that was not supported by MCC generated code." alt="" coords="5,13,189,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,29,189,29,189,24,222,24"/>
+</map>

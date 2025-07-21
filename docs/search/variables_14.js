@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['val1_5fhysteresis_0',['Val1_Hysteresis',['../a00557.html#a2a3b491ddd84f3397021f935033f3aa2',1,'FAULT_OBJ_T']]],
+  ['val1_5fthreshold_1',['Val1_Threshold',['../a00557.html#a5edf921fa44db4fc0b59e47bb5fd0dfd',1,'FAULT_OBJ_T']]],
+  ['val2_5fhysteresis_2',['Val2_Hysteresis',['../a00557.html#a8e9aca4cd2e220497c2dc9aee4278e12',1,'FAULT_OBJ_T']]],
+  ['val2_5fthreshold_3',['Val2_Threshold',['../a00557.html#ad968f59d734c469b74fb82587f59e07a',1,'FAULT_OBJ_T']]],
+  ['value_4',['value',['../a00605.html#a900b69af7d674b8db3bceae754b4955a',1,'STATUS_FLAGS_s']]],
+  ['vcapvoltage_5',['VCapVoltage',['../a00601.html#a29d50baebf44437b217618a8aa4a379b',1,'FEEDBACK_SETTINGS_s']]],
+  ['vinvoltage_6',['VInVoltage',['../a00601.html#a98000dbe6970d7bb6d868ed7f4dd9dde',1,'FEEDBACK_SETTINGS_s']]],
+  ['vloop_7',['VLoop',['../a00649.html#a74800143138c6a887f2edec0e47008a8',1,'POWER_CONTROL_s']]],
+  ['vmc_5f2p2z_8',['VMC_2p2z',['../a00438.html#ga6f2fab45cc1fd91be7e11205806b6a63',1,'VMC_2p2z:&#160;pwrctrl_dcdt.c'],['../a00438.html#ga6f2fab45cc1fd91be7e11205806b6a63',1,'VMC_2p2z:&#160;pwrctrl_dcdt.c']]],
+  ['voutcalibrate_9',['VoutCalibrate',['../a00649.html#a6dfb94b88d97f708e2e9bb0fc4f6a457',1,'POWER_CONTROL_s']]],
+  ['voutcalibratingaveraging_10',['VoutCalibratingAveraging',['../a00649.html#a6706585c1397b0e65d6a03438d18da4d',1,'POWER_CONTROL_s']]],
+  ['voutvoltage_11',['VOutVoltage',['../a00601.html#af35c37618af8e6c223d8157075885a3b',1,'FEEDBACK_SETTINGS_s']]],
+  ['vprimaryovp_12',['VPrimaryOVP',['../a00561.html#a67a6d7934156a505fe648c5a895795ed',1,'FAULT_s']]],
+  ['vprimaryuvp_13',['VPrimaryUVP',['../a00561.html#a6b578aa818e3a0cd2e97b1f83d9243b6',1,'FAULT_s']]],
+  ['vprireference_14',['VPriReference',['../a00625.html#aa7c7be85fbd243019a3d4117936a5eb6',1,'PWR_CTRL_PROPERTIES_s']]],
+  ['vrail_5f5v_15',['VRail_5V',['../a00561.html#a0c6c9adf47adaed77dbc76be05305b1d',1,'FAULT_s::VRail_5V'],['../a00601.html#acc72d884c453d1343c8e836369311454',1,'FEEDBACK_SETTINGS_s::VRail_5V']]],
+  ['vramp_16',['VRamp',['../a00649.html#afd1d9d28f344713441a2330e010de959',1,'POWER_CONTROL_s']]],
+  ['vsecondaryovp_17',['VSecondaryOVP',['../a00561.html#a4a4096da1c84272a28022842417dc638',1,'FAULT_s']]],
+  ['vsecondaryuvp_18',['VSecondaryUVP',['../a00561.html#a2d333978582de1786722d8740564ea3c',1,'FAULT_s']]],
+  ['vsecreference_19',['VSecReference',['../a00625.html#aa9713a077db135ad061aae799db7be2c',1,'PWR_CTRL_PROPERTIES_s']]]
+];

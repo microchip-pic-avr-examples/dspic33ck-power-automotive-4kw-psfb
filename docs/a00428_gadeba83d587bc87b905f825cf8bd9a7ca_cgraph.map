@@ -1,0 +1,7 @@
+<map id="dev_Get_SecondaryShuntOffset" name="dev_Get_SecondaryShuntOffset">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,211,32"/>
+<area shape="rect" id="Node000002" href="$a00428.html#ga0c23d5a65f61e93198d800d07386e9b1" title=" " alt="" coords="259,5,403,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,16,244,16,244,21,211,21"/>
+<area shape="rect" id="Node000003" href="$a00428.html#ga7806a06617949d40c2098591f3dee7dc" title="Averages the ADC samples." alt="" coords="451,5,598,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="403,16,436,16,436,21,403,21"/>
+</map>

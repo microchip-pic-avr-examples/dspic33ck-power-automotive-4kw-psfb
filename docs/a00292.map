@@ -1,0 +1,9 @@
+<map id="psfb_droop.X/sources/driver/mcc_extension/drv_mcc_extension_pwm.h" name="psfb_droop.X/sources/driver/mcc_extension/drv_mcc_extension_pwm.h">
+<area shape="rect" id="Node000001" title="Contains public functions and defines for the MCC code extension for PWM." alt="" coords="97,5,278,64"/>
+<area shape="rect" id="Node000002" href="$a00281.html" title="Contains PWM initialization that was not supported by MCC generated code." alt="" coords="5,112,183,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,77,121,113,117,110,150,73"/>
+<area shape="rect" id="Node000003" href="$a00284.html" title="Contain the peripheral header files with MCC extension code." alt="" coords="207,112,354,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="224,73,257,110,253,113,221,77"/>
+<area shape="rect" id="Node000004" href="$a00293_source.html" title=" " alt="" coords="205,219,357,277"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="283,186,283,218,278,218,278,186"/>
+</map>

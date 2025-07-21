@@ -1,0 +1,13 @@
+<map id="Fault_Execute" name="Fault_Execute">
+<area shape="rect" id="Node000001" title="Executes the fault handlers." alt="" coords="5,81,111,108"/>
+<area shape="rect" id="Node000002" href="$a00444.html#ga1a12d5b7c5b1f234c50ea2214e91fcfc" title="This function compares the fault source value with the threshold limits and sets (or) resets the faul..." alt="" coords="159,5,289,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,78,158,42,172,36,174,40,160,46,86,83"/>
+<area shape="rect" id="Node000003" href="$a00444.html#gabe4788eb1b8be3ad755eb7daf6bba295" title="This function compares the fault source value with the threshold limits and sets (or) resets the faul..." alt="" coords="161,56,287,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,84,146,79,146,84,111,89"/>
+<area shape="rect" id="Node000004" href="$a00311.html#a525a7d54ffe10a34fc0de37c1d43aa6a" title=" " alt="" coords="169,107,279,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="111,100,155,107,154,112,111,105"/>
+<area shape="rect" id="Node000005" href="$a00443.html#gaf27f2f24932cec222273df148f8765cb" title="Handles the fault trip by turning off the power control switching." alt="" coords="173,157,275,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="86,106,160,143,174,149,172,154,158,148,84,111"/>
+<area shape="rect" id="Node000006" href="$a00436.html#gae13a0db6addfe827e4c48e0f2250e3f2" title="Disable the PWM output." alt="" coords="337,157,537,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="275,168,322,168,322,173,275,173"/>
+</map>

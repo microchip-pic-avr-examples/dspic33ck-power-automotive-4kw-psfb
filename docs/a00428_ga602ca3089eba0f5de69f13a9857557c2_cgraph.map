@@ -1,0 +1,7 @@
+<map id="dev_Get_PrimaryCTOffset" name="dev_Get_PrimaryCTOffset">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,176,32"/>
+<area shape="rect" id="Node000002" href="$a00428.html#ga0c23d5a65f61e93198d800d07386e9b1" title=" " alt="" coords="224,5,368,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,16,209,16,209,21,176,21"/>
+<area shape="rect" id="Node000003" href="$a00428.html#ga7806a06617949d40c2098591f3dee7dc" title="Averages the ADC samples." alt="" coords="416,5,563,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="368,16,401,16,401,21,368,21"/>
+</map>
