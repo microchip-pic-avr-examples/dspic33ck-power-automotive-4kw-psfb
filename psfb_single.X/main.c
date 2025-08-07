@@ -77,6 +77,7 @@ int main(void)
 
     ADC1_SoftwareTriggerEnable(); // add it here so that the very first time the values are available
     dev_MeasureOffsets_Initialize();
+    psfb_ptr->Secondary_Rolling.AveragingCount = 3;
     
     while (counter--> 0) Nop(); // implementing delay for values to settle
     
@@ -114,6 +115,8 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     //Read all the ADC value from the ADCBUF
     psfb_ptr->Data.ISensePrimary = ADCBUF0;
     psfb_ptr->Data.ISenseSecondary = ADCBUF1;
+
+    psfb_ptr->Secondary_Rolling_val = PwrCtrl_UpdateAverageRolling(&psfb_ptr->Secondary_Rolling, ADCBUF1);
     
     PwrCtrl_UpdateADConverterData();
     

@@ -231,13 +231,14 @@ void App_PBV_psfb_Build_Frame()
 
     // phase
     buffer_sixteen_tx[21] = PG1TRIGC;
-    buffer_sixteen_tx[22] = psfb_ptr->Precharge.maxDutyCycle;;
+    buffer_sixteen_tx[22] = psfb_ptr->Precharge.maxDutyCycle;
+    buffer_sixteen_tx[23] = psfb_ptr->Secondary_Rolling_val;
 
 
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 23);
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 24);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 23 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 24 * 2 ;
 }
 
 

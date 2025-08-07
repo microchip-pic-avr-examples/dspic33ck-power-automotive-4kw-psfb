@@ -199,6 +199,17 @@ struct AVERAGING_s
 };
 typedef struct AVERAGING_s AVERAGING_t;
 
+
+struct AVERAGING_ROLLING_s
+{ 
+  uint16_t  samples[3];   
+  uint32_t  Accumulator; 
+  uint16_t  Index; 
+  uint16_t  AveragingCount;
+  uint16_t  AverageValue;
+};
+typedef struct AVERAGING_ROLLING_s AVERAGING_ROLLING_t;
+
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
  * @brief   Power control API structure
@@ -223,6 +234,8 @@ struct POWER_CONTROL_s
     SEC_REC_t           SecRec;     ///< structure for secondary rectification data
     AVERAGING_t         PrimaryCT_Offset;
     AVERAGING_t         SecondarySh_Offset;
+    AVERAGING_ROLLING_t Secondary_Rolling;
+    uint16_t            Secondary_Rolling_val;
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 
