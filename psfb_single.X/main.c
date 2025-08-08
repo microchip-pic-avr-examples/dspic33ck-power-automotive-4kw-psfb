@@ -77,7 +77,6 @@ int main(void)
 
     ADC1_SoftwareTriggerEnable(); // add it here so that the very first time the values are available
     dev_MeasureOffsets_Initialize();
-    psfb_ptr->Secondary_Rolling.AveragingCount = 3;
     
     while (counter--> 0) Nop(); // implementing delay for values to settle
     
