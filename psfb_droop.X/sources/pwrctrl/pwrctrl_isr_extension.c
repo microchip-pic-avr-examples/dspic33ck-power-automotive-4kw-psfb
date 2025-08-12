@@ -107,7 +107,8 @@ void PwrCtrl_ControlLoopExecute(void)
     IloopReference = psfb_ptr->VLoop.Output; 
     
     if (psfb_ptr->ILoop.Enable == 1) {
-        psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISenseSecondary;
+//        psfb_ptr->ILoop.Feedback = psfb_ptr->Data.ISenseSecondary;
+        psfb_ptr->ILoop.Feedback = psfb_ptr->Secondary_Rolling_val;
 
         SMPS_Controller3P3ZUpdate(
             &IMC_3p3z,                      // SPMPS_2P2Z_T pointer type structure

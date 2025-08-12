@@ -284,7 +284,8 @@ void PwrCtrl_PWM_UpdateSecondaryRectifiers (void) {
     {
         //threshhold = 970;
         
-        if (psfb_ptr->Data.ISenseSecondary > psfb_ptr->SecRec.Threshold_high) {       //approx 34 amps Iout
+//        if (psfb_ptr->Data.ISenseSecondary > psfb_ptr->SecRec.Threshold_high) {       //approx 34 amps Iout    
+        if (psfb_ptr->Secondary_Rolling_val > psfb_ptr->SecRec.Threshold_high) {        //using rolling 
             //debug_SetHigh();
             psfb_ptr->SecRec.SR_Flag = 1;
             PG4IOCONLbits.OVRENL = 0;       //turning on SR
@@ -292,7 +293,8 @@ void PwrCtrl_PWM_UpdateSecondaryRectifiers (void) {
         } 
     } else {
         //threshhold = 950;
-        if (psfb_ptr->Data.ISenseSecondary < psfb_ptr->SecRec.Threshold_low) {       // approx 26 amps Iout
+//        if (psfb_ptr->Data.ISenseSecondary < psfb_ptr->SecRec.Threshold_low) {       // approx 26 amps Iout
+        if (psfb_ptr->Secondary_Rolling_val < psfb_ptr->SecRec.Threshold_low) {        // using rolling
             //debug_SetLow();
             psfb_ptr->SecRec.SR_Flag  = 0;
             PG4IOCONLbits.OVRENL = 1;       //turning off SR

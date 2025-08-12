@@ -18,7 +18,7 @@
 #include "pwrctrl_typedef.h"
 
 extern uint16_t PwrCtrl_UpdateAverage(AVERAGING_t* data, uint16_t adcReading);
-extern uint16_t PwrCtrl_UpdateAverageRolling(AVERAGING_t* data, uint16_t adcReading);
+extern uint16_t PwrCtrl_UpdateAverageRolling(AVERAGING_ROLLING_t* data, uint16_t sample);
 extern bool PwrCtrl_RampReference(START_UP_RAMP_t* rampUp);
 
 #endif	/* DEV_PWRCTRL_UTILS_H */

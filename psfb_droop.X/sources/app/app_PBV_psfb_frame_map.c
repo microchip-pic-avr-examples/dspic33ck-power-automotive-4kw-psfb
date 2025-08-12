@@ -241,12 +241,20 @@ void App_PBV_psfb_Build_Frame()
     
     buffer_sixteen_tx[25] = psfb_ptr->VoutCalibrate.calculated_value;
     buffer_sixteen_tx[26] = psfb_ptr->VoutCalibrate.real_value;
-    buffer_sixteen_tx[27] = (uint16_t)psfb_ptr->VoutCalibrate.gain_factor;
 
-    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 28);
+    float temp = (float)buffer_sixteen_tx[16] * psfb_ptr->VoutCalibrate.gain_factor ;
+
+    buffer_sixteen_tx[27] = (uint16_t)temp;
+
+    buffer_sixteen_tx[28] = psfb_ptr->Secondary_Rolling_val;
+
+    buffer_sixteen_tx[29] = abs(psfb_ptr->VoutCalibrate.real_value - psfb_ptr->VoutCalibrate.calculated_value); 
+
+
+    PBV_Change_from_Sixteen_to_Eight(buffer_sixteen_tx, buffer_eight_tx, 30);
     
     App_PBV_psfb_TX_Ptr->Data_Buffer = buffer_eight_tx;
-    App_PBV_psfb_TX_Ptr->Length = 28 * 2 ;
+    App_PBV_psfb_TX_Ptr->Length = 30 * 2 ;
 }
 
 
@@ -358,8 +366,15 @@ void App_PBV_psfb_Process_Sliders(uint16_t * data) {
 
         case 0xee:
             voltage_ref = data[1];
-            float vreftemp = (float)voltage_ref * psfb_ptr->VoutCalibrate.gain_factor;
-            if (abs(vreftemp - voltage_ref)>372) vreftemp = (float)voltage_ref; // if difference is greater than 0.3 v
+            float vreftemp;
+            if (psfb_ptr->VoutCalibrate.gain_factor>0){
+                 vreftemp = (float)voltage_ref / psfb_ptr->VoutCalibrate.gain_factor;
+            } 
+            else{  
+                 vreftemp = (float)voltage_ref * 1;
+            }
+            //if (abs(vreftemp - voltage_ref)>372) vreftemp = (float)voltage_ref; // if difference is greater than 0.3 v
+            
             PwrCtrl_SetVSecReference((uint16_t)vreftemp);
             psfb_ptr->Droop.Droop_Voltage_Reference_from_PBV = (uint16_t)vreftemp;
             break;

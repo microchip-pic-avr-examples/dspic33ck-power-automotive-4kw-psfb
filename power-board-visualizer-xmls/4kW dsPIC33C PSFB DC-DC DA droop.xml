@@ -58,7 +58,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>5v Rail</Name>
-        <Scaling>0.001611</Scaling>
+        <Scaling>0.00167</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
         <Plot>false</Plot>
@@ -137,7 +137,7 @@
       <SignalChannel>
         <Name>I-SHUNT</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
@@ -189,27 +189,27 @@
       <SignalChannel>
         <Name>SR Threshold high</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>14</SignalChannelIndex>
         <PositionInMessage>14</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
         <Name>SR Threshold Low</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>15</SignalChannelIndex>
         <PositionInMessage>15</PositionInMessage>
-        <PageName>4kw</PageName>
+        <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -293,7 +293,7 @@
       <SignalChannel>
         <Name>i-SHUNT-AVG</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
@@ -339,6 +339,45 @@
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>26</SignalChannelIndex>
         <PositionInMessage>26</PositionInMessage>
+        <PageName>4kw 204</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Vout Calibrated</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>27</SignalChannelIndex>
+        <PositionInMessage>27</PositionInMessage>
+        <PageName>4kw 204</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Secondary Rolling</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-50</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>28</SignalChannelIndex>
+        <PositionInMessage>28</PositionInMessage>
+        <PageName>4kw 204</PageName>
+        <ProtocolID>516</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Offset difference at 12</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>29</SignalChannelIndex>
+        <PositionInMessage>29</PositionInMessage>
         <PageName>4kw 204</PageName>
         <ProtocolID>516</ProtocolID>
       </SignalChannel>
@@ -396,7 +435,7 @@
       </SignalChannel>
       <SignalChannel>
         <Name>5v Rail 2</Name>
-        <Scaling>0.001611</Scaling>
+        <Scaling>0.00167</Scaling>
         <Offset>0</Offset>
         <Unit>V</Unit>
         <Plot>false</Plot>
@@ -475,7 +514,7 @@
       <SignalChannel>
         <Name>I-SHUNT 2</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
@@ -527,27 +566,27 @@
       <SignalChannel>
         <Name>SR Threshold high 2</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>54</SignalChannelIndex>
         <PositionInMessage>14</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
         <Name>SR Threshold Low 2</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
         <PlotValMax>0</PlotValMax>
         <SignalChannelIndex>55</SignalChannelIndex>
         <PositionInMessage>15</PositionInMessage>
-        <PageName>4kw2</PageName>
+        <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
       <SignalChannel>
@@ -680,6 +719,45 @@
         <PageName>4kw2 214</PageName>
         <ProtocolID>532</ProtocolID>
       </SignalChannel>
+      <SignalChannel>
+        <Name>Vout Calibrated 2</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>67</SignalChannelIndex>
+        <PositionInMessage>27</PositionInMessage>
+        <PageName>4kw2 214</PageName>
+        <ProtocolID>532</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>Secondary Rolling 2</Name>
+        <Scaling>0.0805</Scaling>
+        <Offset>-50</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>68</SignalChannelIndex>
+        <PositionInMessage>28</PositionInMessage>
+        <PageName>4kw2 214</PageName>
+        <ProtocolID>532</ProtocolID>
+      </SignalChannel>
+      <SignalChannel>
+        <Name>offset difference at 12  2</Name>
+        <Scaling>0.005232</Scaling>
+        <Offset>0</Offset>
+        <Unit xsi:nil="true" />
+        <Plot>false</Plot>
+        <PlotValMin>0</PlotValMin>
+        <PlotValMax>0</PlotValMax>
+        <SignalChannelIndex>69</SignalChannelIndex>
+        <PositionInMessage>29</PositionInMessage>
+        <PageName>4kw2 214</PageName>
+        <ProtocolID>532</ProtocolID>
+      </SignalChannel>
     </SignalChannels>
     <TableView>
       <TableViewItem>
@@ -723,6 +801,10 @@
         <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>27</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>19</SignalChannelIndex>
         <PageName>4kw 204</PageName>
       </TableViewItem>
@@ -736,6 +818,10 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>10</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>28</SignalChannelIndex>
         <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -760,6 +846,18 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>26</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>29</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>14</SignalChannelIndex>
+        <PageName>4kw 204</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>15</SignalChannelIndex>
         <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -803,6 +901,10 @@
         <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
+        <SignalChannelIndex>67</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
         <SignalChannelIndex>59</SignalChannelIndex>
         <PageName>4kw2 214</PageName>
       </TableViewItem>
@@ -816,6 +918,10 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>50</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>68</SignalChannelIndex>
         <PageName>4kw2 214</PageName>
       </TableViewItem>
       <TableViewItem>
@@ -840,6 +946,18 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>66</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>69</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>54</SignalChannelIndex>
+        <PageName>4kw2 214</PageName>
+      </TableViewItem>
+      <TableViewItem>
+        <SignalChannelIndex>55</SignalChannelIndex>
         <PageName>4kw2 214</PageName>
       </TableViewItem>
     </TableView>
