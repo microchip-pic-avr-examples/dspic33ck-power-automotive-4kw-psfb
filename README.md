@@ -33,7 +33,7 @@ The board features well-organized circuit sections, including an input EMI filte
 
 __Product Webpage__
 
--[dsPIC33C 4kW DC-DC Demonstration Application](https://www.microchip.com/en-us/tools-resources/reference-designs/dspic33c-4kw-dc-dc-demonstration-application)
+- [dsPIC33C 4kW DC-DC Demonstration Application](https://www.microchip.com/en-us/tools-resources/reference-designs/dspic33c-4kw-dc-dc-demonstration-application)
 
 __Firmware Documentation__
 

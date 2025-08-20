@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gain_5ffactor_0',['gain_factor',['../a00645.html#ab0018647c65a61f3c992dacd62d3e773',1,'CALIBRATE_S']]],
+  ['gain_5ffactor_0',['gain_factor',['../a00649.html#ab0018647c65a61f3c992dacd62d3e773',1,'CALIBRATE_S']]],
   ['generator_1',['MPLABX MCC Melody Code Generator',['../a00446.html',1,'']]],
   ['generatordisable_2',['GeneratorDisable',['../a00513.html#a332724dc229715fa32b4b57112dfb737',1,'PWM_HS_INTERFACE']]],
   ['generatorenable_3',['GeneratorEnable',['../a00513.html#a7dc2f77f9abf81eaa0444b4b52f9caa0',1,'PWM_HS_INTERFACE']]],

@@ -1,0 +1,26 @@
+var a00653 =
+[
+    [ "Data", "a00653.html#a9961eac6798b52736528d9d4aa30d922", null ],
+    [ "Droop", "a00653.html#a49e355d20b8285181d2b9804378f9713", null ],
+    [ "Fault", "a00653.html#aead2ae6cfabf4831af21d23684e19d1f", null ],
+    [ "ILoop", "a00653.html#a13383149438802e4c6c08683d6d004db", null ],
+    [ "IRamp", "a00653.html#afdaae86371984281bf846fac8b1d918a", null ],
+    [ "ISecAveraging", "a00653.html#ab9462c82d39eb53833bb4156a31e30d9", null ],
+    [ "PhRamp", "a00653.html#ae89acf1ca3b8d30a13e4fb9f35c27e0d", null ],
+    [ "PLoop", "a00653.html#a14f61bb42ecc88a3ff43a417b48194b0", null ],
+    [ "PRamp", "a00653.html#a7969f4ded01738878ec44b5a56985c85", null ],
+    [ "Precharge", "a00653.html#a452b01803c15a8aca96a7c7112db5b65", null ],
+    [ "PrimaryCT_Offset", "a00653.html#afb584f4a61069e959fd28c5a3d82a6a8", null ],
+    [ "Properties", "a00653.html#a2c015371f9d53a7ba0131e65634f8129", null ],
+    [ "Pwm", "a00653.html#a133fe9da595a11547aacc8e4f1ae3b8a", null ],
+    [ "Secondary_Rolling", "a00653.html#afea0510004678ba790c6e2a2cc7e1aa7", null ],
+    [ "Secondary_Rolling_val", "a00653.html#aee2f9df8807146a1dc711d5746526f44", null ],
+    [ "SecondarySh_Offset", "a00653.html#a8dc7691b07c4ecc7fc2e459e1140c7a7", null ],
+    [ "SecRec", "a00653.html#a6dc44da803310a4be5ab45d4e22a6806", null ],
+    [ "State", "a00653.html#a8b22029ea33e1bafe7050317294309c2", null ],
+    [ "Status", "a00653.html#ae5b4ae59c620ed360f0cb1c66ea0cd4e", null ],
+    [ "VLoop", "a00653.html#a74800143138c6a887f2edec0e47008a8", null ],
+    [ "VoutCalibrate", "a00653.html#a6dfb94b88d97f708e2e9bb0fc4f6a457", null ],
+    [ "VoutCalibratingAveraging", "a00653.html#a6706585c1397b0e65d6a03438d18da4d", null ],
+    [ "VRamp", "a00653.html#afd1d9d28f344713441a2330e010de959", null ]
+];

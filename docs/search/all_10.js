@@ -4,8 +4,8 @@ var searchData=
   ['offset_1',['Offset',['../a00553.html#ae6e68acb116dc3b5f8a7354c7f7d4146',1,'dev_Offsets']]],
   ['offset_2',['offset',['../a00545.html#ac681806181c80437cfab37335f62ff39',1,'UART_MSG_RX_OBJ::offset'],['../a00549.html#ac681806181c80437cfab37335f62ff39',1,'UART_MSG_TX_OBJ::offset']]],
   ['on_20to_20the_20dspic33c_20digital_20power_20pim_20using_20available_20hex_20file_3',['Programming Hex File on to the dsPIC33C Digital Power PIM using available hex file',['../index.html#autotoc_md11',1,'']]],
-  ['operate_20in_20droop_20mode_4',['How to operate in Droop Mode',['../a00655.html#autotoc_md21',1,'']]],
-  ['operation_5',['Parallel/Droop Operation',['../a00655.html',1,'']]],
+  ['operate_20in_20droop_20mode_4',['How to operate in Droop Mode',['../a00659.html#autotoc_md21',1,'']]],
+  ['operation_5',['Parallel/Droop Operation',['../a00659.html',1,'']]],
   ['operationmodeget_6',['OperationModeGet',['../a00477.html#ad65d2428ff5e999742c448c5d46b7d1d',1,'CAN_INTERFACE']]],
   ['operationmodeset_7',['OperationModeSet',['../a00477.html#a32ec3b8ce5d102078c95d96c91fb0549',1,'CAN_INTERFACE']]],
   ['os_5freset_5fresetcausebits_5ft_8',['OS_RESET_RESETCAUSEBITS_t',['../a00569.html',1,'']]],
@@ -21,5 +21,5 @@ var searchData=
   ['overridelowenable_18',['OverrideLowEnable',['../a00513.html#a14f0250eed2e3ebdc45a2e2977250f69',1,'PWM_HS_INTERFACE']]],
   ['overrunerror_19',['overrunError',['../a00203.html#ae7caae3e5d64874631b3e065e5c0a8ff',1,'uart1.c']]],
   ['overrunerrorcallbackregister_20',['OverrunErrorCallbackRegister',['../a00529.html#a5a07c7ff4f09da5ff95d2d8c16bb93ac',1,'UART_INTERFACE']]],
-  ['overview_21',['Firmware Overview',['../a00654.html',1,'']]]
+  ['overview_21',['Firmware Overview',['../a00658.html',1,'']]]
 ];

@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['application_0',['4kW dsPIC33C PSFB DC-DC Demonstration Application',['../index.html#autotoc_md1',1,'']]],
-  ['available_20hex_20file_1',['Programming Hex File on to the dsPIC33C Digital Power PIM using available hex file',['../index.html#autotoc_md11',1,'']]]
+  ['da_0',['4kW dsPIC33C PSFB DC-DC DA',['../index.html',1,'']]],
+  ['dc_20da_1',['4kW dsPIC33C PSFB DC-DC DA',['../index.html',1,'']]],
+  ['dc_20dc_20da_2',['4kW dsPIC33C PSFB DC-DC DA',['../index.html',1,'']]],
+  ['droop_20operation_3',['Parallel/Droop Operation',['../a00659.html',1,'']]],
+  ['dspic33c_20psfb_20dc_20dc_20da_4',['4kW dsPIC33C PSFB DC-DC DA',['../index.html',1,'']]]
 ];

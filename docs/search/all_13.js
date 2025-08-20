@@ -2,11 +2,11 @@ var searchData=
 [
   ['rampcomplete_0',['RampComplete',['../a00617.html#a13025badec30c52baf766e745d4c699f',1,'START_UP_RAMP_s']]],
   ['read_1',['Read',['../a00529.html#a2c0c4197e8c11d71bd6301b058c959cd',1,'UART_INTERFACE']]],
-  ['real_5fvalue_2',['real_value',['../a00645.html#a83d680a200abba48257bf17739ef109e',1,'CALIBRATE_S']]],
+  ['real_5fvalue_2',['real_value',['../a00649.html#a83d680a200abba48257bf17739ef109e',1,'CALIBRATE_S']]],
   ['receive_3',['Receive',['../a00477.html#a542fd9b5bfa85b8b43084d255f9e2149',1,'CAN_INTERFACE']]],
   ['receivedmessagecountget_4',['ReceivedMessageCountGet',['../a00477.html#ad1731a37e2b2ec9287a9e15604c2e2a7',1,'CAN_INTERFACE']]],
   ['receivemessageget_5',['ReceiveMessageGet',['../a00477.html#afebd3439b8a71c9e5f4018ab54cfdf61',1,'CAN_INTERFACE']]],
-  ['ref_5fdiff_6',['ref_diff',['../a00641.html#ae0ed6fca1728fb2bb09603cec06b5e78',1,'DROOP_s::ref_diff'],['../a00413.html#ae0ed6fca1728fb2bb09603cec06b5e78',1,'ref_diff:&#160;pwrctrl_sm.c']]],
+  ['ref_5fdiff_6',['ref_diff',['../a00645.html#ae0ed6fca1728fb2bb09603cec06b5e78',1,'DROOP_s::ref_diff'],['../a00413.html#ae0ed6fca1728fb2bb09603cec06b5e78',1,'ref_diff:&#160;pwrctrl_sm.c']]],
   ['reference_7',['Reference',['../a00621.html#a727f4f7790931ccc89ce7743dbe80b4e',1,'CONTROLLER_s']]],
   ['reinit_8',['reinit',['../a00533.html#aad1488054aade0d9770cbae5597a8db9',1,'APP_PBV_INTF_API_s']]],
   ['related_20documentation_9',['Related Documentation',['../index.html#autotoc_md5',1,'']]],

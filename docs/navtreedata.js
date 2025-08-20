@@ -33,14 +33,14 @@ var NAVTREE =
       [ "Directory Structure", "index.html#autotoc_md9", null ],
       [ "Programming Hex File on to the dsPIC33C Digital Power PIM using available hex file", "index.html#autotoc_md11", null ]
     ] ],
-    [ "Firmware Overview", "a00654.html", [
-      [ "Firmware components", "a00654.html#autotoc_md14", null ],
-      [ "Implementation", "a00654.html#autotoc_md15", null ]
+    [ "Firmware Overview", "a00658.html", [
+      [ "Firmware components", "a00658.html#autotoc_md14", null ],
+      [ "Implementation", "a00658.html#autotoc_md15", null ]
     ] ],
-    [ "Parallel/Droop Operation", "a00655.html", [
-      [ "Theory", "a00655.html#autotoc_md19", null ],
-      [ "Implementation", "a00655.html#autotoc_md20", null ],
-      [ "How to operate in Droop Mode", "a00655.html#autotoc_md21", null ]
+    [ "Parallel/Droop Operation", "a00659.html", [
+      [ "Theory", "a00659.html#autotoc_md19", null ],
+      [ "Implementation", "a00659.html#autotoc_md20", null ],
+      [ "How to operate in Droop Mode", "a00659.html#autotoc_md21", null ]
     ] ],
     [ "Firmware Detail", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
@@ -67,12 +67,11 @@ var NAVTREEINDEX =
 "a00047.html",
 "a00424.html#gga26db6be2cdb24ea5b5c7c70d0a6c3b25a194a96a562c6685141b95b9f70100945",
 "a00431.html#ggad056c86678a704b4fe901a1a1b722302a3957504a2e78af985b42357eadedf3f1",
-"a00449.html#ga589e67cdfd74495013704b8357df54ad",
-"a00458.html#ga0d0281b205d9701501e743f556c351f2",
-"a00513.html#a5de4c331047d7f31bbecdcdccca17142",
-"a00637.html"
+"a00449.html#ga57b30800d7bd3b3c936f578ca1fd7e32",
+"a00458.html#ga08808bff069a1ae1e875c4b7363bd301",
+"a00513.html#a5702edde63f815c839b3226be77da684",
+"a00633.html#aa5d999ed567a90f0be012f07a2d8a04c"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+var SYNCONMSG = 'click to disable panel synchronisation';
+var SYNCOFFMSG = 'click to enable panel synchronisation';

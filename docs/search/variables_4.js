@@ -2,7 +2,7 @@ var searchData=
 [
   ['dac1_5fdc_5finterface_0',['dac1_dc_interface',['../a00101.html#a02c3987188b49e4fee8cdb7049c8387d',1,'cmp1.c']]],
   ['dac3_5fdc_5finterface_1',['dac3_dc_interface',['../a00104.html#a7457a15a682454f52868f8c9e3990f2a',1,'cmp3.c']]],
-  ['data_2',['Data',['../a00649.html#a9961eac6798b52736528d9d4aa30d922',1,'POWER_CONTROL_s']]],
+  ['data_2',['Data',['../a00653.html#a9961eac6798b52736528d9d4aa30d922',1,'POWER_CONTROL_s']]],
   ['data_3',['data',['../a00485.html#abe222f6d3581e7920dcad5306cc906a8',1,'CAN_MSG_OBJ::data'],['../a00505.html#a735984d41155bc1032e09bece8f8d66d',1,'CRC_OBJ::data'],['../a00545.html#af6818e30aac80097c9ba1786e8408956',1,'UART_MSG_RX_OBJ::data'],['../a00549.html#abe222f6d3581e7920dcad5306cc906a8',1,'UART_MSG_TX_OBJ::data']]],
   ['data16bit_4',['data16bit',['../a00505.html#a658e8037b0f8c2c1f2ae60440dc0e2d3',1,'CRC_OBJ']]],
   ['data32bit_5',['data32bit',['../a00505.html#a199aaa77495095822c847af9e6bfc9a6',1,'CRC_OBJ']]],
@@ -23,12 +23,12 @@ var searchData=
   ['disable_20',['Disable',['../a00469.html#a7fd5c6c55c6a76c4d35e3f81609fab87',1,'ADC_INTERFACE::Disable'],['../a00493.html#a7fd5c6c55c6a76c4d35e3f81609fab87',1,'DAC_DC_INTERFACE::Disable'],['../a00497.html#a7fd5c6c55c6a76c4d35e3f81609fab87',1,'CMP_INTERFACE::Disable'],['../a00513.html#a7fd5c6c55c6a76c4d35e3f81609fab87',1,'PWM_HS_INTERFACE::Disable']]],
   ['dlc_21',['dlc',['../a00481.html#ab4d50729bdfb45cf06faa799877f71e6',1,'CAN_MSG_FIELD']]],
   ['dmt_5feventhandler_22',['DMT_EventHandler',['../a00161.html#a94ca89a80b6a760bbd389e2d6e019c30',1,'dmt.c']]],
-  ['droop_23',['Droop',['../a00649.html#a49e355d20b8285181d2b9804378f9713',1,'POWER_CONTROL_s']]],
-  ['droop_5fdelay_5fcounter_24',['Droop_Delay_Counter',['../a00641.html#ada6a7656f734bf91002fe9e81e226d4c',1,'DROOP_s']]],
-  ['droop_5fenabled_25',['Droop_Enabled',['../a00641.html#a1f4c1f7431b32c0ea30578937661e2f6',1,'DROOP_s']]],
-  ['droop_5fflag_26',['Droop_Flag',['../a00641.html#aa2b113d66bd0a3ab84be28d871efeb37',1,'DROOP_s']]],
-  ['droop_5fnew_5fvoltage_5freference_27',['Droop_New_Voltage_Reference',['../a00641.html#a3f8c7a6ef1ad951225f3e90c1359fff7',1,'DROOP_s']]],
-  ['droop_5fvoltage_5freference_5ffrom_5fpbv_28',['Droop_Voltage_Reference_from_PBV',['../a00641.html#a0f764e446564e7cb43a8e9ca35581e4c',1,'DROOP_s']]],
+  ['droop_23',['Droop',['../a00653.html#a49e355d20b8285181d2b9804378f9713',1,'POWER_CONTROL_s']]],
+  ['droop_5fdelay_5fcounter_24',['Droop_Delay_Counter',['../a00645.html#ada6a7656f734bf91002fe9e81e226d4c',1,'DROOP_s']]],
+  ['droop_5fenabled_25',['Droop_Enabled',['../a00645.html#a1f4c1f7431b32c0ea30578937661e2f6',1,'DROOP_s']]],
+  ['droop_5fflag_26',['Droop_Flag',['../a00645.html#aa2b113d66bd0a3ab84be28d871efeb37',1,'DROOP_s']]],
+  ['droop_5fnew_5fvoltage_5freference_27',['Droop_New_Voltage_Reference',['../a00645.html#a3f8c7a6ef1ad951225f3e90c1359fff7',1,'DROOP_s']]],
+  ['droop_5fvoltage_5freference_5ffrom_5fpbv_28',['Droop_Voltage_Reference_from_PBV',['../a00645.html#a0f764e446564e7cb43a8e9ca35581e4c',1,'DROOP_s']]],
   ['dutycycle_29',['DutyCycle',['../a00629.html#ac2e3195de325777a336ab51dcc36d95f',1,'PRECHARGE_s']]],
   ['dutycycleset_30',['DutyCycleSet',['../a00513.html#a00ec1bf0543f76c35739ddd4d3c36e55',1,'PWM_HS_INTERFACE']]]
 ];

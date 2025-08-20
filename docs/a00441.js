@@ -77,41 +77,43 @@ var a00441 =
       [ "AveragingCount", "a00637.html#a5c501c087c00d88f54766fff1bed2839", null ],
       [ "Counter", "a00637.html#ac73dde33a2be13416f717c1ab8954227", null ]
     ] ],
-    [ "DROOP_s", "a00641.html", [
-      [ "Droop_Delay_Counter", "a00641.html#ada6a7656f734bf91002fe9e81e226d4c", null ],
-      [ "Droop_Enabled", "a00641.html#a1f4c1f7431b32c0ea30578937661e2f6", null ],
-      [ "Droop_Flag", "a00641.html#aa2b113d66bd0a3ab84be28d871efeb37", null ],
-      [ "Droop_New_Voltage_Reference", "a00641.html#a3f8c7a6ef1ad951225f3e90c1359fff7", null ],
-      [ "Droop_Voltage_Reference_from_PBV", "a00641.html#a0f764e446564e7cb43a8e9ca35581e4c", null ],
-      [ "ref_diff", "a00641.html#ae0ed6fca1728fb2bb09603cec06b5e78", null ]
+    [ "DROOP_s", "a00645.html", [
+      [ "Droop_Delay_Counter", "a00645.html#ada6a7656f734bf91002fe9e81e226d4c", null ],
+      [ "Droop_Enabled", "a00645.html#a1f4c1f7431b32c0ea30578937661e2f6", null ],
+      [ "Droop_Flag", "a00645.html#aa2b113d66bd0a3ab84be28d871efeb37", null ],
+      [ "Droop_New_Voltage_Reference", "a00645.html#a3f8c7a6ef1ad951225f3e90c1359fff7", null ],
+      [ "Droop_Voltage_Reference_from_PBV", "a00645.html#a0f764e446564e7cb43a8e9ca35581e4c", null ],
+      [ "ref_diff", "a00645.html#ae0ed6fca1728fb2bb09603cec06b5e78", null ]
     ] ],
-    [ "CALIBRATE_S", "a00645.html", [
-      [ "calculated_value", "a00645.html#ab6b41d45201b73193181989b3ab33c37", null ],
-      [ "gain_factor", "a00645.html#ab0018647c65a61f3c992dacd62d3e773", null ],
-      [ "real_value", "a00645.html#a83d680a200abba48257bf17739ef109e", null ]
+    [ "CALIBRATE_S", "a00649.html", [
+      [ "calculated_value", "a00649.html#ab6b41d45201b73193181989b3ab33c37", null ],
+      [ "gain_factor", "a00649.html#ab0018647c65a61f3c992dacd62d3e773", null ],
+      [ "real_value", "a00649.html#a83d680a200abba48257bf17739ef109e", null ]
     ] ],
-    [ "POWER_CONTROL_s", "a00649.html", [
-      [ "Data", "a00649.html#a9961eac6798b52736528d9d4aa30d922", null ],
-      [ "Droop", "a00649.html#a49e355d20b8285181d2b9804378f9713", null ],
-      [ "Fault", "a00649.html#aead2ae6cfabf4831af21d23684e19d1f", null ],
-      [ "ILoop", "a00649.html#a13383149438802e4c6c08683d6d004db", null ],
-      [ "IRamp", "a00649.html#afdaae86371984281bf846fac8b1d918a", null ],
-      [ "ISecAveraging", "a00649.html#ab9462c82d39eb53833bb4156a31e30d9", null ],
-      [ "PhRamp", "a00649.html#ae89acf1ca3b8d30a13e4fb9f35c27e0d", null ],
-      [ "PLoop", "a00649.html#a14f61bb42ecc88a3ff43a417b48194b0", null ],
-      [ "PRamp", "a00649.html#a7969f4ded01738878ec44b5a56985c85", null ],
-      [ "Precharge", "a00649.html#a452b01803c15a8aca96a7c7112db5b65", null ],
-      [ "PrimaryCT_Offset", "a00649.html#afb584f4a61069e959fd28c5a3d82a6a8", null ],
-      [ "Properties", "a00649.html#a2c015371f9d53a7ba0131e65634f8129", null ],
-      [ "Pwm", "a00649.html#a133fe9da595a11547aacc8e4f1ae3b8a", null ],
-      [ "SecondarySh_Offset", "a00649.html#a8dc7691b07c4ecc7fc2e459e1140c7a7", null ],
-      [ "SecRec", "a00649.html#a6dc44da803310a4be5ab45d4e22a6806", null ],
-      [ "State", "a00649.html#a8b22029ea33e1bafe7050317294309c2", null ],
-      [ "Status", "a00649.html#ae5b4ae59c620ed360f0cb1c66ea0cd4e", null ],
-      [ "VLoop", "a00649.html#a74800143138c6a887f2edec0e47008a8", null ],
-      [ "VoutCalibrate", "a00649.html#a6dfb94b88d97f708e2e9bb0fc4f6a457", null ],
-      [ "VoutCalibratingAveraging", "a00649.html#a6706585c1397b0e65d6a03438d18da4d", null ],
-      [ "VRamp", "a00649.html#afd1d9d28f344713441a2330e010de959", null ]
+    [ "POWER_CONTROL_s", "a00653.html", [
+      [ "Data", "a00653.html#a9961eac6798b52736528d9d4aa30d922", null ],
+      [ "Droop", "a00653.html#a49e355d20b8285181d2b9804378f9713", null ],
+      [ "Fault", "a00653.html#aead2ae6cfabf4831af21d23684e19d1f", null ],
+      [ "ILoop", "a00653.html#a13383149438802e4c6c08683d6d004db", null ],
+      [ "IRamp", "a00653.html#afdaae86371984281bf846fac8b1d918a", null ],
+      [ "ISecAveraging", "a00653.html#ab9462c82d39eb53833bb4156a31e30d9", null ],
+      [ "PhRamp", "a00653.html#ae89acf1ca3b8d30a13e4fb9f35c27e0d", null ],
+      [ "PLoop", "a00653.html#a14f61bb42ecc88a3ff43a417b48194b0", null ],
+      [ "PRamp", "a00653.html#a7969f4ded01738878ec44b5a56985c85", null ],
+      [ "Precharge", "a00653.html#a452b01803c15a8aca96a7c7112db5b65", null ],
+      [ "PrimaryCT_Offset", "a00653.html#afb584f4a61069e959fd28c5a3d82a6a8", null ],
+      [ "Properties", "a00653.html#a2c015371f9d53a7ba0131e65634f8129", null ],
+      [ "Pwm", "a00653.html#a133fe9da595a11547aacc8e4f1ae3b8a", null ],
+      [ "Secondary_Rolling", "a00653.html#afea0510004678ba790c6e2a2cc7e1aa7", null ],
+      [ "Secondary_Rolling_val", "a00653.html#aee2f9df8807146a1dc711d5746526f44", null ],
+      [ "SecondarySh_Offset", "a00653.html#a8dc7691b07c4ecc7fc2e459e1140c7a7", null ],
+      [ "SecRec", "a00653.html#a6dc44da803310a4be5ab45d4e22a6806", null ],
+      [ "State", "a00653.html#a8b22029ea33e1bafe7050317294309c2", null ],
+      [ "Status", "a00653.html#ae5b4ae59c620ed360f0cb1c66ea0cd4e", null ],
+      [ "VLoop", "a00653.html#a74800143138c6a887f2edec0e47008a8", null ],
+      [ "VoutCalibrate", "a00653.html#a6dfb94b88d97f708e2e9bb0fc4f6a457", null ],
+      [ "VoutCalibratingAveraging", "a00653.html#a6706585c1397b0e65d6a03438d18da4d", null ],
+      [ "VRamp", "a00653.html#afd1d9d28f344713441a2330e010de959", null ]
     ] ],
     [ "PWR_CTRL_STATES_e", "a00441.html#ga6abbf677724014640a3ad06684ff488b", [
       [ "PWRCTRL_STATE_INITIALIZE", "a00441.html#gga6abbf677724014640a3ad06684ff488ba8c956a177c166f90721f74c6d6586c02", null ],
