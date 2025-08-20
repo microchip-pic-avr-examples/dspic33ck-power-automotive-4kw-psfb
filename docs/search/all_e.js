@@ -22,7 +22,7 @@ var searchData=
   ['millisecond_19',['millisecond',['../a00573.html#a2c2fc9077af4f9594b4433cd53e39f47',1,'OS_SYSTIME_t']]],
   ['minoutput_20',['minOutput',['../a00577.html#a0e61035e2b3233a7d496c3eb2f098969',1,'SMPS_3P3Z_T::minOutput'],['../a00581.html#a0e61035e2b3233a7d496c3eb2f098969',1,'SMPS_2P2Z_T::minOutput'],['../a00585.html#a0e61035e2b3233a7d496c3eb2f098969',1,'SMPS_PID_T::minOutput'],['../a00593.html#a0e61035e2b3233a7d496c3eb2f098969',1,'XFT_SMPS_2P2Z_T::minOutput']]],
   ['minute_21',['minute',['../a00573.html#a8ff981ec55c945940f4a0da7d8709b3c',1,'OS_SYSTIME_t']]],
-  ['mode_22',['How to operate in Droop Mode',['../a00655.html#autotoc_md21',1,'']]],
+  ['mode_22',['How to operate in Droop Mode',['../a00659.html#autotoc_md21',1,'']]],
   ['modechangecallbackregister_23',['ModeChangeCallbackRegister',['../a00477.html#a6bad3044f6d3c1a21c09a5251a81087f',1,'CAN_INTERFACE']]],
   ['modeset_24',['ModeSet',['../a00513.html#a4942ec3b24d5ef0fa4ceee551f27b579',1,'PWM_HS_INTERFACE']]],
   ['monitor_25',['Fault Monitor',['../a00442.html',1,'']]],

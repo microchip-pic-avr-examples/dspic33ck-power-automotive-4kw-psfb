@@ -1,18 +1,18 @@
 <map id="psfb_droop.X/mcc_generated_files/pwm_hs/pwm.h" name="psfb_droop.X/mcc_generated_files/pwm_hs/pwm.h">
-<area shape="rect" id="Node000001" title="This is the generated driver header file for the PWM driver." alt="" coords="152,5,340,48"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,52,123"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,51,66,97,64,92,189,46"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="71,171,135,197"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,51,144,70,116,97,105,126,103,156,98,156,100,125,112,95,140,66,175,46"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="165,171,239,197"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,48,278,83,281,104,276,124,260,147,240,164,236,160,256,143,271,122,276,103,273,85,258,50"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="388,96,451,123"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="292,46,380,87,378,92,289,51"/>
-<area shape="rect" id="Node000006" href="$a00128.html" title="This is the generated driver types header file for the PWM driver." alt="" coords="281,171,400,197"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="263,47,296,95,330,156,325,158,292,97,259,50"/>
-<area shape="rect" id="Node000007" href="$a00125_source.html" title=" " alt="" coords="126,96,262,123"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="235,50,212,85,208,82,230,47"/>
-<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="180,125,132,164,128,159,176,121"/>
-<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="198,123,201,156,196,156,193,124"/>
-<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="221,121,303,161,301,166,218,126"/>
+<area shape="rect" id="Node000001" title="This is the generated driver header file for the PWM driver." alt="" coords="155,5,345,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,52,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,48,66,94,64,89,196,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="73,167,139,192"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,48,146,67,118,95,107,123,105,153,100,153,102,122,113,92,143,63,180,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="169,167,243,192"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="266,44,282,79,285,100,280,120,263,143,242,161,238,157,259,140,276,118,280,100,277,81,261,47"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="391,93,455,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="293,43,386,85,384,90,290,48"/>
+<area shape="rect" id="Node000006" href="$a00128.html" title="This is the generated driver types header file for the PWM driver." alt="" coords="285,167,405,192"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="267,44,300,92,335,153,330,155,296,95,262,47"/>
+<area shape="rect" id="Node000007" href="$a00125_source.html" title=" " alt="" coords="128,93,265,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="239,47,215,83,210,80,235,44"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="184,121,133,160,130,156,180,117"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="201,119,205,153,200,154,196,119"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="222,116,309,158,307,163,219,121"/>
 </map>

@@ -1,22 +1,22 @@
 <map id="psfb_droop.X/sources/pwrctrl/pwrctrl_comm_interface.c" name="psfb_droop.X/sources/pwrctrl/pwrctrl_comm_interface.c">
-<area shape="rect" id="Node000001" title="Contains power control interface with communication/gui." alt="" coords="120,5,268,64"/>
-<area shape="rect" id="Node000002" href="$a00383_source.html" title=" " alt="" coords="159,112,229,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,64,197,97,192,97,192,64"/>
-<area shape="rect" id="Node000003" href="$a00416_source.html" title=" " alt="" coords="73,261,193,288"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,129,123,133,83,143,44,160,28,173,14,188,9,198,9,208,20,225,44,241,74,254,72,258,42,246,17,229,4,209,4,197,9,185,24,169,41,156,81,138,122,128,158,124"/>
-<area shape="rect" id="Node000008" href="$a00395.html" title="Contains public functions relevant for power control communication interface." alt="" coords="24,187,194,213"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="181,141,136,179,133,175,178,137"/>
-<area shape="rect" id="Node000009" href="$a00389.html" title="Contains the power control reusable functions." alt="" coords="217,187,345,213"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="211,137,257,175,253,179,208,141"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="369,187,430,213"/>
-<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="231,137,356,180,354,185,229,142"/>
-<area shape="rect" id="Node000004" href="$a00317.html" title="Contains fault data types." alt="" coords="66,336,200,363"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="136,289,136,321,130,321,130,289"/>
-<area shape="rect" id="Node000005" href="$a00308.html" title="Contains fault generic public functions." alt="" coords="76,411,190,437"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="136,363,136,396,130,396,130,363"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="54,485,118,512"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="127,439,104,474,100,471,123,436"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="142,485,217,512"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="143,436,166,471,161,474,139,439"/>
-<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="256,216,173,257,171,252,254,211"/>
+<area shape="rect" id="Node000001" title="Contains power control interface with communication/gui." alt="" coords="121,5,270,60"/>
+<area shape="rect" id="Node000002" href="$a00383_source.html" title=" " alt="" coords="160,108,231,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,60,198,94,193,94,193,60"/>
+<area shape="rect" id="Node000003" href="$a00416_source.html" title=" " alt="" coords="74,255,194,280"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,125,124,128,83,137,44,155,28,167,14,183,9,193,9,203,22,220,47,236,77,248,76,253,44,240,18,224,4,204,4,192,9,180,24,163,42,150,82,132,123,123,160,119"/>
+<area shape="rect" id="Node000008" href="$a00395.html" title="Contains public functions relevant for power control communication interface." alt="" coords="24,181,194,207"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="183,135,135,175,132,170,180,131"/>
+<area shape="rect" id="Node000009" href="$a00389.html" title="Contains the power control reusable functions." alt="" coords="218,181,346,207"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="211,131,259,170,256,175,208,135"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="371,181,434,207"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="230,131,359,175,357,180,228,136"/>
+<area shape="rect" id="Node000004" href="$a00317.html" title="Contains fault data types." alt="" coords="67,328,202,353"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="137,280,137,314,132,314,132,280"/>
+<area shape="rect" id="Node000005" href="$a00308.html" title="Contains fault generic public functions." alt="" coords="77,401,192,427"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="137,354,137,388,132,388,132,354"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="55,475,120,500"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="129,428,105,465,101,462,124,426"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="145,475,220,500"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="144,426,169,462,165,465,140,429"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="260,209,172,251,170,246,257,204"/>
 </map>

@@ -150,8 +150,8 @@ static void PCS_INIT_handler(POWER_CONTROL_t* pcInstance)
             
             pcInstance->VoutCalibrate.calculated_value = 2293; // for 12 volts
             pcInstance->VoutCalibrate.gain_factor = 
-                    (float)psfb_ptr->VoutCalibrate.real_value/ 
-                    (float)psfb_ptr->VoutCalibrate.calculated_value;
+                    (float)psfb_ptr->VoutCalibrate.calculated_value/ 
+                    (float)psfb_ptr->VoutCalibrate.real_value;
             
             pcInstance->State = PWRCTRL_STATE_PRECHARGE;
 
