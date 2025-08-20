@@ -670,7 +670,7 @@
       <SignalChannel>
         <Name>i-SHUNT-AVG2</Name>
         <Scaling>0.0805</Scaling>
-        <Offset>-52</Offset>
+        <Offset>-50</Offset>
         <Unit>A</Unit>
         <Plot>false</Plot>
         <PlotValMin>0</PlotValMin>
@@ -853,14 +853,6 @@
         <PageName>4kw 204</PageName>
       </TableViewItem>
       <TableViewItem>
-        <SignalChannelIndex>14</SignalChannelIndex>
-        <PageName>4kw 204</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>15</SignalChannelIndex>
-        <PageName>4kw 204</PageName>
-      </TableViewItem>
-      <TableViewItem>
         <SignalChannelIndex>43</SignalChannelIndex>
         <PageName>4kw2 214</PageName>
       </TableViewItem>
@@ -950,14 +942,6 @@
       </TableViewItem>
       <TableViewItem>
         <SignalChannelIndex>69</SignalChannelIndex>
-        <PageName>4kw2 214</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>54</SignalChannelIndex>
-        <PageName>4kw2 214</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>55</SignalChannelIndex>
         <PageName>4kw2 214</PageName>
       </TableViewItem>
     </TableView>

@@ -373,14 +373,6 @@
         <SignalChannelIndex>21</SignalChannelIndex>
         <PageName>4kw</PageName>
       </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>14</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
-      <TableViewItem>
-        <SignalChannelIndex>15</SignalChannelIndex>
-        <PageName>4kw</PageName>
-      </TableViewItem>
     </TableView>
     <OutputValues>
       <OutputValue>
