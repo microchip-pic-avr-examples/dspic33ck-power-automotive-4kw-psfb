@@ -31,14 +31,18 @@ The board features well-organized circuit sections, including an input EMI filte
 
 ## Related Documentation
 
+__Product Webpage__
+
+-[dsPIC33C 4kW DC-DC Demonstration Application](https://www.microchip.com/en-us/tools-resources/reference-designs/dspic33c-4kw-dc-dc-demonstration-application)
+
 __Firmware Documentation__
 
 - [Online Firmware Documentation of this Code Example](https://microchip-pic-avr-examples.github.io/dspic33ck-power-automotive-4kw-psfb/)
 
 __Hardware Documentation__
 
-- 4kW dsPIC33C PSFB DC-DC application demonstration user's Guide
-- 4kW dsPIC33C PSFB DC-DC application demonstration operational manual
+- [4kW dsPIC33C Phase-Shifted Full-Bridge DC-DC Demonstration Application User Guide](https://microchip.com/70005619)
+- [4kW dsPIC33C Phase-Shifted Full-Bridge DC-DC Demonstration Application Operational Manual](https://microchip.com/70005620)
 
 __Target Device Documentation__
 
@@ -63,21 +67,22 @@ __Please always check for the latest data sheets on the respective product websi
 
 This section is designed to assist users in powering up the board using the Power Board Visualizer after completing the hardware connections. It does not cover the hardware connection process itself, nor does it address droop or parallel operation. Please ensure that the load and source connections are correct and that the operation is free from hazards. For detailed information, please refer to the user guide. For droop applications, please refer to the parallel operation section in the firmware documentation.
 
+Power Board Visualizer works with Peak Systems [CAN/CAN-FD to USB Dongle](https://www.peak-system.com/PCAN-USB-FD.365.0.html?&L=1)
+
 ## Directory Structure
 
 ```
-	├───psfb_droop.X							        PSFB project for parallel operation
-    ├───psfb_single.X							        PSFB project for standalone operation
-	├───images									        Images for the Readme 
-	├───power_board_visualizer_xmls				        Power Board Visualizer Projects
-	├───pre_compiled_hex_files					        Pre compiled Hex file
-	└───docs									        doxygen files
+├───psfb_droop.X							        PSFB project for parallel operation
+├───psfb_single.X							        PSFB project for standalone operation
+├───images									        Images for the Readme 
+├───power_board_visualizer_xmls				        Power Board Visualizer Projects
+├───pre_compiled_hex_files					        Pre compiled Hex file
+└───docs									        doxygen files
 ```
 ---
 
 ## Programming Hex File on to the dsPIC33C Digital Power PIM using available hex file
-
-In this example ICD4 is being used, but any of the available debuggers/programmers can be used. Hex file for standalone operation is provided in this code example. For Parallel/droop application please refer to the firmware documentation.
+In this example ICD4 is being used, but any of the available debuggers/programmers can be used.
 
 1. Open <i>MPLAB X IPE</i>
 2. Select the device on DP-PIM : <i>dsPIC33CK256MP506</i>
@@ -92,7 +97,7 @@ In this example ICD4 is being used, but any of the available debuggers/programme
 
 ### Power Board Visualizer Hardware Setup
 
-To establish CAN communication between the PC and the PSFB board, a USB to CAN dongle is required. It is important to note that the Power Board Visualizer is compatible only with PEAK System USB CAN-FD dongles. Additionally, an RS232 DB9 straight-through cable is could be used to connect the power board to the PEAK dongle.
+To establish CAN communication between the PC and the PSFB board, a USB to CAN dongle is required. It is important to note that the Power Board Visualizer is compatible only with [PEAK System USB CAN-FD dongles](https://www.peak-system.com/PCAN-USB-FD.365.0.html?&L=1). Additionally, an RS232 DB9 straight-through cable is used to connect the power board to the PEAK dongle.
 
 ### Powering On board through Power Board Visualizer
 

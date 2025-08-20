@@ -107,6 +107,8 @@ void __attribute__ ( ( __interrupt__ , auto_psv ) ) _ADCAN0Interrupt ( void )
     
     psfb_ptr->ISecAveraging.Accumulator += psfb_ptr->Data.ISenseSecondary;
     psfb_ptr->ISecAveraging.Counter = psfb_ptr->ISecAveraging.Counter + 1;
+
+    psfb_ptr->Secondary_Rolling_val = PwrCtrl_UpdateAverageRolling(&psfb_ptr->Secondary_Rolling, ADCBUF1);
     
     PwrCtrl_UpdateADConverterData();
     

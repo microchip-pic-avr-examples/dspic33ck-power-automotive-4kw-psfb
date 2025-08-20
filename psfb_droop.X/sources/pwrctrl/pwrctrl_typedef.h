@@ -205,7 +205,16 @@ struct AVERAGING_s
 };
 typedef struct AVERAGING_s AVERAGING_t;
 
+#define ROLLING_AVG_SAMPLE_POINTS 3
 
+struct AVERAGING_ROLLING_s
+{ 
+  uint16_t  samples[ROLLING_AVG_SAMPLE_POINTS];   
+  uint32_t  Accumulator; 
+  uint16_t  Index; 
+  uint16_t  AverageValue;
+};
+typedef struct AVERAGING_ROLLING_s AVERAGING_ROLLING_t;
 
 /***********************************************************************************
  * @ingroup pwrctrl-data-types
@@ -264,6 +273,8 @@ struct POWER_CONTROL_s
     CALIBRATE_t         VoutCalibrate;  ///< structure for Calibrating Vout during Droop using Averaged value
     AVERAGING_t         ISecAveraging;  ///<secondary current average
     DROOP_t             Droop;          ///< droop controller data
+    AVERAGING_ROLLING_t Secondary_Rolling;      ///< structure for Secondary current rolling average
+    uint16_t            Secondary_Rolling_val;  ///< Secondary Current Rolling Average Value
 };
 typedef struct POWER_CONTROL_s POWER_CONTROL_t;
 
