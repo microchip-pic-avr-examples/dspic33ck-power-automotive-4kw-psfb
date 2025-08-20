@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gain_5ffactor_0',['gain_factor',['../a00645.html#ab0018647c65a61f3c992dacd62d3e773',1,'CALIBRATE_S']]],
+  ['gain_5ffactor_0',['gain_factor',['../a00649.html#ab0018647c65a61f3c992dacd62d3e773',1,'CALIBRATE_S']]],
   ['generatordisable_1',['GeneratorDisable',['../a00513.html#a332724dc229715fa32b4b57112dfb737',1,'PWM_HS_INTERFACE']]],
   ['generatorenable_2',['GeneratorEnable',['../a00513.html#a7dc2f77f9abf81eaa0444b4b52f9caa0',1,'PWM_HS_INTERFACE']]],
   ['generatoreoceventcallbackregister_3',['GeneratorEOCEventCallbackRegister',['../a00513.html#a5e63802b68a1b78a5a19505f096445ca',1,'PWM_HS_INTERFACE']]],

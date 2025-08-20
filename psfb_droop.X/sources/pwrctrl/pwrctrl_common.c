@@ -35,6 +35,28 @@ uint16_t PwrCtrl_UpdateAverage(AVERAGING_t* data, uint16_t sample)
 
 /*******************************************************************************
  * @ingroup pwrctrl-common
+ * @brief  Rolling Average the raw data over number of samples
+ * @param  data     Pointer to averaging data object of type AVERAGING_ROLLING_t
+ * @param  sample   data that will be averaged 
+ * @return AverageValue     Returns the average value
+ * 
+ * @details This function averages the data over number of samples.
+ *********************************************************************************/
+uint16_t PwrCtrl_UpdateAverageRolling(AVERAGING_ROLLING_t* data, uint16_t sample)
+{
+    data->Accumulator -= data->samples[data->Index];      //remove 
+    data->samples[data->Index]= sample;                   //store 
+    data->Accumulator += sample;                          //add the sample 
+    //data->index = (data->index+1) % data->AveragingCount; //next index
+    __builtin_divmodud(data->Index+1, ROLLING_AVG_SAMPLE_POINTS, &data->Index); //next index
+    data->AverageValue = (uint16_t)(__builtin_divud(data->Accumulator, ROLLING_AVG_SAMPLE_POINTS));
+    return (data->AverageValue);
+}
+
+
+
+/*******************************************************************************
+ * @ingroup pwrctrl-common
  * @brief   Softly increment / decrement to the set reference target
  * @param   rampUp     Pointer to start-up ramp data object of type START_UP_RAMP_t
  * @return  RampComplete Indicates if the ramp-up/down is done

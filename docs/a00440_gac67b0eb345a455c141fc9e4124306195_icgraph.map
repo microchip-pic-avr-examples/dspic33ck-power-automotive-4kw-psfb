@@ -1,0 +1,5 @@
+<map id="PwrCtrl_UpdateAverageRolling" name="PwrCtrl_UpdateAverageRolling">
+<area shape="rect" id="Node000001" title="Rolling Average the raw data over number of samples." alt="" coords="151,5,348,31"/>
+<area shape="rect" id="Node000002" href="$a00435.html#ga2068c3c2584547dbc1c8b9bca2d55b18" title="Executes the power converter control loop." alt="" coords="5,5,103,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,21,103,21,103,15,137,15"/>
+</map>

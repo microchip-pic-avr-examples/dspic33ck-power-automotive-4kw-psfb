@@ -1,7 +1,7 @@
 var searchData=
 [
   ['abccoefficients_0',['abcCoefficients',['../a00585.html#a4d14568609b32117e0f022cbb8948134',1,'SMPS_PID_T']]],
-  ['accumulator_1',['Accumulator',['../a00637.html#a1bf80696497119c4e36460f57de7f667',1,'AVERAGING_s']]],
+  ['accumulator_1',['Accumulator',['../a00637.html#a1bf80696497119c4e36460f57de7f667',1,'AVERAGING_s::Accumulator'],['../a00641.html#a1bf80696497119c4e36460f57de7f667',1,'AVERAGING_ROLLING_s::Accumulator']]],
   ['acoefficients_2',['aCoefficients',['../a00577.html#a9b53207353649ed96836db0f78300815',1,'SMPS_3P3Z_T::aCoefficients'],['../a00581.html#a9b53207353649ed96836db0f78300815',1,'SMPS_2P2Z_T::aCoefficients'],['../a00593.html#a9b53207353649ed96836db0f78300815',1,'XFT_SMPS_2P2Z_T::aCoefficients']]],
   ['adc_3',['MCC Custom Code ADC',['../a00432.html',1,'']]],
   ['adc_20multicore_20driver_4',['ADC Multicore Driver',['../a00448.html',1,'']]],
@@ -132,7 +132,8 @@ var searchData=
   ['autobaudquery_129',['AutoBaudQuery',['../a00529.html#a1476f97e3b60533b8aa1b4a0684501d6',1,'UART_INTERFACE']]],
   ['autobaudset_130',['AutoBaudSet',['../a00529.html#ac56c05be04cb59bb60adc7aab9a4a6f4',1,'UART_INTERFACE']]],
   ['available_20hex_20file_131',['Programming Hex File on to the dsPIC33C Digital Power PIM using available hex file',['../index.html#autotoc_md11',1,'']]],
-  ['averagevalue_132',['AverageValue',['../a00637.html#ababc9b3b062bdea79c71035d651fbe79',1,'AVERAGING_s']]],
-  ['averaging_5fs_133',['AVERAGING_s',['../a00637.html',1,'']]],
-  ['averagingcount_134',['AveragingCount',['../a00637.html#a5c501c087c00d88f54766fff1bed2839',1,'AVERAGING_s']]]
+  ['averagevalue_132',['AverageValue',['../a00637.html#ababc9b3b062bdea79c71035d651fbe79',1,'AVERAGING_s::AverageValue'],['../a00641.html#ababc9b3b062bdea79c71035d651fbe79',1,'AVERAGING_ROLLING_s::AverageValue']]],
+  ['averaging_5frolling_5fs_133',['AVERAGING_ROLLING_s',['../a00641.html',1,'']]],
+  ['averaging_5fs_134',['AVERAGING_s',['../a00637.html',1,'']]],
+  ['averagingcount_135',['AveragingCount',['../a00637.html#a5c501c087c00d88f54766fff1bed2839',1,'AVERAGING_s']]]
 ];

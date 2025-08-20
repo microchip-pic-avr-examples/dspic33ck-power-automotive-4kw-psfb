@@ -1,61 +1,61 @@
 <map id="psfb_droop.X/sources/fault/fault_typedef.h" name="psfb_droop.X/sources/fault/fault_typedef.h">
-<area shape="rect" id="Node000001" title="Contains fault data types." alt="" coords="951,5,1096,48"/>
-<area shape="rect" id="Node000002" href="$a00416_source.html" title=" " alt="" coords="941,96,1106,139"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1026,63,1026,96,1021,96,1021,63"/>
-<area shape="rect" id="Node000003" href="$a00281.html" title="Contains PWM initialization that was not supported by MCC generated code." alt="" coords="696,187,874,245"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="960,147,857,189,855,184,958,142"/>
-<area shape="rect" id="Node000004" href="$a00302.html" title="Contains public fault functions." alt="" coords="88,293,234,336"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="997,151,940,208,911,233,887,248,832,265,759,280,577,300,387,311,234,315,234,310,387,305,577,294,758,274,831,260,885,243,908,228,936,204,993,148"/>
-<area shape="rect" id="Node000010" href="$a00383_source.html" title=" " alt="" coords="890,293,1035,336"/>
-<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="1006,152,990,188,975,245,967,294,962,293,970,243,985,186,1001,150"/>
-<area shape="rect" id="Node000020" href="$a00410.html" title="Contains public functions for PWM." alt="" coords="1662,392,1812,435"/>
-<area shape="poly" id="edge37_Node000002_Node000020" title=" " alt="" coords="1088,142,1688,389,1686,394,1086,147"/>
-<area shape="rect" id="Node000021" href="$a00407.html" title="Contains PSFB control phase calculation between primary and secondary, and the PWM distribution." alt="" coords="1818,499,1968,541"/>
-<area shape="poly" id="edge36_Node000002_Node000021" title=" " alt="" coords="1121,124,1271,147,1361,166,1457,192,1555,226,1651,268,1742,320,1825,382,1850,409,1868,441,1890,497,1885,499,1863,443,1845,412,1822,386,1739,324,1649,273,1553,230,1456,197,1360,171,1270,152,1120,129"/>
-<area shape="rect" id="Node000022" href="$a00389.html" title="Contains the power control reusable functions." alt="" coords="1000,195,1173,237"/>
-<area shape="poly" id="edge34_Node000002_Node000022" title=" " alt="" coords="1047,149,1075,193,1071,196,1042,152"/>
-<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="249,299,257,305,260,315,253,328,235,335,233,330,249,324,255,314,253,308,246,303"/>
-<area shape="rect" id="Node000005" href="$a00056_source.html" title=" " alt="" coords="145,400,283,427"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="182,348,210,398,205,401,177,350"/>
-<area shape="rect" id="Node000006" href="$a00299.html" title="Contains fault functions including the fault handler, fault object initialization and fault execution..." alt="" coords="695,597,840,640"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="85,345,60,362,40,385,18,430,8,470,9,489,15,509,25,528,40,547,52,556,72,563,135,577,219,588,317,596,524,608,694,613,694,619,523,613,316,602,218,593,134,582,71,568,50,560,36,551,20,531,10,510,4,490,3,470,13,428,36,383,56,359,82,341"/>
-<area shape="rect" id="Node000007" href="$a00398.html" title="Contains Control loop interrupt Callback that acquires the ADC raw data and process it in the control..." alt="" coords="776,499,922,541"/>
-<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="142,350,131,373,125,397,125,421,135,441,146,449,166,457,227,471,309,482,405,492,608,506,776,514,776,519,608,511,405,498,309,488,226,476,165,462,144,454,131,444,120,422,119,396,126,371,137,348"/>
-<area shape="rect" id="Node000008" href="$a00404.html" title="Contains some of the functions used in the interrupt service routine of control loop." alt="" coords="307,384,452,443"/>
-<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="222,340,316,381,313,386,220,345"/>
-<area shape="rect" id="Node000009" href="$a00413.html" title="Contains power control state machine functions that is executed every 100us." alt="" coords="904,597,1050,640"/>
-<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="136,349,121,372,111,396,109,420,117,441,149,455,221,474,443,520,904,602,903,608,442,525,220,479,147,460,114,445,103,421,106,395,117,369,131,346"/>
-<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="875,321,759,327,613,339,454,358,295,387,246,402,244,397,294,381,453,353,613,333,759,322,875,316"/>
-<area shape="poly" id="edge19_Node000010_Node000006" title=" " alt="" coords="876,325,843,333,810,345,779,362,754,386,730,424,723,461,729,501,739,549,747,573,758,596,753,598,742,575,734,550,723,501,718,461,725,423,750,382,776,358,807,340,841,328,875,320"/>
-<area shape="poly" id="edge24_Node000010_Node000007" title=" " alt="" coords="877,339,843,358,816,386,810,399,808,413,812,444,823,473,837,497,832,500,818,475,806,445,803,413,805,397,812,382,840,354,874,334"/>
-<area shape="poly" id="edge25_Node000010_Node000008" title=" " alt="" coords="875,326,686,347,575,365,466,387,454,390,452,384,464,381,574,359,685,342,874,320"/>
-<area shape="poly" id="edge33_Node000010_Node000009" title=" " alt="" coords="877,340,837,359,803,386,769,426,749,465,745,485,746,505,753,526,766,548,786,564,821,578,905,601,903,606,819,583,784,568,762,551,748,528,741,506,740,485,744,464,765,423,799,382,834,354,874,335"/>
-<area shape="rect" id="Node000011" href="$a00233_source.html" title=" " alt="" coords="1474,499,1693,541"/>
-<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="1002,344,1045,382,1060,400,1070,415,1081,428,1098,440,1149,463,1193,475,1234,481,1274,482,1358,479,1406,481,1463,488,1499,495,1498,501,1462,493,1406,486,1358,484,1274,487,1234,486,1192,481,1147,468,1096,445,1077,432,1066,418,1056,403,1042,386,998,348"/>
-<area shape="rect" id="Node000012" href="$a00269.html" title="measure current sensor offsets" alt="" coords="826,384,984,443"/>
-<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="945,350,924,385,920,382,940,348"/>
-<area shape="rect" id="Node000015" href="$a00293_source.html" title=" " alt="" coords="1298,491,1450,549"/>
-<area shape="poly" id="edge18_Node000010_Node000015" title=" " alt="" coords="979,348,1010,397,1030,421,1054,440,1085,458,1113,468,1164,476,1218,477,1285,488,1299,492,1297,497,1284,493,1218,483,1164,481,1111,473,1083,463,1051,445,1027,424,1005,400,975,351"/>
-<area shape="rect" id="Node000016" href="$a00311.html" title="Contains API functions for fault protection." alt="" coords="1109,392,1296,435"/>
-<area shape="poly" id="edge20_Node000010_Node000016" title=" " alt="" coords="1028,339,1152,389,1150,394,1026,344"/>
-<area shape="rect" id="Node000017" href="$a00380.html" title="Contains power control initialization including control loop initialization and start&#45;up initializati..." alt="" coords="1320,392,1466,435"/>
-<area shape="poly" id="edge21_Node000010_Node000017" title=" " alt="" coords="1050,327,1173,350,1308,381,1334,389,1332,394,1307,387,1172,356,1049,333"/>
-<area shape="rect" id="Node000018" href="$a00392.html" title="Contains power control interface with communication/gui." alt="" coords="1489,384,1638,443"/>
-<area shape="poly" id="edge22_Node000010_Node000018" title=" " alt="" coords="1050,320,1247,341,1363,359,1479,381,1490,384,1488,389,1478,387,1363,364,1246,347,1049,325"/>
-<area shape="rect" id="Node000019" href="$a00386.html" title="Contains generic functions that handles power control ramp Up/Down and the averaging generic function..." alt="" coords="477,392,650,435"/>
-<area shape="poly" id="edge23_Node000010_Node000019" title=" " alt="" coords="876,338,670,387,641,394,639,389,668,381,875,333"/>
-<area shape="poly" id="edge26_Node000010_Node000020" title=" " alt="" coords="1050,316,1169,322,1320,334,1485,353,1651,381,1680,389,1678,394,1650,387,1485,358,1319,339,1169,328,1049,321"/>
-<area shape="rect" id="Node000013" href="$a00266_source.html" title=" " alt="" coords="1115,491,1273,549"/>
-<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="999,446,1116,488,1114,493,997,451"/>
-<area shape="rect" id="Node000014" href="$a00263.html" title="Contains h files that are part of device layer." alt="" coords="946,499,1091,541"/>
-<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="948,451,998,496,994,500,945,455"/>
-<area shape="poly" id="edge16_Node000014_Node000006" title=" " alt="" coords="952,550,822,599,820,594,950,545"/>
-<area shape="poly" id="edge17_Node000014_Node000009" title=" " alt="" coords="1006,556,988,598,983,596,1001,554"/>
-<area shape="poly" id="edge29_Node000020_Node000006" title=" " alt="" coords="1742,450,1741,475,1735,503,1725,529,1707,551,1686,562,1654,570,1562,583,1441,590,1307,594,1048,597,893,600,841,607,840,602,893,595,1048,591,1307,589,1441,585,1561,577,1653,565,1684,557,1703,547,1720,527,1730,501,1735,475,1737,449"/>
-<area shape="poly" id="edge30_Node000020_Node000007" title=" " alt="" coords="1667,442,1651,445,1543,462,1450,470,1369,471,1292,469,1216,467,1134,469,1042,476,935,493,906,501,904,496,934,488,1042,471,1134,463,1216,462,1292,464,1369,466,1450,464,1542,457,1650,440,1666,436"/>
-<area shape="poly" id="edge32_Node000020_Node000009" title=" " alt="" coords="1755,447,1763,472,1767,500,1764,527,1751,551,1737,561,1714,569,1646,583,1556,595,1451,603,1230,614,1050,619,1050,614,1230,609,1451,598,1555,589,1645,578,1712,564,1734,556,1747,548,1759,526,1762,500,1758,474,1750,449"/>
-<area shape="poly" id="edge27_Node000020_Node000011" title=" " alt="" coords="1696,446,1615,500,1612,496,1693,441"/>
-<area shape="poly" id="edge28_Node000020_Node000015" title=" " alt="" coords="1662,442,1651,445,1557,469,1463,493,1452,497,1450,491,1462,488,1556,464,1650,440,1660,437"/>
-<area shape="poly" id="edge31_Node000020_Node000021" title=" " alt="" coords="1781,441,1864,496,1861,500,1778,445"/>
-<area shape="poly" id="edge35_Node000022_Node000010" title=" " alt="" coords="1050,249,991,295,987,291,1047,244"/>
+<area shape="rect" id="Node000001" title="Contains fault data types." alt="" coords="957,5,1103,45"/>
+<area shape="rect" id="Node000002" href="$a00416_source.html" title=" " alt="" coords="947,93,1113,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1033,59,1033,93,1027,93,1027,59"/>
+<area shape="rect" id="Node000003" href="$a00281.html" title="Contains PWM initialization that was not supported by MCC generated code." alt="" coords="701,181,879,236"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="970,141,859,184,857,179,968,136"/>
+<area shape="rect" id="Node000004" href="$a00302.html" title="Contains public fault functions." alt="" coords="86,284,233,324"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1009,146,959,195,927,219,892,238,837,256,762,270,579,289,388,300,233,304,233,299,387,295,579,284,761,264,835,251,890,234,924,215,956,191,1005,142"/>
+<area shape="rect" id="Node000010" href="$a00383_source.html" title=" " alt="" coords="894,284,1041,324"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="1014,147,997,182,981,237,973,284,967,283,976,236,992,180,1009,144"/>
+<area shape="rect" id="Node000020" href="$a00410.html" title="Contains public functions for PWM." alt="" coords="1672,379,1823,419"/>
+<area shape="poly" id="edge37_Node000002_Node000020" title=" " alt="" coords="1091,136,1701,377,1699,382,1089,141"/>
+<area shape="rect" id="Node000021" href="$a00407.html" title="Contains PSFB control phase calculation between primary and secondary, and the PWM distribution." alt="" coords="1825,482,1976,522"/>
+<area shape="poly" id="edge36_Node000002_Node000021" title=" " alt="" coords="1127,118,1278,139,1369,157,1466,182,1564,215,1662,256,1754,308,1837,370,1860,396,1878,426,1899,481,1894,483,1873,429,1856,399,1834,374,1751,312,1659,261,1563,220,1464,187,1368,162,1278,144,1127,124"/>
+<area shape="rect" id="Node000022" href="$a00389.html" title="Contains the power control reusable functions." alt="" coords="1005,189,1180,229"/>
+<area shape="poly" id="edge34_Node000002_Node000022" title=" " alt="" coords="1053,143,1082,187,1078,190,1048,146"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="248,289,256,295,259,304,252,317,234,323,232,318,248,313,254,304,252,298,245,293"/>
+<area shape="rect" id="Node000005" href="$a00056_source.html" title=" " alt="" coords="143,387,282,412"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="179,335,208,385,204,388,175,337"/>
+<area shape="rect" id="Node000006" href="$a00299.html" title="Contains fault functions including the fault handler, fault object initialization and fault execution..." alt="" coords="697,577,843,617"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="86,332,59,350,39,373,18,416,8,454,9,472,14,490,24,509,39,527,51,536,71,543,134,557,218,568,317,576,525,587,696,592,696,597,525,592,316,581,218,573,133,562,70,548,48,540,35,531,20,512,9,492,4,473,3,454,13,414,35,371,56,346,83,328"/>
+<area shape="rect" id="Node000007" href="$a00398.html" title="Contains Control loop interrupt Callback that acquires the ADC raw data and process it in the control..." alt="" coords="778,482,925,522"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="142,337,131,359,124,382,124,405,133,425,145,433,165,441,226,454,309,466,405,476,609,489,778,496,778,501,609,494,405,481,308,471,225,460,164,446,143,438,129,428,118,406,119,382,126,357,137,335"/>
+<area shape="rect" id="Node000008" href="$a00404.html" title="Contains some of the functions used in the interrupt service routine of control loop." alt="" coords="306,372,453,427"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="217,327,319,369,316,374,215,332"/>
+<area shape="rect" id="Node000009" href="$a00413.html" title="Contains power control state machine functions that is executed every 100us." alt="" coords="907,577,1054,617"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="136,336,122,358,112,381,109,404,117,425,149,438,222,457,445,502,908,582,907,587,444,507,221,462,148,443,114,429,104,405,106,380,117,355,132,333"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="880,311,764,317,617,329,455,347,295,375,244,389,243,384,294,369,455,342,616,323,763,312,880,305"/>
+<area shape="poly" id="edge19_Node000010_Node000006" title=" " alt="" coords="881,314,847,321,814,333,783,350,757,374,734,410,728,445,733,483,743,529,751,554,762,576,757,578,746,556,738,530,728,484,723,445,729,409,753,370,780,346,812,328,846,316,880,309"/>
+<area shape="poly" id="edge24_Node000010_Node000007" title=" " alt="" coords="882,327,847,346,831,358,819,373,813,386,811,400,815,429,826,457,840,480,835,483,821,459,810,431,805,400,808,385,815,371,828,354,844,341,880,322"/>
+<area shape="poly" id="edge25_Node000010_Node000008" title=" " alt="" coords="880,315,689,337,577,353,465,375,453,377,452,372,464,369,576,348,688,331,880,310"/>
+<area shape="poly" id="edge33_Node000010_Node000009" title=" " alt="" coords="882,328,841,347,805,374,773,412,753,449,749,468,750,487,756,507,768,528,789,544,823,558,908,580,906,585,821,563,786,548,764,531,751,509,744,488,743,468,748,447,768,409,802,370,838,342,880,323"/>
+<area shape="rect" id="Node000011" href="$a00233_source.html" title=" " alt="" coords="1481,482,1699,522"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="1005,331,1052,370,1077,400,1088,413,1105,424,1155,446,1200,459,1241,464,1281,465,1364,463,1413,465,1469,472,1507,479,1506,484,1468,477,1413,470,1364,468,1281,470,1241,469,1199,464,1154,451,1102,429,1084,417,1073,404,1048,374,1001,335"/>
+<area shape="rect" id="Node000012" href="$a00269.html" title="measure current sensor offsets" alt="" coords="829,372,988,427"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="951,337,928,373,923,370,946,334"/>
+<area shape="rect" id="Node000015" href="$a00293_source.html" title=" " alt="" coords="1303,475,1456,529"/>
+<area shape="poly" id="edge18_Node000010_Node000015" title=" " alt="" coords="985,335,1015,382,1036,405,1060,424,1091,442,1118,452,1170,460,1224,462,1292,472,1303,475,1302,480,1291,477,1224,467,1170,465,1117,457,1088,446,1057,429,1032,409,1011,385,980,338"/>
+<area shape="rect" id="Node000016" href="$a00311.html" title="Contains API functions for fault protection." alt="" coords="1115,379,1303,419"/>
+<area shape="poly" id="edge20_Node000010_Node000016" title=" " alt="" coords="1030,326,1161,377,1159,382,1028,331"/>
+<area shape="rect" id="Node000017" href="$a00380.html" title="Contains power control initialization including control loop initialization and start&#45;up initializati..." alt="" coords="1327,379,1474,419"/>
+<area shape="poly" id="edge21_Node000010_Node000017" title=" " alt="" coords="1055,317,1179,339,1316,369,1343,377,1342,382,1315,375,1178,345,1054,322"/>
+<area shape="rect" id="Node000018" href="$a00392.html" title="Contains power control interface with communication/gui." alt="" coords="1498,372,1647,427"/>
+<area shape="poly" id="edge22_Node000010_Node000018" title=" " alt="" coords="1055,309,1253,331,1370,348,1487,369,1498,372,1497,377,1486,375,1370,353,1253,336,1054,315"/>
+<area shape="rect" id="Node000019" href="$a00386.html" title="Contains generic functions that handles power control ramp Up/Down and the averaging generic function..." alt="" coords="477,379,652,419"/>
+<area shape="poly" id="edge23_Node000010_Node000019" title=" " alt="" coords="881,327,672,375,642,382,640,377,671,369,880,322"/>
+<area shape="poly" id="edge26_Node000010_Node000020" title=" " alt="" coords="1055,306,1326,324,1493,343,1660,369,1690,377,1689,382,1659,375,1492,348,1325,329,1054,311"/>
+<area shape="rect" id="Node000013" href="$a00266_source.html" title=" " alt="" coords="1120,475,1279,529"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="998,429,1125,472,1123,477,996,434"/>
+<area shape="rect" id="Node000014" href="$a00263.html" title="Contains h files that are part of device layer." alt="" coords="949,482,1095,522"/>
+<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="950,434,1003,480,999,484,947,438"/>
+<area shape="poly" id="edge16_Node000014_Node000006" title=" " alt="" coords="959,529,822,580,820,575,957,524"/>
+<area shape="poly" id="edge17_Node000014_Node000009" title=" " alt="" coords="1011,535,992,578,987,576,1006,533"/>
+<area shape="poly" id="edge29_Node000020_Node000006" title=" " alt="" coords="1751,434,1743,485,1731,510,1713,531,1693,542,1660,550,1567,562,1446,570,1311,574,1051,577,896,580,844,587,843,581,895,575,1051,571,1311,569,1446,564,1567,557,1659,545,1691,537,1710,527,1727,507,1737,483,1746,433"/>
+<area shape="poly" id="edge30_Node000020_Node000007" title=" " alt="" coords="1678,425,1660,429,1551,445,1457,453,1298,453,1139,453,1046,461,937,477,907,484,906,479,936,472,1045,456,1139,448,1298,447,1457,447,1550,440,1659,424,1677,420"/>
+<area shape="poly" id="edge32_Node000020_Node000009" title=" " alt="" coords="1763,432,1770,456,1773,482,1770,508,1757,531,1743,541,1720,549,1652,563,1562,575,1456,583,1235,594,1054,598,1054,593,1235,588,1456,578,1561,569,1652,558,1719,544,1741,536,1753,528,1765,507,1768,482,1765,457,1758,433"/>
+<area shape="poly" id="edge27_Node000020_Node000011" title=" " alt="" coords="1708,429,1621,484,1618,480,1705,425"/>
+<area shape="poly" id="edge28_Node000020_Node000015" title=" " alt="" coords="1673,426,1660,429,1469,477,1457,481,1456,476,1468,472,1659,424,1671,421"/>
+<area shape="poly" id="edge31_Node000020_Node000021" title=" " alt="" coords="1789,425,1874,480,1871,484,1786,429"/>
+<area shape="poly" id="edge35_Node000022_Node000010" title=" " alt="" coords="1058,239,994,286,991,282,1055,235"/>
 </map>

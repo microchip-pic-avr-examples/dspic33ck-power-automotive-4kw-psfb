@@ -97,6 +97,8 @@ An example XML file is provided with the firmware package, where one set of sign
 
 To set up the demonstration, program one DP-PIM with the psfb_droop.X project as provided. For the second DP-PIM, modify the CAN ID in the source file sources/app/app_PBV_psfb_frame_map.c by changing the PBV_SYSTEM_TO_GUI_ID define to 0x214. Rebuild the project and program the second DP-PIM with this modified firmware.
 
+The hex files for both CAN ID 0x204 and CAN ID 0x214 are also provided. 
+
 ### Calibration
 
 Before startup, that is, before input voltage is applied—the output voltage sense must be calibrated. Calibration is performed as follows. Note: At this point, it is helpful to have the PBV project open and CAN communication enabled to view the debug data from both boards.
@@ -110,7 +112,7 @@ Before startup, that is, before input voltage is applied—the output voltage se
 
 After calibration, follow these steps to start the board:
 
-1. Open the PBV project file: 4KW dsPIC33C PSFB DC-DC DA.xml.
+1. Open the PBV project file: 4KW dsPIC33C PSFB DC-DC DA droop.xml.
 2. Select the correct communication port and enable it.
 3. Verify that everything is set up correctly by checking the status/housekeeping data and ensuring the system is in the PCS_PRECHARGE state. 
 4. Click on "Start Precharge." The system will charge the output capacitors in open loop.

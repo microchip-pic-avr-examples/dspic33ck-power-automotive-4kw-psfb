@@ -1,7 +1,7 @@
 <map id="CAN1_Transmit" name="CAN1_Transmit">
-<area shape="rect" id="Node000001" title="Writes the CAN message object to specified transmit FIFO channel." alt="" coords="240,43,352,69"/>
-<area shape="rect" id="Node000002" href="$a00422.html#ga8a1a918272c7acb8edadb6686bdf7410" title=" " alt="" coords="11,5,186,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,48,186,42,187,37,225,43"/>
-<area shape="rect" id="Node000003" href="$a00422.html#gae06ebd7cad07c3a104d5b46c6f6323dc" title="transmits the numerical msg to PBV" alt="" coords="5,72,192,99"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,69,192,74,192,69,225,64"/>
+<area shape="rect" id="Node000001" title="Writes the CAN message object to specified transmit FIFO channel." alt="" coords="240,42,353,67"/>
+<area shape="rect" id="Node000002" href="$a00422.html#ga8a1a918272c7acb8edadb6686bdf7410" title=" " alt="" coords="11,5,187,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,47,187,41,187,36,227,42"/>
+<area shape="rect" id="Node000003" href="$a00422.html#gae06ebd7cad07c3a104d5b46c6f6323dc" title="transmits the numerical msg to PBV" alt="" coords="5,70,192,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,67,189,73,188,67,226,62"/>
 </map>
